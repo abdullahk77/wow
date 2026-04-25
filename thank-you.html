@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <title>WOWMindset | You're In</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  
+  <!-- Updated Font Awesome CDN to stable 6.5.1 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-void: #020204;
+      --brand-teal: #2DD4BF;
+      --text-pure: #FFFFFF;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.65); 
+      --font-display: 'Cormorant Garamond', serif; 
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      background-color: var(--bg-void);
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Background Enhancements */
+    .elite-texture-base {
+      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+      background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.95) 100%);
+    }
+
+    .light-beam {
+      position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+      width: 60vw; height: 100vh;
+      background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.08) 0%, transparent 70%);
+      z-index: -1; pointer-events: none; mix-blend-mode: screen;
+    }
+
+    body::after {
+      content: ""; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999;
+      mix-blend-mode: overlay;
+    }
+
+    /* Content Area */
+    .thank-you-card {
+      background: rgba(15, 15, 20, 0.65);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: clamp(2rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      animation: floatUp 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      position: relative;
+      z-index: 10;
+      margin: auto;
+    }
+
+    .icon-wrap {
+      width: 80px; height: 80px;
+      background: rgba(45, 212, 191, 0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem;
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      color: var(--brand-teal);
+      font-size: 2rem;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--text-pure);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    
+    h1 i { color: var(--brand-teal); font-style: italic; }
+
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .steps-list {
+      text-align: left;
+      background: rgba(0,0,0,0.4);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 2rem;
+    }
+
+    .steps-list p { margin-bottom: 1rem; font-weight: 600; color: var(--text-pure); display: flex; align-items: flex-start; gap: 12px; }
+    .steps-list p:last-child { margin-bottom: 0; }
+    .steps-list i { color: var(--brand-teal); font-size: 1.2rem; margin-top: 3px; }
+
+    .nav-cta {
+      display: inline-block; padding: 1rem 2.5rem; border-radius: 50px; background: var(--text-pure); color: var(--bg-void); font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; text-decoration: none; border: none; cursor: pointer;
+    }
+    .nav-cta:hover {
+      background: var(--brand-teal); color: var(--bg-void); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(45, 212, 191, 0.25);
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="elite-texture-base"></div>
+  <div class="light-beam"></div>
+
+  <div class="thank-you-card">
+    <div class="icon-wrap">
+      <!-- Fixed: fa-solid for v6 compatibility -->
+      <i class="fa-solid fa-envelope-open-text"></i>
+    </div>
+    
+    <h1>You are <i>in.</i></h1>
+    <p class="lead">Check your inbox. Day 1 of the Reset has been sent to your email.</p>
+    
+    <div class="steps-list">
+      <p><i class="fa-regular fa-circle-check"></i> <span>Get ready to break unhelpful patterns.</span></p>
+      <p><i class="fa-regular fa-circle-check"></i> <span>Prepare to build a reliable approach.</span></p>
+      <p><i class="fa-regular fa-circle-check"></i> <span>Check your spam or promotions folder if you don't see the email within 2 minutes.</span></p>
+    </div>
+
+    <a href="index.html" class="nav-cta">&larr; Return Home</a>
+  </div>
+
+</body>
+</html>
