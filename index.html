@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
   
   <!-- SEO & Meta -->
-  <title>WOWMindset | Build Focus, Clarity & Consistent Action</title>
+  <title>Words of Wisdom | Build Focus, Clarity & Consistent Action</title>
   <meta name="description" content="Break unhelpful patterns, improve focus, and build consistent action — without relying on motivation."/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   
   <!-- High-Performance Font Preloading -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <!-- Added Great Vibes to match the Canva Quotes Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   
   <!-- Minimalist Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
   <style>
     /* =========================================================
-       WOWMINDSET - CONVERSION ENGINE (V3)
+       WORDS OF WISDOM - CONVERSION ENGINE (V3)
        Design: Cinematic Glassmorphism x Funnel Optimization
     ========================================================= */
 
@@ -45,6 +47,7 @@
       
       --font-display: 'Cormorant Garamond', serif; 
       --font-ui: 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Great Vibes', cursive; /* Mimics Canva Quotes Script */
       
       /* Architectural Spacing */
       --space-sm: 1.5rem;
@@ -93,7 +96,6 @@
     /* ================= CINEMATIC BACKGROUND SYSTEM ================= */
     .elite-texture-base {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      /* Luxurious soft vignette to create deep focus and elite depth */
       background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.95) 100%);
     }
 
@@ -107,7 +109,6 @@
     /* High-End Tactile Film Grain Overlay */
     body::after {
       content: ""; position: fixed; inset: 0;
-      /* Optimized, dense fractal noise for an elite, physical material texture */
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
       pointer-events: none; z-index: 9999;
       mix-blend-mode: overlay;
@@ -153,26 +154,29 @@
     .capsule-nav:hover { border-color: rgba(255,255,255,0.15); }
     
     .nav-top-bar { display: flex; justify-content: space-between; align-items: center; width: auto; }
-    .brand-logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; z-index: 2001; cursor: pointer; transition: opacity 0.3s ease; }
+    
+    /* Brand Logo / Typography Styling */
+    .brand-logo { 
+      display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+      z-index: 2001; cursor: pointer; transition: opacity 0.3s ease; text-decoration: none; 
+    }
     .brand-logo:hover { opacity: 0.8; }
+    
     .wow-text { 
-      font-family: var(--font-ui); font-style: normal; font-weight: 900; font-size: 1.6rem; letter-spacing: -0.01em; 
+      font-family: var(--font-script); font-weight: 400; font-size: 2.2rem; line-height: 1.2; 
       background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-size: 200% auto; animation: colorFlow 8s linear infinite;
       text-shadow: 0 0 15px rgba(45, 212, 191, 0.25);
+      padding: 0.1em 0.1em 0.2em 0; /* prevents script descenders from clipping */
     }
-    .mindset-text {
-      font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.7rem; color: var(--text-pure);
-      letter-spacing: 0.02em;
-    }
-    .brand-icon { 
-      width: 8px; height: 8px; background: var(--brand-teal); border-radius: 50%; 
-      box-shadow: 0 0 10px var(--brand-teal); animation: pulseDot 3s cubic-bezier(0.4, 0, 0.2, 1) infinite; 
+    .logo-tagline {
+      font-family: var(--font-ui); font-size: 0.55rem; font-weight: 800; text-transform: uppercase; 
+      letter-spacing: 0.18em; color: var(--text-muted); margin-top: -0.3rem; margin-left: 0.15rem;
     }
 
-    @keyframes pulseDot {
-      0%, 100% { transform: scale(0.95); box-shadow: 0 0 8px rgba(45, 212, 191, 0.3), 0 0 15px rgba(45, 212, 191, 0.1); }
-      50% { transform: scale(1.15); box-shadow: 0 0 12px rgba(45, 212, 191, 0.8), 0 0 25px rgba(45, 212, 191, 0.5); }
+    @keyframes colorFlow { 
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
     }
 
     .nav-links { display: flex; gap: 2rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
@@ -229,7 +233,7 @@
     }
     .entity-tag span { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-    .hero-title { font-size: clamp(3.5rem, 9vw, 8.5rem); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 2.5rem; }
+    .hero-title { font-size: clamp(3.5rem, 9vw, 8.5rem); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 0; }
     
     /* Enhanced Color Flow Animation */
     .text-gradient { 
@@ -241,10 +245,15 @@
       animation: colorFlow 8s linear infinite; 
       padding-right: 0.15em; padding-bottom: 0.15em; display: inline-block;
     }
-    
-    @keyframes colorFlow { 
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
+
+    /* Micro Pause UX Layer */
+    .hero-pause {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-align: center;
+      opacity: 0.7;
     }
     
     .hero-subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--text-muted); margin: 0 auto 3rem; display: inline-block; text-align: left; line-height: 1.8; max-width: 580px; }
@@ -469,8 +478,6 @@
     .site-footer .container { position: relative; z-index: 2; }
     
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 6rem; }
-    .footer-brand span { font-family: var(--font-display); font-size: 2.5rem; font-style: italic; color: var(--text-pure); display: block; margin-bottom: 1rem; }
-    .footer-brand p { color: var(--text-muted); font-size: 1.05rem; max-width: 380px; line-height: 1.6; }
     
     .footer-col h4 { font-family: var(--font-ui); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-pure); margin-bottom: 1.5rem; font-weight: 800; }
     .footer-col ul { list-style: none; }
@@ -479,7 +486,7 @@
     .footer-col a:hover { color: var(--brand-teal); }
 
     .footer-massive-text { 
-      font-size: 11vw; font-family: var(--font-display); font-weight: 700; line-height: 0.85; text-align: center; color: rgba(255,255,255,0.02); white-space: nowrap; overflow: hidden; pointer-events: none; user-select: none; letter-spacing: 0; padding: 2rem 0; width: 100%; 
+      font-size: 11vw; font-family: var(--font-script); font-weight: 400; line-height: 1; text-align: center; color: rgba(255,255,255,0.02); white-space: nowrap; overflow: hidden; pointer-events: none; user-select: none; letter-spacing: 0; padding: 2rem 0; width: 100%; 
       background: linear-gradient(to bottom, rgba(255,255,255,0.04), transparent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -552,10 +559,12 @@
   <!-- Floating Nav -->
   <header class="capsule-nav" id="master-nav">
     <div class="nav-top-bar">
+      <!-- Integrated Logomark -->
       <a href="#hero" class="brand-logo">
-        <div class="brand-icon"></div>
-        <span class="wow-text">WOW</span><span class="mindset-text">Mindset</span>
+        <span class="wow-text">Words of Wisdom</span>
+        <span class="logo-tagline">Enlightening Minds, Inspiring Souls.</span>
       </a>
+      
       <button class="mobile-menu-btn" aria-label="Toggle Menu" id="mobile-toggle">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
@@ -567,12 +576,12 @@
       <li><a href="#plan">30-Day Reset</a></li>
       <li><a href="#library">Library</a></li>
       <li class="mobile-only-link">
-        <a href="#capture" class="nav-cta">Start Reset</a>
+        <a href="#capture" class="nav-cta">Start the Reset</a>
       </li>
     </ul>
     
     <div class="nav-actions desktop-only">
-      <a href="#capture" class="nav-cta">Start Reset</a>
+      <a href="#capture" class="nav-cta">Start the Reset</a>
     </div>
   </header>
 
@@ -595,8 +604,19 @@
         
         <h1 class="hero-title display-font reveal delay-1">
           You’re not stuck.<br>
-          <i class="text-gradient">You’re repeating a pattern that isn’t helping you.</i>
+          <i class="text-gradient" style="font-family: var(--font-display);">You’re repeating a pattern that isn’t helping you.</i>
         </h1>
+
+        <div class="hero-pause reveal delay-2" style="
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
+          color: var(--text-muted);
+          text-align: center;
+          opacity: 0.7;
+        ">
+          This is why nothing sticks.
+        </div>
         
         <div class="hero-subtitle reveal delay-2">
           <p style="color: var(--text-pure); font-weight: 600;">You don’t need more motivation.<br>You need to understand what keeps pulling you back.</p>
@@ -613,10 +633,10 @@
         </div>
 
         <div class="hero-cta-wrap reveal delay-2">
-           <a href="#capture" class="btn-massive">Start Your 30-Day Reset &rarr;</a>
+           <a href="#capture" class="btn-massive">Start the Reset &rarr;</a>
            <div class="trust-badge">
               <div class="dots"><div class="dot"></div><div class="dot" style="background:var(--brand-purple);"></div><div class="dot" style="background:var(--brand-gold);"></div></div>
-              <span>Used by people working to build clarity, focus, and consistency</span>
+              <span>For people serious about real change</span>
            </div>
         </div>
       </div>
@@ -640,7 +660,7 @@
 
     <!-- 2. MANIFESTO -->
     <section class="manifesto-section container reveal">
-      <h2>WOWMindset is not motivation.<br><span>Motivation is unstable. Patterns are predictable.</span></h2>
+      <h2>Words of Wisdom is not motivation.<br><span>Motivation is unstable. Patterns are predictable.</span></h2>
       
       <div class="manifesto-body">
         <p>You don’t repeat habits because you lack discipline.</p>
@@ -649,8 +669,9 @@
         <p>Your attention gets pulled in different directions.<br>Your focus becomes weaker.<br>Your intentions don’t turn into action.</p>
         <p>So you try again.<br>And again.</p>
         <p>But nothing sticks.</p>
-        <p>Because you’re trying to change results without changing what drives them.</p>
-        <p style="color: var(--text-pure); font-weight: 700; font-size: 1.4rem; margin-top: 2.5rem;">WOWMindset is built to help you change that.</p>
+        <p>You’re trying to change results.</p>
+        <p>Without changing what drives them.</p>
+        <p style="color: var(--text-pure); font-weight: 700; font-size: 1.4rem; margin-top: 2.5rem;">Words of Wisdom is built to help you change that.</p>
       </div>
     </section>
 
@@ -739,15 +760,16 @@
       <div class="inline-capture reveal">
         <div>
           <h3>Break the loop. Don’t just deal with it.</h3>
+          <p style="color: var(--text-pure); font-weight: 600; margin-bottom: 0.5rem;">This is what the reset is designed to change.</p>
           <p>Get the 30-day approach designed to help you break and rebuild these patterns step by step.</p>
         </div>
-        <form class="inline-form" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
+        <form class="inline-form ml-block-form" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
           <label for="inline-email" class="sr-only">Email address</label>
           <input type="email" id="inline-email" name="fields[email]" placeholder="Enter your email..." required />
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
-          <input type="hidden" name="redirect" value="https://abdullahk77.github.io/wow/thank-you.html">
-          <button type="submit" class="nav-cta">Start Reset</button>
+          <input type="hidden" name="redirect" value="https://www.wordsofwisdom.in/thank-you.html">
+          <button type="submit" class="nav-cta">Start the Reset</button>
         </form>
       </div>
     </section>
@@ -891,7 +913,7 @@
           <img src="https://i.ibb.co/0yTqLVMy/office.png" alt="Abdullah Khan Portrait" loading="lazy" crossorigin="anonymous"/>
         </div>
         <div>
-          <span class="eyebrow">Creator of WOWMindset</span>
+          <span class="eyebrow">Creator of Words of Wisdom</span>
           <h2 class="dossier-name display-font">Abdullah Khan</h2>
           <div class="dossier-bio">
             <p style="margin-bottom: 1rem;">Creating practical methods that turn:</p>
@@ -911,7 +933,49 @@
       </aside>
     </section>
 
-    <!-- 8. FINAL LEAD MAGNET (MailerLite Integrated) -->
+    <!-- 8. ECOSYSTEM & RECOMMENDED -->
+    <section id="ecosystem" class="container" style="padding-top: var(--space-md); padding-bottom: var(--space-md); position: relative; z-index: 10;">
+      <div class="section-header reveal" style="margin-bottom: 2rem;">
+        <div>
+          <span class="eyebrow">Ecosystem</span>
+          <h2 class="section-title display-font">Explore & <i>Support</i></h2>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch;">
+        
+        <!-- Explore Links -->
+        <div class="reveal glass-card" style="padding: clamp(2rem, 4vw, 3rem); justify-content: center;">
+          <h3 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-pure);">Apps & Community</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">Extend your daily mindset practice with our tailored digital tools and community.</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 1.2rem;">
+              <a href="https://quotes-app.wordsofwisdom.in/" target="_blank" style="display:flex; align-items:center; gap:12px; font-size: 1.15rem; color: var(--text-pure); font-weight: 600; transition: transform 0.3s ease;">
+                <i class="fas fa-mobile-alt" style="color:var(--brand-teal); font-size: 1.3rem;"></i> WOW Quotes App
+              </a>
+            </li>
+            <li style="margin-bottom: 1.2rem;">
+              <a href="https://wow-quotes-poster.wordsofwisdom.in/" target="_blank" style="display:flex; align-items:center; gap:12px; font-size: 1.15rem; color: var(--text-pure); font-weight: 600; transition: transform 0.3s ease;">
+                <i class="fas fa-image" style="color:var(--brand-purple); font-size: 1.3rem;"></i> Quote Poster Generator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.patreon.com/cw/Words_of_Wisdom" target="_blank" style="display:flex; align-items:center; gap:12px; font-size: 1.15rem; color: var(--text-pure); font-weight: 600; transition: transform 0.3s ease;">
+                <i class="fab fa-patreon" style="color:#f96854; font-size: 1.3rem;"></i> Support on Patreon
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Recommended Book Widget -->
+        <div class="reveal glass-card" style="padding: clamp(2rem, 4vw, 3rem); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <h3 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-pure); text-align: center;">Recommended Resource</h3>
+          <div id="amazon-widget" style="text-align:center; font-family:var(--font-ui); width: 100%; max-width:280px; margin:auto; padding:20px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08); border-radius:16px; box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.3); transition: opacity 0.5s ease-in-out; opacity: 0;"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. FINAL LEAD MAGNET (MailerLite Integrated) -->
     <section id="capture" class="container">
       <div class="final-cta reveal">
         <span class="eyebrow">Final Invitation</span>
@@ -924,13 +988,13 @@
           <p style="color: var(--text-pure); font-weight: 700; margin-bottom: 0;">Change the way you approach things —<br>and everything starts to feel easier to handle.</p>
         </div>
         
-        <form class="inline-form" style="max-width: 580px; margin: 0 auto; justify-content: center;" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
+        <form class="inline-form ml-block-form" style="max-width: 580px; margin: 0 auto; justify-content: center;" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
           <label for="footer-email" class="sr-only">Email address</label>
           <input type="email" id="footer-email" name="fields[email]" placeholder="Enter your best email address..." required />
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
-          <input type="hidden" name="redirect" value="https://abdullahk77.github.io/wow/thank-you.html">
-          <button type="submit" class="btn-massive" style="padding: 1.1rem 2rem;">Start Your 30-Day Reset &rarr;</button>
+          <input type="hidden" name="redirect" value="https://www.wordsofwisdom.in/thank-you.html">
+          <button type="submit" class="btn-massive" style="padding: 1.1rem 2rem;">Start the Reset &rarr;</button>
         </form>
         <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 1rem;"><i class="fas fa-lock" style="margin-right: 5px;"></i> Immediate access. No spam. Leave anytime.</p>
       </div>
@@ -945,11 +1009,11 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#hero" style="display: flex; align-items: center; margin-bottom: 1.2rem; cursor: pointer; text-decoration: none;">
-            <span class="wow-text" style="font-size: 2.8rem; line-height: 1; text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);">WOW</span>
-            <span class="mindset-text" style="font-size: 2.8rem; line-height: 1; text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);">Mindset</span>
+          <a href="#hero" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 1.2rem; cursor: pointer; text-decoration: none;">
+            <span class="wow-text" style="font-size: 3.5rem; line-height: 1.2; padding-bottom: 0.1em; text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);">Words of Wisdom</span>
+            <span class="logo-tagline" style="font-size: 0.7rem; margin-top: -0.5rem;">Enlightening Minds, Inspiring Souls.</span>
           </a>
-          <p>WOWMindset is for people who want more than motivation. It’s for those who want clarity, focus, and a way to stay consistent — every day.</p>
+          <p>Words of Wisdom is for people who want more than motivation. It’s for those who want clarity, focus, and a way to stay consistent — every day.</p>
         </div>
         <div class="footer-col">
           <h4>Pathways</h4>
@@ -985,10 +1049,10 @@
           </ul>
         </div>
       </div>
-      <div class="footer-massive-text">WOWMINDSET</div>
+      <div class="footer-massive-text">Words of Wisdom</div>
       <div class="footer-bottom">
         <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; flex-wrap: wrap; gap: 1rem;">
-          <p>&copy; 2026 WOWMindset. Created by <span class="author-highlight">Abdullah Khan</span>.</p>
+          <p>&copy; 2026 Words of Wisdom. Created by <span class="author-highlight">Abdullah Khan</span>.</p>
           <p>Built for people who want real change.</p>
         </div>
         <p style="width: 100%; text-align: center; margin-top: 2rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">No spam. No noise. Only high-quality thinking.</p>
@@ -1000,6 +1064,17 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       
+      // 0. Form Redirection Handling for GitHub Pages
+      document.addEventListener("submit", function (e) {
+        const form = e.target;
+        if (form.matches(".ml-block-form") || form.matches(".inline-form")) {
+          // Delay to allow MailerLite's background AJAX to submit
+          setTimeout(function () {
+            window.location.href = "/thank-you.html";
+          }, 1500); 
+        }
+      });
+
       // 1. Mobile Menu Logic
       const menuBtn = document.getElementById('mobile-toggle');
       const masterNav = document.getElementById('master-nav');
@@ -1109,6 +1184,73 @@
         });
       }
     });
+
+    // 6. Amazon Book Promotion Logic
+    var products = [
+      {
+        title: "The Right Question",
+        link: "https://amzn.to/4lO6pvx",
+        image: "https://m.media-amazon.com/images/I/819zZKDw3KL._SY466_.jpg",
+        desc: "A guide to intentional questioning & inner fulfillment.",
+        hasImage: true
+      },
+      {
+        title: "A Guided Gratitude Journal",
+        link: "https://amzn.to/46CqjoM",
+        image: "https://m.media-amazon.com/images/I/618mYP5cjDL._SL1329_.jpg",
+        desc: "Cultivate gratitude with reflective prompts for daily joy.",
+        hasImage: true
+      },
+      {
+        title: "Act Fast—Hot Deals Now",
+        link: "https://amzn.to/46DCQIF",
+        image: "", 
+        desc: "Find Today’s Best Amazon Deals, Updated Daily.",
+        hasImage: false
+      },
+      {
+        title: "🌟 WOW Quotes App",
+        link: "https://quotes-app.wordsofwisdom.in/",
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV8wdYb8zh9G20znmgaE2Cpkvg5Q09IB8swhD1pkAoDzLgCtW0dAQ88ZhNL7JYiaw5jkVkVWF3PLGqSsmy1WEZKF3vSOxuHkGlMuE9h9P5q1d8LGZduWN6QSBnondGQIKFZVhacxGpKBRdlQQMLXL27OUVXdYwWyRNQbW71RQm3wtA_QGYvxAMLLHy6d0/s600/WOW%20Quotes%20App.png",
+        desc: "Discover uplifting quotes daily. Minimal, beautiful, and inspiring.",
+        hasImage: true
+      }
+    ];
+
+    var index = 0;
+    var widget = document.getElementById("amazon-widget");
+
+    if(widget) {
+      function displayProduct(product) {
+        widget.style.opacity = 0;
+        setTimeout(function () {
+          let imageContent = product.hasImage
+            ? `<img src="${product.image}" alt="${product.title}" style="width:100%; border-radius:6px; margin-bottom:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">`
+            : `<div style="width:100%; height:180px; background:linear-gradient(135deg, rgba(45,212,191,0.1), rgba(147,51,234,0.1)); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold; color:var(--text-pure); margin-bottom:15px; border:1px solid rgba(255,255,255,0.05);">🔥 Today’s Deals</div>`;
+          
+          widget.innerHTML = `
+            <a href="${product.link}" target="_blank" rel="nofollow sponsored" style="display:block;">
+              ${imageContent}
+            </a>
+            <p style="font-size:14px; margin-top:5px; line-height:1.4; color:var(--text-muted);">
+              <strong style="color:var(--text-pure); font-size:1.1rem; display:block; margin-bottom:5px;">${product.title}</strong>${product.desc}
+            </p>
+            <a href="${product.link}" target="_blank" rel="nofollow sponsored"
+               style="display:inline-block; margin-top:15px; padding:8px 20px; background:var(--brand-teal); color:#000; font-weight:800; border-radius:50px; text-decoration:none; text-transform:uppercase; font-size:0.8rem; letter-spacing:0.05em; transition:transform 0.3s ease;">
+              Explore Now
+            </a>
+          `;
+          widget.style.opacity = 1;
+        }, 300);
+      }
+
+      displayProduct(products[index]);
+
+      setInterval(function () {
+        index = (index + 1) % products.length;
+        displayProduct(products[index]);
+      }, 10000); // rotates every 10 seconds
+    }
   </script>
 
 </body>
