@@ -32,6 +32,7 @@
       --font-ui: 'Plus Jakarta Sans', sans-serif;
       --border-glass: 1px solid rgba(255, 255, 255, 0.08);
       --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,7 +46,7 @@
     .display-font { font-family: var(--font-display); }
 
     /* Background Setup */
-    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.95) 100%); }
+    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.98) 100%); }
     .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 60vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.06) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; }
     body::after { content: ""; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; mix-blend-mode: overlay; }
 
@@ -70,7 +71,7 @@
     .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
     @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
     .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); box-shadow: 0 0 10px rgba(255,255,255,0.8); transition: opacity 0.2s ease, transform 0.2s ease; }
-    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s; }
+    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); transition: width 0.3s var(--ease-premium), height 0.3s var(--ease-premium), background 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium); }
     .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
     .cursor-dot.hover-state { opacity: 0; transform: scale(0); }
 
@@ -78,8 +79,8 @@
     .content-section { padding-top: 4rem; padding-bottom: 2rem; }
     .content-section:first-of-type { padding-top: 10rem; }
     
-    h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-pure); }
-    h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 1.5rem; color: var(--text-pure); margin-top: 2rem; }
+    h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--text-pure); letter-spacing: -0.01em; }
+    h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1.5rem; color: var(--text-pure); margin-top: 2.5rem; letter-spacing: -0.01em; }
     h3 { font-size: 1.8rem; color: var(--text-pure); margin-top: 1.5rem; margin-bottom: 0.8rem;}
     
     p { margin-bottom: 1.5rem; font-size: 1.15rem; color: var(--text-muted); }
@@ -87,33 +88,35 @@
     
     .highlight { color: var(--text-pure); font-weight: 600; }
     
+    /* Premium Box / Recognition */
     .box {
-      background: var(--bg-glass-heavy);
+      background: linear-gradient(145deg, rgba(30, 30, 35, 0.6), rgba(15, 15, 20, 0.8));
       border: var(--border-glass);
       border-radius: 16px;
       padding: 2.5rem;
       margin: 2.5rem 0;
       text-align: center;
-      box-shadow: var(--shadow-bevel);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 15px 30px rgba(0,0,0,0.3);
     }
-    
     .box p { margin: 0; font-size: 1.25rem; line-height: 1.6; }
 
-    /* Polished Lists */
+    /* Polished Lists with perfect alignment */
     ul.clean-list { list-style: none; padding: 0; margin: 0 0 2rem 0; }
-    ul.clean-list li { margin-bottom: 1.2rem; font-size: 1.15rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; }
-    
+    ul.clean-list li { margin-bottom: 1.2rem; font-size: 1.15rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; line-height: 1.6; }
+    ul.clean-list li i { font-size: 0.45rem; color: var(--brand-teal); margin-top: 0.6rem; flex-shrink: 0; }
+
     .progress-hint {
       font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-teal);
       margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; opacity: 0.8;
     }
     .progress-hint span { color: var(--text-muted); font-size: 0.8rem; }
 
-    /* System Pipeline adapted for user content */
+    /* System Pipeline with Gradient Track */
     .system-pipeline { position: relative; margin: 2rem 0 3rem; }
     .system-pipeline::before { 
-      content: ''; position: absolute; top: 35px; bottom: 35px; left: 35px; width: 1px; 
-      background: rgba(255,255,255,0.1); z-index: 0; 
+      content: ''; position: absolute; top: 35px; bottom: 35px; left: 35px; width: 2px; 
+      background: linear-gradient(to bottom, rgba(45, 212, 191, 0.3), rgba(147, 51, 234, 0.3), rgba(253, 224, 71, 0.3)); 
+      z-index: 0; border-radius: 2px;
     }
     @media (max-width: 768px) { 
       .system-pipeline::before { left: 25px; top: 25px; bottom: 25px; } 
@@ -122,9 +125,14 @@
     .step-card {
       position: relative; z-index: 1; display: flex; gap: 2rem; margin-bottom: 2.5rem;
       background: var(--bg-glass-heavy); border: var(--border-glass); border-radius: 20px;
-      padding: 2rem; box-shadow: var(--shadow-bevel); transition: transform 0.4s ease, border-color 0.4s ease;
+      padding: 2rem; box-shadow: inset 0 1px 1px rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.2); 
+      transition: transform 0.4s var(--ease-premium), border-color 0.4s ease, box-shadow 0.4s ease;
     }
-    .step-card:hover { transform: translateY(-5px); border-color: rgba(45, 212, 191, 0.3); }
+    .step-card:hover { 
+      transform: translateY(-6px) scale(1.01); 
+      border-color: rgba(45, 212, 191, 0.3); 
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 20px 40px rgba(0,0,0,0.4);
+    }
 
     .step-indicator {
       width: 70px; height: 70px; border-radius: 50%; background: var(--bg-void); border: 1px solid rgba(45, 212, 191, 0.5);
@@ -145,23 +153,32 @@
     .article-link:hover { color: var(--brand-teal); }
     .article-link:hover i { transform: translateX(5px); }
 
+    .step-2:hover { border-color: rgba(147, 51, 234, 0.3); }
     .step-2 .step-indicator { border-color: rgba(147, 51, 234, 0.5); color: var(--brand-purple); box-shadow: inset 0 0 20px rgba(147, 51, 234, 0.1); }
     .step-2 .article-link { border-color: var(--brand-purple); }
     .step-2 .article-link i { color: var(--brand-purple); }
+    .step-2 .article-link:hover { color: var(--brand-purple); }
     
+    .step-3:hover { border-color: rgba(253, 224, 71, 0.3); }
     .step-3 .step-indicator { border-color: rgba(253, 224, 71, 0.5); color: var(--brand-gold); box-shadow: inset 0 0 20px rgba(253, 224, 71, 0.1); }
     .step-3 .article-link { border-color: var(--brand-gold); }
     .step-3 .article-link i { color: var(--brand-gold); }
+    .step-3 .article-link:hover { color: var(--brand-gold); }
 
     /* Loop Track UI */
     .loop-track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin: 3rem 0; text-align: left; }
-    .loop-item { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1.5rem 1rem; border: var(--border-glass); border-radius: 16px; background: rgba(0,0,0,0.4); text-align: center; }
+    .loop-item { 
+      display: flex; flex-direction: column; justify-content: center; align-items: center; 
+      padding: 1.5rem 1rem; border: var(--border-glass); border-radius: 16px; 
+      background: rgba(0,0,0,0.4); text-align: center; transition: background 0.3s ease;
+    }
+    .loop-item:hover { background: rgba(255,255,255,0.03); }
     .loop-item i { color: var(--brand-teal); font-size: 1rem; margin-bottom: 0.5rem; opacity: 0.5; }
     .loop-item strong { color: var(--text-pure); font-size: 0.95rem; font-weight: 600; }
     
     @media (max-width: 768px) {
       .loop-track { grid-template-columns: 1fr; gap: 0.8rem; }
-      .loop-item { flex-direction: row; gap: 1rem; padding: 1rem; justify-content: flex-start; }
+      .loop-item { flex-direction: row; gap: 1rem; padding: 1.2rem; justify-content: flex-start; }
       .loop-item i { margin-bottom: 0; transform: rotate(90deg); }
       .step-card { flex-direction: column; gap: 1.5rem; padding: 1.8rem; }
       .step-indicator { width: 50px; height: 50px; font-size: 1.2rem; }
@@ -169,16 +186,16 @@
 
     /* Final CTA Area */
     .cta-area {
-      text-align: center; padding: clamp(3rem, 6vw, 4rem) 2rem; border-radius: 24px;
+      text-align: center; padding: clamp(3rem, 6vw, 4.5rem) 2rem; border-radius: 24px;
       background: linear-gradient(180deg, var(--bg-glass-heavy) 0%, rgba(5,5,8,0.95) 100%);
-      border: var(--border-glass); margin: 5rem 0; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+      border: var(--border-glass); margin: 5rem 0; box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.5);
     }
     .cta-area h2 { margin-top: 0; font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 1rem; }
     
     .inline-form { display: flex; flex-direction: column; gap: 1rem; max-width: 450px; margin: 2rem auto 0; }
     .inline-form input { width: 100%; padding: 1.2rem 1.5rem; border-radius: 50px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15); color: var(--text-pure); outline: none; font-family: var(--font-ui); font-size: 1rem; text-align: center; transition: border-color 0.3s; }
     .inline-form input:focus { border-color: var(--brand-teal); }
-    .btn-massive { width: 100%; padding: 1.2rem 2rem; font-size: 1rem; background: var(--gradient-btn); color: #080804; font-weight: 900; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(253, 224, 71, 0.4); transition: all 0.4s ease; cursor: pointer; }
+    .btn-massive { width: 100%; padding: 1.2rem 2rem; font-size: 1rem; background: var(--gradient-btn); color: #080804; font-weight: 900; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(253, 224, 71, 0.4); transition: all 0.4s var(--ease-premium); cursor: pointer; }
     .btn-massive:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(45, 212, 191, 0.25); filter: brightness(1.1); }
 
     /* Back Link */
@@ -219,54 +236,46 @@
       
       <!-- HERO -->
       <section class="content-section">
-        <h1 class="display-font">Start here if you want to stop repeating the same patterns</h1>
-        <p class="highlight" style="font-size: 1.3rem; margin-bottom: 2rem; line-height: 1.6;">
-          You don’t need more motivation.<br>
-          <span style="color: var(--brand-teal);">You need to understand what’s driving your behavior — and change that.</span>
-        </p>
+        <h1 class="display-font">
+          You’re repeating a pattern.<br>
+          This is where you break it.
+        </h1>
 
-        <p>If things feel inconsistent…<br>if focus comes and goes…<br>if you keep starting over…</p>
-        <p>This is where you begin.</p>
+        <div style="margin-top:1.5rem; font-size:1.1rem; color:var(--text-muted);">
+          Follow this step by step.<br>
+          Don’t skip ahead.
+        </div>
       </section>
 
       <!-- RECOGNITION -->
       <section class="content-section" style="padding-top: 0;">
         <h2 class="display-font">This is what it usually looks like</h2>
         <ul class="clean-list">
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> You know what to do, but don’t follow through</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> You get distracted even when something matters</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> You rely on motivation, but it fades</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> You reset again… and again</li>
+          <li><i class="fas fa-circle"></i> You know what to do, but don’t follow through</li>
+          <li><i class="fas fa-circle"></i> You get distracted even when something matters</li>
+          <li><i class="fas fa-circle"></i> You rely on motivation, but it fades</li>
+          <li><i class="fas fa-circle"></i> You reset again… and again</li>
         </ul>
 
-        <div class="box">
+        <div class="box" style="margin-top: 3rem;">
           <p class="highlight">
-            This isn’t random.<br>
-            <span style="color: var(--brand-teal);">It’s a pattern.</span>
+            You already understand the problem.<br>
+            <span style="color: var(--brand-teal);">Now follow the process to change it.</span>
           </p>
         </div>
-      </section>
-
-      <!-- CORE SHIFT -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">You’re not stuck. You’re repeating something.</h2>
-        <p>Most people try to fix discipline, motivation, or habits.</p>
-        <p>But those are outcomes.</p>
-
-        <div class="box">
-          <p class="highlight">
-            Behavior is not the problem.<br>
-            It’s the result of something deeper.
-          </p>
-        </div>
-
-        <p>If you don’t change what’s underneath, you’ll keep returning to the same place.</p>
       </section>
 
       <!-- PATH -->
       <section class="content-section" style="padding-top: 0;">
         <h2 class="display-font">Follow this in order</h2>
         
+        <div class="box" style="margin-top: 0; margin-bottom: 3rem; padding: 2rem;">
+          <p class="highlight">
+            If you skip steps, nothing will change.<br><br>
+            <span style="color: var(--brand-teal);">Follow this in order.</span>
+          </p>
+        </div>
+
         <div class="progress-hint">
           Step 1 <span>&rarr;</span> Step 2 <span>&rarr;</span> Step 3 <span>&rarr;</span> Reset
         </div>
@@ -278,7 +287,7 @@
             <div class="step-content">
               <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-teal); margin-bottom: 0.5rem;">Identity</span>
               <h3>Why you stay the same</h3>
-              <p>(Even when you try not to)</p>
+              <p>Read this slowly.<br>Notice how it applies to you.</p>
               <a href="articles/why-you-stay-the-same.html" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -289,7 +298,7 @@
             <div class="step-content">
               <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-purple); margin-bottom: 0.5rem;">Focus</span>
               <h3>Why focus feels difficult</h3>
-              <p>(And how to fix it)</p>
+              <p>Read this slowly.<br>Notice how it applies to you.</p>
               <a href="articles/why-you-cant-focus.html" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -300,7 +309,7 @@
             <div class="step-content">
               <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-gold); margin-bottom: 0.5rem;">Action</span>
               <h3>Why motivation fails</h3>
-              <p>(And what works instead)</p>
+              <p>Read this slowly.<br>Notice how it applies to you.</p>
               <a href="articles/why-motivation-fails.html" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -313,6 +322,10 @@
       <section class="content-section" style="padding-top: 0;">
         <h2 class="display-font">This is the loop most people are stuck in</h2>
         
+        <p class="highlight" style="font-size: 1.25rem; margin-top: 1rem; margin-bottom: 2rem;">
+          Before you continue, recognize this in your own behavior:
+        </p>
+        
         <div class="loop-track">
           <div class="loop-item"><strong>Identity</strong></div>
           <div class="loop-item"><i class="fas fa-arrow-right"></i><strong>Behavior</strong></div>
@@ -320,34 +333,22 @@
           <div class="loop-item"><i class="fas fa-arrow-right"></i><strong>Reinforcement</strong></div>
           <div class="loop-item" style="border-color: var(--brand-purple);"><i class="fas fa-arrow-right" style="color:var(--brand-purple);"></i><strong>Self-Image</strong></div>
         </div>
-
-        <p>You act based on how you see yourself.<br>Your actions create results.<br>Those results reinforce your belief.<br>That belief drives your next action.</p>
-
-        <div class="box">
-          <p class="highlight">
-            This is why change doesn’t last.<br><br>
-            <span style="color: var(--brand-teal);">You interrupt behavior — but not the loop.</span>
-          </p>
-        </div>
       </section>
 
       <!-- HOW TO USE -->
       <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">How to use this properly</h2>
-        <p>This is not content to consume.</p>
-        <p class="highlight" style="font-size: 1.5rem; color: var(--brand-gold); margin-bottom: 2rem;">It’s something to apply.</p>
+        <h2 class="display-font">Use this properly</h2>
+        
+        <p class="highlight" style="font-size:1.4rem; color:var(--brand-gold); margin-bottom: 2rem;">
+          This only works if you apply it.
+        </p>
 
         <ul class="clean-list">
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> Read one article at a time</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> Notice your patterns</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> Apply small changes</li>
-          <li><i class="fas fa-circle" style="font-size: 0.4rem; color: var(--brand-teal); margin-top: 0.6rem;"></i> Repeat consistently</li>
+          <li><i class="fas fa-circle"></i> Read one step at a time</li>
+          <li><i class="fas fa-circle"></i> Pause and reflect</li>
+          <li><i class="fas fa-circle"></i> Apply immediately</li>
+          <li><i class="fas fa-circle"></i> Repeat consistently</li>
         </ul>
-
-        <p class="highlight" style="margin-top: 2rem;">
-          You don’t need more information.<br>
-          You need better application.
-        </p>
       </section>
 
       <!-- EXPECT -->
@@ -357,10 +358,10 @@
         <p>This is where you:</p>
         
         <ul class="clean-list">
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); margin-top: 0.3rem;"></i> Change your environment</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); margin-top: 0.3rem;"></i> Reduce distractions</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); margin-top: 0.3rem;"></i> Build structure</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); margin-top: 0.3rem;"></i> Take consistent action</li>
+          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Change your environment</li>
+          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Reduce distractions</li>
+          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Build structure</li>
+          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Take consistent action</li>
         </ul>
 
         <p class="highlight" style="margin-top: 2rem;">
@@ -372,15 +373,15 @@
       <!-- CTA -->
       <div class="cta-area">
         <h2 class="display-font">If you’re ready to approach things differently</h2>
-        <p class="highlight" style="font-size: 1.15rem; margin-bottom: 2rem;">
-          Change the way you approach things —<br>
-          and everything starts to feel easier to handle.
+        
+        <p style="margin-bottom:1.5rem; color:var(--text-muted); font-size: 1.1rem;">
+          This is what the reset is designed to help you change.
         </p>
 
         <form class="inline-form" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
           <label for="start-email" class="sr-only">Email address</label>
           <input type="email" id="start-email" name="fields[email]" placeholder="Enter your email" required>
-          <button type="submit" class="btn-massive">Start Your 30-Day Reset</button>
+          <button type="submit" class="btn-massive">Start the Reset &rarr;</button>
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
           <input type="hidden" name="redirect" value="https://abdullahk77.github.io/wow/thank-you.html">
