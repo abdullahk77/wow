@@ -278,6 +278,19 @@
     .trust-badge .dots { display: flex; }
     .trust-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-teal); margin-left: -4px; border: 2px solid var(--bg-void); }
 
+    /* ================= RECOGNITION SECTION ================= */
+    .recognition-section { margin-top: -1.5rem; margin-bottom: 3rem; position: relative; z-index: 15; }
+    .recognition-card {
+      background: var(--bg-glass); border: var(--border-glass); border-radius: 24px; 
+      padding: clamp(2.5rem, 5vw, 3.5rem); max-width: 650px; margin: 0 auto; 
+      box-shadow: var(--shadow-bevel); text-align: left;
+    }
+    .recognition-card h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--text-pure); margin-bottom: 1.5rem; text-align: center; }
+    .recognition-list { list-style: none; padding: 0; margin: 0 auto 2rem; max-width: 380px; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+    .recognition-list li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 12px; }
+    .recognition-list i { color: var(--brand-purple); font-size: 0.5rem; margin-top: 10px; }
+    .recognition-footer { text-align: center; font-weight: 700; color: var(--brand-teal); font-size: 1.2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; }
+
     /* ================= MANIFESTO ================= */
     .manifesto-section { padding-top: var(--space-md); padding-bottom: var(--space-xl); position: relative; z-index: 10; text-align: center; max-width: 900px; margin: 0 auto; }
     .manifesto-section h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 4rem); color: var(--text-pure); line-height: 1.2; font-weight: 400; }
@@ -549,9 +562,9 @@
     </div>
     
     <ul class="nav-links" id="nav-links-menu">
-      <li><a href="#pathways">Pathways</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
       <li><a href="#framework">Framework</a></li>
-      <li><a href="#plan">Plan</a></li>
+      <li><a href="#plan">30-Day Reset</a></li>
       <li><a href="#library">Library</a></li>
       <li class="mobile-only-link">
         <a href="#capture" class="nav-cta">Start Reset</a>
@@ -586,7 +599,7 @@
         </h1>
         
         <div class="hero-subtitle reveal delay-2">
-          <p style="color: var(--text-pure); font-weight: 600;">You don’t need more motivation.<br>You need to fix what keeps pulling you back.</p>
+          <p style="color: var(--text-pure); font-weight: 600;">You don’t need more motivation.<br>You need to understand what keeps pulling you back.</p>
           <p>You’ve tried to be consistent.<br>You’ve tried to focus.<br>You’ve tried to change.</p>
           <p>But somehow… you return to the same patterns.</p>
           <p style="color: var(--text-pure); font-weight: 600;">This isn’t a discipline problem.<br>It’s a pattern problem.</p>
@@ -600,12 +613,27 @@
         </div>
 
         <div class="hero-cta-wrap reveal delay-2">
-           <a href="#capture" class="btn-massive">Start the 30-Day Mind Reset &rarr;</a>
+           <a href="#capture" class="btn-massive">Start Your 30-Day Reset &rarr;</a>
            <div class="trust-badge">
               <div class="dots"><div class="dot"></div><div class="dot" style="background:var(--brand-purple);"></div><div class="dot" style="background:var(--brand-gold);"></div></div>
-              <span>Start building clarity, focus, and consistent action</span>
+              <span>Used by people working to build clarity, focus, and consistency</span>
            </div>
-           <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1.5rem; max-width: 450px; line-height: 1.6;">Used by professionals, creators, and deep thinkers who want clarity, focus, and control over their mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.5 RECOGNITION SECTION -->
+    <section class="container reveal delay-2" style="margin-top: -2rem; margin-bottom: 3rem; position: relative; z-index: 15;">
+      <div class="recognition-card">
+        <h3>If this feels familiar:</h3>
+        <ul class="recognition-list">
+          <li><i class="fas fa-circle"></i> You start things but don’t follow through</li>
+          <li><i class="fas fa-circle"></i> You can’t focus without distractions</li>
+          <li><i class="fas fa-circle"></i> You rely on motivation</li>
+          <li><i class="fas fa-circle"></i> You reset again and again</li>
+        </ul>
+        <div class="recognition-footer">
+          &rarr; You’re repeating a pattern.
         </div>
       </div>
     </section>
@@ -617,7 +645,7 @@
       <div class="manifesto-body">
         <p>You don’t repeat habits because you lack discipline.</p>
         <p>You repeat them because your brain prefers what is easy, familiar, and immediately rewarding.</p>
-        <p>That’s how your brain works.<br>And in today’s world, that tendency is constantly triggered.</p>
+        <p>That’s how we naturally operate.<br>And in today’s world, that tendency is constantly triggered.</p>
         <p>Your attention gets pulled in different directions.<br>Your focus becomes weaker.<br>Your intentions don’t turn into action.</p>
         <p>So you try again.<br>And again.</p>
         <p>But nothing sticks.</p>
@@ -641,14 +669,14 @@
           <div class="pathway-number">01</div>
           <span class="pathway-tag">Phase 01</span>
           <h3>Why You Stay the Same <span style="display:block; font-size:1rem; font-family:var(--font-ui); font-weight:400; color:var(--text-muted); margin-top:0.5rem;">(Even When You Try Not To)</span></h3>
-          <p>Every action reinforces who you believe you are. Until identity changes, behavior will always relapse.</p>
+          <p>Every action reinforces who you believe you are. Until identity shifts, behavior usually falls back.</p>
           <div class="pathway-grounding">If you keep saying “I’ll start tomorrow,” this is where the problem begins.</div>
         </article>
         <article class="pathway-card reveal delay-1">
           <div class="pathway-number">02</div>
           <span class="pathway-tag" style="color: var(--brand-purple);">Phase 02</span>
           <h3>Why You Can’t Focus <span style="display:block; font-size:1rem; font-family:var(--font-ui); font-weight:400; color:var(--text-muted); margin-top:0.5rem;">(And Why It Feels So Difficult)</span></h3>
-          <p>Your brain has adapted to constant stimulation. Deep work now feels unnatural — but it can be retrained.</p>
+          <p>Your brain has adapted to constant stimulation. Deep work now feels difficult — but it can come back.</p>
           <div class="pathway-grounding">If you can’t sit still for 10 minutes without checking your phone, this is your starting point.</div>
         </article>
         <article class="pathway-card reveal delay-2">
@@ -670,7 +698,7 @@
         </div>
       </div>
       <p class="reveal" style="color: var(--text-muted); font-size: 1.15rem; max-width: 700px; text-align: left; margin-bottom: 2rem;">It often feels like you’re making decisions. But many of your actions follow familiar patterns. Small actions create evidence over time. That evidence shapes how you see yourself. And that self-image influences what you do next.</p>
-      <p class="reveal delay-1" style="color: var(--text-pure); font-size: 1.15rem; font-weight: 600; max-width: 700px; text-align: left; margin-bottom: 3rem;">That’s why change often doesn’t last.<br><br>Because you're not changing the pattern. You're just interrupting it.<br><br>And interruptions don’t last.</p>
+      <p class="reveal delay-1" style="color: var(--text-pure); font-size: 1.15rem; font-weight: 600; max-width: 700px; text-align: left; margin-bottom: 3rem;">That’s why change often doesn’t stick.<br><br>Because you're not changing the pattern. You're just interrupting it.<br><br>And interruptions don’t last.</p>
       
       <!-- Animated Conceptual Infinity Loop SVG -->
       <div class="reveal delay-1" style="display: flex; justify-content: center; margin-bottom: 3rem;">
@@ -710,7 +738,7 @@
       <!-- MailerLite Integrated Form (Inline) -->
       <div class="inline-capture reveal">
         <div>
-          <h3>Break the loop. Don’t manage it.</h3>
+          <h3>Break the loop. Don’t just deal with it.</h3>
           <p>Get the 30-day approach designed to help you break and rebuild these patterns step by step.</p>
         </div>
         <form class="inline-form" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post" target="_blank">
@@ -782,38 +810,38 @@
       </div>
 
       <div class="masonry-grid">
-        <a href="#" class="glass-card card-half reveal">
+        <a href="articles/why-you-stay-the-same.html" class="glass-card card-half reveal">
           <div class="card-img">
             <span class="card-tag" style="background: var(--brand-purple);">Philosophy</span>
             <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&w=800&q=80" alt="Classical stoic architecture" loading="lazy" crossorigin="anonymous"/>
           </div>
           <div class="card-body">
             <div class="card-meta"><span>Meaning</span> &bull; <span>8 Min Read</span></div>
-            <h3 class="card-title">Understanding Your Emotions</h3>
+            <h3 class="card-title">Why You Stay the Same</h3>
             <p class="card-desc">Learn how to operate with emotion instead of reacting to it.</p>
           </div>
         </a>
 
-        <a href="#" class="glass-card card-half reveal delay-1">
+        <a href="articles/why-you-cant-focus.html" class="glass-card card-half reveal delay-1">
           <div class="card-img">
             <span class="card-tag" style="background: var(--brand-teal); color: #000;">Identity</span>
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Abstract cognitive distortion" loading="lazy" crossorigin="anonymous"/>
           </div>
           <div class="card-body">
             <div class="card-meta"><span>Subconscious</span> &bull; <span>6 Min Read</span></div>
-            <h3 class="card-title">The Identity Trap</h3>
+            <h3 class="card-title">Why You Can't Focus</h3>
             <p class="card-desc">Why change keeps collapsing — and how to break it.</p>
           </div>
         </a>
 
-        <a href="#" class="glass-card card-full reveal">
+        <a href="articles/why-motivation-fails.html" class="glass-card card-full reveal">
           <div class="card-img">
             <span class="card-tag" style="background: var(--brand-purple);">Focus / Biology</span>
             <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Neurological network" loading="lazy" crossorigin="anonymous"/>
           </div>
           <div class="card-body">
             <div class="card-meta"><span>Focus & Energy</span> &bull; <span>10 Min Read</span></div>
-            <h3 class="card-title">The Dopamine Trap</h3>
+            <h3 class="card-title">Why Motivation Fails</h3>
             <p class="card-desc">Why everything feels harder than it should — and how to reset your baseline.</p>
           </div>
         </a>
@@ -892,7 +920,7 @@
         <div style="text-align: left; display: inline-block; margin: 0 auto 3rem; font-size: 1.15rem; line-height: 1.8; color: var(--text-muted);">
           <p style="margin-bottom: 1rem;">If nothing changes, the next 30 days will look exactly like the last 30.</p>
           <p style="margin-bottom: 1rem;">Same intentions.<br>Same distractions.<br>Same unfinished goals.</p>
-          <p style="margin-bottom: 1rem;">Not because you failed.<br>Because your approach didn’t change.</p>
+          <p style="margin-bottom: 1rem;">Not because you failed.<br>Because the way you're approaching it didn’t change.</p>
           <p style="color: var(--text-pure); font-weight: 700; margin-bottom: 0;">Change the way you approach things —<br>and everything starts to feel easier to handle.</p>
         </div>
         
@@ -926,7 +954,7 @@
         <div class="footer-col">
           <h4>Pathways</h4>
           <ul>
-            <li><a href="#pathways">Start Here</a></li>
+            <li><a href="start-here.html">Start Here</a></li>
             <li><a href="#framework">Core Pattern</a></li>
             <li><a href="#plan">30-Day Reset Plan</a></li>
           </ul>
@@ -934,7 +962,7 @@
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#pathways">Start Here</a></li>
+            <li><a href="start-here.html">Start Here</a></li>
             <li><a href="#capture">30-Day Reset Plan</a></li>
             <li><a href="#framework">Identity Focus</a></li>
             <li><a href="#plan">Focus Methods</a></li>
