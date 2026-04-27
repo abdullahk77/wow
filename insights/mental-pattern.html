@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <title>The Mental Pattern | Words of Wisdom Insights</title>
+  <meta name="description" content="Understand the architecture of your habits. Learn why your brain repeats patterns and how to finally see them clearly."/>
+  
+  <!-- High-Performance Font Preloading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Elite Core Variables */
+    :root {
+      --bg-void: #020204;
+      --bg-glass: rgba(10, 10, 15, 0.4);
+      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
+      --brand-teal: #2DD4BF;
+      --brand-purple: #A855F7;
+      --brand-gold: #FDE047;
+      --gradient-dynamic: linear-gradient(to right, #A855F7 0%, #818CF8 33%, #2DD4BF 66%, #A855F7 100%);
+      --text-pure: #FFFFFF;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.55); 
+      --font-display: 'Cormorant Garamond', serif; 
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; height: 100%; }
+    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; transition: all 0.4s var(--ease-premium); }
+    
+    .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 180px 20px 100px; position: relative; }
+    .display-font { font-family: var(--font-display); }
+
+    /* Cinematic Background Setup */
+    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 20%, #0c0810 0%, #020204 100%); }
+    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(168, 85, 247, 0.05) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; pointer-events: none; }
+    body::after { content: ""; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; mix-blend-mode: overlay; }
+
+    /* Custom Cursor */
+    @media (pointer: fine) { body, a, button { cursor: none !important; } }
+    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
+    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
+    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(168, 85, 247, 0.3); transition: width 0.4s var(--ease-premium), height 0.4s var(--ease-premium), background 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium); }
+    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
+
+    /* Navigation Header */
+    .capsule-nav {
+      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
+      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 2rem;
+      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 20px 40px rgba(0,0,0,0.4); 
+    }
+    .brand-logo { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+    .wow-text { font-family: var(--font-script); font-weight: 400; font-size: 2.2rem; line-height: 1.2; background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: colorFlow 8s linear infinite; }
+    .logo-tagline { font-family: var(--font-ui); font-size: 0.55rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); margin-top: -0.3rem; }
+
+    @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+    /* Typography */
+    h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.5rem); margin-bottom: 2rem; color: var(--text-pure); line-height: 1.1; font-weight: 400; }
+    h2 { font-family: var(--font-display); font-size: 2.2rem; margin: 4.5rem 0 1.5rem; color: var(--text-pure); border-left: 3px solid var(--brand-purple); padding-left: 1.5rem; }
+    p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.2rem; }
+    .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.4rem; }
+    
+    ul { list-style: none; margin-bottom: 3.5rem; }
+    ul li { margin-bottom: 1.2rem; font-size: 1.2rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 1rem; }
+    ul li::before { content: "•"; color: var(--brand-purple); font-weight: 900; font-size: 1.5rem; line-height: 1; }
+
+    /* Boxes */
+    .box {
+      background: var(--bg-glass-heavy); border: var(--border-glass); border-radius: 24px;
+      padding: 3rem; margin: 4rem 0; box-shadow: var(--shadow-bevel); position: relative;
+    }
+    .box-bridge {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(10, 10, 15, 0.9));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      text-align: center;
+    }
+    .box-bridge a {
+      display: inline-block; margin-top: 2rem; padding: 1rem 2.5rem;
+      background: var(--text-pure); color: var(--bg-void); border-radius: 50px;
+      font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem;
+    }
+    .box-bridge a:hover { background: var(--brand-purple); color: var(--text-pure); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3); }
+
+    /* Meta Info */
+    .insight-tag {
+      display: inline-block; padding: 0.4rem 1rem; border-radius: 4px;
+      background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2);
+      color: var(--brand-purple); font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.2em; margin-bottom: 2.5rem;
+    }
+
+    /* Scroll Reveals */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 1s var(--ease-premium); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="elite-texture-base"></div>
+  <div class="light-beam"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="capsule-nav">
+    <div class="nav-top-bar">
+      <a href="../index.html" class="brand-logo">
+        <span class="wow-text">Words of Wisdom</span>
+        <span class="logo-tagline">Insights — Rewiring</span>
+      </a>
+    </div>
+    <div class="nav-actions">
+      <a href="../why-you-stay-the-same.html" class="nav-cta" style="padding: 0.6rem 1.4rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">&larr; Back to Identity</a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="reveal">
+      <span class="insight-tag">Rewiring</span>
+      <h1 class="display-font">The Mental Pattern</h1>
+
+      <p class="highlight">
+        You don’t think as freely as you believe.
+      </p>
+
+      <p>
+        Most of your thinking follows a pattern.
+      </p>
+
+      <p>
+        Not once.<br>
+        Not occasionally.<br>
+        But repeatedly.
+      </p>
+    </div>
+
+    <section class="reveal">
+      <h2>It usually feels like choice</h2>
+
+      <p>
+        You decide what to do.<br>
+        You react to situations.<br>
+        You form opinions.
+      </p>
+
+      <p>
+        It feels intentional.
+      </p>
+
+      <div class="box">
+        <p class="highlight">
+          But most of it is familiar — not new.
+        </p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>What’s actually happening</h2>
+
+      <p>
+        Your brain prefers what it already knows.
+      </p>
+
+      <p>
+        Familiar thoughts.<br>
+        Familiar reactions.<br>
+        Familiar conclusions.
+      </p>
+
+      <p class="highlight">
+        Because familiar feels safe.
+      </p>
+
+      <p>
+        Even when it keeps you stuck.
+      </p>
+
+      <div class="box">
+        <p class="highlight">
+          You don’t repeat your life by accident.<br><br>
+          You repeat what feels normal.
+        </p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>How the pattern forms</h2>
+
+      <p>
+        A thought appears.<br>
+        You respond to it.<br>
+        That response creates a result.
+      </p>
+
+      <p>
+        That result reinforces the thought.
+      </p>
+
+      <p>
+        And the cycle continues.
+      </p>
+
+      <p class="highlight" style="font-family: var(--font-display); font-size: 1.8rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+        Thought → Action → Result → Reinforcement
+      </p>
+
+      <p style="margin-top: 2rem;">
+        Over time,
+      </p>
+
+      <p class="highlight">
+        this becomes automatic.
+      </p>
+    </section>
+
+    <section class="reveal">
+      <h2>Why it’s hard to break</h2>
+
+      <p>
+        Because the pattern doesn’t feel like a pattern.
+      </p>
+
+      <p>
+        It feels like:
+      </p>
+
+      <ul>
+        <li>Your personality</li>
+        <li>Your preferences</li>
+        <li>Your way of thinking</li>
+      </ul>
+
+      <p class="highlight">
+        So you don’t question it.
+      </p>
+
+      <p>
+        You operate inside it.
+      </p>
+
+      <div class="box">
+        <p class="highlight">
+          And anything outside it feels uncomfortable — even if it’s better.
+        </p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>What most people try</h2>
+
+      <p>
+        They try to change behavior.
+      </p>
+
+      <p>
+        They try to force better habits.
+      </p>
+
+      <p>
+        They try to stay consistent.
+      </p>
+
+      <p class="highlight">
+        But the pattern underneath stays the same.
+      </p>
+
+      <p>
+        So the change doesn’t last.
+      </p>
+    </section>
+
+    <section class="reveal">
+      <h2>The shift</h2>
+
+      <p>
+        You don’t break a pattern by pushing harder.
+      </p>
+
+      <p class="highlight">
+        You break it by seeing it clearly.
+      </p>
+
+      <p>
+        Because once you notice it,
+      </p>
+
+      <p>
+        you create space between:
+      </p>
+
+      <ul>
+        <li>the thought</li>
+        <li>and your response</li>
+      </ul>
+
+      <p class="highlight">
+        And that’s where change becomes possible.
+      </p>
+
+      <div class="box">
+        <p class="highlight">
+          You are not your thoughts.<br><br>
+          You are the one repeating them.
+        </p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>But this leads to a deeper problem</h2>
+
+      <p>
+        Even when you see the pattern,
+      </p>
+
+      <p>
+        you still return to it.
+      </p>
+
+      <p>
+        Because the pattern is tied to how you see yourself.
+      </p>
+
+      <p class="highlight">
+        And that is what keeps it in place.
+      </p>
+
+      <!-- SYSTEM BRIDGE -->
+      <div class="box box-bridge">
+        <p class="highlight">
+          Until your identity changes,<br>
+          your patterns will keep rebuilding themselves.
+        </p>
+
+        <a href="../why-you-stay-the-same.html">→ Understand Identity</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Reveal Observer
+      const observerOptions = { threshold: 0.1 };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Custom Cursor
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+        let mouseX = 0; let mouseY = 0;
+        let outlineX = 0; let outlineY = 0;
+        
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`;
+        });
+
+        function animateCursor() {
+          outlineX += (mouseX - outlineX) * 0.15; outlineY += (mouseY - outlineY) * 0.15;
+          cursorOutline.style.left = `${outlineX}px`; cursorOutline.style.top = `${outlineY}px`;
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest('a, button, .box')) { cursorOutline.classList.add('hover-state'); }
+        });
+        document.body.addEventListener('mouseout', (e) => {
+          if (e.target.closest('a, button, .box')) { cursorOutline.classList.remove('hover-state'); }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
