@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <title>30-Day Mind Reset | Words of Wisdom</title>
+  <meta name="description" content="A structured 30-day psychological reset protocol. Rebuild your life through structure, not motivation."/>
+  
+  <!-- High-Performance Font Preloading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Reused Core Variables */
+    :root {
+      --bg-void: #020204;
+      --bg-glass: rgba(10, 10, 15, 0.4);
+      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
+      --brand-teal: #2DD4BF;
+      --brand-purple: #9333EA;
+      --brand-gold: #FDE047;
+      --gradient-dynamic: linear-gradient(to right, #2DD4BF 0%, #818CF8 25%, #9333EA 50%, #FDE047 75%, #2DD4BF 100%);
+      --gradient-buy: linear-gradient(135deg, #FDE047 0%, #F59E0B 100%);
+      --text-pure: #FFFFFF;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.55); 
+      --font-display: 'Cormorant Garamond', serif; 
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; height: 100%; }
+    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; transition: all 0.4s var(--ease-premium); }
+    
+    .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 180px 20px 100px; position: relative; }
+    .display-font { font-family: var(--font-display); }
+
+    /* Cinematic Background Setup */
+    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 20%, #08080c 0%, #020204 100%); }
+    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.05) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; pointer-events: none; }
+    body::after { 
+      content: ""; position: fixed; inset: 0; 
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"); 
+      pointer-events: none; z-index: 9999; mix-blend-mode: overlay; 
+    }
+
+    /* Custom Cursor */
+    @media (pointer: fine) { body, a, button { cursor: none !important; } }
+    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
+    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
+    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); transition: width 0.4s var(--ease-premium), height 0.4s var(--ease-premium), background 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium); }
+    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
+
+    /* Header Navigation */
+    .capsule-nav {
+      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
+      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 2rem;
+      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 20px 40px rgba(0,0,0,0.4); 
+    }
+    .brand-logo { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+    .wow-text { font-family: var(--font-script); font-weight: 400; font-size: 2.2rem; line-height: 1.2; background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: colorFlow 8s linear infinite; }
+    .logo-tagline { font-family: var(--font-ui); font-size: 0.55rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); margin-top: -0.3rem; }
+
+    /* Typography & Core Content Styling */
+    h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.8rem); margin-bottom: 25px; line-height: 1.05; color: var(--text-pure); letter-spacing: -0.02em; font-weight: 400; }
+    h2 { font-size: 2.4rem; margin-top: 100px; color: var(--text-pure); margin-bottom: 2rem; display: block; font-family: var(--font-display); font-weight: 500; }
+    h3 { font-size: 1.4rem; color: var(--brand-teal); margin-top: 2rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 800; }
+    
+    p { margin-bottom: 1.5rem; font-size: 1.35rem; color: var(--text-muted); line-height: 1.8; }
+    .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.4rem; }
+    
+    .quote {
+      margin: 60px 0; padding: 40px 50px; border-left: 2px solid var(--brand-teal);
+      font-size: 2rem; font-family: var(--font-display); font-style: italic; color: var(--text-pure);
+      background: linear-gradient(90deg, rgba(45, 212, 191, 0.05), transparent);
+      border-radius: 0 20px 20px 0;
+    }
+
+    .box {
+      background: var(--bg-glass-heavy); border: var(--border-glass); border-radius: 24px;
+      padding: 3rem; margin: 3rem 0; box-shadow: var(--shadow-bevel); position: relative;
+      overflow: hidden;
+    }
+
+    ul { list-style: none; margin: 2rem 0; }
+    ul li { margin-bottom: 1rem; font-size: 1.25rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; }
+    ul li::before { content: "•"; color: var(--brand-teal); font-weight: 900; font-size: 1.5rem; line-height: 1.2; }
+
+    /* Button Styling */
+    .btn {
+      display: inline-block; padding: 22px 60px; background: var(--gradient-buy); color: #000;
+      border-radius: 100px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em;
+      transition: all 0.5s var(--ease-premium); text-decoration: none; border: none; font-size: 1rem;
+      box-shadow: 0 10px 30px rgba(253, 204, 21, 0.2);
+    }
+    .btn:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 50px rgba(253, 204, 21, 0.4); filter: brightness(1.1); }
+
+    /* Scroll Animations */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.2s var(--ease-premium), transform 1.2s var(--ease-premium); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    .section { margin-top: 120px; }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 3.5rem; }
+      .container { padding-top: 140px; }
+      .quote { font-size: 1.6rem; padding: 30px; }
+      .box { padding: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="elite-texture-base"></div>
+  <div class="light-beam"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="capsule-nav">
+    <div class="nav-top-bar">
+      <a href="index.html" class="brand-logo">
+        <span class="wow-text">Words of Wisdom</span>
+        <span class="logo-tagline">Mind Reset Protocol</span>
+      </a>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-cta" style="padding: 0.6rem 1.4rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">&larr; Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- 1. HERO -->
+    <section class="reveal">
+      <h1 class="display-font">
+        Reset your mind.<br>
+        Rebuild your life — in 30 days.
+      </h1>
+
+      <p class="highlight" style="color: var(--brand-teal); font-size: 1.8rem;">
+        Not through motivation.<br>
+        Not through discipline.<br>
+        But through structure.
+      </p>
+
+      <p>
+        You are not stuck.<br>
+        You are repeating patterns you never consciously chose.
+      </p>
+
+      <div class="quote">
+        This is not a challenge.<br>
+        This is a reset protocol.
+      </div>
+
+      <a href="#buy" class="btn">Start the Reset →</a>
+    </section>
+
+    <!-- 2. PROBLEM -->
+    <section class="section reveal">
+      <h2>Why nothing seems to change</h2>
+      <p>You’ve tried before.</p>
+
+      <ul>
+        <li>New routines</li>
+        <li>Better plans</li>
+        <li>More effort</li>
+      </ul>
+
+      <p class="highlight" style="color: var(--brand-gold);">And for a while, it worked.</p>
+      <p>Then you slipped back.</p>
+
+      <div class="box">
+        <p class="highlight" style="font-size: 1.6rem;">
+          You don’t repeat because you’re weak.<br><br>
+          You repeat because your system never changed.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. REFRAME -->
+    <section class="section reveal">
+      <h2>This is the part most people miss</h2>
+      <p>Your thoughts are not random.</p>
+
+      <ul>
+        <li>They are conditioned</li>
+        <li>They are reinforced</li>
+        <li>They are repeated</li>
+      </ul>
+
+      <p class="highlight" style="font-size: 1.6rem; color: var(--brand-teal);">
+        And over time, they become your identity.
+      </p>
+    </section>
+
+    <!-- 4. PRODUCT -->
+    <section class="section reveal">
+      <h2>The 30-Day Mind Reset</h2>
+      <p class="highlight">A structured psychological reset system.</p>
+
+      <div class="box" style="background: rgba(147, 51, 234, 0.05); border-color: rgba(147, 51, 234, 0.2);">
+        <p style="font-family: var(--font-display); font-size: 1.8rem; color: var(--text-pure);">
+          Not a checklist.<br>
+          Not a routine.<br>
+          Not motivation.
+        </p>
+
+        <p class="highlight" style="margin-top: 2rem; color: var(--brand-purple);">
+          A complete rewiring process — from identity to action.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. VALUE -->
+    <section class="section reveal">
+      <h2>What this system does</h2>
+
+      <ul>
+        <li>Break unconscious patterns</li>
+        <li>Reset your attention</li>
+        <li>Rebuild your identity</li>
+        <li>Create systems that hold</li>
+      </ul>
+
+      <p class="highlight" style="color: var(--brand-teal);">Not temporarily — but permanently.</p>
+    </section>
+
+    <!-- 6. SYSTEM -->
+    <section class="section reveal">
+      <h2>The 4-Phase Reset</h2>
+
+      <h3>Week 1 — Deconstruction</h3>
+      <p>Break the patterns controlling your life.</p>
+
+      <h3>Week 2 — Reset</h3>
+      <p>Stabilize attention and mental clarity.</p>
+
+      <h3>Week 3 — Reconstruction</h3>
+      <p>Install a new identity.</p>
+
+      <h3>Week 4 — Execution</h3>
+      <p>Build systems that sustain change.</p>
+
+      <div class="box">
+        <p class="highlight">
+          Each phase builds on the last.<br>
+          Nothing is random.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. DAILY -->
+    <section class="section reveal">
+      <h2>What each day looks like</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 3rem 0;">
+        <div class="box" style="margin: 0; padding: 2rem; text-align: center;">
+          <h3 style="margin-top: 0;">Insight</h3>
+          <p style="font-size: 1rem;">Understand</p>
+        </div>
+        <div class="box" style="margin: 0; padding: 2rem; text-align: center;">
+          <h3 style="margin-top: 0;">Reframe</h3>
+          <p style="font-size: 1rem;">Shift Perspective</p>
+        </div>
+        <div class="box" style="margin: 0; padding: 2rem; text-align: center;">
+          <h3 style="margin-top: 0;">Action</h3>
+          <p style="font-size: 1rem;">Execute</p>
+        </div>
+        <div class="box" style="margin: 0; padding: 2rem; text-align: center;">
+          <h3 style="margin-top: 0;">Reflection</h3>
+          <p style="font-size: 1rem;">Internalize</p>
+        </div>
+      </div>
+
+      <p class="highlight" style="text-align: center;">
+        Simple structure. Deep transformation.
+      </p>
+    </section>
+
+    <!-- 8. DIFFERENTIATOR -->
+    <section class="section reveal">
+      <h2>This is not what you’re used to</h2>
+
+      <ul>
+        <li>No productivity hacks</li>
+        <li>No “wake early” routines</li>
+        <li>No motivation dependency</li>
+      </ul>
+
+      <p class="highlight" style="color: var(--brand-gold);">
+        This is a cognitive reset system.
+      </p>
+    </section>
+
+    <!-- 9. RESULT -->
+    <section class="section reveal">
+      <h2>What changes after 30 days</h2>
+
+      <ul>
+        <li>You see patterns clearly</li>
+        <li>You control your attention</li>
+        <li>You act without hesitation</li>
+        <li>You follow systems — not moods</li>
+      </ul>
+
+      <div class="quote" style="border-color: var(--brand-gold);">
+        You don’t become perfect.<br>
+        You become aligned.
+      </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="section reveal" id="buy" style="text-align: center;">
+      <h2 style="margin-top: 0;">Start the Reset</h2>
+
+      <p class="highlight" style="font-size: 1.8rem; margin-bottom: 3rem;">
+        This is not information.<br>
+        This is transformation.
+      </p>
+
+      <a href="#" class="btn">Get the 30-Day Reset →</a>
+
+      <p style="opacity:0.5; margin-top: 2rem; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;">Instant access. No waiting.</p>
+    </section>
+
+    <!-- FINAL -->
+    <section class="section reveal">
+      <h2>One decision</h2>
+
+      <p>
+        You can continue repeating the same patterns.
+      </p>
+
+      <p>
+        Or you can reset them.
+      </p>
+
+      <div class="box" style="border-color: var(--brand-teal);">
+        <p class="highlight" style="font-size: 1.6rem; color: var(--text-pure);">
+          This is not about starting over.<br><br>
+          It’s about starting correctly.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Reveal Observer
+      const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Custom Cursor
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+        let mouseX = 0; let mouseY = 0;
+        let outlineX = 0; let outlineY = 0;
+        
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`;
+        });
+
+        function animateCursor() {
+          outlineX += (mouseX - outlineX) * 0.15; outlineY += (mouseY - outlineY) * 0.15;
+          cursorOutline.style.left = `${outlineX}px`; cursorOutline.style.top = `${outlineY}px`;
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest('a, button, .box, .quote')) { cursorOutline.classList.add('hover-state'); }
+        });
+        document.body.addEventListener('mouseout', (e) => {
+          if (e.target.closest('a, button, .box, .quote')) { cursorOutline.classList.remove('hover-state'); }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
