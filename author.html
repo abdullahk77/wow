@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <title>Author | Words of Wisdom System</title>
+  <meta name="description" content="Meet Abdullah Khan, creator of the Words of Wisdom system. A structured approach to breaking patterns and building clarity."/>
+  
+  <!-- High-Performance Font Preloading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Elite Core Variables */
+    :root {
+      --bg-void: #020204;
+      --bg-glass: rgba(10, 10, 15, 0.4);
+      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
+      --brand-teal: #2DD4BF;
+      --brand-purple: #9333EA;
+      --brand-gold: #FDE047;
+      --gradient-dynamic: linear-gradient(to right, #2DD4BF 0%, #818CF8 25%, #9333EA 50%, #FDE047 75%, #2DD4BF 100%);
+      --text-pure: #FFFFFF;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.55); 
+      --font-display: 'Cormorant Garamond', serif; 
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; height: 100%; }
+    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; transition: all 0.4s var(--ease-premium); }
+    
+    .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 180px 20px 100px; position: relative; }
+    .display-font { font-family: var(--font-display); }
+
+    /* Cinematic Background Setup */
+    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 20%, #08080c 0%, #020204 100%); }
+    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.05) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; pointer-events: none; }
+    
+    body::after { 
+      content: ""; position: fixed; inset: 0; 
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"); 
+      pointer-events: none; z-index: 9999; mix-blend-mode: overlay; 
+    }
+
+    /* Custom Cursor */
+    @media (pointer: fine) { body, a, button { cursor: none !important; } }
+    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
+    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
+    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); transition: width 0.4s var(--ease-premium), height 0.4s var(--ease-premium), background 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium); }
+    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
+    .cursor-dot.hover-state { opacity: 0; transform: scale(0); }
+
+    /* Header Navigation */
+    .capsule-nav {
+      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
+      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 2rem;
+      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 20px 40px rgba(0,0,0,0.4); 
+      transition: all 0.6s var(--ease-premium);
+    }
+    .capsule-nav.scrolled { padding: 0.4rem 2rem; background: rgba(10, 10, 15, 0.85); transform: translateY(-5px); }
+    
+    .brand-logo { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-decoration: none; }
+    .wow-text { 
+      font-family: var(--font-script); font-weight: 400; font-size: 2.2rem; line-height: 1.2; 
+      background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-size: 200% auto; animation: colorFlow 8s linear infinite;
+      padding: 0.1em 0; 
+    }
+    .logo-tagline { font-family: var(--font-ui); font-size: 0.55rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); margin-top: -0.3rem; margin-left: 0.15rem; }
+    
+    .nav-cta { padding: 0.6rem 1.6rem; border-radius: 50px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text-pure); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.4s ease; }
+    .nav-cta:hover { background: var(--text-pure); color: var(--bg-void); border-color: var(--text-pure); }
+
+    @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+    /* Editorial Hero Architecture */
+    .author-manifesto-card {
+      display: grid; grid-template-columns: 1fr 300px; gap: 5rem; align-items: start;
+      margin-bottom: 6rem; position: relative;
+    }
+    
+    .portrait-sidebar { position: sticky; top: 140px; display: flex; flex-direction: column; align-items: center; }
+    
+    .parallax-img {
+      width: 280px; height: 280px; border-radius: 50%; overflow: hidden;
+      border: 1px solid rgba(45, 212, 191, 0.2);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      transform-style: preserve-3d;
+      transition: transform 0.1s linear;
+    }
+    .parallax-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); transition: filter 1s ease; }
+    .author-portrait:hover img { filter: grayscale(0%) contrast(1); }
+
+    /* Typography Polish */
+    h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.8rem); margin-bottom: 30px; line-height: 1.05; color: var(--text-pure); letter-spacing: -0.03em; font-weight: 400; }
+    h2 { font-size: 2.2rem; margin-top: 100px; color: var(--text-pure); margin-bottom: 2rem; display: block; font-family: var(--font-display); font-weight: 500; opacity: 0.9; }
+    
+    p { margin-bottom: 2.4rem; font-size: 1.35rem; color: var(--text-muted); line-height: 1.8; }
+    .lead-p { font-size: 1.8rem; color: var(--text-main); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 3.5rem; line-height: 1.4; border-left: 2px solid var(--brand-teal); padding-left: 2rem; }
+    .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.4rem; }
+    
+    .quote {
+      margin: 80px 0; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 2.4rem; font-family: var(--font-display); font-style: italic; color: var(--text-pure);
+      line-height: 1.3; position: relative;
+    }
+
+    /* Scroll Animations */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.2s var(--ease-premium), transform 1.2s var(--ease-premium); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* CTA Area */
+    .cta-area {
+      text-align: center; padding: 120px 20px; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .btn-massive {
+      display: inline-block; padding: 22px 60px; background: var(--text-pure); color: #000;
+      border-radius: 100px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em;
+      transition: all 0.5s var(--ease-premium); text-decoration: none; border: none; font-size: 1rem;
+      box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+    .btn-massive:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(45, 212, 191, 0.3); background: var(--brand-teal); }
+
+    .signature-wrap {
+      margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 50px; 
+      display: flex; justify-content: center; align-items: center;
+    }
+    .signature { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-pure); font-style: italic; text-align: center; }
+
+    @media (max-width: 900px) {
+      .author-manifesto-card { grid-template-columns: 1fr; gap: 4rem; }
+      .portrait-sidebar { position: relative; top: 0; order: -1; }
+      .parallax-img { width: 220px; height: 220px; }
+      h1 { font-size: 3rem; }
+      .container { padding-top: 160px; }
+      .quote { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="elite-texture-base"></div>
+  <div class="light-beam"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="capsule-nav" id="mainNav">
+    <div class="nav-top-bar">
+      <a href="index.html" class="brand-logo">
+        <span class="wow-text">Words of Wisdom</span>
+        <span class="logo-tagline">Enlightening Minds, Inspiring Souls.</span>
+      </a>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-cta">&larr; Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="author-manifesto-card">
+      <div class="card-content">
+        <h1 class="display-font reveal">
+          What if the way you think is the reason things don’t change?
+        </h1>
+        
+        <div class="lead-p reveal">
+          Not your effort.<br>
+          But the structure behind how you think.
+        </div>
+        
+        <p class="reveal">Because most people don’t struggle from a lack of trying.</p>
+
+        <p class="reveal">
+          They struggle because they keep approaching the same pattern<br>
+          in slightly different ways.
+        </p>
+
+        <p class="reveal" style="opacity:0.4;">
+          The pattern feels familiar.
+        </p>
+        
+        <div class="quote reveal">
+          And the question rarely changes.
+        </div>
+
+        <p class="highlight reveal">
+          “How do I stay consistent?”<br>
+          “How do I stay focused?”<br>
+          “Why does this keep happening?”
+        </p>
+
+        <p class="reveal" style="margin-top: 2rem;">
+          But those questions keep you inside the same loop.
+        </p>
+
+        <p class="highlight reveal">
+          A better question changes everything.
+        </p>
+
+        <p class="reveal">
+          Not how to try harder.<br>
+          But what is actually shaping the way you think, decide, and act?
+        </p>
+
+        <p class="reveal" style="opacity:0.6;">
+          That’s where this begins.
+        </p>
+      </div>
+
+      <div class="portrait-sidebar">
+        <div class="parallax-img author-portrait reveal">
+          <img src="https://i.ibb.co/0yTqLVMy/office.png" alt="Abdullah Khan" id="authorPortrait">
+        </div>
+        <p class="reveal" style="font-size: 0.7rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 800; margin-top: 1.5rem;">Originator of RightQ</p>
+      </div>
+    </section>
+
+    <!-- 2. EXPERIENCE -->
+    <section class="section">
+      <h2 class="reveal">Where this comes from</h2>
+      <p class="reveal">That question didn’t come from a single moment.</p>
+      <p class="reveal">
+        It came from noticing the same pattern —<br>
+        across roles, environments, and everyday decisions.
+      </p>
+
+      <p class="highlight reveal" style="font-size:1.8rem; line-height:1.4; margin-bottom: 3rem; max-width: 80%;">
+        Not a lack of knowledge.<br>
+        But a lack of structure in how people think.
+      </p>
+
+      <p class="reveal">The pattern is consistent:</p>
+
+      <p class="reveal" style="opacity:0.8; font-style:italic; border-left:3px solid var(--brand-teal); padding-left:2.5rem; font-size:1.5rem; margin-bottom: 3.5rem; color: var(--text-pure);">
+        Attention scattered.<br>
+        Decisions reactive.<br>
+        Action inconsistent.
+      </p>
+
+      <p class="reveal">
+        More effort doesn’t resolve it.<br>
+        Because effort is applied to the wrong layer.
+      </p>
+    </section>
+
+    <!-- 3. SHIFT -->
+    <section class="section">
+      <h2 class="reveal">What changed</h2>
+      <p class="reveal">At some point, it becomes clear:</p>
+      <p class="reveal">Trying harder is not the solution.</p>
+
+      <p class="reveal">
+        Because behavior is not the starting point.<br>
+        It’s the outcome.
+      </p>
+
+      <p class="reveal">What actually drives it is quieter:</p>
+
+      <p class="highlight reveal" style="margin-bottom: 2rem; color: var(--text-pure);">
+        What you notice.<br>
+        How you interpret it.<br>
+        What you repeat without realizing.
+      </p>
+
+      <p class="reveal">
+        And once that becomes visible,<br>
+        the approach shifts.
+      </p>
+
+      <p class="highlight reveal" style="color:var(--brand-teal); font-size:1.6rem;">
+        Not more effort.<br>
+        But clearer thinking — applied consistently.
+      </p>
+    </section>
+
+    <!-- 4. SYSTEM -->
+    <section class="section">
+      <h2 class="reveal">Why this platform exists</h2>
+      <p class="reveal">Words of Wisdom Media was built from that shift.</p>
+      
+      <p class="reveal">
+        Not to add more information.<br>
+        But to remove confusion.
+      </p>
+
+      <p class="highlight reveal">
+        Not to motivate.<br>
+        But to introduce structure.
+      </p>
+
+      <div class="quote reveal" style="text-align: center; border: none; background: rgba(255,255,255,0.02); border-radius: 20px; padding: 40px;">
+        Identity <span style="opacity: 0.3;">→</span> Focus <span style="opacity: 0.3;">→</span> Action <span style="opacity: 0.3;">→</span> Reset
+      </div>
+
+      <p class="reveal">Simple on the surface.</p>
+
+      <p class="reveal">But each step changes how the next one works.</p>
+
+      <p class="highlight reveal">Skip one, and nothing really changes.</p>
+    </section>
+
+    <!-- 5. AUTHOR + BOOK -->
+    <section class="section">
+      <h2 class="reveal">The work behind this</h2>
+      <p class="reveal">That same thinking extends further.</p>
+      <p class="reveal">Into something more deliberate.</p>
+
+      <p class="highlight reveal" style="color:var(--brand-gold); font-size:2.6rem; font-family:var(--font-display);">
+        <a href="book.html" style="color: inherit; border-bottom: 1px solid var(--brand-gold);">The Right Question</a>
+      </p>
+
+      <p class="reveal">Because over time, one idea becomes unavoidable:</p>
+
+      <div class="quote reveal">
+        The direction of your life changes the moment your questions change.
+      </div>
+
+      <p class="reveal">
+        Not intensity.<br>
+        Not motivation.<br>
+        But the clarity that precedes action.
+      </p>
+    </section>
+
+    <!-- 6. PHILOSOPHY -->
+    <section class="section">
+      <h2 class="reveal">How to approach this</h2>
+      <p class="reveal">There is no need to rush.</p>
+      <p class="reveal">The goal is not to consume more. It is to notice more.</p>
+
+      <p class="reveal">
+        Read slowly.<br>
+        Pause where something feels familiar.<br>
+        Apply one thing at a time.
+      </p>
+
+      <p class="highlight reveal" style="font-size:1.8rem; color:var(--text-pure);">
+        That’s how change happens.<br>
+        Quietly. Gradually. But in a way that lasts.
+      </p>
+    </section>
+
+    <!-- 7. CTA -->
+    <div class="cta-area reveal">
+      <p class="highlight reveal" style="font-size: 2rem; margin-bottom: 2rem;">If something here felt true, don’t ignore it.</p>
+      <a href="start-here.html" class="btn-massive reveal">Start with the system &rarr;</a>
+    </div>
+
+    <!-- 8. SIGNATURE -->
+    <div class="signature-wrap reveal">
+      <div class="signature reveal">
+        &mdash; Abdullah Khan
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. ELITE SCROLL OBSERVER
+      const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            // Apply a slight delay based on index if multiple reveal in one view
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, index * 100);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // 2. PARALLAX PORTRAIT & HEADER EFFECTS
+      const portrait = document.getElementById('authorPortrait');
+      const nav = document.getElementById('mainNav');
+
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        // Header styling on scroll
+        if (scrolled > 50) { nav.classList.add('scrolled'); } 
+        else { nav.classList.remove('scrolled'); }
+
+        // Parallax logic for portrait
+        if (portrait) {
+          const parentRect = portrait.parentElement.getBoundingClientRect();
+          if (parentRect.top < window.innerHeight && parentRect.bottom > 0) {
+            const movement = (window.innerHeight - parentRect.top) * 0.05;
+            portrait.style.transform = `translateY(${movement}px) scale(1.05)`;
+          }
+        }
+      });
+
+      // 3. CUSTOM CURSOR
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+        let mouseX = window.innerWidth / 2; let mouseY = window.innerHeight / 2;
+        let outlineX = mouseX; let outlineY = mouseY;
+        
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`;
+        });
+
+        function animateCursor() {
+          outlineX += (mouseX - outlineX) * 0.15;
+          outlineY += (mouseY - outlineY) * 0.15;
+          cursorOutline.style.left = `${outlineX}px`; cursorOutline.style.top = `${outlineY}px`;
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest('a, button, .quote, .author-portrait')) {
+            cursorOutline.classList.add('hover-state'); cursorDot.classList.add('hover-state');
+          }
+        });
+        document.body.addEventListener('mouseout', (e) => {
+          if (e.target.closest('a, button, .quote, .author-portrait')) {
+            cursorOutline.classList.remove('hover-state'); cursorDot.classList.remove('hover-state');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

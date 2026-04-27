@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  
+  <title>About | Words of Wisdom System</title>
+  <meta name="description" content="Not another motivation platform. A structured behavioral system designed for clarity, structure, and execution."/>
+  
+  <!-- High-Performance Font Preloading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Core Variables */
+    :root {
+      --bg-void: #020204;
+      --bg-glass: rgba(10, 10, 15, 0.65);
+      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
+      --brand-teal: #2DD4BF;
+      --brand-purple: #9333EA;
+      --brand-gold: #FDE047;
+      --gradient-text: linear-gradient(135deg, #2DD4BF, #818CF8);
+      --gradient-dynamic: linear-gradient(to right, #2DD4BF 0%, #818CF8 25%, #9333EA 50%, #FDE047 75%, #2DD4BF 100%);
+      --gradient-btn: linear-gradient(135deg, rgba(253, 224, 71, 0.95), rgba(45, 212, 191, 0.88));
+      --text-pure: #FFFFFF;
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.75); 
+      --font-display: 'Cormorant Garamond', serif; 
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; width: 100%; scroll-behavior: smooth; }
+    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; transition: all 0.3s ease; }
+    
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 max(5vw, 2rem); }
+    .narrative-container { max-width: 760px; margin: 0 auto; }
+    
+    .display-font { font-family: var(--font-display); }
+
+    /* Background Setup */
+    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.98) 100%); }
+    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 60vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.06) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; }
+    body::after { content: ""; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; mix-blend-mode: overlay; }
+
+    /* Navigation */
+    .capsule-nav {
+      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
+      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s ease; min-height: 64px;
+    }
+    .brand-logo { font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; gap: 10px; z-index: 2001; }
+    .wow-text { font-family: var(--font-ui); font-weight: 900; font-size: 1.6rem; background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: colorFlow 8s linear infinite;}
+    .mindset-text { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.7rem; color: var(--text-pure); }
+    .brand-icon { width: 8px; height: 8px; background: var(--brand-teal); border-radius: 50%; box-shadow: 0 0 10px var(--brand-teal); }
+    .nav-cta { padding: 0.7rem 1.6rem; border-radius: 50px; background: var(--text-pure); color: var(--bg-void); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; }
+    .nav-cta:hover { background: var(--brand-teal); color: var(--bg-void); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(45, 212, 191, 0.2); }
+
+    @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+    /* Custom Cursor */
+    @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
+    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
+    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); box-shadow: 0 0 10px rgba(255,255,255,0.8); transition: opacity 0.2s ease, transform 0.2s ease; }
+    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); transition: width 0.3s var(--ease-premium), height 0.3s var(--ease-premium), background 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium); }
+    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
+    .cursor-dot.hover-state { opacity: 0; transform: scale(0); }
+
+    /* Editorial Content Styling */
+    .content-section { padding-top: 4rem; padding-bottom: 2rem; }
+    .content-section:first-of-type { padding-top: 10rem; }
+    
+    h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--text-pure); letter-spacing: -0.01em; }
+    h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1.5rem; color: var(--text-pure); margin-top: 2.5rem; letter-spacing: -0.01em; }
+    
+    p { margin-bottom: 1.5rem; font-size: 1.15rem; color: var(--text-muted); }
+    p:last-child { margin-bottom: 0; }
+    
+    .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.25rem; }
+    
+    /* Box & Quotes */
+    .box {
+      background: linear-gradient(145deg, rgba(30, 30, 35, 0.6), rgba(15, 15, 20, 0.8));
+      border: var(--border-glass);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      color: var(--text-pure);
+      line-height: 1.3;
+      margin: 0;
+      font-style: italic;
+    }
+    .quote .accent { color: var(--brand-teal); display: block; margin-top: 0.5rem; }
+
+    /* Polished Lists */
+    ul.clean-list { list-style: none; padding: 0; margin: 0 0 2.5rem 0; }
+    ul.clean-list li { margin-bottom: 1.2rem; font-size: 1.15rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; line-height: 1.6; }
+    ul.clean-list li i { font-size: 0.6rem; color: var(--brand-teal); margin-top: 0.6rem; flex-shrink: 0; }
+    
+    ul.clean-list.cross li i { color: rgba(255,255,255,0.25); font-size: 0.8rem; margin-top: 0.4rem; }
+    ul.clean-list.dash li i { font-size: 0.8rem; color: var(--brand-gold); margin-top: 0.5rem; }
+
+    /* In-text links */
+    .article-link {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-pure);
+      border-bottom: 1px solid var(--brand-gold); padding-bottom: 2px; transition: color 0.3s;
+    }
+    .article-link:hover { color: var(--brand-gold); }
+
+    /* System Progression UI */
+    .progression-track {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.2rem); font-style: italic;
+      color: var(--text-pure);
+    }
+    .progression-track i { font-size: 1rem; color: var(--brand-purple); margin: 0 0.5rem; }
+
+    /* CTA Area */
+    .cta-area {
+      text-align: center; padding: clamp(3.5rem, 6vw, 5rem) 2rem; border-radius: 24px;
+      background: linear-gradient(180deg, var(--bg-glass-heavy) 0%, rgba(5,5,8,0.95) 100%);
+      border: var(--border-glass); margin: 5rem 0; box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.5);
+    }
+    .cta-area h2 { margin-top: 0; }
+    
+    .btn-massive { display: inline-block; padding: 1.2rem 3rem; font-size: 1rem; background: var(--gradient-btn); color: #080804; font-weight: 900; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(253, 224, 71, 0.4); transition: all 0.4s var(--ease-premium); cursor: pointer; margin-top: 1.5rem; }
+    .btn-massive:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(45, 212, 191, 0.25); filter: brightness(1.1); }
+
+    /* Back Link */
+    .back-link-wrapper { text-align: center; margin: 4rem 0 6rem; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s;
+    }
+    .back-link:hover { color: var(--brand-teal); }
+    .back-link i { transition: transform 0.3s; }
+    .back-link:hover i { transform: translateX(-5px); }
+  </style>
+</head>
+<body>
+
+  <!-- Backgrounds -->
+  <div class="elite-texture-base"></div>
+  <div class="light-beam"></div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="capsule-nav">
+    <div class="nav-top-bar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"></div>
+        <span class="wow-text">WOW</span><span class="mindset-text">Media</span>
+      </a>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-cta" style="background: transparent; border: 1px solid var(--text-pure); color: var(--text-pure);">&larr; Return Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="narrative-container">
+      
+      <!-- 1. HERO -->
+      <section class="content-section">
+        <h1 class="display-font">Not another motivation platform.</h1>
+
+        <p class="highlight" style="margin-top: 1.5rem;">
+          Most people don’t struggle because they lack information.
+        </p>
+        <p>
+          They struggle because their thinking is unstructured,<br>
+          their attention is scattered,<br>
+          and their actions are inconsistent.
+        </p>
+        <p class="highlight" style="color: var(--brand-teal); margin-top: 2rem;">
+          Words of Wisdom Media exists to solve that.
+        </p>
+      </section>
+
+      <!-- 2. CORE IDEA -->
+      <section class="content-section" style="padding-top: 0;">
+        <div class="box" style="padding: 3rem 2rem;">
+          <p class="quote">
+            You don’t need more information.<br>
+            <span class="accent">You need clarity, structure, and execution.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. WHAT THIS PLATFORM IS -->
+      <section class="content-section" style="padding-top:0;">
+        <h2 class="display-font">What This Platform Is</h2>
+        
+        <p>
+          This is not a collection of quotes.<br>
+          This is not a blog for temporary motivation.
+        </p>
+        
+        <p class="highlight" style="margin-top: 2rem; margin-bottom: 2rem; font-size: 1.4rem;">
+          This is a structured behavioral system.
+        </p>
+        
+        <p>Everything here is designed to help you:</p>
+        
+        <ul class="clean-list">
+          <li><i class="fas fa-circle"></i> Understand how your thinking actually works</li>
+          <li><i class="fas fa-circle"></i> Regain control over your focus</li>
+          <li><i class="fas fa-circle"></i> Take consistent, meaningful action</li>
+          <li><i class="fas fa-circle"></i> Reset when you fall off track</li>
+        </ul>
+      </section>
+
+      <!-- 4. SYSTEM -->
+      <section class="content-section" style="padding-top: 0;">
+        <h2 class="display-font">The System</h2>
+        
+        <p>At its core, everything here follows a simple progression:</p>
+        
+        <div class="box" style="border-color: rgba(147, 51, 234, 0.3); background: rgba(0,0,0,0.5);">
+          <div class="progression-track">
+            Identity <i class="fas fa-arrow-right"></i> 
+            Focus <i class="fas fa-arrow-right"></i> 
+            Action <i class="fas fa-arrow-right"></i> 
+            Reset
+          </div>
+        </div>
+        
+        <p>
+          Each step builds on the previous one.<br>
+          If you skip steps, nothing changes.
+        </p>
+      </section>
+
+      <!-- 5. WOW MINDSET -->
+      <section class="content-section" style="padding-top: 0;">
+        <h2 class="display-font">The WOW Mindset</h2>
+        
+        <p>
+          The system behind this platform is called the <span class="highlight" style="color: var(--brand-gold);">WOW Mindset</span>.
+        </p>
+        <p>
+          You’ll experience it across key pages like <a href="/start-here.html" class="article-link">/start-here.html</a>.
+        </p>
+        <p>
+          It is not theory.<br>
+          It is a practical framework for navigating distraction, inconsistency, and mental overload.
+        </p>
+        
+        <p class="highlight" style="margin-top: 2.5rem;">
+          Instead of chasing motivation, it helps you:
+        </p>
+        
+        <ul class="clean-list">
+          <li><i class="fas fa-check" style="color: var(--brand-teal);"></i> See clearly</li>
+          <li><i class="fas fa-check" style="color: var(--brand-teal);"></i> Think deliberately</li>
+          <li><i class="fas fa-check" style="color: var(--brand-teal);"></i> Act intentionally</li>
+        </ul>
+      </section>
+
+      <!-- 6. WHY THIS EXISTS -->
+      <section class="content-section" style="padding-top: 0;">
+        <h2 class="display-font">Why This Exists</h2>
+        
+        <p>Most self-improvement content fails for one reason:</p>
+        <p class="highlight" style="margin-bottom: 2rem;">It gives you ideas — but not structure.</p>
+        
+        <p>Without structure:</p>
+        <ul class="clean-list cross">
+          <li><i class="fas fa-times"></i> You feel motivated for a moment</li>
+          <li><i class="fas fa-times"></i> Then fall back into the same patterns</li>
+        </ul>
+
+        <div class="box" style="margin-top: 2.5rem; padding: 2rem;">
+          <p class="highlight" style="color: var(--brand-teal); font-size: 1.4rem;">
+            This platform was built to change that.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. WHAT YOU'LL EXPERIENCE -->
+      <section class="content-section" style="padding-top: 0;">
+        <h2 class="display-font">What You’ll Experience</h2>
+        
+        <p>If you follow the system as intended, you will:</p>
+        
+        <ul class="clean-list">
+          <li><i class="fas fa-circle" style="color: var(--brand-purple); font-size: 0.5rem;"></i> Recognize patterns you were previously blind to</li>
+          <li><i class="fas fa-circle" style="color: var(--brand-purple); font-size: 0.5rem;"></i> Understand why you lose focus</li>
+          <li><i class="fas fa-circle" style="color: var(--brand-purple); font-size: 0.5rem;"></i> Make clearer decisions</li>
+          <li><i class="fas fa-circle" style="color: var(--brand-purple); font-size: 0.5rem;"></i> Build momentum through small, consistent actions</li>
+        </ul>
+
+        <p class="highlight" style="margin-top: 2.5rem;">
+          This is not instant transformation.<br>
+          <span style="opacity: 0.8; font-weight: 400;">This is controlled, repeatable progress.</span>
+        </p>
+      </section>
+
+      <!-- 8. CONTENT PHILOSOPHY -->
+      <section class="content-section" style="padding-top: 0;">
+        <h2 class="display-font">A Note on Content</h2>
+        
+        <p>Everything published here is intentional.</p>
+        
+        <ul class="clean-list dash">
+          <li><i class="fas fa-minus"></i> No noise</li>
+          <li><i class="fas fa-minus"></i> No filler</li>
+          <li><i class="fas fa-minus"></i> No recycled motivation</li>
+        </ul>
+
+        <p class="highlight" style="color: var(--brand-gold); margin-top: 2rem;">
+          Only structured content that serves a purpose.
+        </p>
+      </section>
+
+      <!-- 9 & 10. FINAL CLOSE & CTA -->
+      <div class="cta-area">
+        <h2 class="display-font">Final Thought</h2>
+        
+        <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">
+          You don’t need more information.
+        </p>
+        
+        <div class="box" style="margin: 0 auto 3rem; max-width: 550px; background: rgba(0,0,0,0.3); border-color: rgba(45, 212, 191, 0.3); padding: 1.8rem;">
+          <div class="progression-track" style="font-size: clamp(1.5rem, 3vw, 2rem);">
+            Clarity <i class="fas fa-arrow-right" style="color: var(--brand-teal);"></i> 
+            Structure <i class="fas fa-arrow-right" style="color: var(--brand-teal);"></i> 
+            Execution
+          </div>
+        </div>
+
+        <p class="highlight" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Start where the system begins.</p>
+        <a href="/start-here.html" class="btn-massive">Go to Start Here &rarr;</a>
+      </div>
+
+      <!-- BACK LINK -->
+      <div class="back-link-wrapper">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Elite Custom Cursor (Smooth Follow)
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let outlineX = mouseX;
+        let outlineY = mouseY;
+        
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursorDot.style.left = `${mouseX}px`;
+          cursorDot.style.top = `${mouseY}px`;
+        });
+
+        function animateCursor() {
+          let distX = mouseX - outlineX;
+          let distY = mouseY - outlineY;
+          
+          outlineX += distX * 0.15;
+          outlineY += distY * 0.15;
+          
+          cursorOutline.style.left = `${outlineX}px`;
+          cursorOutline.style.top = `${outlineY}px`;
+          
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest('a, button, .box')) {
+            cursorOutline.classList.add('hover-state');
+            cursorDot.classList.add('hover-state');
+          }
+        });
+        document.body.addEventListener('mouseout', (e) => {
+          if (e.target.closest('a, button, .box')) {
+            cursorOutline.classList.remove('hover-state');
+            cursorDot.classList.remove('hover-state');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
