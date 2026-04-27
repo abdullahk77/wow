@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
   
   <title>Words of Wisdom | You're In</title>
+  <meta name="description" content="You're in. Start your reset and take the first step toward clarity, focus, and consistent action."/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -44,7 +45,7 @@
       padding: 4rem 1rem;
     }
 
-    /* Background Enhancements */
+    /* Cinematic Background System */
     .elite-texture-base {
       position: fixed; inset: 0; z-index: -2; pointer-events: none;
       background: radial-gradient(circle at 50% 20%, transparent 10%, rgba(2, 2, 4, 0.98) 100%);
@@ -64,7 +65,7 @@
       mix-blend-mode: overlay;
     }
 
-    /* Content Area */
+    /* Content Architecture */
     .thank-you-container {
       background: rgba(12, 12, 16, 0.7);
       backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
@@ -80,27 +81,59 @@
       margin: auto;
     }
 
+    /* Cognitive Pacing (Staggered Animation) */
+    .thank-you-container > * {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: reveal 0.6s ease forwards;
+    }
+
+    .thank-you-container > *:nth-child(1) { animation-delay: 0.1s; }
+    .thank-you-container > *:nth-child(2) { animation-delay: 0.2s; }
+    .thank-you-container > *:nth-child(3) { animation-delay: 0.3s; }
+    .thank-you-container > *:nth-child(4) { animation-delay: 0.4s; }
+    .thank-you-container > *:nth-child(5) { animation-delay: 0.5s; }
+    .thank-you-container > *:nth-child(6) { animation-delay: 0.6s; }
+    .thank-you-container > *:nth-child(7) { animation-delay: 0.7s; }
+    .thank-you-container > *:nth-child(8) { animation-delay: 0.8s; }
+    .thank-you-container > *:nth-child(9) { animation-delay: 0.9s; }
+    .thank-you-container > *:nth-child(10) { animation-delay: 1.0s; }
+    .thank-you-container > *:nth-child(11) { animation-delay: 1.1s; }
+    .thank-you-container > *:nth-child(12) { animation-delay: 1.2s; }
+
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Icon Momentum */
     .icon-wrap {
-      width: 64px; height: 64px;
+      width: 70px; height: 70px;
       background: rgba(45, 212, 191, 0.1);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 2rem;
       border: 1px solid rgba(45, 212, 191, 0.3);
       color: var(--brand-teal);
-      font-size: 1.5rem;
-      box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+      font-size: 1.6rem;
+      animation: pulseGlow 2.5s infinite ease-in-out;
     }
 
-    h1, h2 { font-family: var(--font-display); color: var(--text-pure); font-weight: 400; line-height: 1.15; }
-    h1 { font-size: clamp(2.8rem, 6vw, 3.8rem); margin-bottom: 0.5rem; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.2rem); margin-top: 3rem; margin-bottom: 1.5rem; }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(45, 212, 191, 0.2); }
+      50% { box-shadow: 0 0 35px rgba(45, 212, 191, 0.4); }
+    }
+
+    /* Typography Hierarchy */
+    h1 { font-family: var(--font-display); color: var(--text-pure); font-weight: 400; line-height: 1.15; font-size: clamp(2.8rem, 6vw, 3.8rem); margin-bottom: 0.5rem; }
     h1 i { color: var(--brand-teal); font-style: italic; }
 
-    p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.4rem; line-height: 1.7; }
     
     .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.25rem; }
+    .trigger { margin-top: 2rem; font-size: 1.3rem; font-weight: 600; color: var(--text-pure); }
+    .closing { margin-top: 3rem; font-size: 1.3rem; font-weight: 600; color: var(--brand-gold); line-height: 1.5; }
 
+    /* Action Container */
     .box {
       background: linear-gradient(145deg, rgba(30, 30, 35, 0.4), rgba(15, 15, 20, 0.6));
       border: var(--border-glass);
@@ -110,42 +143,29 @@
       box-shadow: var(--shadow-bevel);
       text-align: center;
     }
-    .box p { margin-bottom: 1rem; }
-    .box p:last-of-type { margin-bottom: 0; }
+    .box p { margin-bottom: 0.5rem; }
 
-    .clean-list {
-      text-align: left;
-      list-style: none;
-      padding: 0;
-      max-width: 380px;
-      margin: 0 auto 2rem;
-    }
-    .clean-list li {
-      margin-bottom: 1rem;
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-    }
-    .clean-list li i {
-      color: var(--brand-teal);
-      font-size: 1rem;
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
+    .step { margin-top: 1rem; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-teal); opacity: 0.8; font-weight: 800; }
 
+    .clean-list { text-align: left; list-style: none; padding: 0; max-width: 380px; margin: 0 auto 2rem; }
+    .clean-list li { margin-bottom: 1rem; font-size: 1.15rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; }
+    .clean-list li i { color: var(--brand-teal); font-size: 1rem; margin-top: 6px; flex-shrink: 0; }
+
+    /* Interaction State */
     .cta-button {
-      display: inline-block; padding: 1.1rem 2.5rem; border-radius: 50px; background: var(--text-pure); color: var(--bg-void); font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; text-decoration: none; border: none; margin-top: 1.5rem;
+      display: inline-block; padding: 1.2rem 2.8rem; border-radius: 50px; background: var(--text-pure); color: var(--bg-void); font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; text-decoration: none; border: none; margin-top: 1rem;
     }
+    
     .cta-button:hover {
-      background: var(--brand-teal); color: var(--bg-void); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(45, 212, 191, 0.25);
+      background: var(--brand-teal); color: var(--bg-void); 
+      transform: translateY(-3px) scale(1.02); 
+      box-shadow: 0 10px 25px rgba(45, 212, 191, 0.25);
     }
 
-    .text-link {
-      display: inline-flex; align-items: center; gap: 8px; color: var(--brand-teal); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; transition: color 0.3s ease; text-decoration: none;
+    .soft-link {
+      margin-top: 3rem; display: block; font-size: 0.8rem; opacity: 0.5; text-decoration: none; color: var(--brand-teal); text-transform: uppercase; letter-spacing: 0.1em; transition: opacity 0.3s ease;
     }
-    .text-link:hover { color: var(--text-pure); }
+    .soft-link:hover { opacity: 1; color: var(--text-pure); }
 
     @keyframes floatUp {
       0% { opacity: 0; transform: translateY(30px); }
@@ -165,53 +185,45 @@
       <i class="fa-solid fa-check"></i>
     </div>
     
-    <!-- 1. CONFIRMATION -->
+    <!-- CONFIRMATION -->
     <h1>You’re <i>in.</i></h1>
-    <p class="highlight" style="margin-bottom: 2.5rem;">Your reset has started.</p>
+    <p class="highlight">Your reset has started.</p>
     
-    <!-- 2. REASSURANCE -->
-    <p>You don’t need to do everything at once.</p>
-    <p>You just need to follow the process — step by step.</p>
+    <!-- IDENTITY SHIFT -->
+    <p style="margin-bottom: 0;">Most people stay stuck in the same loop.</p>
+    <p>You chose to interrupt it.</p>
 
-    <!-- 3. IMMEDIATE ACTION -->
+    <!-- ACTION TRIGGER -->
+    <p class="trigger">
+      Continue now while this is clear.
+    </p>
+
+    <!-- PRIMARY ACTION -->
     <div class="box">
-      <p class="highlight">Start here:</p>
-      <p>Go back and read the first step again — slowly.</p>
-      <a href="articles/why-you-stay-the-same.html" class="cta-button">Revisit Step 1 &rarr;</a>
+      <p style="font-size: 1.1rem; color: var(--text-muted);">Start simple. But start now.</p>
+      <a href="/identity.html" class="cta-button">Start Step 1 &rarr;</a>
+      <div class="step">Step 1 of 3</div>
     </div>
 
-    <!-- 4. EXPECTATION SETTING -->
-    <h2>What happens next</h2>
-    <p style="margin-bottom: 2rem;">You’ll receive simple guidance to help you:</p>
-    
+    <!-- EXPECTATION -->
+    <p>You’ll receive guidance to help you:</p>
     <ul class="clean-list">
       <li><i class="fa-solid fa-check"></i> <span>Understand your patterns</span></li>
       <li><i class="fa-solid fa-check"></i> <span>Reduce distractions</span></li>
       <li><i class="fa-solid fa-check"></i> <span>Take consistent action</span></li>
     </ul>
 
-    <!-- 5. IDENTITY REINFORCEMENT -->
-    <div class="box" style="padding: 2rem; background: rgba(0,0,0,0.3);">
-      <p class="highlight">
-        Most people stay where they are.<br><br>
-        You chose to approach this differently.
-      </p>
-    </div>
-
-    <!-- 6. REMOVE PRESSURE -->
-    <p style="margin-top: 3rem;">Move at your own pace.</p>
-    <p class="highlight" style="color: var(--brand-gold);">Consistency matters more than intensity.</p>
-
-    <!-- 7. OPTIONAL SECONDARY PATH -->
-    <p style="margin-top: 3rem; font-size: 1rem;">If you want something lighter while you think:</p>
-    <a href="https://quotes-app.wordsofwisdom.in/" target="_blank" class="text-link">Explore Quotes &rarr;</a>
-
-    <!-- 8. CLOSE WITH DIRECTION -->
-    <p class="highlight" style="margin-top: 4rem; opacity: 0.9; line-height: 1.4;">
-      Start simple.<br>
+    <!-- FINAL CLOSE -->
+    <p class="closing">
+      Don’t rush.<br>
       Stay consistent.<br>
-      Let the system do the work.
+      Let the system work.
     </p>
+
+    <!-- OPTIONAL -->
+    <a href="https://quotes-app.wordsofwisdom.in/" target="_blank" class="soft-link">
+      Explore Quotes &rarr;
+    </a>
 
   </main>
 
