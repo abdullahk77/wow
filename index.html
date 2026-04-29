@@ -4,41 +4,25 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
   
-  <!-- SEO & Meta -->
   <title>Words of Wisdom | Build Focus, Clarity & Consistent Action</title>
   <meta name="description" content="Break unhelpful patterns, improve focus, and build consistent action — without relying on motivation."/>
   <link rel="canonical" href="https://www.wordsofwisdom.in/">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 
-  <!-- Open Graph (Social SEO) -->
   <meta property="og:title" content="Words of Wisdom">
   <meta property="og:description" content="Build focus, clarity, and consistent action without relying on motivation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.wordsofwisdom.in/">
   <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80">
-  
-  <!-- Structured Data (AEO & Rich Snippets) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Words of Wisdom",
-    "url": "https://www.wordsofwisdom.in/",
-    "description": "Build focus, clarity, and consistent action by breaking unhelpful mental patterns.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.wordsofwisdom.in/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 
-  <!-- High-Performance Font Preloading -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   
-  <!-- Minimalist Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
   <style>
@@ -129,7 +113,6 @@
       z-index: 0; pointer-events: none; mix-blend-mode: screen;
     }
 
-    /* High-End Tactile Film Grain Overlay */
     body::after {
       content: ""; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
@@ -150,7 +133,7 @@
       z-index: 10001; width: 0%; pointer-events: none;
     }
 
-    /* ================= ANIMATIONS (SCROLL REVEAL) ================= */
+    /* ================= ANIMATIONS ================= */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s var(--ease-cinematic), transform 1s var(--ease-cinematic); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
     .delay-1 { transition-delay: 0.1s; }
@@ -178,7 +161,6 @@
     
     .nav-top-bar { display: flex; justify-content: space-between; align-items: center; width: auto; }
     
-    /* Brand Logo / Typography Styling */
     .brand-logo { 
       display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
       z-index: 2001; cursor: pointer; transition: opacity 0.3s ease; text-decoration: none; 
@@ -268,7 +250,6 @@
       padding-right: 0.15em; padding-bottom: 0.15em; display: inline-block;
     }
 
-    /* ELITE HOOK SYSTEM FADE-IN STYLES */
     #hero-line-1,
     #hero-line-2,
     #hero-pause {
@@ -334,7 +315,7 @@
     .manifesto-body p { margin-bottom: 1.5rem; }
     .manifesto-body p:last-child { margin-bottom: 0; }
 
-    /* ================= 4. THE FRAMEWORK (THE AHA MOMENT) ================= */
+    /* ================= 4. THE FRAMEWORK ================= */
     .framework-section { padding-top: var(--space-md); padding-bottom: var(--space-xl); position: relative; z-index: 10; text-align: center; }
     
     .loop-track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.5rem; margin: 4rem 0; text-align: left; }
@@ -345,7 +326,7 @@
     .loop-item span { color: var(--brand-teal); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;}
     .loop-item strong { color: var(--text-pure); font-family: var(--font-display); font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 600; }
 
-    /* ================= 5. START HERE (Sequential Journey) ================= */
+    /* ================= 5. START HERE ================= */
     .pathway-section { padding-top: var(--space-md); padding-bottom: var(--space-lg); position: relative; z-index: 10; }
     
     .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-md); border-bottom: var(--border-glass); padding-bottom: 1.5rem; }
@@ -492,32 +473,6 @@
     }
     .final-cta h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; font-family: var(--font-display); line-height: 1.1; }
 
-    /* ================= AI REFRAME WIDGET ================= */
-    .ai-reframe-widget {
-      padding-top: var(--space-md); padding-bottom: var(--space-md); position: relative; z-index: 10;
-    }
-    .reframe-textarea {
-      width: 100%; background: rgba(2, 2, 4, 0.6); border: 1px solid rgba(255,255,255,0.12);
-      color: var(--text-pure); padding: 1.5rem; border-radius: 16px; font-family: var(--font-ui);
-      font-size: 1.1rem; resize: vertical; min-height: 120px; outline: none; margin-bottom: 1.5rem;
-      transition: all 0.4s var(--ease-cinematic);
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
-    }
-    .reframe-textarea::placeholder { color: rgba(255,255,255,0.3); transition: color 0.3s; }
-    .reframe-textarea:focus {
-      border-color: rgba(147, 51, 234, 0.5);
-      background: rgba(10, 10, 15, 0.9);
-      box-shadow: 0 0 25px rgba(147, 51, 234, 0.15), inset 0 2px 4px rgba(0,0,0,0.5);
-      transform: translateY(-2px);
-    }
-    .reframe-textarea:focus::placeholder { color: transparent; }
-    .reframe-result {
-      display: none; margin-top: 2rem; padding: 2rem; background: rgba(45, 212, 191, 0.05);
-      border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 16px; text-align: left;
-      animation: fadeIn 0.5s ease;
-    }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
     /* ================= HIGH-END FOOTER ================= */
     .site-footer { 
       border-top: var(--border-glass); 
@@ -554,6 +509,23 @@
     }
     .footer-bottom { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2rem; padding-top: 3rem; border-top: var(--border-glass); color: var(--text-muted); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700;}
 
+    /* Back To Top Button (Fixed Icon) */
+    .back-to-top { 
+      position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+      width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;
+      background: var(--bg-glass-heavy); backdrop-filter: blur(10px);
+      border: 1px solid rgba(253, 224, 71, 0.3); border-radius: 50%;
+      color: var(--brand-gold); font-size: 1.2rem; text-decoration: none;
+      opacity: 0; visibility: hidden; transform: translateY(20px);
+      transition: all 0.4s var(--ease-cinematic); box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { 
+      background: rgba(253, 224, 71, 0.15); color: var(--text-pure); 
+      border-color: var(--brand-gold); transform: translateY(-5px); 
+      box-shadow: 0 10px 25px rgba(253, 224, 71, 0.2); 
+    }
+
     /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
       .featured { grid-template-columns: 1fr; }
@@ -586,6 +558,12 @@
       .inline-form input { max-width: 100%;}
     }
     
+    @media (max-width: 768px) {
+      .card-full { grid-template-columns: 1fr; }
+      .card-full .card-img { min-height: 280px; }
+      .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.1rem; }
+    }
+
     @media (max-width: 600px) {
       .hero { padding-top: 10rem; }
       .hero-benefits { flex-direction: column; gap: 1rem; align-items: center;}
@@ -593,34 +571,30 @@
       .footer-brand { grid-column: span 1; }
       .stat-grid { flex-direction: column; gap: 1.5rem; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      .container { padding: 0 1.5rem !important; }
+      /* Fixed Mobile Section Spacing Issue */
+      .container { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
   <div class="scroll-progress"></div>
 
-  <!-- Elite Custom Cursor -->
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
 
-  <!-- Deep Cinematic Background Layers -->
   <div class="elite-texture-base"></div>
   <div class="light-beam"></div>
 
-  <!-- Ambient Cinematic Background -->
   <div class="ambient-mesh">
     <div class="orb orb-teal" id="orb-1"></div>
     <div class="orb orb-purple" id="orb-2"></div>
     <div class="orb orb-blue" id="orb-3"></div>
   </div>
 
-  <!-- Floating Nav -->
   <header class="capsule-nav" id="master-nav">
     <div class="nav-top-bar">
-      <!-- Integrated Logomark -->
       <a href="#hero" class="brand-logo">
         <span class="wow-text">Words of Wisdom</span>
         <span class="logo-tagline">Enlightening Minds, Inspiring Souls.</span>
@@ -633,9 +607,9 @@
     
     <ul class="nav-links" id="nav-links-menu">
       <li><a href="/start-here.html">Start Here</a></li>
-      <li><a href="#framework">Framework</a></li>
-      <li><a href="#plan">30-Day Reset</a></li>
-      <li><a href="#library">Library</a></li>
+      <li><a href="/book.html">The Book</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
       <li class="mobile-only-link">
         <a href="/start-here.html" class="nav-cta">Start the Reset</a>
       </li>
@@ -647,7 +621,6 @@
   </header>
 
   <main>
-    <!-- 1. HERO (Conversion Spine) -->
     <section id="hero" class="hero container">
       <div class="hero-content">
         <div class="entity-tag reveal delay-1">
@@ -676,7 +649,6 @@
           <p style="color: var(--text-pure); font-weight: 600;">To break the cycle, you have to change the underlying script.</p>
         </div>
 
-        <!-- Outcome Clarity / Benefits -->
         <div class="hero-benefits reveal delay-2">
           <span><i class="fas fa-check"></i> Reset your mental baseline in 30 days</span>
           <span><i class="fas fa-check"></i> Reduce distractions at the source</span>
@@ -694,7 +666,6 @@
       </div>
     </section>
 
-    <!-- 2. RECOGNITION SECTION -->
     <section class="container reveal delay-2" style="margin-top: -2rem; margin-bottom: 3rem; position: relative; z-index: 15;">
       <div class="recognition-card">
         <h3>If this feels familiar:</h3>
@@ -710,7 +681,6 @@
       </div>
     </section>
 
-    <!-- 3. MANIFESTO -->
     <section class="manifesto-section container reveal">
       <h2>Words of Wisdom is not motivation.<br><span>Motivation is unstable. Patterns are predictable.</span></h2>
       
@@ -728,7 +698,6 @@
       </div>
     </section>
 
-    <!-- 4. CORE FRAMEWORK (THE AHA MOMENT) -->
     <section id="framework" class="framework-section container">
       <div class="section-header reveal" style="border:none; padding:0; margin-bottom: 2rem;">
         <div>
@@ -743,7 +712,6 @@
         This is the system you’ve been stuck inside.
       </p>
 
-      <!-- Animated Conceptual Infinity Loop SVG -->
       <div class="reveal delay-2" style="display: flex; justify-content: center; margin-bottom: 3rem;">
         <svg viewBox="0 0 100 50" style="width: 140px; height: 70px; overflow: visible;">
           <defs>
@@ -760,10 +728,7 @@
             </filter>
           </defs>
           
-          <!-- Background Track -->
           <path d="M 50 25 C 35 5, 10 5, 10 25 C 10 45, 35 45, 50 25 C 65 5, 90 5, 90 25 C 90 45, 65 45, 50 25 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
-                
-          <!-- Glowing Animated Path -->
           <path d="M 50 25 C 35 5, 10 5, 10 25 C 10 45, 35 45, 50 25 C 65 5, 90 5, 90 25 C 90 45, 65 45, 50 25 Z" fill="none" stroke="url(#infGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="60 160" filter="url(#glow-inf)">
             <animate attributeName="stroke-dashoffset" from="220" to="0" dur="3.5s" repeatCount="indefinite" />
           </path>
@@ -779,7 +744,6 @@
       </div>
     </section>
 
-    <!-- 5. START HERE (Sequential Journey) -->
     <section id="pathways" class="pathway-section container">
       <div class="section-header reveal">
         <div>
@@ -814,7 +778,6 @@
       </div>
     </section>
 
-    <!-- 6. INLINE EMAIL CAPTURE -->
     <section class="container" style="padding-bottom: var(--space-xl); position: relative; z-index: 10;">
       <div class="inline-capture reveal">
         <div>
@@ -833,7 +796,6 @@
       </div>
     </section>
 
-    <!-- 7. PROTOCOL SYLLABUS -->
     <section id="plan" class="featured-protocol container">
       <div class="section-header reveal">
         <div>
@@ -877,7 +839,6 @@
       </div>
     </section>
 
-    <!-- 8. THE LIBRARY (Demonstrating Depth) -->
     <section id="library" class="editorial-section container">
       <div class="section-header reveal" style="flex-direction: column; align-items: flex-start; text-align: left; padding-bottom: 1.5rem;">
         <div>
@@ -928,7 +889,7 @@
           </div>
         </a>
 
-        <a href="#" class="glass-card card-third reveal">
+        <a href="https://www.wordsofwisdom.in/insights/action-approach.html" class="glass-card card-third reveal">
           <div class="card-img">
             <span class="card-tag" style="background: var(--brand-gold); color:#000;">Method</span>
             <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Execution stairs representing structured action" loading="lazy" crossorigin="anonymous"/>
@@ -940,7 +901,7 @@
           </div>
         </a>
 
-        <a href="#" class="glass-card card-third reveal delay-1">
+        <a href="https://www.wordsofwisdom.in/insights/mental-pattern.html" class="glass-card card-third reveal delay-1">
           <div class="card-img">
              <span class="card-tag" style="background: var(--brand-teal); color:#000;">Identity</span>
             <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80" alt="Neural pathways representing habit loops" loading="lazy" crossorigin="anonymous"/>
@@ -952,7 +913,7 @@
           </div>
         </a>
 
-        <a href="#" class="glass-card card-third reveal delay-2">
+        <a href="https://www.wordsofwisdom.in/insights/deep-work-skill.html" class="glass-card card-third reveal delay-2">
           <div class="card-img">
              <span class="card-tag" style="background: var(--brand-purple);">Focus</span>
             <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80" alt="Dark atmospheric landscape representing deep work" loading="lazy" crossorigin="anonymous"/>
@@ -966,7 +927,6 @@
       </div>
     </section>
 
-    <!-- 9. DOSSIER / AUTHORITY -->
     <section id="creator" class="container">
       <aside class="dossier-section reveal">
         <div class="dossier-image">
@@ -993,7 +953,6 @@
       </aside>
     </section>
 
-    <!-- 10. ECOSYSTEM & RECOMMENDED -->
     <section id="ecosystem" class="container" style="padding-top: var(--space-md); padding-bottom: var(--space-md); position: relative; z-index: 10;">
       <div class="section-header reveal" style="margin-bottom: 2rem;">
         <div>
@@ -1003,7 +962,6 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch;">
         
-        <!-- Explore Links -->
         <div class="reveal glass-card" style="padding: clamp(2rem, 4vw, 3rem); justify-content: center;">
           <h3 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-pure);">Apps & Community</h3>
           <p style="color: var(--text-muted); margin-bottom: 2rem;">Extend your daily mindset practice with our tailored digital tools and community.</p>
@@ -1026,7 +984,6 @@
           </ul>
         </div>
         
-        <!-- Recommended Book Widget -->
         <div class="reveal glass-card" style="padding: clamp(2rem, 4vw, 3rem); display: flex; flex-direction: column; align-items: center; justify-content: center;">
           <h3 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-pure); text-align: center;">Recommended Resource</h3>
           <div id="amazon-widget" style="text-align:center; font-family:var(--font-ui); width: 100%; max-width:280px; min-height: 440px; display: flex; flex-direction: column; justify-content: space-between; margin:auto; padding:20px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08); border-radius:16px; box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.3); transition: opacity 0.5s ease-in-out; opacity: 0;"></div>
@@ -1035,7 +992,6 @@
       </div>
     </section>
 
-    <!-- 11. HIGH-CONVERTING BOOK SECTION (THE RIGHT QUESTION) -->
     <section id="book-teaser" class="container" style="padding-top: var(--space-lg); padding-bottom: var(--space-md); position: relative; z-index: 10; text-align: center;">
       <div class="reveal">
         <span class="eyebrow" style="color: var(--brand-gold);">When You’re Ready to Go Deeper</span>
@@ -1076,7 +1032,6 @@
           </div>
         </div>
 
-        <!-- MICRO PREVIEW (HIGH IMPACT ADD-ON) -->
         <div style="margin-top: 4rem;">
           <p style="opacity: 0.7; color: var(--brand-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 800; margin-bottom: 0.5rem;">
             Start with one question:
@@ -1088,7 +1043,6 @@
       </div>
     </section>
 
-    <!-- 12. FINAL LEAD MAGNET (MailerLite Integrated) -->
     <section id="capture" class="container">
       <div class="final-cta reveal">
         <span class="eyebrow">Final Invitation</span>
@@ -1111,33 +1065,8 @@
       </div>
     </section>
 
-    <!-- 13. AI PATTERN INTERRUPT (ENGAGEMENT HOOK) -->
-    <section id="ai-reframe" class="ai-reframe-widget container">
-      <div class="glass-card reveal" style="padding: clamp(2.5rem, 5vw, 4rem); text-align: center; max-width: 850px; margin: 0 auto; box-shadow: var(--shadow-premium);">
-        <span class="eyebrow" style="color: var(--brand-purple);">Active Interference</span>
-        <h2 class="display-font" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Shatter The Illusion</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-          Caught in a loop right now? Type your current hesitation below. The Words of Wisdom engine will instantly provide a clear, direct, and honest reframe.
-        </p>
-
-        <textarea id="ai-input" class="reframe-textarea" placeholder="e.g., I'm too tired to work on my project today, I'll just scroll for 5 minutes to relax..."></textarea>
-
-        <button id="ai-trigger" class="btn-massive" style="width: 100%; border-radius: 16px; padding: 1.2rem; background: linear-gradient(135deg, rgba(147, 51, 234, 0.95), rgba(45, 212, 191, 0.88)); border-color: rgba(147, 51, 234, 0.4);">
-          Reframe My Mindset ✨
-        </button>
-
-        <div id="ai-result-container" class="reframe-result">
-          <span style="color: var(--brand-teal); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.8rem;">The Reality Check</span>
-          <div id="ai-result" style="font-size: 1.2rem; line-height: 1.7; color: var(--text-pure); font-weight: 500;"></div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ==============================================
-       GLOBAL FOOTER
-  =============================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1149,36 +1078,41 @@
           <p>Words of Wisdom is for people who want more than motivation. It’s for those who want clarity, focus, and a way to stay consistent — every day.</p>
         </div>
         <div class="footer-col">
-          <h4>Pathways</h4>
+          <h4>System</h4>
           <ul>
             <li><a href="/start-here.html">Start Here</a></li>
-            <li><a href="#framework">Core Pattern</a></li>
-            <li><a href="#plan">30-Day Reset Plan</a></li>
+            <li><a href="/identity.html">Identity Loop</a></li>
+            <li><a href="/focus.html">Focus Protocol</a></li>
+            <li><a href="/action.html">Action Engine</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="/start-here.html">Start Here</a></li>
-            <li><a href="/start-here.html">30-Day Reset Plan</a></li>
-            <li><a href="#framework">Identity Focus</a></li>
-            <li><a href="#plan">Focus Methods</a></li>
+            <li><a href="/book.html">The Right Question</a></li>
+            <li><a href="/start-here.html">30-Day Reset</a></li>
+            <li><a href="https://quotes-app.wordsofwisdom.in/">Quotes App</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Entity</h4>
           <ul>
-            <li><a href="#creator">Abdullah Khan</a></li>
-            <li><a href="#">The Lab (Notes)</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/author.html">Author</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/disclaimer.html">Disclaimer</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <ul style="display: flex; gap: 1.5rem; font-size: 1.3rem;">
-            <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <ul style="display: flex; gap: 1.5rem; font-size: 1.3rem; flex-wrap: wrap;">
+            <li><a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
           </ul>
         </div>
       </div>
@@ -1188,12 +1122,15 @@
           <p>&copy; 2026 Words of Wisdom. Created by <span class="author-highlight">Abdullah Khan</span>.</p>
           <p>Built for people who want real change.</p>
         </div>
-        <p style="width: 100%; text-align: center; margin-top: 2rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">No spam. No noise. Only high-quality thinking.</p>
+        <p style="width: 100%; text-align: center; margin-top: 1rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">No spam. No noise. Only high-quality thinking.</p>
       </div>
     </div>
   </footer>
 
-  <!-- DYNAMIC LOGIC ENGINE -->
+  <a href="#top" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       
@@ -1308,13 +1245,13 @@
         animateCursor();
 
         document.body.addEventListener('mouseover', (e) => {
-          if (e.target.closest('a, button, input, .nav-cta, .btn-massive, .glass-card, .pathway-card, .featured')) {
+          if (e.target.closest('a, button, input, textarea, .nav-cta, .btn-massive, .glass-card, .pathway-card, .featured')) {
             cursorOutline.classList.add('hover-state');
             cursorDot.classList.add('hover-state');
           }
         });
         document.body.addEventListener('mouseout', (e) => {
-          if (e.target.closest('a, button, input, .nav-cta, .btn-massive, .glass-card, .pathway-card, .featured')) {
+          if (e.target.closest('a, button, input, textarea, .nav-cta, .btn-massive, .glass-card, .pathway-card, .featured')) {
             cursorOutline.classList.remove('hover-state');
             cursorDot.classList.remove('hover-state');
           }
@@ -1387,6 +1324,18 @@
           pauseEl.style.opacity = "1";
         }, 1600);
       }
+
+      // 9. Back to Top Button Logic
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.add('is-visible');
+          } else {
+            backToTopBtn.classList.remove('is-visible');
+          }
+        });
+      }
     });
 
     // 6. Amazon Book Promotion Logic
@@ -1429,7 +1378,7 @@
         widget.style.opacity = 0;
         setTimeout(function () {
           let imageContent = product.hasImage
-            ? `<img src="${product.image}" alt="${product.title}" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">`
+            ? `<img src="${product.image}" alt="${product.title}" style="width:100%; height:220px; object-fit:contain; border-radius:8px; margin-bottom:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">`
             : `<div style="width:100%; height:220px; background:linear-gradient(135deg, rgba(45,212,191,0.08), rgba(147,51,234,0.08)); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold; color:var(--brand-teal); margin-bottom:15px; border:1px solid rgba(45,212,191,0.15); box-shadow: inset 0 0 20px rgba(45,212,191,0.05);">🔥 Today’s Deals</div>`;
           
           widget.innerHTML = `
@@ -1459,78 +1408,14 @@
         displayProduct(products[index]);
       }, 10000); 
     }
-
-    // 7. Gemini API Integration - AI Pattern Interrupt
-    const apiKey = ""; 
-    const aiInput = document.getElementById('ai-input');
-    const aiTrigger = document.getElementById('ai-trigger');
-    const aiResultContainer = document.getElementById('ai-result-container');
-    const aiResult = document.getElementById('ai-result');
-
-    async function fetchWithRetry(url, options, retries = 5) {
-      const delays = [1000, 2000, 4000, 8000, 16000];
-      for (let i = 0; i < retries; i++) {
-        try {
-          const response = await fetch(url, options);
-          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-          return await response.json();
-        } catch (e) {
-          if (i === retries - 1) throw e;
-          await new Promise(res => setTimeout(res, delays[i]));
-        }
-      }
-    }
-
-    if (aiTrigger) {
-      aiTrigger.addEventListener('click', async () => {
-        const text = aiInput.value.trim();
-        if (!text) {
-          aiInput.focus();
-          return;
-        }
-
-        aiTrigger.innerHTML = 'Analyzing Pattern... <i class="fas fa-circle-notch fa-spin" style="margin-left: 8px;"></i>';
-        aiTrigger.disabled = true;
-        aiTrigger.style.opacity = '0.7';
-        aiResultContainer.style.display = 'none';
-
-        try {
-          // TONE FIX: Adjusted system prompt to be clear and direct, not hostile.
-          const systemPrompt = "You are the clear, direct, and honest 'Words of Wisdom' AI. The user will provide a negative thought, excuse, or distraction. Your job is to break this down in 2-3 short sentences. Shift their focus away from emotion and toward strict action and identity. Be authoritative and grounding. No fluff. No excuses. Just what actually helps.";
-          
-          const payload = {
-            contents: [{ parts: [{ text: text }] }],
-            systemInstruction: { parts: [{ text: systemPrompt }] }
-          };
-
-          const result = await fetchWithRetry(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-            }
-          );
-
-          const responseText = result.candidates?.[0]?.content?.parts?.[0]?.text;
-          
-          if (responseText) {
-            aiResult.innerHTML = responseText.replace(/\n/g, '<br>');
-            aiResultContainer.style.display = 'block';
-          } else {
-            throw new Error("Invalid response format");
-          }
-        } catch (error) {
-          aiResult.innerText = "Connection lost. Stop waiting for the perfect condition. Take action now.";
-          aiResultContainer.style.display = 'block';
-        } finally {
-          aiTrigger.innerHTML = 'Reframe My Mindset ✨';
-          aiTrigger.disabled = false;
-          aiTrigger.style.opacity = '1';
-        }
-      });
-    }
-
+  </script>
+  
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2293635');
   </script>
 
 </body>
