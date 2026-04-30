@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Page Not Found | Words of Wisdom</title>
+    <meta name="description" content="This page doesn’t exist. But you're not in the wrong place. Start your journey to clear thinking here.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.wordsofwisdom.in/404">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Page Not Found | Words of Wisdom">
+    <meta property="og:description" content="This page doesn’t exist. But you're not in the wrong place.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wordsofwisdom.in/404">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Not Found | Words of Wisdom">
+    <meta name="twitter:description" content="This page doesn’t exist. But you're not in the wrong place.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                            purple: '#c084fc',
+                            gold: '#fbbf24',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS for Elite Premium UI/UX (Calmed Down for 404) -->
+    <style type="text/tailwindcss">
+        /* Elite Visible Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+
+        /* Premium Lux Texture Base */
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+        }
+
+        /* Faint Noise Texture Overlay */
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.15;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.25; }
+
+        /* Footer Noise Extraction */
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Scroll Reveal Architecture */
+        .fade-up {
+            opacity: 0; transform: translateY(30px); filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        /* Premium Buttons & Links (Softer Shadow for 404 Page) */
+        .btn-premium { box-shadow: 0 2px 10px 0 rgba(0,0,0,0.05); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 2px 10px 0 rgba(255,255,255,0.03); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .dark .btn-premium:hover { box-shadow: 0 4px 15px rgba(255,255,255,0.06); }
+
+        .clean-link { position: relative; text-decoration: none; display: inline-block; }
+        .clean-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0;
+            background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+        .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        
+        ::selection { background-color: #2dd4bf; color: #171717; }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
+
+    <!-- Global Noise & Ambient Light Engine -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+            
+            <!-- Logo Integration -->
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
+                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+
+            <!-- CTA -->
+            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+                START<br>HERE
+            </a>
+
+            <!-- Mobile Utilities -->
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
+        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    </div>
+
+    <main class="pt-40 md:pt-56 pb-24 px-6 sm:px-8 z-10 relative min-h-[85vh] flex flex-col items-center justify-center text-center">
+        
+        <!-- HERO / 404 CONTEXT -->
+        <section class="max-w-2xl mx-auto fade-up w-full">
+            <h1 class="font-display text-5xl md:text-7xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-8">
+                This page doesn’t exist.
+            </h1>
+            
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light">
+                <p>But you’re not in the wrong place.</p>
+            </div>
+        </section>
+
+        <!-- REDIRECTION OPTIONS -->
+        <section class="max-w-2xl mx-auto w-full pt-16 pb-16 fade-up border-t border-neutral-200/60 dark:border-white/5 mt-16">
+            <div class="flex flex-col items-center">
+                
+                <a href="/start-here" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-4 rounded-full uppercase tracking-[0.1em] font-bold text-sm group opacity-95 hover:opacity-100">
+                    Start Here
+                    <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                </a>
+                <p class="text-sm text-neutral-500 font-light mt-4">Start here if you want to understand what this site is about.</p>
+                
+                <div class="pt-16 w-full max-w-lg">
+                    <p class="mb-6 text-neutral-600 dark:text-neutral-400 font-light">If you were looking for something specific:</p>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-xl md:text-2xl font-display italic text-neutral-800 dark:text-neutral-300">
+                        <a href="/identity" class="transition-colors hover:text-brand-teal">Identity</a>
+                        <span class="text-neutral-300 dark:text-neutral-700 text-sm not-italic">•</span>
+                        <a href="/focus" class="transition-colors hover:text-brand-teal">Focus</a>
+                        <span class="text-neutral-300 dark:text-neutral-700 text-sm not-italic">•</span>
+                        <a href="/action" class="transition-colors hover:text-brand-teal">Action</a>
+                    </div>
+                </div>
+                
+                <div class="pt-24">
+                    <a href="/" class="clean-link text-neutral-500 hover:text-brand-teal dark:hover:text-brand-teal transition-colors font-medium text-sm tracking-wide uppercase">
+                        <i class="fa-solid fa-arrow-left mr-2 text-sm transition-transform hover:-translate-x-1"></i> Return to Home Page
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <!-- Subtle noise over footer using the CSS class -->
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                
+                <!-- Column 1 & Socials -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex">
+                        <a href="/" class="inline-flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
+                            <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-neutral-200 p-1 bg-white shadow-sm block dark:hidden object-contain">
+                            <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-white/10 p-1 bg-[#0a0a0c] shadow-sm hidden dark:block object-contain">
+                            <span class="font-display text-3xl md:text-4xl tracking-wide text-neutral-900 dark:text-white">Words of Wisdom</span>
+                        </a>
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm">Clear thinking. Steady action.</p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center space-x-5 pt-2">
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-400 hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-400 hover:text-[#E1306C] dark:hover:text-[#E1306C] transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-400 hover:text-[#FF0000] dark:hover:text-[#FF0000] transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-400 hover:text-[#1877F2] dark:hover:text-[#1877F2] transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-4">
+                    <a href="/start-here" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Start</a>
+                    <a href="/identity" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Identity</a>
+                    <a href="/focus" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Focus</a>
+                    <a href="/action" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Action</a>
+                    <a href="/wow-mindset" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">WOW Mindset</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-4">
+                    <a href="/book" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Book</a>
+                    <a href="/tools" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Tools</a>
+                    <a href="/community" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Community</a>
+                    <a href="/about" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">About</a>
+                    <a href="/author" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Author</a>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Legal + Author + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
+                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
+                </div>
+
+                <p class="tracking-[0.1em] opacity-60">No noise. No hype. Just clarity and practical action.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

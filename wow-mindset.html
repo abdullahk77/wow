@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>WOW Mindset | 30 Days to Think Clearly and Act Consistently</title>
+    <meta name="description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wordsofwisdom.in/wow-mindset">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="WOW Mindset | 30 Days to Think Clearly and Act Consistently">
+    <meta property="og:description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wordsofwisdom.in/wow-mindset">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WOW Mindset | 30 Days to Think Clearly and Act Consistently">
+    <meta name="twitter:description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                            purple: '#c084fc',
+                            gold: '#fbbf24',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 20s ease-in-out infinite alternate',
+                        'float-delayed': 'float 25s ease-in-out infinite alternate-reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                            '100%': { transform: 'translate(5%, 15%) scale(1.1) rotate(5deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS for Elite Premium UI/UX -->
+    <style type="text/tailwindcss">
+        /* Elite Visible Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+
+        /* Premium Lux Texture Base */
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+        }
+
+        /* Subtle Noise Texture Overlay */
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.4; }
+
+        /* Footer Noise Extraction */
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Cinematic Ambient Orbs */
+        .ambient-orb {
+            position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
+            transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
+        }
+        .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
+        .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, transparent 70%); }
+
+        /* Magnetic Cursor */
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+
+        /* Spotlight Cards */
+        .spotlight-card {
+            position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 10px 30px rgba(0,0,0,0.02);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+        }
+        .dark .spotlight-card {
+            background: rgba(20,20,24,0.3); border: 1px solid rgba(255,255,255,0.04);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .spotlight-card::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0,0,0,0.03), transparent 40%);
+            opacity: 0; transition: opacity 0.4s ease; pointer-events: none; z-index: 1;
+        }
+        .dark .spotlight-card::before {
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.04), transparent 40%);
+        }
+        .spotlight-card:hover::before { opacity: 1; }
+        .spotlight-card:hover { transform: translateY(-4px); border-color: rgba(0,0,0,0.12); }
+        .dark .spotlight-card:hover { border-color: rgba(255,255,255,0.12); }
+
+        /* Scroll Reveal Architecture */
+        .fade-up {
+            opacity: 0; transform: translateY(30px); filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        /* Premium Buttons & Links */
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.08); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .dark .btn-premium:hover { box-shadow: 0 6px 20px rgba(255,255,255,0.12); }
+
+        .clean-link { position: relative; text-decoration: none; display: inline-block; }
+        .clean-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0;
+            background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+        .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        
+        .cta-arrow { transition: transform 0.3s ease; }
+        .group:hover .cta-arrow { transform: translateX(6px); }
+
+        ::selection { background-color: #2dd4bf; color: #171717; }
+    </style>
+
+    <!-- SCHEMA (PRODUCT ENTITY) -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "Product",
+     "name": "WOW Mindset",
+     "description": "A 30-day approach to think clearly and act consistently.",
+     "brand": {
+       "@type": "Brand",
+       "name": "Words of Wisdom"
+     }
+    }
+    </script>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
+
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Global Noise & Ambient Light Engine -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="ambient-orb orb-1 animate-float-slow"></div>
+        <div class="ambient-orb orb-2 animate-float-delayed"></div>
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+            
+            <!-- Logo Integration -->
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/wow-mindset" class="text-brand-teal dark:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
+                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+
+            <!-- CTA -->
+            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+                START<br>HERE
+            </a>
+
+            <!-- Mobile Utilities -->
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">WOW Mindset</a>
+        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    </div>
+
+    <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
+        
+        <!-- HERO -->
+        <section class="max-w-2xl mx-auto pt-8 pb-24 fade-up">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-teal block mb-6">The Approach</span>
+            <h1 class="font-display text-6xl md:text-8xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-3">
+                WOW Mindset
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-display text-neutral-800 dark:text-neutral-200 mb-12 italic">
+                <span class="font-sans font-medium not-italic text-[1.2em] text-neutral-900 dark:text-white tracking-tighter pr-1">30</span> Days to Think Clearly and Act Consistently
+            </h2>
+            
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-6 pt-2">
+                <p>You already know what to do.</p>
+                <p class="text-neutral-900 dark:text-white font-medium">This helps you actually follow through.</p>
+                
+                <div class="pt-4 space-y-2">
+                    <p>You try to focus.</p>
+                    <p>You try to stay consistent.</p>
+                    <p>You try to do what matters.</p>
+                </div>
+                
+                <p>It doesn’t last.</p>
+                
+                <p>Not because you’re incapable.</p>
+                <p>Because something keeps getting in the way.</p>
+                
+                <p class="text-neutral-900 dark:text-white font-medium pt-2">This shows you what that is.</p>
+                
+                <div class="pt-10">
+                    <a href="#access" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group">
+                        Start the WOW Mindset
+                        <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTCOME CLARITY -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p>After 30 days, you won’t be a different person.</p>
+                <p class="text-neutral-900 dark:text-white font-medium">But you will notice:</p>
+                
+                <ul class="space-y-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-brand-teal mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span>You start sooner</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-brand-teal mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span>You get distracted less often</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-brand-teal mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span>You finish more of what you begin</span>
+                    </li>
+                </ul>
+                
+                <div class="space-y-2 pt-6">
+                    <p>Not perfectly.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But more consistently than before.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT THIS IS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p>This is not something you “complete.”</p>
+                <p>It’s something you begin to see.</p>
+                
+                <div class="pl-6 border-l-[3px] border-neutral-200 dark:border-white/5 py-4 my-10 text-neutral-800 dark:text-neutral-300 font-display text-2xl md:text-3xl italic leading-relaxed">
+                    <p>And once you see it,</p>
+                    <p class="mt-4">your actions start to change.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY 30 DAYS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Why <span class="font-sans font-medium not-italic text-[1.1em] tracking-tighter">30</span> days?</h3>
+                <p>Because change doesn’t happen in one moment.</p>
+                <p>It builds.</p>
+                <p>A few small shifts.<br>Repeated over time.</p>
+                <p class="text-neutral-900 dark:text-white font-medium pt-4">That’s enough to notice a difference.</p>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p>Each day gives you something small to notice.</p>
+                <p>Not tasks.<br>Not pressure.</p>
+                <p>Just something that changes how you look at what you’re doing.</p>
+                
+                <div class="pt-8 space-y-6">
+                    <p class="text-neutral-900 dark:text-white font-medium">That shift affects how you:</p>
+                    <ul class="space-y-4 text-neutral-700 dark:text-neutral-300">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 shrink-0"></span> approach your work</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 shrink-0"></span> handle distraction</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 shrink-0"></span> respond to resistance</li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-2 pt-8 text-neutral-900 dark:text-white font-display text-2xl italic">
+                    <p>Small changes.</p>
+                    <p>That build.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT CHANGES -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p>Most people try to change by pushing harder.</p>
+                <p>That works briefly. Then it fades.</p>
+                <p>This works differently.</p>
+                
+                <div class="pt-8 space-y-6">
+                    <p class="text-neutral-900 dark:text-white font-medium">You begin to:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-teal mt-1 mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>notice what is actually happening</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-teal mt-1 mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>reduce the noise around you</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-teal mt-1 mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>make starting easier</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-teal mt-1 mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>follow through without forcing yourself</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-2 pt-8">
+                    <p>Not perfectly.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But more consistently.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT YOU GET / WHAT YOU MAY EXPERIENCE -->
+        <section class="max-w-4xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                
+                <!-- What you get -->
+                <div class="space-y-8">
+                    <p class="font-display text-3xl text-neutral-900 dark:text-white">What you get</p>
+                    <ul class="space-y-4 text-base font-light text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> 30 days of structured guidance</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> short daily reflections</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> simple observations you can apply immediately</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> a clear progression from awareness to action</li>
+                    </ul>
+                    <div class="pt-4 space-y-1">
+                        <p class="text-neutral-900 dark:text-white font-medium">No overload.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium">No unnecessary content.</p>
+                    </div>
+                </div>
+
+                <!-- What you may experience -->
+                <div class="space-y-8">
+                    <p class="font-display text-3xl text-neutral-900 dark:text-white">What you may experience</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light mb-4">During these 30 days, you may notice:</p>
+                    <ul class="space-y-4 text-base font-light text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> you pause before drifting</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> you become aware of distractions sooner</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> starting feels slightly easier</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> you finish more than you usually do</li>
+                    </ul>
+                    <div class="pt-4 space-y-1 font-display text-xl italic text-neutral-800 dark:text-neutral-300">
+                        <p>Nothing dramatic.</p>
+                        <p>But something different.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHO THIS IS FOR / WHAT THIS IS NOT -->
+        <section class="max-w-4xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                
+                <!-- Who this is for -->
+                <div class="space-y-8">
+                    <p class="font-display text-3xl text-neutral-900 dark:text-white">This is for you if:</p>
+                    <ul class="space-y-4 text-base font-light text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-neutral-400 mt-0.5 mr-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            you know what to do, but don’t follow through
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-neutral-400 mt-0.5 mr-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            you struggle to stay focused
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-neutral-400 mt-0.5 mr-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            you start things and leave them unfinished
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-neutral-400 mt-0.5 mr-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            you rely on motivation, and it fades
+                        </li>
+                    </ul>
+                    <p class="text-neutral-900 dark:text-white font-medium pt-4">If that feels familiar, this will make sense.</p>
+                </div>
+
+                <!-- What this is not -->
+                <div class="space-y-8">
+                    <p class="font-display text-3xl text-neutral-900 dark:text-white">This will not:</p>
+                    <ul class="space-y-4 text-base font-light text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">✕</span> force you to be disciplined</li>
+                        <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">✕</span> give you rigid routines</li>
+                        <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">✕</span> overwhelm you with information</li>
+                    </ul>
+                    <div class="pt-4 space-y-1">
+                        <p>There is nothing to “keep up with.”</p>
+                        <p class="text-neutral-900 dark:text-white font-medium">Only something to understand.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VALUE ANCHOR -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p>Most people stay stuck in the same cycle for years.</p>
+                <p>Not because they don’t try.</p>
+                <p>Because they don’t see what’s happening.</p>
+                
+                <p class="font-display text-3xl italic text-neutral-900 dark:text-white pt-8">This is a way out of that.</p>
+            </div>
+        </section>
+
+        <!-- PRICE SECTION & RISK REDUCTION -->
+        <section id="access" class="max-w-3xl mx-auto py-24 fade-up relative z-10">
+            <div class="bg-gradient-to-br from-white to-neutral-50 dark:from-[#0d0d11] dark:to-[#050507] border border-neutral-200 dark:border-white/5 rounded-[2.5rem] p-10 md:p-16 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_10px_30px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.02),0_10px_30px_rgba(0,0,0,0.4)] relative overflow-hidden text-center md:text-left">
+                
+                <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center justify-between">
+                    <div class="flex-1 space-y-6 text-lg font-light text-neutral-600 dark:text-neutral-400">
+                        <div class="space-y-2">
+                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> One-time access.</p>
+                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> Go at your own pace.</p>
+                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> Come back anytime.</p>
+                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> No subscription.</p>
+                        </div>
+                        
+                        <div class="pt-4 space-y-2">
+                            <p>You get full access to all 30 days.</p>
+                            <p>You don’t need to finish it in 30 days.</p>
+                            <p class="text-neutral-900 dark:text-white font-medium">You just need to begin.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-auto flex flex-col items-center md:items-end">
+                        <!-- Note: Adjust the href to your actual checkout/access link -->
+                        <a href="#" class="w-full md:w-[280px] bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-5 rounded-2xl font-bold uppercase tracking-[0.1em] text-sm flex justify-center items-center group text-center mb-6">
+                            Get Access
+                            <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                        
+                        <div class="text-sm text-neutral-500 font-light text-center md:text-right max-w-[280px]">
+                            <p>If this doesn’t make sense to you, you don’t have to continue.</p>
+                            <p class="mt-2">There’s no pressure to stay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL DECISION MOMENT -->
+        <section class="max-w-2xl mx-auto py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10">
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 space-y-8 font-light">
+                <p>You already know what needs to change.</p>
+                <p class="text-neutral-900 dark:text-white font-medium">This helps you actually do it.</p>
+                
+                <div class="pt-12 font-display text-4xl md:text-5xl text-neutral-900 dark:text-white leading-tight italic">
+                    <p>Start when you’re ready.</p>
+                </div>
+                
+                <div class="pt-12 flex flex-col items-center">
+                    <a href="#access" class="bg-brand-teal text-brand-dark btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group mb-6 hover:bg-[#20bca8] transition-colors duration-300">
+                        Start the WOW Mindset
+                        <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                    
+                    <div class="text-sm text-neutral-500 flex flex-col md:flex-row gap-2 md:gap-6 justify-center">
+                        <span class="flex items-center justify-center"><i class="fa-regular fa-clock mr-2 opacity-70"></i> Takes less than 10 minutes a day</span>
+                        <span class="flex items-center justify-center"><i class="fa-solid fa-unlock mr-2 opacity-70"></i> No prior knowledge needed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GEO (ENTITY DEFINITION) -->
+        <section class="max-w-5xl mx-auto py-16 px-6 relative z-10 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-neutral-500 dark:text-neutral-500 font-light text-sm">
+                    WOW Mindset is a 30-day guided experience that helps you think more clearly, reduce distraction, and follow through consistently by understanding what gets in the way of your actions.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <!-- Subtle noise over footer using the CSS class -->
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                
+                <!-- Column 1 & Socials -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex">
+                        <a href="/" class="inline-flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
+                            <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-neutral-200 p-1 bg-white shadow-sm block dark:hidden object-contain">
+                            <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-white/10 p-1 bg-[#0a0a0c] shadow-sm hidden dark:block object-contain">
+                            <span class="font-display text-3xl md:text-4xl tracking-wide text-neutral-900 dark:text-white">Words of Wisdom</span>
+                        </a>
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm">Clear thinking. Steady action.</p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center space-x-5 pt-2">
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-400 hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-400 hover:text-[#E1306C] dark:hover:text-[#E1306C] transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-400 hover:text-[#FF0000] dark:hover:text-[#FF0000] transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-400 hover:text-[#1877F2] dark:hover:text-[#1877F2] transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-4">
+                    <a href="/start-here" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Start</a>
+                    <a href="/identity" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Identity</a>
+                    <a href="/focus" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Focus</a>
+                    <a href="/action" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Action</a>
+                    <a href="/wow-mindset" class="block text-brand-teal dark:text-white transition-colors font-medium">WOW Mindset</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-4">
+                    <a href="/book" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Book</a>
+                    <a href="/tools" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Tools</a>
+                    <a href="/community" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Community</a>
+                    <a href="/about" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">About</a>
+                    <a href="/author" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Author</a>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Legal + Author + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
+                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
+                </div>
+
+                <p class="tracking-[0.1em] opacity-60">No noise. No hype. Just clarity and practical action.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Elite Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Back to Top Logic
+            const bttBtn = document.getElementById('back-to-top');
+            if(bttBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        bttBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
+
+                bttBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Spotlight Cards Tracking & Cursor
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const cards = document.querySelectorAll('.spotlight-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        card.style.setProperty('--mouse-x', `${x}px`);
+                        card.style.setProperty('--mouse-y', `${y}px`);
+                    });
+                });
+                
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    if(dot) {
+                        dot.style.left = `${mouseX}px`;
+                        dot.style.top = `${mouseY}px`;
+                    }
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, .spotlight-card');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
