@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- FINAL META DATA (SEO + AEO) -->
-    <title>WOW Mindset | 30 Days to Think Clearly and Act Consistently</title>
-    <meta name="description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+    <title>Choose How You Continue | WOW Mindset</title>
+    <meta name="description" content="Start with clarity or go deeper with a workspace that helps you stay focused while you act. Choose the next step that fits you.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.wordsofwisdom.in/wow-mindset">
+    <link rel="canonical" href="https://www.wordsofwisdom.in/continue">
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="WOW Mindset | 30 Days to Think Clearly and Act Consistently">
-    <meta property="og:description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+    <meta property="og:title" content="Choose How You Continue | WOW Mindset">
+    <meta property="og:description" content="Start with clarity or go deeper with a workspace that helps you stay focused while you act. Choose the next step that fits you.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.wordsofwisdom.in/wow-mindset">
+    <meta property="og:url" content="https://www.wordsofwisdom.in/continue">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WOW Mindset | 30 Days to Think Clearly and Act Consistently">
-    <meta name="twitter:description" content="A simple 30-day approach to think clearly, reduce distractions, and follow through consistently without relying on motivation.">
+    <meta name="twitter:title" content="Choose How You Continue | WOW Mindset">
+    <meta name="twitter:description" content="Start with clarity or go deeper with a workspace that helps you stay focused while you act. Choose the next step that fits you.">
 
     <!-- FAVICON -->
     <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
     <!-- Premium Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
     <!-- Theme Initialization Script (Dark Mode Default) -->
@@ -50,6 +50,7 @@
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
                         brand: {
@@ -195,6 +196,20 @@
         .cta-arrow { transition: transform 0.3s ease; }
         .group:hover .cta-arrow { transform: translateX(6px); }
 
+        /* Arrival Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
         ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 
@@ -283,38 +298,25 @@
     <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
         
         <!-- HERO -->
-        <section class="max-w-2xl mx-auto pt-8 pb-24 fade-up">
-            <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-teal block mb-6">The Approach</span>
-            <h1 class="font-display text-6xl md:text-8xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-3">
-                WOW Mindset
+        <section class="max-w-2xl mx-auto pt-8 pb-24 fade-up text-center md:text-left">
+            <h1 class="font-display text-5xl md:text-7xl text-neutral-900 dark:text-white leading-[1.1] tracking-tight mb-6">
+                You already know what to do.<br>
+                <i class="block pt-2 text-neutral-500 text-[0.8em]">But something keeps getting in the way.</i>
             </h1>
-            <h2 class="text-2xl md:text-3xl font-display text-neutral-800 dark:text-neutral-200 mb-12 italic">
-                <span class="font-sans font-medium not-italic text-[1.2em] text-neutral-900 dark:text-white tracking-tighter pr-1">30</span> Days to Think Clearly and Act Consistently
-            </h2>
             
-            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-6 pt-2">
-                <p>You already know what to do.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">This helps you actually follow through.</p>
-                
-                <div class="pt-4 space-y-2">
-                    <p>You try to focus.</p>
-                    <p>You try to stay consistent.</p>
-                    <p>You try to do what matters.</p>
-                </div>
-                
-                <p>It doesn’t last.</p>
-                
-                <p>Not because you’re incapable.</p>
-                <p>Because something keeps getting in the way.</p>
-                
-                <p class="text-neutral-900 dark:text-white font-medium pt-2">This shows you what that is.</p>
-                
-                <div class="pt-10">
-                    <a href="#access" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group">
-                        Start the WOW Mindset
-                        <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-6 pt-4">
+                <p class="reveal">You’ve seen what’s happening.</p>
+                <p class="reveal delay-1">You know where things break.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Now you decide how you want to continue.</p>
+            </div>
+        </section>
+
+        <!-- ORIENTATION -->
+        <section class="max-w-2xl mx-auto py-16 border-t border-neutral-200/60 dark:border-white/5 fade-up text-center">
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                <p class="reveal">You can go one step at a time.</p>
+                <p class="reveal delay-1">Or you can go a little deeper.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Both are valid.</p>
             </div>
         </section>
 
@@ -322,7 +324,7 @@
         <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
                 <p>After 30 days, you won’t be a different person.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">But you will notice:</p>
+                <p class="text-neutral-900 dark:text-white font-medium">Over time, you may begin to notice:</p>
                 
                 <ul class="space-y-6">
                     <li class="flex items-center">
@@ -341,7 +343,7 @@
                 
                 <div class="space-y-2 pt-6">
                     <p>Not perfectly.</p>
-                    <p class="text-neutral-900 dark:text-white font-medium">But more consistently than before.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But more often than before.</p>
                 </div>
             </div>
         </section>
@@ -349,12 +351,12 @@
         <!-- WHAT THIS IS -->
         <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
-                <p>This is not something you “complete.”</p>
-                <p>It’s something you begin to see.</p>
+                <p>This is not something you complete.</p>
+                <p>It’s something you begin to notice.</p>
                 
                 <div class="pl-6 border-l-[3px] border-neutral-200 dark:border-white/5 py-4 my-10 text-neutral-800 dark:text-neutral-300 font-display text-2xl md:text-3xl italic leading-relaxed">
                     <p>And once you see it,</p>
-                    <p class="mt-4">your actions start to change.</p>
+                    <p class="mt-4">you start to understand what’s been shaping what you do.</p>
                 </div>
             </div>
         </section>
@@ -362,8 +364,8 @@
         <!-- WHY 30 DAYS -->
         <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
-                <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Why <span class="font-sans font-medium not-italic text-[1.1em] tracking-tighter">30</span> days?</h3>
-                <p>Because change doesn’t happen in one moment.</p>
+                <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Why <span class="font-sans not-italic">30</span> days?</h3>
+                <p>Because this doesn’t shift in one moment.</p>
                 <p>It builds.</p>
                 <p>A few small shifts.<br>Repeated over time.</p>
                 <p class="text-neutral-900 dark:text-white font-medium pt-4">That’s enough to notice a difference.</p>
@@ -378,7 +380,7 @@
                 <p>Just something that changes how you look at what you’re doing.</p>
                 
                 <div class="pt-8 space-y-6">
-                    <p class="text-neutral-900 dark:text-white font-medium">That shift affects how you:</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">That shift influences how you:</p>
                     <ul class="space-y-4 text-neutral-700 dark:text-neutral-300">
                         <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 shrink-0"></span> approach your work</li>
                         <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 shrink-0"></span> handle distraction</li>
@@ -393,6 +395,13 @@
             </div>
         </section>
 
+        <!-- EARLY CTA -->
+        <section class="max-w-2xl mx-auto pb-24 pt-8 fade-up text-center">
+            <a href="https://mindset.wordsofwisdom.in/" class="clean-link font-display italic text-2xl md:text-3xl text-neutral-900 dark:text-white group transition-colors hover:text-brand-teal dark:hover:text-brand-teal">
+                Start with WOW Mindset <span class="cta-arrow inline-block transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </section>
+
         <!-- WHAT CHANGES -->
         <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
@@ -401,7 +410,7 @@
                 <p>This works differently.</p>
                 
                 <div class="pt-8 space-y-6">
-                    <p class="text-neutral-900 dark:text-white font-medium">You begin to:</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">Over time, you may begin to:</p>
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-brand-teal mt-1 mr-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -437,7 +446,7 @@
                 <div class="space-y-8">
                     <p class="font-display text-3xl text-neutral-900 dark:text-white">What you get</p>
                     <ul class="space-y-4 text-base font-light text-neutral-600 dark:text-neutral-400">
-                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> 30 days of structured guidance</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> 30 days of guided direction</li>
                         <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> short daily reflections</li>
                         <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> simple observations you can apply immediately</li>
                         <li class="flex items-start"><span class="text-brand-teal mr-3">—</span> a clear progression from awareness to action</li>
@@ -519,76 +528,122 @@
                 <p>Not because they don’t try.</p>
                 <p>Because they don’t see what’s happening.</p>
                 
-                <p class="font-display text-3xl italic text-neutral-900 dark:text-white pt-8">This is a way out of that.</p>
+                <p class="font-display text-3xl italic text-neutral-900 dark:text-white pt-8">This is a way to begin seeing it differently.</p>
             </div>
         </section>
 
-        <!-- PRICE SECTION & RISK REDUCTION -->
-        <section id="access" class="max-w-3xl mx-auto py-24 fade-up relative z-10">
-            <div class="bg-gradient-to-br from-white to-neutral-50 dark:from-[#0d0d11] dark:to-[#050507] border border-neutral-200 dark:border-white/5 rounded-[2.5rem] p-10 md:p-16 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_10px_30px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.02),0_10px_30px_rgba(0,0,0,0.4)] relative overflow-hidden text-center md:text-left">
-                
-                <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center justify-between">
-                    <div class="flex-1 space-y-6 text-lg font-light text-neutral-600 dark:text-neutral-400">
-                        <div class="space-y-2">
-                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> One-time access.</p>
-                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> Go at your own pace.</p>
-                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> Come back anytime.</p>
-                            <p class="flex items-center justify-center md:justify-start"><span class="text-brand-teal mr-3">✓</span> No subscription.</p>
-                        </div>
-                        
-                        <div class="pt-4 space-y-2">
-                            <p>You get full access to all 30 days.</p>
-                            <p>You don’t need to finish it in 30 days.</p>
-                            <p class="text-neutral-900 dark:text-white font-medium">You just need to begin.</p>
-                        </div>
+        <!-- PRE-DECISION -->
+        <section class="max-w-2xl mx-auto py-16 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 mt-12">
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                <p class="reveal">You don’t need to decide perfectly.</p>
+                <p class="reveal delay-1">Start where it feels right.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">You can always go further later.</p>
+            </div>
+        </section>
+
+        <!-- OPTION 1: WOW MINDSET -->
+        <section class="max-w-2xl mx-auto py-12 fade-up">
+            <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 border border-neutral-200 dark:border-white/10 relative overflow-hidden">
+                <div class="space-y-8 relative z-10">
+                    <div>
+                        <h3 class="font-display text-4xl text-neutral-900 dark:text-white mb-2">WOW Mindset</h3>
+                        <p class="text-neutral-500 italic font-display text-2xl"><span class="font-sans not-italic">30</span> days to think clearly and act more consistently.</p>
                     </div>
                     
-                    <div class="w-full md:w-auto flex flex-col items-center md:items-end">
-                        <!-- Note: Adjust the href to your actual checkout/access link -->
-                        <a href="#" class="w-full md:w-[280px] bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-5 rounded-2xl font-bold uppercase tracking-[0.1em] text-sm flex justify-center items-center group text-center mb-6">
-                            Get Access
+                    <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                        <p>This helps you understand what’s happening,<br>and begin working through it, day by day.</p>
+                    </div>
+
+                    <div class="pt-4 space-y-4 text-lg text-neutral-600 dark:text-neutral-400 font-light">
+                        <p class="text-neutral-900 dark:text-white font-medium">You start noticing:</p>
+                        <ul class="space-y-3 pl-5 border-l border-brand-teal/30 dark:border-brand-teal/50">
+                            <li>Where your attention moves</li>
+                            <li>Where you delay</li>
+                            <li>What makes starting difficult</li>
+                            <li>And what changes when you see it clearly</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-2">
+                        <p>This is a good place to begin.</p>
+                        <p>Nothing extra.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium">Just clarity.</p>
+                    </div>
+
+                    <div class="pt-10">
+                        <a href="https://mindset.wordsofwisdom.in/" class="btn-premium w-full md:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-5 px-10 rounded-full font-bold uppercase tracking-[0.1em] text-xs flex justify-center items-center group shadow-md transition-all duration-300 inline-flex">
+                            $19 — Start with WOW Mindset 
                             <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
                         </a>
-                        
-                        <div class="text-sm text-neutral-500 font-light text-center md:text-right max-w-[280px]">
-                            <p>If this doesn’t make sense to you, you don’t have to continue.</p>
-                            <p class="mt-2">There’s no pressure to stay.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FINAL DECISION MOMENT -->
-        <section class="max-w-2xl mx-auto py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10">
-            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 space-y-8 font-light">
-                <p>You already know what needs to change.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">This helps you actually do it.</p>
-                
-                <div class="pt-12 font-display text-4xl md:text-5xl text-neutral-900 dark:text-white leading-tight italic">
-                    <p>Start when you’re ready.</p>
-                </div>
-                
-                <div class="pt-12 flex flex-col items-center">
-                    <a href="#access" class="bg-brand-teal text-brand-dark btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group mb-6 hover:bg-[#20bca8] transition-colors duration-300">
-                        Start the WOW Mindset
-                        <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
-                    </a>
+        <!-- TRANSITION TO OPTION 2 -->
+        <section class="max-w-2xl mx-auto py-16 fade-up text-center">
+            <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light font-display italic space-y-4">
+                <p class="reveal">For some people, understanding is enough.</p>
+                <p class="reveal delay-1 text-neutral-900 dark:text-white">For others, it helps to have something<br>that stays with them while they work.</p>
+            </div>
+        </section>
+
+        <!-- OPTION 2: BUNDLE -->
+        <section class="max-w-2xl mx-auto py-12 fade-up">
+            <div class="spotlight-card bg-gradient-to-br from-white to-neutral-50 dark:from-[#0d0d11] dark:to-[#050507] rounded-[2.5rem] p-10 md:p-14 border border-neutral-200 dark:border-white/5 relative overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+                <div class="space-y-8 relative z-10">
+                    <div>
+                        <h3 class="font-display text-4xl md:text-[2.5rem] leading-tight text-neutral-900 dark:text-white mb-2">WOW Mindset + Clarity Workspace</h3>
+                        <p class="text-neutral-500 italic font-display text-2xl mt-3">Understand what’s happening.<br>And stay connected to it during your day.</p>
+                    </div>
                     
-                    <div class="text-sm text-neutral-500 flex flex-col md:flex-row gap-2 md:gap-6 justify-center">
-                        <span class="flex items-center justify-center"><i class="fa-regular fa-clock mr-2 opacity-70"></i> Takes less than 10 minutes a day</span>
-                        <span class="flex items-center justify-center"><i class="fa-solid fa-unlock mr-2 opacity-70"></i> No prior knowledge needed</span>
+                    <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                        <p>WOW Mindset helps you see clearly.</p>
+                        <p>Clarity Workspace helps you stay with it while you work.</p>
+                    </div>
+
+                    <div class="pt-4 space-y-4 text-lg text-neutral-600 dark:text-neutral-400 font-light">
+                        <p class="text-neutral-900 dark:text-white font-medium">You may notice:</p>
+                        <ul class="space-y-3 pl-5 border-l border-brand-teal/30 dark:border-brand-teal/50">
+                            <li>You return to your work faster</li>
+                            <li>You drift less without realizing it</li>
+                            <li>You continue more often than before</li>
+                            <li>Things feel less scattered during the day</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-2">
+                        <p>This is not more to manage.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium">It’s less to fight against.</p>
+                    </div>
+
+                    <div class="pt-10">
+                        <a href="https://wowmindset.gumroad.com/l/bundle" class="btn-premium w-full md:w-auto bg-[#111] dark:bg-brand-teal dark:text-brand-dark text-white py-5 px-10 rounded-full font-bold uppercase tracking-[0.1em] text-xs flex justify-center items-center group shadow-lg hover:bg-black dark:hover:bg-[#20bca8] transition-colors duration-300 inline-flex">
+                            $59 — Go deeper 
+                            <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GEO (ENTITY DEFINITION) -->
-        <section class="max-w-5xl mx-auto py-16 px-6 relative z-10 border-t border-neutral-200/60 dark:border-white/5 fade-up">
-            <div class="max-w-2xl mx-auto text-center">
-                <p class="text-neutral-500 dark:text-neutral-500 font-light text-sm">
-                    WOW Mindset is a 30-day guided experience that helps you think more clearly, reduce distraction, and follow through consistently by understanding what gets in the way of your actions.
-                </p>
+        <!-- TRUST BLOCK & FINAL CLOSE -->
+        <section class="max-w-2xl mx-auto py-24 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 mt-12">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-16">
+                
+                <!-- TRUST BLOCK -->
+                <div class="space-y-4">
+                    <p class="reveal">No pressure to keep up.</p>
+                    <p class="reveal delay-1">No system to follow.</p>
+                    <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Use it in a way that fits how you work.</p>
+                </div>
+
+                <!-- FINAL CLOSE -->
+                <div class="pt-16 font-display text-4xl md:text-5xl text-neutral-900 dark:text-white leading-tight italic space-y-6 border-t border-neutral-200/40 dark:border-white/5">
+                    <p class="reveal">You already know what needs attention.</p>
+                    <p class="reveal delay-1">This is just how you choose to continue.</p>
+                </div>
+                
             </div>
         </section>
 
@@ -604,41 +659,47 @@
                 
                 <!-- Column 1 & Socials -->
                 <div class="md:col-span-2 space-y-6">
-                    <div class="flex">
-                        <a href="/" class="inline-flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
-                            <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-neutral-200 p-1 bg-white shadow-sm block dark:hidden object-contain">
-                            <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-white/10 p-1 bg-[#0a0a0c] shadow-sm hidden dark:block object-contain">
-                            <span class="font-display text-3xl md:text-4xl tracking-wide text-neutral-900 dark:text-white">Words of Wisdom</span>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
+                            <!-- Borderless, transparent logo container -->
+                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                            </div>
+                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
                         </a>
                     </div>
-                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm">Clear thinking. Steady action.</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
                     
                     <!-- Social Icons -->
-                    <div class="flex items-center space-x-5 pt-2">
-                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-400 hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-400 hover:text-[#E1306C] dark:hover:text-[#E1306C] transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-400 hover:text-[#FF0000] dark:hover:text-[#FF0000] transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-400 hover:text-[#1877F2] dark:hover:text-[#1877F2] transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="space-y-4">
-                    <a href="/start-here" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Start</a>
-                    <a href="/identity" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Identity</a>
-                    <a href="/focus" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Focus</a>
-                    <a href="/action" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Action</a>
-                    <a href="/wow-mindset" class="block text-brand-teal dark:text-white transition-colors font-medium">WOW Mindset</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="space-y-4">
-                    <a href="/book" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Book</a>
-                    <a href="/tools" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Tools</a>
-                    <a href="/community" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Community</a>
-                    <a href="/about" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">About</a>
-                    <a href="/author" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Author</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
+                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
+                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -654,7 +715,7 @@
                     Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
                 </div>
 
-                <p class="tracking-[0.1em] opacity-60">No noise. No hype. Just clarity and practical action.</p>
+                <p class="tracking-[0.1em] opacity-60 text-center md:text-left">No noise. No hype. Just clarity and practical action.</p>
             </div>
         </div>
     </footer>
@@ -777,6 +838,16 @@
                     });
                 });
             }
+            
+            // Soft Presence Observer (for generic reveal text)
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
         });
     </script>
 </body>
