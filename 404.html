@@ -6,20 +6,20 @@
     
     <!-- FINAL META DATA (SEO + AEO) -->
     <title>Page Not Found | Words of Wisdom</title>
-    <meta name="description" content="This page doesn’t exist. But you're not in the wrong place. Start your journey to clear thinking here.">
+    <meta name="description" content="This page isn’t available. You can continue from here.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://www.wordsofwisdom.in/404">
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Page Not Found | Words of Wisdom">
-    <meta property="og:description" content="This page doesn’t exist. But you're not in the wrong place.">
+    <meta property="og:description" content="This page isn’t available. You can continue from here.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.wordsofwisdom.in/404">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Page Not Found | Words of Wisdom">
-    <meta name="twitter:description" content="This page doesn’t exist. But you're not in the wrong place.">
+    <meta name="twitter:description" content="This page isn’t available. You can continue from here.">
 
     <!-- FAVICON -->
     <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
     <!-- Premium Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
     <!-- Theme Initialization Script (Dark Mode Default) -->
@@ -50,6 +50,7 @@
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
                         brand: {
@@ -72,13 +73,23 @@
                             900: '#171717',
                             950: '#0a0a0a',
                         }
+                    },
+                    animation: {
+                        'float-slow': 'float 20s ease-in-out infinite alternate',
+                        'float-delayed': 'float 25s ease-in-out infinite alternate-reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                            '100%': { transform: 'translate(5%, 15%) scale(1.1) rotate(5deg)' },
+                        }
                     }
                 }
             }
         }
     </script>
 
-    <!-- Advanced CSS for Elite Premium UI/UX (Calmed Down for 404) -->
+    <!-- Advanced CSS for Elite Premium UI/UX -->
     <style type="text/tailwindcss">
         /* Elite Visible Scrollbar */
         ::-webkit-scrollbar { width: 10px; }
@@ -100,18 +111,44 @@
                         radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
         }
 
-        /* Faint Noise Texture Overlay */
+        /* Subtle Noise Texture Overlay */
         .ambient-noise {
-            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.15;
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
             mix-blend-mode: overlay;
         }
-        .dark .ambient-noise { opacity: 0.25; }
+        .dark .ambient-noise { opacity: 0.4; }
 
         /* Footer Noise Extraction */
         .footer-noise-bg {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
         }
+
+        /* Cinematic Ambient Orbs */
+        .ambient-orb {
+            position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
+            transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
+        }
+        .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
+        .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, transparent 70%); }
+
+        /* Magnetic Cursor */
+        @media (pointer: fine) { body, a, button, input, textarea { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
 
         /* Scroll Reveal Architecture */
         .fade-up {
@@ -138,9 +175,17 @@
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
     <!-- Global Noise & Ambient Light Engine -->
     <div class="elite-texture-base"></div>
     <div class="ambient-noise"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="ambient-orb orb-1 animate-float-slow"></div>
+        <div class="ambient-orb orb-2 animate-float-delayed"></div>
+    </div>
 
     <!-- NAVIGATION MENU -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
@@ -194,6 +239,9 @@
         <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
         <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
         <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+        <div class="pt-4 border-t border-neutral-200 dark:border-white/10">
+            <a href="/start-here" class="flex justify-center bg-[#111] dark:bg-white text-white dark:text-[#111] text-xs uppercase tracking-[0.05em] font-bold px-5 py-3.5 rounded-full w-full whitespace-nowrap">Start Here</a>
+        </div>
     </div>
 
     <main class="pt-40 md:pt-56 pb-24 px-6 sm:px-8 z-10 relative min-h-[85vh] flex flex-col items-center justify-center text-center">
@@ -201,26 +249,34 @@
         <!-- HERO / 404 CONTEXT -->
         <section class="max-w-2xl mx-auto fade-up w-full">
             <h1 class="font-display text-5xl md:text-7xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-8">
-                This page doesn’t exist.
+                This isn’t where you meant to land.<br>
+                <i class="block pt-2 text-neutral-500 text-[0.8em]">But it’s not a problem.</i>
             </h1>
             
-            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light">
-                <p>But you’re not in the wrong place.</p>
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                <p>Sometimes you arrive somewhere unexpected.</p>
+                <p>That’s not always a mistake.</p>
+                <p class="text-neutral-900 dark:text-white font-medium pt-2">You can still continue.</p>
             </div>
         </section>
 
         <!-- REDIRECTION OPTIONS -->
         <section class="max-w-2xl mx-auto w-full pt-16 pb-16 fade-up border-t border-neutral-200/60 dark:border-white/5 mt-16">
             <div class="flex flex-col items-center">
+
+                <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-2 mb-10">
+                    <p>If you were looking for something specific,</p>
+                    <p>you can continue from here.</p>
+                </div>
                 
                 <a href="/start-here" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-4 rounded-full uppercase tracking-[0.1em] font-bold text-sm group opacity-95 hover:opacity-100">
                     Start Here
                     <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
                 </a>
-                <p class="text-sm text-neutral-500 font-light mt-4">Start here if you want to understand what this site is about.</p>
+                <p class="text-sm text-neutral-500 font-light mt-4">Start here if you want to see how everything connects.</p>
                 
                 <div class="pt-16 w-full max-w-lg">
-                    <p class="mb-6 text-neutral-600 dark:text-neutral-400 font-light">If you were looking for something specific:</p>
+                    <p class="mb-6 text-neutral-600 dark:text-neutral-400 font-light">Or continue from where it makes sense:</p>
                     <div class="flex flex-wrap items-center justify-center gap-4 text-xl md:text-2xl font-display italic text-neutral-800 dark:text-neutral-300">
                         <a href="/identity" class="transition-colors hover:text-brand-teal">Identity</a>
                         <span class="text-neutral-300 dark:text-neutral-700 text-sm not-italic">•</span>
@@ -232,7 +288,7 @@
                 
                 <div class="pt-24">
                     <a href="/" class="clean-link text-neutral-500 hover:text-brand-teal dark:hover:text-brand-teal transition-colors font-medium text-sm tracking-wide uppercase">
-                        <i class="fa-solid fa-arrow-left mr-2 text-sm transition-transform hover:-translate-x-1"></i> Return to Home Page
+                        <i class="fa-solid fa-arrow-left mr-2 text-sm transition-transform hover:-translate-x-1"></i> Go back to where you started
                     </a>
                 </div>
                 
@@ -251,41 +307,47 @@
                 
                 <!-- Column 1 & Socials -->
                 <div class="md:col-span-2 space-y-6">
-                    <div class="flex">
-                        <a href="/" class="inline-flex flex-col items-center gap-4 hover:opacity-80 transition-opacity">
-                            <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-neutral-200 p-1 bg-white shadow-sm block dark:hidden object-contain">
-                            <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Icon" class="h-20 w-20 md:h-24 md:w-24 rounded-full border border-white/10 p-1 bg-[#0a0a0c] shadow-sm hidden dark:block object-contain">
-                            <span class="font-display text-3xl md:text-4xl tracking-wide text-neutral-900 dark:text-white">Words of Wisdom</span>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
+                            <!-- Borderless, transparent logo container -->
+                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                            </div>
+                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
                         </a>
                     </div>
-                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm">Clear thinking. Steady action.</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
                     
                     <!-- Social Icons -->
-                    <div class="flex items-center space-x-5 pt-2">
-                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-400 hover:text-[#0077b5] dark:hover:text-[#0077b5] transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-400 hover:text-[#E1306C] dark:hover:text-[#E1306C] transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-400 hover:text-[#FF0000] dark:hover:text-[#FF0000] transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-400 hover:text-[#1877F2] dark:hover:text-[#1877F2] transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="space-y-4">
-                    <a href="/start-here" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Start</a>
-                    <a href="/identity" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Identity</a>
-                    <a href="/focus" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Focus</a>
-                    <a href="/action" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Action</a>
-                    <a href="/wow-mindset" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">WOW Mindset</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="space-y-4">
-                    <a href="/book" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Book</a>
-                    <a href="/tools" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Tools</a>
-                    <a href="/community" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Community</a>
-                    <a href="/about" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">About</a>
-                    <a href="/author" class="block text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-white transition-colors font-medium">Author</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
+                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
+                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
 
@@ -301,10 +363,15 @@
                     Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
                 </div>
 
-                <p class="tracking-[0.1em] opacity-60">No noise. No hype. Just clarity and practical action.</p>
+                <p class="tracking-[0.1em] opacity-50 text-center md:text-left">No noise. No hype. Just clarity.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Elite Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
 
     <!-- INTERACTION LOGIC -->
     <script>
@@ -350,6 +417,68 @@
             }, observerOptions);
 
             fadeElements.forEach(el => observer.observe(el));
+
+            // Back to Top Logic
+            const bttBtn = document.getElementById('back-to-top');
+            if(bttBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        bttBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
+
+                bttBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Magnetic Cursor Logic
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+                let cursorInitiated = false;
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) {
+                        dot.style.opacity = "1";
+                        ring.style.opacity = "1";
+                        cursorInitiated = true;
+                    }
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    dot.style.left = `${mouseX}px`;
+                    dot.style.top = `${mouseY}px`;
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, textarea');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
         });
     </script>
 </body>
