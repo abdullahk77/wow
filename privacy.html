@@ -1,120 +1,438 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-  <title>Privacy Policy | Words of Wisdom</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-
-  <style>
-    :root {
-      --bg-void: #020204;
-      --text-pure: #FFFFFF;
-      --text-muted: rgba(255, 255, 255, 0.7);
-      --brand-teal: #2DD4BF;
-      --font-display: 'Cormorant Garamond', serif;
-      --font-ui: 'Plus Jakarta Sans', sans-serif;
-      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    body {
-      background: var(--bg-void);
-      color: var(--text-muted);
-      font-family: var(--font-ui);
-      line-height: 1.8;
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: auto;
-      -webkit-font-smoothing: antialiased;
-    }
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Privacy Policy | Words of Wisdom</title>
+    <meta name="description" content="This page explains how your information is handled here. Simple, direct, and without unnecessary complexity.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://wordsofwisdom.com/privacy">
 
-    h1, h2 {
-      color: var(--text-pure);
-      font-family: var(--font-display);
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Privacy Policy | Words of Wisdom">
+    <meta property="og:description" content="This page explains how your information is handled here. Simple, direct, and without unnecessary complexity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordsofwisdom.com/privacy">
 
-    h1 { 
-      font-size: clamp(2.5rem, 5vw, 3.5rem); 
-      border-bottom: var(--border-glass); 
-      padding-bottom: 20px; 
-      margin-top: 0;
-    }
-    
-    h2 { font-size: 1.8rem; margin-top: 50px; }
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
 
-    p { margin-bottom: 20px; font-size: 1.1rem; }
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
-    .back-home {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 50px;
-      color: var(--brand-teal);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: opacity 0.3s ease;
-    }
-    
-    .back-home:hover { opacity: 0.8; }
+    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
 
-    footer {
-      margin-top: 100px;
-      padding-top: 30px;
-      border-top: var(--border-glass);
-      font-size: 0.8rem;
-      text-align: center;
-      letter-spacing: 0.05em;
-    }
-    
-    strong { color: var(--text-pure); }
-  </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                            purple: '#c084fc',
+                            gold: '#fbbf24',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS for Elite Premium UI/UX (Animations Removed for Legal Pages) -->
+    <style type="text/tailwindcss">
+        /* Elite Visible Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+
+        /* Premium Lux Texture Base */
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+        }
+
+        /* Subtle Noise Texture Overlay */
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.4; }
+
+        /* Footer Noise Extraction */
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Premium Links */
+        .clean-link { position: relative; text-decoration: none; display: inline-block; }
+        .clean-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0;
+            background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+        .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+        ::selection { background-color: #2dd4bf; color: #171717; }
+    </style>
 </head>
-<body>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
-  <a href="index.html" class="back-home">&larr; Back to Home</a>
+    <!-- Global Noise & Texture -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
 
-  <h1>Privacy Policy</h1>
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+            
+            <!-- Logo Integration -->
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
+                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
 
-  <p>This website, <strong>Words of Wisdom Media</strong>, respects your privacy and is committed to protecting your personal data.</p>
+            <!-- CTA -->
+            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_0_rgba(255,255,255,0.08)]">
+                START<br>HERE
+            </a>
 
-  <h2>Information We Collect</h2>
-  <p>We may collect personal identification information such as your name and email address when you voluntarily subscribe to our insights, contact us, or interact with our system.</p>
+            <!-- Mobile Utilities -->
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
 
-  <h2>How Your Information Is Used</h2>
-  <p>Your information is used to send insights, updates, and relevant content. We value the clarity of our relationship and do not sell or share your personal data with third parties.</p>
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40">
+        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
+        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    </div>
 
-  <h2>Email Communication</h2>
-  <p>You may unsubscribe at any time using the link provided in the footer of our emails. We respect your attention and do not send noise.</p>
+    <main class="max-w-[760px] mx-auto pt-40 md:pt-48 pb-24 px-6 sm:px-8 z-10 relative min-h-screen">
+        
+        <div class="mb-12">
+            <a href="/" class="text-brand-teal hover:text-brand-teal/80 transition-colors text-sm font-bold uppercase tracking-[0.15em] flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Back to Home
+            </a>
+        </div>
 
-  <h2>Third-Party Services</h2>
-  <p>We use trusted services such as <strong>MailerLite</strong> for email automation and basic analytics tools to understand how to better serve our audience. These services process limited data according to their own privacy standards.</p>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-6">
+            Privacy Policy
+        </h1>
+        <p class="text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 mb-12 pb-8 border-b border-neutral-200 dark:border-white/10">
+            Last updated: May 2026
+        </p>
 
-  <h2>Cookies</h2>
-  <p>This site may use basic cookies to improve your experience and ensure the system functions smoothly.</p>
+        <div class="text-lg text-neutral-700 dark:text-neutral-300 font-light space-y-16">
+            
+            <div class="space-y-4">
+                <p>This page explains how your information is handled here.</p>
+                <p>Simple, direct, and without unnecessary complexity.</p>
+                <p>If you use this site, subscribe, or contact us, some information may be collected.</p>
+                <p class="text-neutral-900 dark:text-white font-medium pt-2">This is how it is used.</p>
+            </div>
 
-  <h2>Data Security</h2>
-  <p>Reasonable administrative and technical measures are taken to protect your information from unauthorized access.</p>
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Information We Collect</h2>
+                <p class="mb-4">We may collect:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Your name and email (when you subscribe or contact)</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Basic usage data (such as pages visited or time spent)</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Technical data (device type, browser, approximate location)</li>
+                </ul>
+                <div class="mt-6 space-y-2">
+                    <p>You provide this information voluntarily.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">We do not collect sensitive personal data.</p>
+                </div>
+            </div>
 
-  <h2>Changes</h2>
-  <p>This policy may be updated periodically to reflect changes in our practices. Updates will be posted here without prior notice.</p>
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">How Your Information Is Used</h2>
+                <p class="mb-4">Your information is used to:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Send insights and updates</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Respond to messages</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Improve the experience of the site</li>
+                </ul>
+                <div class="mt-6 space-y-2 text-neutral-900 dark:text-white font-medium">
+                    <p>We do not sell your personal data.</p>
+                    <p>We do not share it unnecessarily.</p>
+                </div>
+            </div>
 
-  <h2>Contact</h2>
-  <p>For any questions regarding your privacy, contact:<br>
-  <strong>msg.abdullah {at} gmail [dot] com</strong></p>
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Email Communication</h2>
+                <p>If you subscribe, you may receive emails.</p>
+                <p>You can unsubscribe at any time using the link provided.</p>
+                <div class="mt-6 space-y-2">
+                    <p>Emails are sent with care.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">No noise. No unnecessary frequency.</p>
+                </div>
+            </div>
 
-  <footer>
-    &copy; 2026 Words of Wisdom Media. All rights reserved.
-  </footer>
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Third-Party Services</h2>
+                <p class="mb-4">We use trusted third-party services to operate this site. This may include:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Email delivery (such as MailerLite)</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Basic analytics tools</li>
+                </ul>
+                <p>These services may process limited data according to their own privacy policies.</p>
+            </div>
 
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Cookies</h2>
+                <p class="mb-4">This site may use basic cookies to:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Improve performance</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Understand usage patterns</li>
+                </ul>
+                <p>You can disable cookies through your browser settings.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Legal Basis (GDPR)</h2>
+                <p class="mb-4">If you are in the European Economic Area (EEA), we process your data based on:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Your consent (when you subscribe or contact)</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Legitimate interest (to improve and maintain the site)</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Your Rights</h2>
+                <p class="mb-4">Depending on your location, you may have the right to:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Access your data</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Correct your data</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Request deletion</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Withdraw consent</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Restrict or object to processing</li>
+                </ul>
+                <p>To request any of these, you can contact us directly.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">California Privacy Rights (CCPA/CPRA)</h2>
+                <p class="mb-4">If you are a California resident, you have the right to:</p>
+                <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Know what personal data is collected</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Request deletion of your data</li>
+                    <li class="flex items-start"><span class="text-neutral-400 mr-4 shrink-0">—</span> Request access to your data</li>
+                </ul>
+                <p class="text-neutral-900 dark:text-white font-medium">We do not sell personal data.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Data Retention</h2>
+                <p>Your data is kept only as long as necessary to provide the service or comply with legal obligations.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Data Security</h2>
+                <p>We take reasonable steps to protect your information.</p>
+                <p>However, no system can guarantee absolute security.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">International Use</h2>
+                <p>This site may be accessed globally.</p>
+                <p>By using it, you understand that your data may be processed in different regions.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Changes</h2>
+                <p>This policy may be updated when necessary.</p>
+                <p>Any updates will be reflected on this page.</p>
+            </div>
+
+            <div>
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Contact</h2>
+                <p class="mb-4">If you have questions about your data:</p>
+                <code class="font-mono text-sm md:text-base text-neutral-900 dark:text-white font-semibold">info {at} wordsofwisdom [dot] in</code>
+            </div>
+            
+            <div class="pt-16 border-t border-neutral-200/40 dark:border-white/10 text-sm text-neutral-500 font-light">
+                <p>&copy; 2026 Words of Wisdom Media. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <footer class="bg-brand-light dark:bg-[#030305] pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <!-- Subtle noise over footer using the CSS class -->
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                
+                <!-- Column 1 & Socials -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex justify-center md:justify-start">
+                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
+                            <!-- Borderless, transparent logo container -->
+                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                            </div>
+                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
+                        </a>
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
+                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
+                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Legal + Author + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="/privacy" class="text-neutral-900 dark:text-white transition-colors">Privacy</a>
+                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
+                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
+                </div>
+
+                <p class="tracking-[0.1em] opacity-50 text-center md:text-left">No noise. No hype. Just clarity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION LOGIC (Only Theme and Menu) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
