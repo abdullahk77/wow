@@ -1,450 +1,613 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-  
-  <title>Author | Words of Wisdom System</title>
-  <meta name="description" content="Meet Abdullah Khan, creator of the Words of Wisdom system. A structured approach to breaking patterns and building clarity."/>
-  
-  <!-- High-Performance Font Preloading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-
-  <style>
-    /* Elite Core Variables */
-    :root {
-      --bg-void: #020204;
-      --bg-glass: rgba(10, 10, 15, 0.4);
-      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
-      --brand-teal: #2DD4BF;
-      --brand-purple: #9333EA;
-      --brand-gold: #FDE047;
-      --gradient-dynamic: linear-gradient(to right, #2DD4BF 0%, #818CF8 25%, #9333EA 50%, #FDE047 75%, #2DD4BF 100%);
-      --text-pure: #FFFFFF;
-      --text-main: rgba(255, 255, 255, 0.95);
-      --text-muted: rgba(255, 255, 255, 0.55); 
-      --font-display: 'Cormorant Garamond', serif; 
-      --font-ui: 'Plus Jakarta Sans', sans-serif;
-      --font-script: 'Great Vibes', cursive;
-      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
-      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
-      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; height: 100%; }
-    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; transition: all 0.4s var(--ease-premium); }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 180px 20px 100px; position: relative; }
-    .display-font { font-family: var(--font-display); }
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Author | Words of Wisdom</title>
+    <meta name="description" content="A simple approach to thinking clearly, reducing distraction, and following through more consistently.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wordsofwisdom.in/author">
 
-    /* Cinematic Background Setup */
-    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 20%, #08080c 0%, #020204 100%); }
-    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.05) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; pointer-events: none; }
-    
-    body::after { 
-      content: ""; position: fixed; inset: 0; 
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"); 
-      pointer-events: none; z-index: 9999; mix-blend-mode: overlay; 
-    }
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Author | Words of Wisdom">
+    <meta property="og:description" content="A simple approach to thinking clearly, reducing distraction, and following through more consistently.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wordsofwisdom.in/author">
 
-    /* Custom Cursor */
-    @media (pointer: fine) { body, a, button { cursor: none !important; } }
-    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
-    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
-    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); transition: opacity 0.3s ease, transform 0.3s ease; }
-    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); transition: width 0.4s var(--ease-premium), height 0.4s var(--ease-premium), background 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium); }
-    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
-    .cursor-dot.hover-state { opacity: 0; transform: scale(0); }
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Author | Words of Wisdom">
+    <meta name="twitter:description" content="A simple approach to thinking clearly, reducing distraction, and following through more consistently.">
 
-    /* Header Navigation */
-    .capsule-nav {
-      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
-      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 2rem;
-      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 20px 40px rgba(0,0,0,0.4); 
-      transition: all 0.6s var(--ease-premium);
-    }
-    .capsule-nav.scrolled { padding: 0.4rem 2rem; background: rgba(10, 10, 15, 0.85); transform: translateY(-5px); }
-    
-    .brand-logo { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-decoration: none; }
-    .wow-text { 
-      font-family: var(--font-script); font-weight: 400; font-size: 2.2rem; line-height: 1.2; 
-      background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-size: 200% auto; animation: colorFlow 8s linear infinite;
-      padding: 0.1em 0; 
-    }
-    .logo-tagline { font-family: var(--font-ui); font-size: 0.55rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted); margin-top: -0.3rem; margin-left: 0.15rem; }
-    
-    .nav-cta { padding: 0.6rem 1.6rem; border-radius: 50px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text-pure); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.4s ease; }
-    .nav-cta:hover { background: var(--text-pure); color: var(--bg-void); border-color: var(--text-pure); }
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
 
-    @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
-    /* Editorial Hero Architecture */
-    .author-manifesto-card {
-      display: grid; grid-template-columns: 1fr 300px; gap: 5rem; align-items: start;
-      margin-bottom: 6rem; position: relative;
-    }
-    
-    .portrait-sidebar { position: sticky; top: 140px; display: flex; flex-direction: column; align-items: center; }
-    
-    .parallax-img {
-      width: 280px; height: 280px; border-radius: 50%; overflow: hidden;
-      border: 1px solid rgba(45, 212, 191, 0.2);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
-      transform-style: preserve-3d;
-      transition: transform 0.1s linear;
-    }
-    .parallax-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); transition: filter 1s ease; }
-    .author-portrait:hover img { filter: grayscale(0%) contrast(1); }
+    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
 
-    /* Typography Polish */
-    h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.8rem); margin-bottom: 30px; line-height: 1.05; color: var(--text-pure); letter-spacing: -0.03em; font-weight: 400; }
-    h2 { font-size: 2.2rem; margin-top: 100px; color: var(--text-pure); margin-bottom: 2rem; display: block; font-family: var(--font-display); font-weight: 500; opacity: 0.9; }
-    
-    p { margin-bottom: 2.4rem; font-size: 1.35rem; color: var(--text-muted); line-height: 1.8; }
-    .lead-p { font-size: 1.8rem; color: var(--text-main); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 3.5rem; line-height: 1.4; border-left: 2px solid var(--brand-teal); padding-left: 2rem; }
-    .highlight { color: var(--text-pure); font-weight: 600; font-size: 1.4rem; }
-    
-    .quote {
-      margin: 80px 0; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 2.4rem; font-family: var(--font-display); font-style: italic; color: var(--text-pure);
-      line-height: 1.3; position: relative;
-    }
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                            purple: '#c084fc',
+                            gold: '#fbbf24',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 20s ease-in-out infinite alternate',
+                        'float-delayed': 'float 25s ease-in-out infinite alternate-reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                            '100%': { transform: 'translate(5%, 15%) scale(1.1) rotate(5deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-    /* Scroll Animations */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.2s var(--ease-premium), transform 1.2s var(--ease-premium); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
+    <!-- Advanced CSS for Elite Premium UI/UX -->
+    <style type="text/tailwindcss">
+        /* Elite Visible Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
 
-    /* CTA Area */
-    .cta-area {
-      text-align: center; padding: 120px 20px; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .btn-massive {
-      display: inline-block; padding: 22px 60px; background: var(--text-pure); color: #000;
-      border-radius: 100px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em;
-      transition: all 0.5s var(--ease-premium); text-decoration: none; border: none; font-size: 1rem;
-      box-shadow: 0 0 0 rgba(255,255,255,0);
-    }
-    .btn-massive:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(45, 212, 191, 0.3); background: var(--brand-teal); }
+        /* Premium Lux Texture Base */
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+        }
 
-    .signature-wrap {
-      margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 50px; 
-      display: flex; justify-content: center; align-items: center;
-    }
-    .signature { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-pure); font-style: italic; text-align: center; }
+        /* Subtle Noise Texture Overlay */
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.4; }
 
-    @media (max-width: 900px) {
-      .author-manifesto-card { grid-template-columns: 1fr; gap: 4rem; }
-      .portrait-sidebar { position: relative; top: 0; order: -1; }
-      .parallax-img { width: 220px; height: 220px; }
-      h1 { font-size: 3rem; }
-      .container { padding-top: 160px; }
-      .quote { font-size: 1.8rem; }
-    }
-  </style>
+        /* Footer Noise Extraction */
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Cinematic Ambient Orbs */
+        .ambient-orb {
+            position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
+            transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
+        }
+        .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
+        .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, transparent 70%); }
+
+        /* Magnetic Cursor */
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+
+        /* Scroll Reveal Architecture */
+        .fade-up {
+            opacity: 0; transform: translateY(30px); filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        /* Premium Buttons & Links */
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.08); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .dark .btn-premium:hover { box-shadow: 0 6px 20px rgba(255,255,255,0.12); }
+
+        .clean-link { position: relative; text-decoration: none; display: inline-block; }
+        .clean-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0;
+            background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+        .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        
+        .cta-arrow { transition: transform 0.3s ease; }
+        .group:hover .cta-arrow { transform: translateX(6px); }
+
+        /* Arrival Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        ::selection { background-color: #2dd4bf; color: #171717; }
+    </style>
 </head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
-<body>
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
 
-  <div class="elite-texture-base"></div>
-  <div class="light-beam"></div>
-
-  <!-- Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
-  <!-- Header -->
-  <header class="capsule-nav" id="mainNav">
-    <div class="nav-top-bar">
-      <a href="index.html" class="brand-logo">
-        <span class="wow-text">Words of Wisdom</span>
-        <span class="logo-tagline">Enlightening Minds, Inspiring Souls.</span>
-      </a>
+    <!-- Global Noise & Ambient Light Engine -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="ambient-orb orb-1 animate-float-slow"></div>
+        <div class="ambient-orb orb-2 animate-float-delayed"></div>
     </div>
-    <div class="nav-actions">
-      <a href="index.html" class="nav-cta">&larr; Home</a>
-    </div>
-  </header>
 
-  <main class="container">
-    
-    <!-- 1. HERO SECTION -->
-    <section class="author-manifesto-card">
-      <div class="card-content">
-        <h1 class="display-font reveal">
-          What if the way you think is the reason things don’t change?
-        </h1>
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+            
+            <!-- Logo Integration -->
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
+                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+
+            <!-- CTA -->
+            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+                START<br>HERE
+            </a>
+
+            <!-- Mobile Utilities -->
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
+        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    </div>
+
+    <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
         
-        <div class="lead-p reveal">
-          Not your effort.<br>
-          But the structure behind how you think.
+        <!-- HERO -->
+        <section class="max-w-4xl mx-auto pt-16 md:pt-24 pb-24 fade-up flex flex-col md:flex-row gap-16 items-center md:items-start">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="font-display text-5xl md:text-7xl text-neutral-900 dark:text-white leading-[1.1] mb-8">
+                    This didn’t start with an idea.<br>
+                    <i class="block pt-3 text-neutral-500 text-[0.6em] md:text-[0.7em] leading-snug">It started with noticing the same thing again and again.</i>
+                </h1>
+                
+                <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-6 pt-4">
+                    <p class="reveal">Trying to focus.</p>
+                    <p class="reveal delay-1">Trying to stay consistent.</p>
+                    <p class="reveal delay-2">Trying to follow through.</p>
+                    <p class="reveal delay-3 text-neutral-900 dark:text-white font-medium pt-2">And still ending up in the same place.</p>
+                    
+                    <div class="pt-6 space-y-4">
+                        <p class="reveal">Not because of a lack of effort.</p>
+                        <p class="reveal delay-1 text-neutral-900 dark:text-white font-medium">But because something wasn’t being seen clearly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-[320px] shrink-0 reveal delay-3 flex flex-col items-center">
+               <div class="w-64 h-64 md:w-full md:h-[320px] rounded-[2rem] overflow-hidden border border-neutral-200 dark:border-white/10 shadow-2xl relative">
+                   <img src="https://i.ibb.co/0yTqLVMy/office.png" alt="Abdullah Khan" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+               </div>
+            </div>
+        </section>
+
+        <!-- SHIFT -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">At some point, that becomes difficult to ignore.</p>
+                <p class="reveal delay-1">You start to notice:</p>
+                
+                <div class="pl-6 space-y-4 pt-2 reveal delay-2 text-neutral-700 dark:text-neutral-300">
+                    <p>Where your attention moves</p>
+                    <p>Where you delay</p>
+                    <p>Where things break</p>
+                </div>
+                
+                <div class="pt-8 space-y-4 reveal delay-3">
+                    <p>Not once.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But repeatedly.</p>
+                </div>
+
+                <div class="pt-4 space-y-4 reveal">
+                    <p>Across different situations.</p>
+                    <p>Different environments.</p>
+                    <p>Different phases of life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REALIZATION -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">It wasn’t random.</p>
+                <p class="reveal delay-1">And it wasn’t about trying harder.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium text-xl md:text-2xl pt-4">It was about seeing what was already happening.</p>
+            </div>
+        </section>
+
+        <!-- WHY THIS EXISTS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">This work comes from that.</p>
+                <p class="reveal delay-1">Not to give more ideas.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">But to make what is already happening easier to see.</p>
+                
+                <div class="pt-12 font-display text-3xl md:text-4xl text-neutral-900 dark:text-white italic leading-relaxed reveal delay-3">
+                    <p>Because once you see it clearly,</p>
+                    <p class="mt-4">you don’t approach things the same way.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT THIS BECAME -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">Over time, this became something consistent.</p>
+                <p class="reveal delay-1">A way of looking at:</p>
+                
+                <div class="pl-6 space-y-4 pt-2 reveal delay-2 text-neutral-700 dark:text-neutral-300">
+                    <p>How you think</p>
+                    <p>Where your attention goes</p>
+                    <p>What you actually do</p>
+                </div>
+                
+                <div class="pt-8 space-y-4 reveal delay-3">
+                    <p>Not as separate things.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But as something connected.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT THE WORK -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">Everything here is built around that.</p>
+                <p class="reveal delay-1">Not to add more.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">But to reduce what gets in the way.</p>
+                
+                <div class="pt-8 space-y-4 reveal">
+                    <p>No pressure to follow anything.</p>
+                    <p>No expectation to do it perfectly.</p>
+                </div>
+
+                <div class="pt-8 font-display text-2xl md:text-3xl italic text-neutral-800 dark:text-neutral-300 reveal delay-1">
+                    <p>Just something you return to,</p>
+                    <p class="mt-2">when things feel unclear.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL NOTE -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">This is not about getting everything right.</p>
+                <p class="reveal delay-1">It never was.</p>
+                
+                <div class="pt-12 font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-relaxed reveal delay-2">
+                    <p>It’s about noticing what keeps repeating,</p>
+                    <p class="mt-4 italic text-neutral-600 dark:text-neutral-400">and understanding it a little better each time.</p>
+                </div>
+
+                <div class="pt-16 reveal delay-3">
+                    <p class="font-display text-2xl italic text-neutral-900 dark:text-white">— Abdullah Khan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CLOSE -->
+        <section class="max-w-2xl mx-auto py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10">
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 space-y-8 font-light">
+                <p class="reveal">If something here feels familiar,</p>
+                <p class="reveal delay-1 text-neutral-900 dark:text-white font-medium">start there.</p>
+                
+                <div class="pt-12 reveal delay-2">
+                    <a href="/start-here" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-12 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group transition-all duration-300">
+                        Start Here
+                        <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <!-- Subtle noise over footer using the CSS class -->
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                
+                <!-- Column 1 & Socials -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex justify-center md:justify-start">
+                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
+                            <!-- Borderless, transparent logo container -->
+                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                            </div>
+                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
+                        </a>
+                    </div>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
+                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
+                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author" class="block text-brand-teal dark:text-white transition-colors">Author</a>
+                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Legal + Author + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
+                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
+                </div>
+
+                <p class="tracking-[0.1em] opacity-60 text-center md:text-left">No noise. No hype. Just clarity and practical action.</p>
+            </div>
         </div>
-        
-        <p class="reveal">Because most people don’t struggle from a lack of trying.</p>
+    </footer>
 
-        <p class="reveal">
-          They struggle because they keep approaching the same pattern<br>
-          in slightly different ways.
-        </p>
+    <!-- Elite Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
 
-        <p class="reveal" style="opacity:0.4;">
-          The pattern feels familiar.
-        </p>
-        
-        <div class="quote reveal">
-          And the question rarely changes.
-        </div>
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
 
-        <p class="highlight reveal">
-          “How do I stay consistent?”<br>
-          “How do I stay focused?”<br>
-          “Why does this keep happening?”
-        </p>
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
 
-        <p class="reveal" style="margin-top: 2rem;">
-          But those questions keep you inside the same loop.
-        </p>
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
 
-        <p class="highlight reveal">
-          A better question changes everything.
-        </p>
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
 
-        <p class="reveal">
-          Not how to try harder.<br>
-          But what is actually shaping the way you think, decide, and act?
-        </p>
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
 
-        <p class="reveal" style="opacity:0.6;">
-          That’s where this begins.
-        </p>
-      </div>
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-      <div class="portrait-sidebar">
-        <div class="parallax-img author-portrait reveal">
-          <img src="https://i.ibb.co/0yTqLVMy/office.png" alt="Abdullah Khan" id="authorPortrait">
-        </div>
-        <p class="reveal" style="font-size: 0.7rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 800; margin-top: 1.5rem;">Originator of RightQ</p>
-      </div>
-    </section>
+            fadeElements.forEach(el => observer.observe(el));
 
-    <!-- 2. EXPERIENCE -->
-    <section class="section">
-      <h2 class="reveal">Where this comes from</h2>
-      <p class="reveal">That question didn’t come from a single moment.</p>
-      <p class="reveal">
-        It came from noticing the same pattern —<br>
-        across roles, environments, and everyday decisions.
-      </p>
+            // Back to Top Logic
+            const bttBtn = document.getElementById('back-to-top');
+            if(bttBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        bttBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
 
-      <p class="highlight reveal" style="font-size:1.8rem; line-height:1.4; margin-bottom: 3rem; max-width: 80%;">
-        Not a lack of knowledge.<br>
-        But a lack of structure in how people think.
-      </p>
+                bttBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
-      <p class="reveal">The pattern is consistent:</p>
+            // Spotlight Cards Tracking & Cursor
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const cards = document.querySelectorAll('.spotlight-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        card.style.setProperty('--mouse-x', `${x}px`);
+                        card.style.setProperty('--mouse-y', `${y}px`);
+                    });
+                });
+                
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
 
-      <p class="reveal" style="opacity:0.8; font-style:italic; border-left:3px solid var(--brand-teal); padding-left:2.5rem; font-size:1.5rem; margin-bottom: 3.5rem; color: var(--text-pure);">
-        Attention scattered.<br>
-        Decisions reactive.<br>
-        Action inconsistent.
-      </p>
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    if(dot) {
+                        dot.style.left = `${mouseX}px`;
+                        dot.style.top = `${mouseY}px`;
+                    }
+                });
 
-      <p class="reveal">
-        More effort doesn’t resolve it.<br>
-        Because effort is applied to the wrong layer.
-      </p>
-    </section>
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
 
-    <!-- 3. SHIFT -->
-    <section class="section">
-      <h2 class="reveal">What changed</h2>
-      <p class="reveal">At some point, it becomes clear:</p>
-      <p class="reveal">Trying harder is not the solution.</p>
-
-      <p class="reveal">
-        Because behavior is not the starting point.<br>
-        It’s the outcome.
-      </p>
-
-      <p class="reveal">What actually drives it is quieter:</p>
-
-      <p class="highlight reveal" style="margin-bottom: 2rem; color: var(--text-pure);">
-        What you notice.<br>
-        How you interpret it.<br>
-        What you repeat without realizing.
-      </p>
-
-      <p class="reveal">
-        And once that becomes visible,<br>
-        the approach shifts.
-      </p>
-
-      <p class="highlight reveal" style="color:var(--brand-teal); font-size:1.6rem;">
-        Not more effort.<br>
-        But clearer thinking — applied consistently.
-      </p>
-    </section>
-
-    <!-- 4. SYSTEM -->
-    <section class="section">
-      <h2 class="reveal">Why this platform exists</h2>
-      <p class="reveal">Words of Wisdom Media was built from that shift.</p>
-      
-      <p class="reveal">
-        Not to add more information.<br>
-        But to remove confusion.
-      </p>
-
-      <p class="highlight reveal">
-        Not to motivate.<br>
-        But to introduce structure.
-      </p>
-
-      <div class="quote reveal" style="text-align: center; border: none; background: rgba(255,255,255,0.02); border-radius: 20px; padding: 40px;">
-        Identity <span style="opacity: 0.3;">→</span> Focus <span style="opacity: 0.3;">→</span> Action <span style="opacity: 0.3;">→</span> Reset
-      </div>
-
-      <p class="reveal">Simple on the surface.</p>
-
-      <p class="reveal">But each step changes how the next one works.</p>
-
-      <p class="highlight reveal">Skip one, and nothing really changes.</p>
-    </section>
-
-    <!-- 5. AUTHOR + BOOK -->
-    <section class="section">
-      <h2 class="reveal">The work behind this</h2>
-      <p class="reveal">That same thinking extends further.</p>
-      <p class="reveal">Into something more deliberate.</p>
-
-      <p class="highlight reveal" style="color:var(--brand-gold); font-size:2.6rem; font-family:var(--font-display);">
-        <a href="book.html" style="color: inherit; border-bottom: 1px solid var(--brand-gold);">The Right Question</a>
-      </p>
-
-      <p class="reveal">Because over time, one idea becomes unavoidable:</p>
-
-      <div class="quote reveal">
-        The direction of your life changes the moment your questions change.
-      </div>
-
-      <p class="reveal">
-        Not intensity.<br>
-        Not motivation.<br>
-        But the clarity that precedes action.
-      </p>
-    </section>
-
-    <!-- 6. PHILOSOPHY -->
-    <section class="section">
-      <h2 class="reveal">How to approach this</h2>
-      <p class="reveal">There is no need to rush.</p>
-      <p class="reveal">The goal is not to consume more. It is to notice more.</p>
-
-      <p class="reveal">
-        Read slowly.<br>
-        Pause where something feels familiar.<br>
-        Apply one thing at a time.
-      </p>
-
-      <p class="highlight reveal" style="font-size:1.8rem; color:var(--text-pure);">
-        That’s how change happens.<br>
-        Quietly. Gradually. But in a way that lasts.
-      </p>
-    </section>
-
-    <!-- 7. CTA -->
-    <div class="cta-area reveal">
-      <p class="highlight reveal" style="font-size: 2rem; margin-bottom: 2rem;">If something here felt true, don’t ignore it.</p>
-      <a href="start-here.html" class="btn-massive reveal">Start with the system &rarr;</a>
-    </div>
-
-    <!-- 8. SIGNATURE -->
-    <div class="signature-wrap reveal">
-      <div class="signature reveal">
-        &mdash; Abdullah Khan
-      </div>
-    </div>
-
-  </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // 1. ELITE SCROLL OBSERVER
-      const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            // Apply a slight delay based on index if multiple reveal in one view
-            setTimeout(() => {
-              entry.target.classList.add('active');
-            }, index * 100);
-          }
+                const interactables = document.querySelectorAll('a, button, input, .spotlight-card');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
+            
+            // Soft Presence Observer (for generic reveal text)
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
         });
-      }, observerOptions);
-
-      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      // 2. PARALLAX PORTRAIT & HEADER EFFECTS
-      const portrait = document.getElementById('authorPortrait');
-      const nav = document.getElementById('mainNav');
-
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        
-        // Header styling on scroll
-        if (scrolled > 50) { nav.classList.add('scrolled'); } 
-        else { nav.classList.remove('scrolled'); }
-
-        // Parallax logic for portrait
-        if (portrait) {
-          const parentRect = portrait.parentElement.getBoundingClientRect();
-          if (parentRect.top < window.innerHeight && parentRect.bottom > 0) {
-            const movement = (window.innerHeight - parentRect.top) * 0.05;
-            portrait.style.transform = `translateY(${movement}px) scale(1.05)`;
-          }
-        }
-      });
-
-      // 3. CUSTOM CURSOR
-      const cursorDot = document.querySelector('.cursor-dot');
-      const cursorOutline = document.querySelector('.cursor-outline');
-      
-      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
-        let mouseX = window.innerWidth / 2; let mouseY = window.innerHeight / 2;
-        let outlineX = mouseX; let outlineY = mouseY;
-        
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX; mouseY = e.clientY;
-          cursorDot.style.left = `${mouseX}px`; cursorDot.style.top = `${mouseY}px`;
-        });
-
-        function animateCursor() {
-          outlineX += (mouseX - outlineX) * 0.15;
-          outlineY += (mouseY - outlineY) * 0.15;
-          cursorOutline.style.left = `${outlineX}px`; cursorOutline.style.top = `${outlineY}px`;
-          requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        document.body.addEventListener('mouseover', (e) => {
-          if (e.target.closest('a, button, .quote, .author-portrait')) {
-            cursorOutline.classList.add('hover-state'); cursorDot.classList.add('hover-state');
-          }
-        });
-        document.body.addEventListener('mouseout', (e) => {
-          if (e.target.closest('a, button, .quote, .author-portrait')) {
-            cursorOutline.classList.remove('hover-state'); cursorDot.classList.remove('hover-state');
-          }
-        });
-      }
-    });
-  </script>
-
+    </script>
 </body>
 </html>
