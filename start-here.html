@@ -1,495 +1,579 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-  
-  <title>Start Here | WOWMindset System</title>
-  <meta name="description" content="Start here if you want clarity, focus, and consistent action. A structured approach to resetting your mental baseline."/>
-  
-  <!-- High-Performance Font Preloading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-
-  <style>
-    /* Reused Core Variables */
-    :root {
-      --bg-void: #020204;
-      --bg-glass: rgba(10, 10, 15, 0.65);
-      --bg-glass-heavy: rgba(15, 15, 20, 0.85);
-      --brand-teal: #2DD4BF;
-      --brand-purple: #9333EA;
-      --brand-gold: #FDE047;
-      --gradient-text: linear-gradient(135deg, #2DD4BF, #818CF8);
-      --gradient-dynamic: linear-gradient(to right, #2DD4BF 0%, #818CF8 25%, #9333EA 50%, #FDE047 75%, #2DD4BF 100%);
-      --gradient-btn: linear-gradient(135deg, rgba(253, 224, 71, 0.95), rgba(45, 212, 191, 0.88));
-      --text-pure: #FFFFFF;
-      --text-main: rgba(255, 255, 255, 0.95);
-      --text-muted: rgba(255, 255, 255, 0.75); 
-      --font-display: 'Cormorant Garamond', serif; 
-      --font-ui: 'Plus Jakarta Sans', sans-serif;
-      --border-glass: 1px solid rgba(255, 255, 255, 0.08);
-      --shadow-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.5);
-      --ease-premium: cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { overflow-x: hidden; width: 100%; scroll-behavior: smooth; }
-    body { background-color: var(--bg-void); color: var(--text-main); font-family: var(--font-ui); line-height: 1.8; -webkit-font-smoothing: antialiased; }
-    a { color: inherit; text-decoration: none; transition: all 0.3s ease; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 max(5vw, 2rem); }
-    .narrative-container { max-width: 760px; margin: 0 auto; }
-    
-    .display-font { font-family: var(--font-display); }
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Start Here | See What’s Been Getting in Your Way</title>
+    <meta name="description" content="Start here to see what’s been getting in your way. A clear, simple way to understand why you lose focus and struggle to follow through.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wordsofwisdom.in/start-here">
 
-    /* Background Setup */
-    .elite-texture-base { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 40%, transparent 10%, rgba(2, 2, 4, 0.98) 100%); }
-    .light-beam { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 60vw; height: 100vh; background: radial-gradient(ellipse at top, rgba(45, 212, 191, 0.06) 0%, transparent 60%); z-index: -1; mix-blend-mode: screen; }
-    body::after { content: ""; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; mix-blend-mode: overlay; }
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Start Here | See What’s Been Getting in Your Way">
+    <meta property="og:description" content="Start here to see what’s been getting in your way. A clear, simple way to understand why you lose focus and struggle to follow through.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wordsofwisdom.in/start-here">
 
-    /* Navigation */
-    .capsule-nav {
-      position: fixed; top: 2rem; left: 0; right: 0; margin: 0 auto; width: calc(100% - 4rem); max-width: 1100px; z-index: 2000;
-      background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border: var(--border-glass); border-radius: 100px; padding: 0.6rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-bevel), 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s ease; min-height: 64px;
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Start Here | See What’s Been Getting in Your Way">
+    <meta name="twitter:description" content="Start here to see what’s been getting in your way. A clear, simple way to understand why you lose focus and struggle to follow through.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fdfdfc',
+                            dark: '#050505',
+                            teal: '#2dd4bf',
+                        },
+                        neutral: {
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS: Elite Design Layer -->
+    <style type="text/tailwindcss">
+        body { transition: background-color 0.6s ease, color 0.6s ease; }
+
+        /* Scrollbar Restored */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.6); }
+
+        /* Arrival Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        /* Focus Zones */
+        .focus-zone { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, filter 0.5s ease; }
+        .focus-zone.dimmed { opacity: 0.25; transform: scale(0.98); filter: blur(2px); }
+
+        /* Texture Layers */
+        .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.04) 0%, transparent 60%); }
+        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.07) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(20, 20, 24, 1) 0%, transparent 100%); }
+        .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.12; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
+
+        /* Glass Morphism Base Classes */
+        .glass-base {
+            @apply backdrop-blur-2xl border transition-all duration-500;
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .dark .glass-base {
+            background: rgba(10, 10, 12, 0.6);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Micro-Interactions */
+        .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; }
+        .button-press:active { transform: scale(0.95); }
+        .clean-link { opacity: 0.7; transition: opacity 0.3s ease; position: relative; }
+        .clean-link:hover { opacity: 1; }
+        .clean-link::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: -2px; left: 0; background-color: currentColor; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform-origin: right; }
+        .clean-link:hover::after { transform: scaleX(1); transform-origin: left; }
+
+        section { position: relative; z-index: 10; }
+        
+        /* Elevated Spotlight Cards */
+        .spotlight-card { 
+            position: relative; overflow: hidden; background: rgba(255,255,255,0.4); 
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .dark .spotlight-card { 
+            background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); 
+        }
+        .spotlight-card:hover { 
+            transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.2); 
+            background: rgba(255,255,255,0.7); box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+        .dark .spotlight-card:hover {
+            background: rgba(255,255,255,0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        #form-state, #success-state { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        #success-text { transition: opacity 0.6s ease; }
+
+        /* Precision Magnetic Cursor */
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        .cursor-dot { 
+            position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; 
+            z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; 
+            opacity: 0; transition: opacity 0.3s ease; 
+        }
+        .cursor-ring { 
+            position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.5); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); 
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0;
+        }
+        .cursor-ring.hover-active { width: 64px; height: 64px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+    </style>
+
+    <!-- SCHEMA (AEO + GEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Start Here - Words of Wisdom",
+      "description": "Start here to see what’s been getting in your way. A clear, simple way to understand why you lose focus and struggle to follow through.",
+      "url": "https://www.wordsofwisdom.in/start-here",
+      "inLanguage": "en"
     }
-    .brand-logo { font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; gap: 10px; z-index: 2001; }
-    .wow-text { font-family: var(--font-ui); font-weight: 900; font-size: 1.6rem; background: var(--gradient-dynamic); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: colorFlow 8s linear infinite;}
-    .mindset-text { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.7rem; color: var(--text-pure); }
-    .brand-icon { width: 8px; height: 8px; background: var(--brand-teal); border-radius: 50%; box-shadow: 0 0 10px var(--brand-teal); }
-    .nav-cta { padding: 0.7rem 1.6rem; border-radius: 50px; background: var(--text-pure); color: var(--bg-void); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; }
-    .nav-cta:hover { background: var(--brand-teal); color: var(--bg-void); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(45, 212, 191, 0.2); }
-
-    @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-
-    /* Custom Cursor */
-    @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
-    .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 10000; pointer-events: none; display: none; mix-blend-mode: difference; }
-    @media (pointer: fine) { .cursor-dot, .cursor-outline { display: block; } }
-    .cursor-dot { width: 6px; height: 6px; background: var(--text-pure); box-shadow: 0 0 10px rgba(255,255,255,0.8); transition: opacity 0.2s ease, transform 0.2s ease; }
-    .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); transition: width 0.3s var(--ease-premium), height 0.3s var(--ease-premium), background 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium); }
-    .cursor-outline.hover-state { width: 70px; height: 70px; background: rgba(255, 255, 255, 1); border-color: transparent; }
-    .cursor-dot.hover-state { opacity: 0; transform: scale(0); }
-
-    /* Editorial Content Styling */
-    .content-section { padding-top: 4rem; padding-bottom: 2rem; }
-    .content-section:first-of-type { padding-top: 10rem; }
-    
-    h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--text-pure); letter-spacing: -0.01em; }
-    h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1.5rem; color: var(--text-pure); margin-top: 2.5rem; letter-spacing: -0.01em; }
-    h3 { font-size: 1.8rem; color: var(--text-pure); margin-top: 1.5rem; margin-bottom: 0.8rem;}
-    
-    p { margin-bottom: 1.5rem; font-size: 1.15rem; color: var(--text-muted); }
-    p:last-child { margin-bottom: 0; }
-    
-    .highlight { color: var(--text-pure); font-weight: 600; }
-    
-    /* Premium Box / Recognition */
-    .box {
-      background: linear-gradient(145deg, rgba(30, 30, 35, 0.6), rgba(15, 15, 20, 0.8));
-      border: var(--border-glass);
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2.5rem 0;
-      text-align: center;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 15px 30px rgba(0,0,0,0.3);
-    }
-    .box p { margin: 0; font-size: 1.25rem; line-height: 1.6; }
-
-    /* Polished Lists with perfect alignment */
-    ul.clean-list { list-style: none; padding: 0; margin: 0 0 2rem 0; }
-    ul.clean-list li { margin-bottom: 1.2rem; font-size: 1.15rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 15px; line-height: 1.6; }
-    ul.clean-list li i { font-size: 0.45rem; color: var(--brand-teal); margin-top: 0.6rem; flex-shrink: 0; }
-
-    .progress-hint {
-      font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-teal);
-      margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; opacity: 0.8;
-    }
-    .progress-hint span { color: var(--text-muted); font-size: 0.8rem; }
-
-    /* System Pipeline with Gradient Track */
-    .system-pipeline { position: relative; margin: 2rem 0 3rem; }
-    .system-pipeline::before { 
-      content: ''; position: absolute; top: 35px; bottom: 35px; left: 35px; width: 2px; 
-      background: linear-gradient(to bottom, rgba(45, 212, 191, 0.3), rgba(147, 51, 234, 0.3), rgba(253, 224, 71, 0.3)); 
-      z-index: 0; border-radius: 2px;
-    }
-    @media (max-width: 768px) { 
-      .system-pipeline::before { left: 25px; top: 25px; bottom: 25px; } 
-    }
-
-    .step-card {
-      position: relative; z-index: 1; display: flex; gap: 2rem; margin-bottom: 2.5rem;
-      background: var(--bg-glass-heavy); border: var(--border-glass); border-radius: 20px;
-      padding: 2rem; box-shadow: inset 0 1px 1px rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.2); 
-      transition: transform 0.4s var(--ease-premium), border-color 0.4s ease, box-shadow 0.4s ease;
-    }
-    .step-card:hover { 
-      transform: translateY(-6px) scale(1.01); 
-      border-color: rgba(45, 212, 191, 0.3); 
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 20px 40px rgba(0,0,0,0.4);
-    }
-
-    .step-indicator {
-      width: 70px; height: 70px; border-radius: 50%; background: var(--bg-void); border: 1px solid rgba(45, 212, 191, 0.5);
-      display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.8rem; color: var(--brand-teal);
-      flex-shrink: 0; position: relative; box-shadow: inset 0 0 20px rgba(45,212,191,0.1);
-    }
-    .step-indicator::after { content: ''; position: absolute; inset: -8px; border-radius: 50%; border: 1px dashed rgba(255,255,255,0.1); animation: rotate 20s linear infinite; }
-    
-    .step-content { flex: 1; }
-    .step-content h3 { font-family: var(--font-display); font-size: 2rem; color: var(--text-pure); margin-top: 0; margin-bottom: 0.5rem; }
-    .step-content p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-    
-    .article-link {
-      display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-pure);
-      border-bottom: 1px solid var(--brand-teal); padding-bottom: 4px; transition: color 0.3s;
-    }
-    .article-link i { font-size: 0.8rem; color: var(--brand-teal); transition: transform 0.3s; }
-    .article-link:hover { color: var(--brand-teal); }
-    .article-link:hover i { transform: translateX(5px); }
-
-    .step-2:hover { border-color: rgba(147, 51, 234, 0.3); }
-    .step-2 .step-indicator { border-color: rgba(147, 51, 234, 0.5); color: var(--brand-purple); box-shadow: inset 0 0 20px rgba(147, 51, 234, 0.1); }
-    .step-2 .article-link { border-color: var(--brand-purple); }
-    .step-2 .article-link i { color: var(--brand-purple); }
-    .step-2 .article-link:hover { color: var(--brand-purple); }
-    
-    .step-3:hover { border-color: rgba(253, 224, 71, 0.3); }
-    .step-3 .step-indicator { border-color: rgba(253, 224, 71, 0.5); color: var(--brand-gold); box-shadow: inset 0 0 20px rgba(253, 224, 71, 0.1); }
-    .step-3 .article-link { border-color: var(--brand-gold); }
-    .step-3 .article-link i { color: var(--brand-gold); }
-    .step-3 .article-link:hover { color: var(--brand-gold); }
-
-    /* Loop Track UI */
-    .loop-track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin: 3rem 0; text-align: left; }
-    .loop-item { 
-      display: flex; flex-direction: column; justify-content: center; align-items: center; 
-      padding: 1.5rem 1rem; border: var(--border-glass); border-radius: 16px; 
-      background: rgba(0,0,0,0.4); text-align: center; transition: background 0.3s ease;
-    }
-    .loop-item:hover { background: rgba(255,255,255,0.03); }
-    .loop-item i { color: var(--brand-teal); font-size: 1rem; margin-bottom: 0.5rem; opacity: 0.5; }
-    .loop-item strong { color: var(--text-pure); font-size: 0.95rem; font-weight: 600; }
-    
-    @media (max-width: 768px) {
-      .loop-track { grid-template-columns: 1fr; gap: 0.8rem; }
-      .loop-item { flex-direction: row; gap: 1rem; padding: 1.2rem; justify-content: flex-start; }
-      .loop-item i { margin-bottom: 0; transform: rotate(90deg); }
-      .step-card { flex-direction: column; gap: 1.5rem; padding: 1.8rem; }
-      .step-indicator { width: 50px; height: 50px; font-size: 1.2rem; }
-    }
-
-    /* Final CTA Area */
-    .cta-area {
-      text-align: center; padding: clamp(3rem, 6vw, 4.5rem) 2rem; border-radius: 24px;
-      background: linear-gradient(180deg, var(--bg-glass-heavy) 0%, rgba(5,5,8,0.95) 100%);
-      border: var(--border-glass); margin: 5rem 0; box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.5);
-    }
-    .cta-area h2 { margin-top: 0; font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 1rem; }
-    
-    .inline-form { display: flex; flex-direction: column; gap: 1rem; max-width: 450px; margin: 2rem auto 0; }
-    .inline-form input { width: 100%; padding: 1.2rem 1.5rem; border-radius: 50px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15); color: var(--text-pure); outline: none; font-family: var(--font-ui); font-size: 1rem; text-align: center; transition: border-color 0.3s; }
-    .inline-form input:focus { border-color: var(--brand-teal); }
-    .btn-massive { width: 100%; padding: 1.2rem 2rem; font-size: 1rem; background: var(--gradient-btn); color: #080804; font-weight: 900; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(253, 224, 71, 0.4); transition: all 0.4s var(--ease-premium); cursor: pointer; }
-    .btn-massive:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(45, 212, 191, 0.25); filter: brightness(1.1); }
-
-    /* Back Link */
-    .back-link-wrapper { text-align: center; margin: 4rem 0 6rem; }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s;
-    }
-    .back-link:hover { color: var(--brand-teal); }
-    .back-link i { transition: transform 0.3s; }
-    .back-link:hover i { transform: translateX(-5px); }
-  </style>
+    </script>
 </head>
-<body>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem]">
 
-  <!-- Backgrounds -->
-  <div class="elite-texture-base"></div>
-  <div class="light-beam"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
 
-  <!-- Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
 
-  <!-- Header -->
-  <header class="capsule-nav">
-    <div class="nav-top-bar">
-      <a href="index.html" class="brand-logo">
-        <div class="brand-icon"></div>
-        <span class="wow-text">WOW</span><span class="mindset-text">Mindset</span>
-      </a>
-    </div>
-    <div class="nav-actions">
-      <a href="index.html" class="nav-cta" style="background: transparent; border: 1px solid var(--text-pure); color: var(--text-pure);">&larr; Return Home</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="narrative-container">
-      
-      <!-- HERO -->
-      <section class="content-section">
-        <h1 class="display-font">
-          This is where you stop repeating the same pattern.
-        </h1>
-
-        <div style="margin-top:1.5rem; font-size:1.15rem; color:var(--text-muted);">
-          Follow this step by step.<br>
-          Don’t skip ahead.<br>
-          <span style="color:var(--brand-teal);">This only works if you follow it properly.</span>
-        </div>
-      </section>
-
-      <!-- RECOGNITION -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">This is what it usually looks like</h2>
-        <ul class="clean-list">
-          <li><i class="fas fa-circle"></i> You know what to do, but don’t follow through</li>
-          <li><i class="fas fa-circle"></i> You get distracted even when something matters</li>
-          <li><i class="fas fa-circle"></i> You rely on motivation, but it fades</li>
-          <li><i class="fas fa-circle"></i> You reset again… and nothing changes</li>
-        </ul>
-
-        <div class="box" style="margin-top: 3rem;">
-          <p class="highlight">
-            You already understand the problem.<br>
-            <span style="color: var(--brand-teal);">Now follow the process to change it.</span><br>
-            <span style="opacity:0.7;">And don’t overthink it.</span>
-          </p>
-        </div>
-      </section>
-
-      <!-- SYSTEM POSITIONING -->
-      <section class="content-section" style="padding-top:0;">
-        <p class="highlight" style="font-size:1.3rem;">
-          This is not random advice.
-        </p>
-        <p>
-          This is a structured system.<br>
-          Each step builds on the previous one.
-        </p>
-        <p style="color:var(--text-pure); font-weight:600;">
-          If you skip steps, nothing changes.
-        </p>
-      </section>
-
-      <!-- PATH -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">Follow this in order</h2>
-        
-        <div class="box" style="margin-top: 0; margin-bottom: 3rem; padding: 2rem;">
-          <p class="highlight">
-            If you skip steps, nothing will change.<br><br>
-            <span style="color: var(--brand-teal);">Follow this in order.</span>
-          </p>
-        </div>
-
-        <div class="progress-hint">
-          Step 1 <span>&rarr;</span> Step 2 <span>&rarr;</span> Step 3 <span>&rarr;</span> Reset
-        </div>
-
-        <div class="system-pipeline">
-          <!-- Step 1 -->
-          <div class="step-card step-1">
-            <div class="step-indicator">01</div>
-            <div class="step-content">
-              <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-teal); margin-bottom: 0.5rem;">Identity</span>
-              <h3>Why you stay the same</h3>
-              <p>Read this slowly.<br>Notice where it applies to you.<br>Don’t rush.</p>
-              <a href="/identity.html" class="article-link">Start Step 1 &rarr;</a>
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-brand-teal">START</a>
+                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">MINDSET</a>
+                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
+                </button>
             </div>
-          </div>
 
-          <!-- Step 2 -->
-          <div class="step-card step-2">
-            <div class="step-indicator">02</div>
-            <div class="step-content">
-              <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-purple); margin-bottom: 0.5rem;">Focus</span>
-              <h3>Why focus feels difficult</h3>
-              <p>Read this slowly.<br>Notice how it applies to you.</p>
-              <a href="/focus.html" class="article-link">Continue &rarr;</a>
+            <a href="/start-here" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full items-center justify-center whitespace-nowrap hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">
+                START HERE
+            </a>
+
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white p-1">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
             </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step-card step-3">
-            <div class="step-indicator">03</div>
-            <div class="step-content">
-              <span style="display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brand-gold); margin-bottom: 0.5rem;">Action</span>
-              <h3>Why motivation fails</h3>
-              <p>Read this slowly.<br>Notice how it applies to you.</p>
-              <a href="/action.html" class="article-link">Continue &rarr;</a>
-            </div>
-          </div>
-        </div>
-        
-        <p class="highlight">Don’t skip steps. Each one changes how you think and act.</p>
-      </section>
-
-      <!-- LOOP -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">This is the loop most people are stuck in</h2>
-        
-        <p class="highlight" style="font-size: 1.25rem; margin-top: 1rem; margin-bottom: 1rem;">
-          Before you continue, recognize this in your own behavior:
-        </p>
-
-        <p style="font-size:1.2rem; color:var(--text-pure); margin-bottom: 2rem;">
-          Most people stay here.
-        </p>
-        
-        <div class="loop-track">
-          <div class="loop-item"><i class="fas fa-arrow-right" style="opacity: 0; pointer-events: none;"></i><strong>Identity</strong></div>
-          <div class="loop-item"><i class="fas fa-arrow-right"></i><strong>Behavior</strong></div>
-          <div class="loop-item"><i class="fas fa-arrow-right"></i><strong>Evidence</strong></div>
-          <div class="loop-item"><i class="fas fa-arrow-right"></i><strong>Reinforcement</strong></div>
-          <div class="loop-item" style="border-color: var(--brand-purple);"><i class="fas fa-arrow-right" style="color:var(--brand-purple);"></i><strong>Self-Image</strong></div>
-        </div>
-      </section>
-
-      <!-- HOW TO USE -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">Use this properly</h2>
-        
-        <p class="highlight" style="font-size:1.4rem; color:var(--brand-gold); margin-bottom: 2rem;">
-          This only works if you apply it.
-        </p>
-
-        <ul class="clean-list">
-          <li><i class="fas fa-circle"></i> Read one step at a time</li>
-          <li><i class="fas fa-circle"></i> Pause and reflect</li>
-          <li><i class="fas fa-circle"></i> Apply immediately</li>
-          <li><i class="fas fa-circle"></i> Don’t rush through it</li>
-          <li><i class="fas fa-circle"></i> Repeat consistently</li>
-        </ul>
-      </section>
-
-      <!-- EXPECT -->
-      <section class="content-section" style="padding-top: 0;">
-        <h2 class="display-font">Once you understand the pattern</h2>
-        <p>You move into the 30-Day Reset.</p>
-        <p style="color:var(--brand-teal); font-weight:600;">
-          This is where real change begins.
-        </p>
-        
-        <ul class="clean-list" style="margin-top: 2rem;">
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Change your environment</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Reduce distractions</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Build structure</li>
-          <li><i class="far fa-check-circle" style="color: var(--brand-teal); font-size: 1.2rem;"></i> Take consistent action</li>
-        </ul>
-
-        <p class="highlight" style="margin-top: 2rem;">
-          Not extreme. Not overwhelming.<br>
-          <span style="color: var(--brand-purple); font-size: 1.2rem;">Just practical and doable.</span>
-        </p>
-      </section>
-
-      <!-- CTA -->
-      <div class="cta-area">
-        <h2 class="display-font">If you’re ready to follow this properly</h2>
-        
-        <p style="margin-bottom:1.5rem; color:var(--text-muted); font-size: 1.1rem;">
-          This is where you start changing the pattern.
-        </p>
-
-        <!-- MailerLite Form -->
-        <form class="inline-form" action="https://assets.mailerlite.com/jsonp/2293635/forms/185757766435996802/subscribe" method="post">
-          <label for="start-email" class="sr-only">Email address</label>
-          <input type="email" id="start-email" name="fields[email]" placeholder="Enter your email" required>
-          <button type="submit" class="btn-massive">Start the Reset &rarr;</button>
-          <input type="hidden" name="ml-submit" value="1">
-          <input type="hidden" name="anticsrf" value="true">
-          <input type="hidden" name="redirect" value="https://www.wordsofwisdom.in/thank-you.html">
-        </form>
-
-        <p class="highlight" style="margin-top:2rem;">
-          Start simple.<br>
-          But start now.
-        </p>
-
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">
-          <i class="fas fa-lock" style="margin-right: 5px;"></i> Takes a few minutes &bull; No pressure &bull; Move at your own pace
-        </p>
-      </div>
-
-      <!-- BACK LINK -->
-      <div class="back-link-wrapper">
-        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
-      </div>
-
+        </nav>
     </div>
-  </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Form Submission Feedback
-      document.addEventListener("submit", function (e) {
-        const form = e.target;
-        if (form.matches(".ml-block-form") || form.matches(".inline-form")) {
-          const btn = form.querySelector('button[type="submit"]');
-          if (btn) {
-            btn.dataset.originalText = btn.innerHTML;
-            btn.innerHTML = 'Initiating Reset <i class="fas fa-circle-notch fa-spin"></i>';
-            btn.style.pointerEvents = 'none';
-            btn.style.opacity = '0.9';
-            btn.style.boxShadow = '0 0 25px rgba(45, 212, 191, 0.4)';
-          }
-        }
-      });
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">Start</a>
+        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">Identity</a>
+        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">Focus</a>
+        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">Action</a>
+        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">Mindset</a>
+        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">Library</a>
+        <div class="pt-4 border-t border-neutral-200 dark:border-white/10">
+            <a href="/start-here" class="flex justify-center bg-[#111] dark:bg-white text-white dark:text-[#111] text-xs uppercase tracking-[0.05em] font-bold px-5 py-3.5 rounded-full w-full whitespace-nowrap">Start Here</a>
+        </div>
+    </div>
 
-      // Elite Custom Cursor (Smooth Follow)
-      const cursorDot = document.querySelector('.cursor-dot');
-      const cursorOutline = document.querySelector('.cursor-outline');
-      
-      if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
-        let mouseX = window.innerWidth / 2;
-        let mouseY = window.innerHeight / 2;
-        let outlineX = mouseX;
-        let outlineY = mouseY;
+    <main class="max-w-[640px] mx-auto pt-40 pb-32 px-6 sm:px-0 relative z-10">
         
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-          cursorDot.style.left = `${mouseX}px`;
-          cursorDot.style.top = `${mouseY}px`;
-        });
+        <!-- HERO (Welcoming Energy) -->
+        <section class="mb-40">
+            <div class="reveal visible mb-8 block">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-teal block mb-1">Your Journey Begins</span>
+            </div>
 
-        function animateCursor() {
-          let distX = mouseX - outlineX;
-          let distY = mouseY - outlineY;
-          
-          outlineX += distX * 0.15;
-          outlineY += distY * 0.15;
-          
-          cursorOutline.style.left = `${outlineX}px`;
-          cursorOutline.style.top = `${outlineY}px`;
-          
-          requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
+            <div class="mb-12 relative z-10">
+                <h1 class="text-[3rem] md:text-6xl font-display text-neutral-900 dark:text-white leading-tight md:leading-[1.1] tracking-tight reveal visible">
+                    Start here.<br>
+                    <i class="block pt-2 text-neutral-500">You don’t need to figure everything out.<br><span class="block pt-2">Just see this a little more clearly.</span></i>
+                </h1>
+            </div>
 
-        document.body.addEventListener('mouseover', (e) => {
-          if (e.target.closest('a, button, input, .box, .step-card, .loop-item')) {
-            cursorOutline.classList.add('hover-state');
-            cursorDot.classList.add('hover-state');
-          }
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-8">
+                <p class="reveal delay-1">You’ve already noticed something isn’t working.</p>
+                <p class="reveal delay-2">You try to focus.<br>You try to stay consistent.<br>You try to follow through.</p>
+                <p class="reveal delay-3">But it doesn’t last.</p>
+                <p class="reveal delay-3 pt-6">Not because you’re incapable.<br>Something keeps interfering.</p>
+                
+                <div class="reveal delay-3 pt-12">
+                    <p class="text-neutral-900 dark:text-white font-medium text-2xl font-display italic">This is where you begin to see it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOGNITION -->
+        <section class="mb-48 reveal">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-16">You’ve probably seen this already.</h2>
+            
+            <div class="space-y-8 text-lg text-neutral-700 dark:text-neutral-300 font-light pl-6 md:pl-10 border-l border-brand-teal/30 dark:border-brand-teal/50">
+                <p class="reveal">You know what to do, but don’t follow through.</p>
+                <p class="reveal delay-1">Your attention shifts, even when something matters.</p>
+                <p class="reveal delay-2">You rely on motivation, but it fades.</p>
+                <p class="reveal delay-3">You start again, and it feels familiar.</p>
+            </div>
+
+            <div class="pt-20 space-y-4 text-lg text-neutral-700 dark:text-neutral-300 font-light">
+                <p class="reveal">This isn’t random.</p>
+                <p class="reveal delay-1 text-neutral-900 dark:text-white font-medium">There’s a reason it keeps happening.</p>
+            </div>
+        </section>
+
+        <!-- HOW TO GO THROUGH THIS -->
+        <section class="mb-48 reveal">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">How to go through this</h2>
+            <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 border border-neutral-200 dark:border-white/10 text-lg text-neutral-700 dark:text-neutral-300 font-light space-y-8 relative overflow-hidden">
+                <p class="reveal">You don’t need to rush through this.</p>
+                <p class="reveal delay-1">Take it one step at a time.</p>
+                <p class="reveal delay-2">Pause when something feels familiar.</p>
+                <p class="reveal delay-3">Notice where it shows up in your own life.</p>
+                <p class="reveal delay-3 pt-6">You don’t need to apply everything.</p>
+                <p class="reveal delay-3 italic font-display text-3xl text-neutral-900 dark:text-white pt-2">Just understand what’s happening.</p>
+            </div>
+        </section>
+
+        <!-- PATH CARDS (Focus Zones) -->
+        <section class="mb-48 reveal">
+            <div class="mb-16 space-y-6">
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-4">You can go through this in a simple way.</h2>
+                <p class="text-neutral-900 dark:text-white font-medium text-xl">Start here.</p>
+                <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-2">
+                    <p>Each part looks at a different layer.</p>
+                    <p>Together, they make things clearer.</p>
+                    <p>There’s no need to rush.</p>
+                    <p>Just move through them in order.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6" id="system-grid">
+                
+                <!-- Identity -->
+                <div class="focus-zone reveal">
+                    <a href="/identity" class="spotlight-card block p-12 rounded-[2rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                        <span class="block text-[10px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-6">Step 01</span>
+                        <h3 class="text-3xl font-display text-neutral-900 dark:text-white mb-4">Identity</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base font-light mb-8">Why you keep returning to the same place, even when you want something different.</p>
+                        <span class="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-neutral-900 dark:text-white group-hover:text-brand-teal transition-colors">
+                            Go to Identity <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Focus -->
+                <div class="focus-zone reveal delay-1">
+                    <a href="/focus" class="spotlight-card block p-12 rounded-[2rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                        <span class="block text-[10px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-6">Step 02</span>
+                        <h3 class="text-3xl font-display text-neutral-900 dark:text-white mb-4">Focus</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base font-light mb-8">Why your attention does not stay where you want it, even when it matters.</p>
+                        <span class="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-neutral-900 dark:text-white group-hover:text-brand-teal transition-colors">
+                            Go to Focus <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Action -->
+                <div class="focus-zone reveal delay-2">
+                    <a href="/action" class="spotlight-card block p-12 rounded-[2rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                        <span class="block text-[10px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-6">Step 03</span>
+                        <h3 class="text-3xl font-display text-neutral-900 dark:text-white mb-4">Action</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base font-light mb-8">Why you don’t follow through, even when you intend to.</p>
+                        <span class="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-neutral-900 dark:text-white group-hover:text-brand-teal transition-colors">
+                            Go to Action <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRANSITION TO EMAIL -->
+        <section class="mb-32 reveal text-center pt-16">
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-8">
+                <p class="reveal">As you go through this, something becomes clearer.</p>
+                <p class="reveal delay-1">Not all at once.<br>But enough to notice.</p>
+                <p class="reveal delay-2 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white pt-8">And once you see it,<br>you start to understand what was happening.</p>
+            </div>
+        </section>
+
+        <!-- EMAIL CAPTURE (Upgraded Form) -->
+        <section class="mb-48 reveal">
+            <div class="spotlight-card rounded-[3rem] p-12 md:p-20 text-center border border-neutral-200 dark:border-white/10 overflow-hidden relative">
+                <div id="form-state">
+                    <p class="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-8">Stay close</p>
+                    
+                    <div class="mb-12 space-y-4">
+                        <h3 class="font-display text-4xl text-neutral-900 dark:text-white leading-tight mb-6">If this makes sense to you.</h3>
+                        <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">You can stay close.</p>
+                        <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">I share what I notice from time to time.</p>
+                        <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">Nothing frequent.</p>
+                        <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">Only when there is something worth saying.</p>
+                    </div>
+
+                    <form id="email-form" class="max-w-sm mx-auto space-y-4">
+                        <input type="email" name="email" required placeholder="Enter your email" 
+                               class="w-full bg-white/50 dark:bg-black/40 border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-6 py-5 rounded-2xl focus:outline-none focus:border-brand-teal transition-all placeholder:text-neutral-400 text-center shadow-inner">
+                        <button type="submit" id="submit-btn" class="button-press w-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300 shadow-md">
+                            Continue
+                        </button>
+                        <div class="pt-6 space-y-2">
+                            <p class="text-[10px] uppercase tracking-wider text-neutral-500">No noise.</p>
+                            <p class="text-[10px] uppercase tracking-wider text-neutral-500">Leave anytime.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="success-state" class="hidden text-center">
+                    <h3 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white mb-6">You’re in.</h3>
+                    <p id="success-text" class="text-neutral-600 dark:text-neutral-400 text-lg font-light opacity-0">You’ll hear from me soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CLOSE -->
+        <section class="mb-32 reveal text-center border-t border-neutral-200 dark:border-white/10 pt-32">
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-8">
+                <p class="reveal">You don’t need to look for more.</p>
+                <p class="reveal delay-1 text-neutral-900 dark:text-white font-medium">You need to see what’s already happening.</p>
+                <p class="reveal delay-2 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white pt-4">More clearly.</p>
+                
+                <div class="space-y-4 pt-16 font-display text-2xl text-neutral-500 italic">
+                    <p class="reveal">Start slowly.</p>
+                    <p class="reveal delay-1">But stay with it.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-light dark:bg-[#030305] pt-32 pb-16 px-8 border-t border-neutral-200 dark:border-white/10">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24 text-center md:text-left">
+                <div class="md:col-span-2 space-y-10">
+                    <div class="flex justify-center md:justify-start">
+                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
+                            <!-- Borderless, transparent logo container -->
+                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                            </div>
+                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
+                        </a>
+                    </div>
+                    <p class="text-neutral-700 dark:text-neutral-300 font-light text-sm">Clear thinking. Steady action.</p>
+                    <div class="flex items-center justify-center md:justify-start space-x-6">
+                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-lg transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-lg transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/#" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-lg transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-lg transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-lg transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">Mindset</a>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
+                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center text-[9px] font-bold uppercase tracking-[0.3em] text-neutral-500 gap-8">
+                <div class="flex gap-8"><a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a><a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a><a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a></div>
+                <div class="text-center md:text-left">Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></div>
+                <p class="tracking-[0.1em] opacity-50">No noise. No hype. Just clarity and practical action.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full glass-base shadow-2xl opacity-0 translate-y-20 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2"/></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. ARRIVAL: Soft Presence Observer
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            // 2. FOCUS ZONES
+            const zones = document.querySelectorAll('.focus-zone');
+            zones.forEach(zone => {
+                zone.addEventListener('mouseenter', () => zones.forEach(z => { if (z !== zone) z.classList.add('dimmed'); }));
+                zone.addEventListener('mouseleave', () => zones.forEach(z => z.classList.remove('dimmed')));
+            });
+
+            // 3. PAGE TRANSITIONS
+            document.querySelectorAll('a[href]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && (href.startsWith('/') || href.startsWith('./'))) {
+                        e.preventDefault();
+                        document.body.style.opacity = "0";
+                        setTimeout(() => { window.location.href = href; }, 400);
+                    }
+                });
+            });
+
+            // 4. THEME & MOBILE MENU
+            const themeBtn = document.getElementById('theme-toggle');
+            const themeBtnMobile = document.getElementById('theme-toggle-mobile');
+            const toggleTheme = () => {
+                document.documentElement.classList.toggle('dark');
+                localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            };
+            if(themeBtn) themeBtn.addEventListener('click', toggleTheme);
+            if(themeBtnMobile) themeBtnMobile.addEventListener('click', toggleTheme);
+
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileBtn) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+            // 5. BACK TO TOP
+            const btt = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if(window.scrollY > 500) btt.classList.remove('translate-y-20', 'opacity-0');
+                else btt.classList.add('translate-y-20', 'opacity-0');
+            });
+            btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // 6. MAGNETIC CURSOR
+            const dot = document.getElementById('cursor-dot');
+            const ring = document.getElementById('cursor-ring');
+            let mX = -100, mY = -100, rX = -100, rY = -100;
+            let cursorInitiated = false;
+
+            const updateCursor = (e) => {
+                if (!cursorInitiated) {
+                    dot.style.opacity = "1";
+                    ring.style.opacity = "1";
+                    cursorInitiated = true;
+                }
+                mX = e.clientX;
+                mY = e.clientY;
+                dot.style.left = `${mX}px`;
+                dot.style.top = `${mY}px`;
+            };
+
+            window.addEventListener('mousemove', updateCursor);
+
+            const tick = () => {
+                rX += (mX - rX) * 0.15;
+                rY += (mY - rY) * 0.15;
+                ring.style.left = `${rX}px`;
+                ring.style.top = `${rY}px`;
+                requestAnimationFrame(tick);
+            };
+            tick();
+
+            document.querySelectorAll('a, button, input, .focus-zone').forEach(el => {
+                el.addEventListener('mouseenter', () => ring.classList.add('hover-active'));
+                el.addEventListener('mouseleave', () => ring.classList.remove('hover-active'));
+            });
+
+            // 7. PREMIUM AJAX EMAIL SUBMISSION
+            const emailForm = document.getElementById('email-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formState = document.getElementById('form-state');
+            const successState = document.getElementById('success-state');
+            const successText = document.getElementById('success-text');
+
+            if (emailForm) {
+                emailForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const email = emailForm.email.value.trim();
+                    if (!email || !email.includes('@')) return;
+
+                    submitBtn.innerText = ""; submitBtn.disabled = true;
+                    submitBtn.innerHTML = `<div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto"></div>`;
+
+                    try {
+                        await fetch("https://assets.mailerlite.com/jsonp/2293635/forms/JJMM9C/subscribe", { method: "POST", mode: 'no-cors' });
+                        formState.style.opacity = "0"; formState.style.transform = "translateY(12px)";
+                        setTimeout(() => {
+                            formState.classList.add("hidden"); successState.classList.remove("hidden");
+                            successState.style.opacity = "0";
+                            successState.style.transform = "translateY(12px)";
+
+                            requestAnimationFrame(() => {
+                                successState.style.opacity = "1";
+                                successState.style.transform = "translateY(0)";
+                                setTimeout(() => { successText.style.opacity = "1"; }, 500);
+                            });
+                        }, 350);
+                    } catch (err) { submitBtn.innerText = "Try again"; submitBtn.disabled = false; }
+                });
+            }
         });
-        document.body.addEventListener('mouseout', (e) => {
-          if (e.target.closest('a, button, input, .box, .step-card, .loop-item')) {
-            cursorOutline.classList.remove('hover-state');
-            cursorDot.classList.remove('hover-state');
-          }
-        });
-      }
-    });
-  </script>
+    </script>
 </body>
 </html>
