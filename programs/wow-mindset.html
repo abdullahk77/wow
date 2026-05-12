@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>WOW Mindset | Think Clearly. Act Consistently. | Words of Wisdom</title>
+    <meta name="description" content="A premium 30-day guided experience designed to help you reduce distraction, think clearly, and follow through more consistently — with optional access to the Clarity Workspace system.">
+    <meta name="keywords" content="mental clarity, focus improvement, consistency system, distraction management, action mindset, behavioral awareness, productivity mindset, focus system, self improvement, clarity workspace, WOW Mindset">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/programs/wow-mindset.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WOW Mindset | Think Clearly. Act Consistently.">
+    <meta property="og:description" content="Reduce distraction, think clearly, and follow through more consistently with a 30-day guided experience built for real behavioral change.">
+    <meta property="og:url" content="https://wordsofwisdom.in/programs/wow-mindset.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/og/logo.png">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WOW Mindset | Think Clearly. Act Consistently.">
+    <meta name="twitter:description" content="A 30-day guided experience designed to help you think clearly, reduce mental noise, and act more consistently.">
+
+    <!-- SCHEMA (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "WOW Mindset",
+      "description": "A premium 30-day guided experience designed to help people reduce distraction, think clearly, and follow through more consistently.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Words of Wisdom"
+      },
+      "category": "Digital Product",
+      "url": "https://wordsofwisdom.in/programs/wow-mindset.html",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "WOW Mindset",
+          "price": "19",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wowmindset.gumroad.com/l/wowmindset"
+        },
+        {
+          "@type": "Offer",
+          "name": "WOW Mindset + Clarity Workspace",
+          "price": "59",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wowmindset.gumroad.com/l/bundle"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                        },
+                        neutral: {
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 20s ease-in-out infinite alternate',
+                        'float-delayed': 'float 25s ease-in-out infinite alternate-reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                            '100%': { transform: 'translate(5%, 15%) scale(1.1) rotate(5deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS for Elite Premium UI/UX -->
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
+        }
+
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.4; }
+
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .ambient-orb {
+            position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
+            transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
+        }
+        .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
+        .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); }
+
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+
+        .fade-up {
+            opacity: 0; transform: translateY(30px); filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.08); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .dark .btn-premium:hover { box-shadow: 0 6px 20px rgba(255,255,255,0.12); }
+
+        .btn-secondary { transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .btn-secondary:hover { transform: translateY(-2px); background: rgba(0,0,0,0.05); }
+        .dark .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+        .spotlight-card { 
+            position: relative; overflow: hidden; background: rgba(255,255,255,0.6); 
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .dark .spotlight-card { 
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); 
+        }
+        .spotlight-card:hover { 
+            transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.2); 
+            background: rgba(255,255,255,0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .dark .spotlight-card:hover {
+            background: rgba(255,255,255,0.04); box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        ::selection { background-color: #2dd4bf; color: #171717; }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
+
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Global Noise & Ambient Light Engine -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="ambient-orb orb-1 animate-float-slow"></div>
+        <div class="ambient-orb orb-2 animate-float-delayed"></div>
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+            
+            <!-- Logo Integration -->
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/programs/index.html" class="text-brand-teal dark:text-white transition-colors duration-300">PROGRAMS</a>
+                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+
+            <!-- CTA -->
+            <a href="/start-here.html" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+                START<br>HERE
+            </a>
+
+            <!-- Mobile Utilities -->
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    </div>
+
+    <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
+        
+        <!-- HERO SECTION -->
+        <section class="max-w-3xl mx-auto pt-8 pb-24 fade-up text-center">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-teal block mb-6">30-Day Guided Experience</span>
+            <h1 class="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-8">
+                You already know what to do.<br>
+                <i class="block pt-2 text-neutral-500 text-[0.8em]">The problem is staying with it consistently.</i>
+            </h1>
+            
+            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light max-w-2xl mx-auto space-y-6 pt-4">
+                <p class="reveal">WOW Mindset is a premium guided experience designed to help you understand the patterns behind distraction, inconsistency, overthinking, and unfinished action — so you can think more clearly and follow through more consistently.</p>
+                
+                <div class="pt-4 space-y-2 reveal delay-1">
+                    <p>Not through pressure.</p>
+                    <p>Not through motivation.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">But through clearer awareness of what keeps interrupting your actions.</p>
+                </div>
+                
+                <div class="pt-12 flex flex-col md:flex-row items-center justify-center gap-6 reveal delay-2">
+                    <a href="https://wowmindset.gumroad.com/l/wowmindset" target="_blank" rel="noopener" class="w-full md:w-auto bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-all duration-300">
+                        Start WOW Mindset — $19
+                    </a>
+                    <a href="https://wowmindset.gumroad.com/l/bundle" target="_blank" rel="noopener" class="w-full md:w-auto bg-transparent text-neutral-900 dark:text-white border border-neutral-300 dark:border-white/20 btn-secondary inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-all duration-300">
+                        Get WOW Mindset + Clarity Workspace — $59
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOGNITION SECTION -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">This probably feels familiar.</h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6 pl-6 border-l border-brand-teal/30 dark:border-brand-teal/50">
+                <p class="reveal">You start with good intentions.</p>
+                <p class="reveal delay-1">Then attention shifts.</p>
+                <p class="reveal delay-2">You delay longer than expected.</p>
+                <p class="reveal delay-3">Simple tasks begin to feel heavier.</p>
+                <p class="reveal">You open distractions without thinking.</p>
+                <p class="reveal delay-1">You overconsume information but struggle to apply it consistently.</p>
+                <p class="reveal delay-2">You tell yourself you’ll “start properly tomorrow.”</p>
+                <p class="reveal delay-3">Then the cycle repeats.</p>
+            </div>
+            
+            <div class="pt-16 space-y-4">
+                <p class="reveal text-lg text-neutral-600 dark:text-neutral-400 font-light">Not because you’re incapable.</p>
+                <p class="reveal delay-1 text-lg text-neutral-900 dark:text-white font-medium">Because most people never learn how their attention and behavior actually work.</p>
+            </div>
+        </section>
+
+        <!-- THE REAL PROBLEM SECTION -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">The issue is usually not lack of information.</h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p class="reveal">Most people already know enough.</p>
+                <p class="reveal delay-1">They know what they should focus on.</p>
+                <p class="reveal delay-2">They know what matters.</p>
+                <p class="reveal delay-3">They know what they need to stop doing.</p>
+                <p class="reveal pt-4 text-neutral-900 dark:text-white font-medium">But knowing is not the same as consistently acting.</p>
+                
+                <p class="reveal delay-1 pt-12 text-neutral-900 dark:text-white font-medium">What usually gets in the way is:</p>
+                
+                <ul class="space-y-4 pt-4 text-neutral-700 dark:text-neutral-300">
+                    <li class="reveal flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> fragmented attention</li>
+                    <li class="reveal delay-1 flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> constant stimulation</li>
+                    <li class="reveal delay-2 flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> mental overload</li>
+                    <li class="reveal delay-3 flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> unconscious behavioral patterns</li>
+                    <li class="reveal flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> reactive decision-making</li>
+                    <li class="reveal delay-1 flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> invisible distraction loops</li>
+                    <li class="reveal delay-2 flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-70"></span> emotional resistance before starting</li>
+                </ul>
+                
+                <p class="reveal delay-3 pt-12 font-display text-3xl italic text-neutral-900 dark:text-white">WOW Mindset helps you begin seeing those patterns clearly.</p>
+            </div>
+        </section>
+
+        <!-- WHAT WOW MINDSET IS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">What is WOW Mindset?</h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">WOW Mindset is a 30-day guided experience designed to help you:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 pt-2 pb-8">
+                    <div class="reveal flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> notice distraction earlier</div>
+                    <div class="reveal delay-1 flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> reduce mental noise</div>
+                    <div class="reveal delay-2 flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> understand resistance more clearly</div>
+                    <div class="reveal delay-3 flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> improve focus consistency</div>
+                    <div class="reveal flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> follow through more often</div>
+                    <div class="reveal delay-1 flex items-start"><span class="text-brand-teal mr-3 mt-0.5">•</span> return to important work faster</div>
+                    <div class="reveal delay-2 flex items-start md:col-span-2"><span class="text-brand-teal mr-3 mt-0.5">•</span> think with greater clarity during daily decisions</div>
+                </div>
+                
+                <div class="space-y-4 reveal delay-3">
+                    <p>This is not a productivity hack.</p>
+                    <p>It is not motivational content.</p>
+                    <p>And it is not another system designed to overwhelm you.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium pt-4">It is a structured shift in awareness that influences how you think, focus, and act throughout the day.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">How the experience works</h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
+                <p class="reveal">Each day takes only a few minutes.</p>
+                <p class="reveal delay-1">Inside WOW Mindset, you receive:</p>
+                
+                <ul class="space-y-5 pt-2 pl-6 pb-8 border-l border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300">
+                    <li class="reveal delay-2"><strong class="font-medium text-neutral-900 dark:text-white mr-2">1.</strong> one focused insight</li>
+                    <li class="reveal delay-3"><strong class="font-medium text-neutral-900 dark:text-white mr-2">2.</strong> one behavioral observation</li>
+                    <li class="reveal"><strong class="font-medium text-neutral-900 dark:text-white mr-2">3.</strong> one perspective shift to notice during the day</li>
+                    <li class="reveal delay-1"><strong class="font-medium text-neutral-900 dark:text-white mr-2">4.</strong> one practical reflection connected to real action</li>
+                </ul>
+                
+                <div class="space-y-4 pt-4">
+                    <p class="reveal delay-2">The goal is not perfection.</p>
+                    <p class="reveal delay-3 text-neutral-900 dark:text-white font-medium">The goal is becoming aware of the patterns that repeatedly interrupt your focus, consistency, and execution.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT MAY CHANGE -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">Over time, you may begin to notice:</h2>
+            
+            <div class="text-lg text-neutral-700 dark:text-neutral-300 font-light">
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 mb-16">
+                    <li class="reveal flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> less hesitation before starting</li>
+                    <li class="reveal delay-1 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> fewer unconscious distractions</li>
+                    <li class="reveal delay-2 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> improved follow-through</li>
+                    <li class="reveal delay-3 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> better awareness during decisions</li>
+                    <li class="reveal flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> reduced mental clutter</li>
+                    <li class="reveal delay-1 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> more intentional use of attention</li>
+                    <li class="reveal delay-2 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> less dependence on motivation</li>
+                    <li class="reveal delay-3 flex items-center"><svg class="w-5 h-5 text-brand-teal mr-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> more consistency without forcing yourself</li>
+                </ul>
+                
+                <div class="space-y-4">
+                    <p class="reveal text-neutral-600 dark:text-neutral-400">Not perfectly.</p>
+                    <p class="reveal delay-1 font-display text-3xl italic text-neutral-900 dark:text-white">But more consistently than before.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY 30 DAYS -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">Why 30 days?</h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+                <p class="reveal">Because real behavioral change does not happen in one emotional moment.</p>
+                <p class="reveal delay-1">It happens through repeated awareness.</p>
+                
+                <div class="pt-6 space-y-4">
+                    <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Small observations.</p>
+                    <p class="reveal delay-3 text-neutral-900 dark:text-white font-medium">Small adjustments.</p>
+                    <p class="reveal text-neutral-900 dark:text-white font-medium">Small moments where you notice yourself before reacting automatically.</p>
+                </div>
+                
+                <p class="reveal delay-1 pt-6">Over time, those moments begin shaping how you work, think, and respond.</p>
+                <p class="reveal delay-2 font-display text-3xl italic text-neutral-900 dark:text-white pt-12">That is where meaningful change starts.</p>
+            </div>
+        </section>
+
+        <!-- WHO THIS IS FOR & NOT FOR -->
+        <section class="max-w-4xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Who it's for -->
+                <div class="spotlight-card rounded-[2rem] p-10 md:p-12 reveal">
+                    <h2 class="font-display text-3xl text-neutral-900 dark:text-white mb-8">This is for you if:</h2>
+                    <ul class="space-y-6 text-base text-neutral-600 dark:text-neutral-400 font-light">
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you know what to do but struggle to follow through</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you constantly lose focus during important work</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you start things and leave them unfinished</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you rely on motivation and burn out quickly</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you consume too much information without implementation</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you feel mentally scattered throughout the day</li>
+                        <li class="flex items-start"><span class="text-brand-teal mr-3 mt-0.5 opacity-80">+</span> you want clarity without overwhelming systems</li>
+                    </ul>
+                    <p class="pt-10 text-neutral-900 dark:text-white font-medium italic">If those patterns feel familiar, this experience will make sense.</p>
+                </div>
+
+                <!-- What it's not -->
+                <div class="spotlight-card rounded-[2rem] p-10 md:p-12 reveal delay-1 bg-white/30 dark:bg-black/20">
+                    <h2 class="font-display text-3xl text-neutral-900 dark:text-white mb-8">What this is not:</h2>
+                    <ul class="space-y-6 text-base text-neutral-600 dark:text-neutral-400 font-light">
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not a rigid productivity system</li>
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not motivational hype</li>
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not extreme discipline culture</li>
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not endless information consumption</li>
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not pressure to become perfect</li>
+                        <li class="flex items-start"><span class="text-neutral-400 dark:text-neutral-600 mr-3 mt-0.5">—</span> not another overwhelming self-improvement program</li>
+                    </ul>
+                    <p class="pt-10 text-neutral-900 dark:text-white font-medium italic">There is nothing to “keep up with.” Only something to understand more clearly.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CLARITY WORKSPACE INTRODUCTION -->
+        <section class="max-w-2xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up text-center">
+            <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white leading-tight mb-8">
+                Seeing clearly is important.<br>
+                <i class="block pt-2 text-neutral-500">Staying connected to that clarity during the day is harder.</i>
+            </h2>
+            
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-6 pt-4">
+                <p class="reveal">That is why the Clarity Workspace exists.</p>
+                <p class="reveal delay-1">WOW Mindset helps you understand the patterns.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Clarity Workspace helps you work with awareness while you act.</p>
+                
+                <div class="pt-12 text-left pl-6 md:pl-20 border-l border-neutral-200 dark:border-white/10 reveal delay-3">
+                    <p class="mb-6">The workspace is designed to reduce friction between:</p>
+                    <ul class="space-y-4 font-display text-2xl italic text-neutral-900 dark:text-white">
+                        <li>intention</li>
+                        <li>focus</li>
+                        <li>execution</li>
+                        <li>reflection</li>
+                        <li>and consistency</li>
+                    </ul>
+                </div>
+                
+                <p class="reveal pt-16 font-medium text-neutral-900 dark:text-white">Instead of constantly restarting your focus every day, the workspace helps create a calmer and more intentional environment for action.</p>
+            </div>
+        </section>
+
+        <!-- WHAT IS INCLUDED IN CLARITY WORKSPACE -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-12">Inside the Clarity Workspace</h2>
+            
+            <div class="text-lg text-neutral-700 dark:text-neutral-300 font-light space-y-6">
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8 mb-16">
+                    <li class="reveal flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> guided focus environment</li>
+                    <li class="reveal delay-1 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> structured reflection system</li>
+                    <li class="reveal delay-2 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> intentional daily workflow</li>
+                    <li class="reveal delay-3 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> clarity-based action prompts</li>
+                    <li class="reveal flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> distraction awareness support</li>
+                    <li class="reveal delay-1 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> execution-oriented organization</li>
+                    <li class="reveal delay-2 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> implementation-focused structure</li>
+                    <li class="reveal delay-3 flex items-center"><span class="w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-600 rounded-full mr-4"></span> designed for practical daily use</li>
+                </ul>
+                
+                <div class="space-y-4 font-display text-3xl italic text-neutral-900 dark:text-white pt-4">
+                    <p class="reveal">Less chaos.</p>
+                    <p class="reveal delay-1">Less mental switching.</p>
+                    <p class="reveal delay-2">Less friction before action.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFER COMPARISON SECTION -->
+        <section class="max-w-5xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white">Choose how you want to continue.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                
+                <!-- Option 1: Base -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal">
+                    <div class="mb-10 flex-grow">
+                        <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-2">WOW Mindset</h3>
+                        <p class="text-2xl font-light text-neutral-500 mb-8">$19</p>
+                        
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 block mb-6">Included</span>
+                        <ul class="space-y-5 text-base text-neutral-700 dark:text-neutral-300 font-light">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 30-Day Guided Experience</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Daily behavioral insights</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Focus and awareness framework</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Self-paced access</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Practical reflection system</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Clear progression from awareness to action</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://wowmindset.gumroad.com/l/wowmindset" target="_blank" rel="noopener" class="w-full text-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white btn-secondary py-4 rounded-full uppercase tracking-[0.15em] font-bold text-xs mt-auto">
+                        Start WOW Mindset
+                    </a>
+                </div>
+
+                <!-- Option 2: Bundle -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal delay-1 bg-gradient-to-b from-white/80 to-white/40 dark:from-white/[0.03] dark:to-transparent border-brand-teal/20 dark:border-brand-teal/30 relative">
+                    <div class="absolute top-0 right-0 bg-brand-teal text-neutral-900 text-[9px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-bl-xl">Complete System</div>
+                    
+                    <div class="mb-10 flex-grow pt-2">
+                        <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-2">WOW Mindset + Workspace</h3>
+                        <p class="text-2xl font-light text-brand-teal mb-8">$59</p>
+                        
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 block mb-6">Included</span>
+                        <ul class="space-y-5 text-base text-neutral-700 dark:text-neutral-300 font-light">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <strong class="font-medium dark:text-white text-neutral-900">Everything inside WOW Mindset</strong></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Full Clarity Workspace system</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Interactive implementation environment</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Focus-oriented structure</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Reflection and execution support</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Daily clarity integration</li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-brand-teal mr-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Designed for deeper behavioral implementation</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://wowmindset.gumroad.com/l/bundle" target="_blank" rel="noopener" class="w-full text-center bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-4 rounded-full uppercase tracking-[0.15em] font-bold text-xs mt-auto">
+                        Get the Complete System
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- RISK REDUCTION SECTION -->
+        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up text-center">
+            <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-4">
+                <p class="reveal">Go at your own pace.</p>
+                <div class="py-6 space-y-2 reveal delay-1 text-neutral-500">
+                    <p>No subscriptions.</p>
+                    <p>No pressure to keep up.</p>
+                    <p>No endless content overload.</p>
+                </div>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium">Just a structured way to think more clearly and act more consistently.</p>
+                
+                <div class="pt-12 space-y-4 reveal delay-3">
+                    <p>You can return anytime.</p>
+                    <p>You do not need to finish everything immediately.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium italic">You only need to begin paying attention differently.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CLOSE -->
+        <section class="max-w-3xl mx-auto py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10">
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-tight mb-12">
+                <span class="reveal block">You already know what matters.</span>
+                <i class="reveal delay-1 block pt-4 text-neutral-500 text-[0.8em]">The question is whether your attention keeps leaving it.</i>
+            </h2>
+            
+            <p class="reveal delay-2 text-xl md:text-2xl text-neutral-900 dark:text-white font-medium mb-16">WOW Mindset helps you return.</p>
+            
+            <div class="reveal delay-3 flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+                <a href="https://wowmindset.gumroad.com/l/wowmindset" target="_blank" rel="noopener" class="w-full md:w-auto bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-all duration-300">
+                    Start WOW Mindset — $19
+                </a>
+                <a href="https://wowmindset.gumroad.com/l/bundle" target="_blank" rel="noopener" class="w-full md:w-auto bg-transparent text-neutral-900 dark:text-white border border-neutral-300 dark:border-white/20 btn-secondary inline-flex items-center justify-center px-10 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-all duration-300">
+                    Get WOW Mindset + Clarity Workspace — $59
+                </a>
+            </div>
+            
+            <div class="reveal delay-3 text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 dark:text-neutral-500 flex flex-wrap justify-center gap-x-6 gap-y-3">
+                <span>One-time purchase</span>
+                <span class="hidden sm:inline">•</span>
+                <span>Lifetime access</span>
+                <span class="hidden sm:inline">•</span>
+                <span>No subscription</span>
+                <span class="hidden sm:inline">•</span>
+                <span>Self-paced</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK (Centered Profile Layout) -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <!-- Subtle noise over footer using the CSS class -->
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <!-- Centered Cursive Branding & Icon -->
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <!-- Borderless, transparent logo container -->
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <!-- Global Footer Links (Centered Layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
+                
+                <!-- Column 1 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/library/index.html" class="block hover:text-brand-teal transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block text-brand-teal dark:text-white transition-colors">Programs</a>
+                    <a href="/books.html" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Connect</p>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Social Icons Centered -->
+            <div class="flex items-center space-x-8 mb-16 justify-center">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <!-- Bottom Row: Legal + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <div class="flex flex-wrap justify-center gap-6 mb-2">
+                    <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Elite Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Back to Top Logic
+            const bttBtn = document.getElementById('back-to-top');
+            if(bttBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        bttBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
+
+                bttBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Spotlight Cards Tracking & Cursor
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const cards = document.querySelectorAll('.spotlight-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        card.style.setProperty('--mouse-x', `${x}px`);
+                        card.style.setProperty('--mouse-y', `${y}px`);
+                    });
+                });
+                
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    if(dot) {
+                        dot.style.left = `${mouseX}px`;
+                        dot.style.top = `${mouseY}px`;
+                    }
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, .spotlight-card');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
+            
+            // Soft Presence Observer (for generic reveal text)
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
