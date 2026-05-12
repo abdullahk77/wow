@@ -8,18 +8,20 @@
     <title>Community | Words of Wisdom</title>
     <meta name="description" content="A quiet space to notice patterns, share observations, and see things more clearly. No noise. No pressure.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wordsofwisdom.com/community">
+    <link rel="canonical" href="https://wordsofwisdom.in/community.html">
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Community | Words of Wisdom">
     <meta property="og:description" content="A place to notice patterns, share observations, and see things more clearly.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wordsofwisdom.com/community">
+    <meta property="og:url" content="https://wordsofwisdom.in/community.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/og/logo.png">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Community | Words of Wisdom">
     <meta name="twitter:description" content="A quiet space to notice patterns, share observations, and see things more clearly. No noise. No pressure.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/og/logo.png">
 
     <!-- FAVICON -->
     <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
@@ -57,21 +59,11 @@
                             light: '#fafafa',
                             dark: '#030305',
                             teal: '#2dd4bf',
-                            purple: '#c084fc',
-                            gold: '#fbbf24',
                         },
                         neutral: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#e5e5e5',
-                            300: '#d4d4d4',
-                            400: '#a3a3a3',
-                            500: '#737373',
-                            600: '#525252',
-                            700: '#404040',
-                            800: '#262626',
-                            900: '#171717',
-                            950: '#0a0a0a',
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
                         }
                     },
                     animation: {
@@ -91,7 +83,6 @@
 
     <!-- Advanced CSS for Elite Premium UI/UX -->
     <style type="text/tailwindcss">
-        /* Elite Visible Scrollbar */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
         .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
@@ -100,7 +91,6 @@
         ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
         .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
 
-        /* Premium Lux Texture Base */
         .elite-texture-base {
             position: fixed; inset: 0; z-index: -2; pointer-events: none;
             background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
@@ -111,7 +101,6 @@
                         radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
         }
 
-        /* Subtle Noise Texture Overlay */
         .ambient-noise {
             position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
@@ -119,22 +108,19 @@
         }
         .dark .ambient-noise { opacity: 0.4; }
 
-        /* Footer Noise Extraction */
         .footer-noise-bg {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
-        /* Cinematic Ambient Orbs */
         .ambient-orb {
             position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
             transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
         }
         .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
         .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
-        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); }
 
-        /* Magnetic Cursor */
-        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        @media (pointer: fine) { body, a, button, input, textarea { cursor: none !important; } }
         
         .cursor-dot {
             position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
@@ -150,12 +136,24 @@
         .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
         @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
 
-        /* Scroll Reveal Architecture */
         .fade-up {
             opacity: 0; transform: translateY(30px); filter: blur(4px);
             transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
         }
         .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.08); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .dark .btn-premium:hover { box-shadow: 0 6px 20px rgba(255,255,255,0.12); }
+        
+        .spotlight-card { 
+            position: relative; overflow: hidden; background: rgba(255,255,255,0.6); 
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .dark .spotlight-card { 
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); 
+        }
 
         .clean-link { position: relative; text-decoration: none; display: inline-block; }
         .clean-link::after {
@@ -163,32 +161,28 @@
             background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
         }
         .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-
-        /* Arrival Reveal System */
+        
+        ::selection { background-color: #2dd4bf; color: #171717; }
+        
         .reveal {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.15s; }
         .delay-2 { transition-delay: 0.3s; }
         .delay-3 { transition-delay: 0.45s; }
-
-        ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 
-    <!-- SCHEMA (COMMUNITY ENTITY) -->
+    <!-- SCHEMA (JSON-LD) -->
     <script type="application/ld+json">
     {
      "@context": "https://schema.org",
      "@type": "WebPage",
      "name": "Community | Words of Wisdom",
      "description": "A quiet space to notice patterns, share observations, and see things more clearly.",
-     "url": "https://wordsofwisdom.com/community"
+     "url": "https://wordsofwisdom.in/community.html"
     }
     </script>
 </head>
@@ -218,12 +212,12 @@
             
             <!-- Desktop Nav Links -->
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
-                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
-                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
-                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
-                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
-                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
-                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
+                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
@@ -233,7 +227,7 @@
             </div>
 
             <!-- CTA -->
-            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+            <a href="/start-here.html" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
                 START<br>HERE
             </a>
 
@@ -252,18 +246,18 @@
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
-        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
-        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
-        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
-        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
-        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
-        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
     </div>
 
-    <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
+    <main class="max-w-[720px] mx-auto pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
         
         <!-- HERO -->
-        <section class="max-w-2xl mx-auto pt-8 pb-24 fade-up text-center md:text-left">
+        <section class="pt-8 pb-24 fade-up text-center md:text-left">
             <h1 class="font-display text-5xl md:text-7xl text-neutral-900 dark:text-white leading-[1.1] mb-6">
                 You don’t need another<br>
                 <i class="block pt-2 text-neutral-500 text-[0.8em]">place to scroll.</i>
@@ -286,11 +280,11 @@
         </section>
 
         <!-- WHAT THIS IS -->
-        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+        <section class="py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
-                <p class="reveal">This is not a typical community.</p>
+                <p class="reveal text-2xl font-display text-neutral-900 dark:text-white mb-8">This is not a typical community.</p>
                 
-                <div class="pt-6 space-y-4 reveal delay-1 text-neutral-700 dark:text-neutral-300">
+                <div class="pt-2 space-y-4 reveal delay-1 text-neutral-700 dark:text-neutral-300">
                     <p>There’s no pressure to post.</p>
                     <p>No expectation to stay active.</p>
                     <p>No need to respond to everything.</p>
@@ -304,11 +298,11 @@
         </section>
 
         <!-- WHAT HAPPENS HERE -->
-        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+        <section class="py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
-                <p class="reveal text-neutral-900 dark:text-white font-medium">People share what they notice.</p>
+                <p class="reveal text-2xl font-display text-neutral-900 dark:text-white mb-8">People share what they notice.</p>
                 
-                <div class="pt-6 space-y-4 reveal delay-1">
+                <div class="pt-2 space-y-4 reveal delay-1">
                     <p>Not polished ideas.</p>
                     <p>Not advice.</p>
                     <p>Just moments that felt familiar.</p>
@@ -322,12 +316,12 @@
         </section>
 
         <!-- HOW TO USE IT -->
-        <section class="max-w-2xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+        <section class="py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-8">
-                <p class="reveal">You don’t need to do much.</p>
+                <p class="reveal text-2xl font-display text-neutral-900 dark:text-white mb-8">You don’t need to do much.</p>
                 <p class="reveal delay-1">You can:</p>
                 
-                <div class="pl-6 space-y-4 pt-2 reveal delay-2 text-neutral-700 dark:text-neutral-300">
+                <div class="pl-6 space-y-4 pt-2 reveal delay-2 border-l border-brand-teal/30 text-neutral-700 dark:text-neutral-300">
                     <p>Read quietly</p>
                     <p>Share something small</p>
                     <p>Respond when it feels relevant</p>
@@ -340,7 +334,7 @@
         </section>
 
         <!-- COMMUNITY GUIDELINES -->
-        <section class="max-w-3xl mx-auto py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+        <section class="py-24 border-t border-neutral-200/60 dark:border-white/5 fade-up">
             <div class="text-lg text-neutral-600 dark:text-neutral-400 font-light space-y-12">
                 <div class="space-y-4 reveal">
                     <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-2">How this space stays clear</h2>
@@ -348,54 +342,54 @@
                     <p class="text-neutral-900 dark:text-white font-medium">It’s about how you show up.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 pt-8 reveal delay-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16 pt-12 reveal delay-1">
                     <!-- 1 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">01</span> Share what you notice</p>
-                        <p class="text-base text-neutral-500">Not advice.<br>Not solutions.<br>Just what you saw or experienced.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">01</span> Share what you notice</p>
+                        <p class="text-base text-neutral-500 pl-8">Not advice.<br>Not solutions.<br>Just what you saw or experienced.</p>
                     </div>
                     <!-- 2 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">02</span> Keep it simple</p>
-                        <p class="text-base text-neutral-500">Short is enough.<br>Clarity matters more than completeness.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">02</span> Keep it simple</p>
+                        <p class="text-base text-neutral-500 pl-8">Short is enough.<br>Clarity matters more than completeness.</p>
                     </div>
                     <!-- 3 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">03</span> Don’t try to fix others</p>
-                        <p class="text-base text-neutral-500">You don’t need to correct or guide anyone.<br>What helps is recognition, not instruction.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">03</span> Don’t fix others</p>
+                        <p class="text-base text-neutral-500 pl-8">You don’t need to correct or guide anyone. What helps is recognition, not instruction.</p>
                     </div>
                     <!-- 4 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">04</span> Avoid noise</p>
-                        <p class="text-base text-neutral-500">No promotion.<br>No unnecessary links.<br>No trying to be impressive.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">04</span> Avoid noise</p>
+                        <p class="text-base text-neutral-500 pl-8">No promotion.<br>No unnecessary links.<br>No trying to be impressive.</p>
                     </div>
                     <!-- 5 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">05</span> Respect silence</p>
-                        <p class="text-base text-neutral-500">Not everything needs a response.<br>Sometimes reading is enough.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">05</span> Respect silence</p>
+                        <p class="text-base text-neutral-500 pl-8">Not everything needs a response.<br>Sometimes reading is enough.</p>
                     </div>
                     <!-- 6 -->
                     <div class="space-y-3">
-                        <p class="text-neutral-900 dark:text-white font-medium flex items-center"><span class="text-brand-teal mr-3 text-sm">06</span> Stay real</p>
-                        <p class="text-base text-neutral-500">Share what actually happened.<br>Not what sounds right.</p>
+                        <p class="text-neutral-900 dark:text-white font-medium flex items-center font-display text-2xl"><span class="text-brand-teal mr-4 text-sm font-sans font-bold opacity-80">06</span> Stay real</p>
+                        <p class="text-base text-neutral-500 pl-8">Share what actually happened.<br>Not what sounds right.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- TRANSITION / CTA / OPTIONAL -->
-        <section class="max-w-2xl mx-auto py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10 mt-12">
-            <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 space-y-8 font-light">
+        <section class="py-32 fade-up text-center border-t border-neutral-200/60 dark:border-white/5 relative z-10 mt-12">
+            <div class="spotlight-card rounded-[3rem] p-12 md:p-16 border border-neutral-200 dark:border-white/10 text-lg md:text-xl text-neutral-600 dark:text-neutral-400 space-y-8 font-light">
                 
                 <div class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white leading-tight italic">
                     <p class="reveal">If this feels different,</p>
                     <p class="reveal delay-1 mt-4">that’s the point.</p>
                 </div>
                 
-                <div class="pt-16 reveal delay-2">
-                    <a href="https://www.reddit.com/r/wordsofwisdom_in/" target="_blank" rel="noopener" class="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 inline-flex items-center justify-center px-12 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-colors hover:bg-neutral-800 dark:hover:bg-neutral-200">
+                <div class="pt-12 reveal delay-2">
+                    <a href="https://www.reddit.com/r/wordsofwisdom_in/" target="_blank" rel="noopener" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium inline-flex items-center justify-center px-12 py-5 rounded-full uppercase tracking-[0.1em] font-bold text-sm group transition-all duration-300">
                         Enter the community
-                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                        <i class="fa-brands fa-reddit-alien ml-3 text-lg transition-transform group-hover:scale-110"></i>
                     </a>
                 </div>
                 
@@ -403,7 +397,7 @@
                     <p class="text-lg font-display italic text-neutral-500">Take a moment before you do.</p>
                 </div>
 
-                <div class="pt-24 space-y-4 text-base text-neutral-500 reveal border-t border-neutral-200/40 dark:border-white/5 mt-16">
+                <div class="pt-16 space-y-2 text-base text-neutral-500 reveal border-t border-neutral-200/40 dark:border-white/5 mt-12">
                     <p>You don’t need to stay.</p>
                     <p>Just see what feels relevant.</p>
                 </div>
@@ -413,73 +407,75 @@
 
     </main>
 
-    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK (Centered Profile Layout) -->
     <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
         <!-- Subtle noise over footer using the CSS class -->
         <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
 
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <!-- Centered Cursive Branding & Icon -->
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <!-- Borderless, transparent logo container -->
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <!-- Global Footer Links (Centered Layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
                 
-                <!-- Column 1 & Socials -->
-                <div class="md:col-span-2 space-y-6">
-                    <div class="flex justify-center md:justify-start">
-                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
-                            <!-- Borderless, transparent logo container -->
-                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
-                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
-                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
-                            </div>
-                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
-                        </a>
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
-                    
-                    <!-- Social Icons -->
-                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
-                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
+                <!-- Column 1 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
-                    <p class="text-neutral-900 dark:text-white">The Journey</p>
-                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
-                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
-                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
-                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
-                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/library/index.html" class="block hover:text-brand-teal transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
+                    <a href="/books/" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
-                    <p class="text-neutral-900 dark:text-white">Explore</p>
-                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
-                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
-                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
-                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
-                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
-                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Connect</p>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block text-brand-teal dark:text-white transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
+            
+            <!-- Social Icons Centered -->
+            <div class="flex items-center space-x-8 mb-16 justify-center">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+            </div>
 
-            <!-- Bottom Row: Legal + Author + Trust Line -->
-            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
-                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
-                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+            <!-- Bottom Row: Legal + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <div class="flex flex-wrap justify-center gap-6 mb-2">
+                    <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
                 </div>
                 
-                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
-                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
-                </div>
-
-                <p class="tracking-[0.1em] opacity-50 text-center md:text-left">No noise. No hype. Just clarity and practical action.</p>
+                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
             </div>
         </div>
     </footer>
@@ -520,13 +516,14 @@
             }
 
             // Scroll Fade-Up Animation
-            const fadeElements = document.querySelectorAll('.fade-up');
+            const fadeElements = document.querySelectorAll('.fade-up, .reveal');
             const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
+                        entry.target.classList.add('visible'); // for .reveal classes
                         observer.unobserve(entry.target);
                     }
                 });
@@ -595,16 +592,6 @@
                     });
                 });
             }
-            
-            // Soft Presence Observer (for generic reveal text)
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.12 });
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
         });
     </script>
 </body>
