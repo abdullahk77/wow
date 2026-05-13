@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Attention in the Modern World | Words of Wisdom</title>
+    <meta name="description" content="A thoughtful exploration of attention, distraction, mental overload, focus, digital stimulation, and how modern environments quietly shape the way people think and live.">
+    <meta name="keywords" content="attention, focus, distraction, mental clarity, modern distraction, digital overload, attention span, overthinking, intentional living, awareness, behavioral patterns, dopamine distraction, concentration, fragmented attention">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/library/attention.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Attention in the Modern World">
+    <meta property="og:description" content="Attention quietly shapes how people think, feel, decide, and live. This page explores distraction, mental overload, focus, and awareness in modern life.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wordsofwisdom.in/library/attention.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/og/attention-article.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attention in the Modern World">
+    <meta name="twitter:description" content="A thoughtful exploration of attention, distraction, mental overload, and intentional awareness.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/og/attention-article.jpg">
+
+    <!-- ARTICLE SCHEMA (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Attention in the Modern World",
+      "description": "A thoughtful exploration of attention, distraction, mental overload, focus, and awareness in modern life.",
+      "author": {
+        "@type": "Organization",
+        "name": "Words of Wisdom Media"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Words of Wisdom Media",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wordsofwisdom.in/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wordsofwisdom.in/library/attention.html"
+      },
+      "image": "https://wordsofwisdom.in/og/attention-article.jpg",
+      "articleSection": "Attention",
+      "keywords": [
+        "attention",
+        "focus",
+        "distraction",
+        "mental clarity",
+        "digital overload",
+        "behavioral awareness"
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script -->
+    <script>
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fdfdfc',
+                            dark: '#050505',
+                            teal: '#2dd4bf',
+                        },
+                        neutral: {
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS: Elite Design Layer -->
+    <style type="text/tailwindcss">
+        body { transition: background-color 0.6s ease, color 0.6s ease; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.6); }
+
+        /* Arrival Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        /* Texture Layers */
+        .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%); }
+        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.05) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(20, 20, 24, 1) 0%, transparent 100%); }
+        .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.12; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
+
+        /* Glass Morphism Base Classes */
+        .glass-base {
+            @apply backdrop-blur-2xl border transition-all duration-500;
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .dark .glass-base {
+            background: rgba(10, 10, 12, 0.6);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Micro-Interactions */
+        .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; }
+        .button-press:active { transform: scale(0.95); }
+        .clean-link { opacity: 0.7; transition: opacity 0.3s ease; position: relative; display: inline-flex; align-items: center; }
+        .clean-link:hover { opacity: 1; }
+        
+        section { position: relative; z-index: 10; }
+        
+        /* Elevated Spotlight Cards */
+        .spotlight-card { 
+            position: relative; overflow: hidden; background: rgba(255,255,255,0.4); 
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .dark .spotlight-card { 
+            background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); 
+        }
+        .spotlight-card:hover {
+            transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.2); 
+            background: rgba(255,255,255,0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .dark .spotlight-card:hover {
+            background: rgba(255,255,255,0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        /* Precision Magnetic Cursor */
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        .cursor-dot { 
+            position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; 
+            z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; 
+            opacity: 0; transition: opacity 0.3s ease; 
+        }
+        .cursor-ring { 
+            position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.5); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); 
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0;
+        }
+        .cursor-ring.hover-active { width: 64px; height: 64px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+
+        /* Editorial Typography Enhancements */
+        .article-body p { margin-bottom: 2rem; line-height: 1.8; }
+        .article-body ul { margin-bottom: 2.5rem; list-style-type: none; padding-left: 1.5rem; }
+        .article-body ul li { position: relative; margin-bottom: 1rem; line-height: 1.8; }
+        .article-body ul li::before { content: "•"; position: absolute; left: -1.2rem; color: #2dd4bf; opacity: 0.8;}
+        .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-top: 6rem; margin-bottom: 2.5rem; color: #171717; font-weight: 500; line-height: 1.1; }
+        .dark .article-body h2 { color: #ffffff; }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
+
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+
+    <!-- NAVIGATION MENU (Standardized Template) -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
+                <a href="/library/index.html" class="text-brand-teal dark:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
+                </button>
+            </div>
+
+            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full items-center justify-center whitespace-nowrap hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">
+                START HERE
+            </a>
+
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white p-1">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">Library</a>
+    </div>
+
+    <!-- MAIN ARTICLE CONTAINER (Max 760px for reading comfort) -->
+    <main class="max-w-[720px] mx-auto pt-40 pb-32 px-6 sm:px-0 relative z-10">
+        
+        <!-- ARTICLE HEADER -->
+        <header class="mb-20">
+            <div class="reveal visible mb-8 flex items-center justify-between">
+                <div class="flex items-center space-x-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+                    <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
+                    <span class="text-neutral-300 dark:text-neutral-700">/</span>
+                    <span>Attention</span>
+                </div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">
+                    12 Min Read
+                </div>
+            </div>
+
+            <h1 class="text-[3rem] md:text-5xl lg:text-[4rem] font-display text-neutral-900 dark:text-white leading-tight md:leading-[1.1] tracking-tight reveal visible mb-8">
+                Attention in the Modern World
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-display italic reveal delay-1 mb-12">
+                Attention quietly shapes how people think, feel, decide, and live. Yet modern environments compete for it constantly, often without people fully noticing the effect.
+            </p>
+
+            <!-- Custom Abstract Focus Representation Hero -->
+            <div class="w-full h-[350px] md:h-[450px] rounded-[2rem] overflow-hidden reveal delay-2 relative mb-16 border border-neutral-200 dark:border-white/5 bg-neutral-50 dark:bg-[#050507] group flex items-center justify-center">
+                <!-- Ambient Base -->
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent to-neutral-200/50 dark:to-brand-teal/5"></div>
+                
+                <!-- Abstract Texture -->
+                <div class="absolute inset-0 opacity-[0.15] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+                <!-- Abstract Composition: Focus vs Fragmentation -->
+                <div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
+                    <!-- Central Core (Attention) -->
+                    <div class="absolute w-20 h-20 bg-brand-teal/20 rounded-full blur-2xl group-hover:scale-150 group-hover:bg-brand-teal/30 transition-all duration-[1.5s] ease-in-out"></div>
+                    <div class="absolute w-4 h-4 bg-brand-teal rounded-full shadow-[0_0_20px_rgba(45,212,191,0.6)] z-10 group-hover:scale-110 transition-transform duration-[1.5s]"></div>
+                    
+                    <!-- Surrounding Rings (Boundaries of Focus) -->
+                    <div class="absolute inset-16 border border-neutral-300 dark:border-neutral-800 rounded-full opacity-50 group-hover:scale-[1.02] transition-transform duration-[2s] ease-out"></div>
+                    <div class="absolute inset-6 border border-neutral-300 dark:border-neutral-800 rounded-full opacity-20 group-hover:rotate-45 transition-transform duration-[3s] ease-in-out border-dashed"></div>
+
+                    <!-- Orbiting Fragments (Distractions) -->
+                    <div class="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-neutral-400 dark:bg-neutral-500 rounded-full blur-[0.5px] transition-all duration-[2s] group-hover:-translate-x-8 group-hover:-translate-y-8 opacity-60"></div>
+                    <div class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full blur-[1px] transition-all duration-[2.5s] group-hover:translate-x-10 group-hover:translate-y-6 opacity-40"></div>
+                    <div class="absolute top-1/2 right-1/4 w-1 h-1 bg-brand-teal rounded-full blur-[0.5px] transition-all duration-[1.5s] group-hover:translate-x-12 group-hover:-translate-y-4 opacity-80"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ARTICLE BODY -->
+        <article class="article-body text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
+            
+            <!-- SECTION 1 -->
+            <h2 class="reveal">Most people are not struggling because they lack information</h2>
+
+            <p class="reveal">
+                Modern life provides endless access to information, advice, entertainment, opinions, and stimulation.
+            </p>
+
+            <p class="reveal">
+                Yet many people still feel mentally exhausted, distracted, emotionally scattered, or unable to focus on what genuinely matters to them.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                The problem is often not a lack of knowledge.
+            </p>
+
+            <p class="reveal">
+                It is the gradual fragmentation of attention.
+            </p>
+
+            <p class="reveal">
+                Attention influences far more than productivity. It affects emotional stability, thinking patterns, relationships, memory, decision-making, and even the ability to feel present in daily life.
+            </p>
+
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 pl-6 border-l-[3px] border-brand-teal/50">
+                What people repeatedly give attention to slowly shapes the quality of their inner world.
+            </p>
+
+            <!-- SECTION 2 -->
+            <h2 class="reveal">Attention is more than focus</h2>
+
+            <p class="reveal">
+                Attention is not simply the ability to concentrate on a task.
+            </p>
+
+            <p class="reveal">
+                It is the process through which the mind selects what receives mental energy, emotional importance, and awareness.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                Where attention goes repeatedly, thoughts begin to organize themselves.
+            </p>
+
+            <ul class="reveal delay-1">
+                <li>Patterns strengthen.</li>
+                <li>Emotions intensify.</li>
+                <li>Habits become easier to repeat.</li>
+            </ul>
+
+            <p class="reveal">
+                Over time, attention quietly influences perception itself.
+            </p>
+
+            <p class="reveal">
+                People often assume attention is fully intentional, but much of it is continuously directed by environments, algorithms, notifications, stress, novelty, emotional discomfort, and habit loops.
+            </p>
+
+            <p class="reveal">
+                This is one reason many people feel mentally pulled in multiple directions even when they genuinely want clarity.
+            </p>
+
+            <!-- SECTION 3 -->
+            <h2 class="reveal">Modern environments compete aggressively for attention</h2>
+
+            <p class="reveal">
+                Many digital systems are designed around stimulation, novelty, interruption, and continuous engagement.
+            </p>
+
+            <p class="reveal">
+                The result is not always obvious immediately.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                Instead, the effect accumulates gradually.
+            </p>
+
+            <p class="reveal">
+                Constant switching between apps, tabs, notifications, videos, conversations, and unfinished thoughts trains the brain toward fragmentation.
+            </p>
+
+            <p class="reveal">
+                Even short interruptions can leave residual mental noise behind. Over time, many people begin experiencing:
+            </p>
+
+            <ul class="reveal delay-1">
+                <li>difficulty sustaining focus</li>
+                <li>mental restlessness</li>
+                <li>compulsive checking behaviors</li>
+                <li>reduced patience</li>
+                <li>emotional overstimulation</li>
+                <li>difficulty being fully present</li>
+                <li>shallow thinking loops</li>
+                <li>increased impulsivity</li>
+            </ul>
+
+            <p class="reveal">
+                This does not mean technology itself is inherently harmful.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                The deeper issue is prolonged exposure to environments that continuously divide awareness.
+            </p>
+
+            <!-- SECTION 4 -->
+            <h2 class="reveal">Attention and emotion influence each other constantly</h2>
+
+            <p class="reveal">
+                People often think distraction is purely behavioral.
+            </p>
+
+            <p class="reveal">
+                In reality, emotional state strongly influences attention. Stress, uncertainty, loneliness, anxiety, emotional fatigue, overwhelm, and unresolved pressure can make distraction feel temporarily comforting.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                This is why many people reach for stimulation automatically during moments of discomfort.
+            </p>
+
+            <p class="reveal">
+                Scrolling, switching tasks, consuming content, or constantly checking devices can become subtle forms of emotional escape.
+            </p>
+
+            <p class="reveal">
+                The difficulty is that temporary relief often increases long-term mental noise. Attention becomes reactive instead of intentional.
+            </p>
+
+            <p class="reveal">
+                Awareness begins shrinking toward immediate stimulation rather than deeper clarity.
+            </p>
+
+            <!-- SECTION 5 -->
+            <h2 class="reveal">Constant stimulation changes the texture of thought</h2>
+
+            <p class="reveal">
+                When attention becomes continuously fragmented, thinking itself often becomes shallower.
+            </p>
+
+            <p class="reveal">
+                People may notice:
+            </p>
+
+            <ul class="reveal delay-1">
+                <li>difficulty reading deeply</li>
+                <li>impatience during silence</li>
+                <li>reduced reflection</li>
+                <li>shortened attention span</li>
+                <li>constant internal urgency</li>
+                <li>inability to remain with one thought for long</li>
+                <li>emotional overreactivity</li>
+                <li>difficulty slowing the mind</li>
+            </ul>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-10">
+                This affects more than productivity. It changes how people experience life.
+            </p>
+
+            <p class="reveal">
+                Moments become harder to fully inhabit. Conversations become easier to half-attend. Rest becomes mixed with stimulation. Even free time can begin feeling mentally crowded.
+            </p>
+
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 text-center">
+                Many people are not physically exhausted as much as they are cognitively overloaded.
+            </p>
+
+            <!-- SECTION 6 -->
+            <h2 class="reveal">Repeated attention slowly shapes identity</h2>
+
+            <p class="reveal">
+                Attention is rarely neutral.
+            </p>
+
+            <p class="reveal">
+                What people repeatedly consume, reinforce, avoid, react to, and emotionally engage with gradually influences beliefs, emotional patterns, and self-perception.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                Attention can strengthen fear. It can strengthen comparison. It can strengthen anxiety.<br><br>
+                It can also strengthen awareness, patience, reflection, creativity, and clarity.
+            </p>
+
+            <p class="reveal">
+                This is why attention deserves deeper respect than modern culture often gives it.
+            </p>
+
+            <p class="reveal">
+                People eventually become influenced by what consistently occupies their inner environment. Not all at once.
+            </p>
+
+            <p class="reveal delay-1 italic text-neutral-500 text-center my-10">
+                Quietly.<br>Repeatedly.<br>Over time.
+            </p>
+
+            <!-- SECTION 7 -->
+            <h2 class="reveal">Recovering attention usually begins with awareness</h2>
+
+            <p class="reveal">
+                Many people try to solve distraction with stricter discipline alone.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                But attention often improves more sustainably through awareness before control.
+            </p>
+
+            <p class="reveal">
+                People begin noticing:
+            </p>
+
+            <ul class="reveal delay-1">
+                <li>what repeatedly captures attention</li>
+                <li>which environments increase mental noise</li>
+                <li>when distraction becomes emotional avoidance</li>
+                <li>how overstimulation affects thinking</li>
+                <li>what restores mental clarity</li>
+                <li>which habits reduce internal fragmentation</li>
+            </ul>
+
+            <p class="reveal mt-10">
+                Small environmental changes can matter significantly:
+            </p>
+
+            <ul class="reveal delay-2">
+                <li>reducing unnecessary notifications</li>
+                <li>creating periods without stimulation</li>
+                <li>slowing information intake</li>
+                <li>spending time in uninterrupted thought</li>
+                <li>reading more deeply</li>
+                <li>allowing moments of silence</li>
+                <li>becoming more intentional about digital consumption</li>
+            </ul>
+
+            <p class="reveal mt-10 font-medium text-neutral-900 dark:text-white">
+                The goal is not perfection. It is reducing unconscious fragmentation.
+            </p>
+
+            <!-- SECTION 8 -->
+            <h2 class="reveal">A quieter form of attention</h2>
+
+            <p class="reveal">
+                Attention does not always need to feel intense.
+            </p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">
+                Sometimes clearer attention feels quieter rather than more forceful.
+            </p>
+
+            <p class="reveal">
+                Less reactive. Less scattered. Less compulsive.
+            </p>
+            
+            <p class="reveal delay-1">
+                More aware. More deliberate. More present.
+            </p>
+
+            <p class="reveal mt-10">
+                Many people spend years trying to force productivity while rarely examining the environments, patterns, and emotional conditions shaping their attention each day.
+            </p>
+
+            <p class="reveal">
+                Awareness changes that relationship.
+            </p>
+
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white mt-12 pl-6 border-l-[3px] border-brand-teal/50">
+                And over time, clearer attention often changes far more than people initially expect.
+            </p>
+
+        </article>
+
+        <!-- INTERNAL NAVIGATION / RELATED READING -->
+        <section class="mt-32 pt-16 border-t border-neutral-200 dark:border-white/10 reveal">
+            <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-10 text-center">Continue Reading</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Related Link 1 -->
+                <a href="/library/focus.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Focus</h4>
+                    <p class="text-neutral-500 text-sm font-light">Why your attention drifts and how to anchor it.</p>
+                </a>
+                
+                <!-- Related Link 2 -->
+                <a href="/library/overthinking.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Overthinking</h4>
+                    <p class="text-neutral-500 text-sm font-light">The mental loops that disguise themselves as problem-solving.</p>
+                </a>
+
+                <!-- Related Link 3 -->
+                <a href="/insights/attention-fragmentation.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3">Insight</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Attention Fragmentation</h4>
+                    <p class="text-neutral-500 text-sm font-light">How micro-interruptions slowly break deep thought.</p>
+                </a>
+
+                <!-- Related Link 4 -->
+                <a href="/insights/why-you-cant-focus-even-when-you-want-to.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3">Insight</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Why You Can't Focus</h4>
+                    <p class="text-neutral-500 text-sm font-light">Even when you want to, and it matters.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FINAL CLOSING THOUGHT -->
+        <section class="mt-32 reveal text-center">
+            <div class="max-w-xl mx-auto space-y-6">
+                <p class="font-display text-2xl md:text-3xl text-neutral-900 dark:text-white italic leading-relaxed">
+                    Attention quietly becomes the background of daily life.
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light">
+                    It influences what people notice, what they reinforce emotionally, what they remember, what they avoid, and what eventually shapes their behavior.
+                </p>
+                <p class="text-neutral-900 dark:text-white font-medium">
+                    Protecting attention is not about becoming perfectly disciplined. It is about becoming more aware of what is continuously shaping the mind.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA BLOCK -->
+        <section class="mt-32 reveal">
+            <div class="spotlight-card rounded-[3rem] p-12 md:p-16 text-center border border-neutral-200 dark:border-white/10 overflow-hidden relative bg-gradient-to-br from-white/80 to-neutral-50/50 dark:from-white/[0.03] dark:to-transparent">
+                <div class="relative z-10">
+                    <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Explore Attention More Deeply</h3>
+                    <p class="text-lg font-light text-neutral-600 dark:text-neutral-400 mb-10 max-w-md mx-auto">
+                        Thoughtful tools, programs, and reflections designed to help reduce mental fragmentation and build clearer awareness in daily life.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="/programs/attention-recovery.html" class="button-press w-full sm:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] shadow-lg">
+                            Explore Programs
+                        </a>
+                        <a href="/library/index.html" class="button-press w-full sm:w-auto bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors">
+                            Browse Library
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/library/index.html" class="block text-brand-teal dark:text-white transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
+                    <a href="/books.html" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Connect</p>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-8 mb-16 justify-center">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <div class="flex flex-wrap justify-center gap-6 mb-2">
+                    <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
+        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.reveal');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Magnetic Cursor Logic
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+                let cursorInitiated = false;
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) {
+                        dot.style.opacity = "1";
+                        ring.style.opacity = "1";
+                        cursorInitiated = true;
+                    }
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    dot.style.left = `${mouseX}px`;
+                    dot.style.top = `${mouseY}px`;
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, textarea, .spotlight-card');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
+
+            // Back to Top Logic
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 600) {
+                        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    }
+                });
+
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
