@@ -8,13 +8,24 @@
     <title>Privacy Policy | Words of Wisdom</title>
     <meta name="description" content="This page explains how your information is handled here. Simple, direct, and without unnecessary complexity.">
     <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://wordsofwisdom.com/privacy">
+    <link rel="canonical" href="https://wordsofwisdom.in/privacy.html">
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="Privacy Policy | Words of Wisdom">
     <meta property="og:description" content="This page explains how your information is handled here. Simple, direct, and without unnecessary complexity.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wordsofwisdom.com/privacy">
+    <meta property="og:url" content="https://wordsofwisdom.in/privacy.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/og/default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Privacy Policy — Words of Wisdom">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | Words of Wisdom">
+    <meta name="twitter:description" content="This page explains how your information is handled here. Simple, direct, and without unnecessary complexity.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/og/default.jpg">
 
     <!-- FAVICON -->
     <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
@@ -52,21 +63,21 @@
                             light: '#fafafa',
                             dark: '#030305',
                             teal: '#2dd4bf',
-                            purple: '#c084fc',
-                            gold: '#fbbf24',
                         },
                         neutral: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#e5e5e5',
-                            300: '#d4d4d4',
-                            400: '#a3a3a3',
-                            500: '#737373',
-                            600: '#525252',
-                            700: '#404040',
-                            800: '#262626',
-                            900: '#171717',
-                            950: '#0a0a0a',
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 20s ease-in-out infinite alternate',
+                        'float-delayed': 'float 25s ease-in-out infinite alternate-reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                            '100%': { transform: 'translate(5%, 15%) scale(1.1) rotate(5deg)' },
                         }
                     }
                 }
@@ -74,18 +85,16 @@
         }
     </script>
 
-    <!-- Advanced CSS for Elite Premium UI/UX (Animations Removed for Legal Pages) -->
+    <!-- Advanced CSS for Elite Premium UI/UX -->
     <style type="text/tailwindcss">
-        /* Elite Visible Scrollbar */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
         .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
-        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
         .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
         ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
         .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
 
-        /* Premium Lux Texture Base */
         .elite-texture-base {
             position: fixed; inset: 0; z-index: -2; pointer-events: none;
             background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
@@ -96,7 +105,6 @@
                         radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.95) 0%, transparent 100%);
         }
 
-        /* Subtle Noise Texture Overlay */
         .ambient-noise {
             position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.25;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
@@ -104,27 +112,71 @@
         }
         .dark .ambient-noise { opacity: 0.4; }
 
-        /* Footer Noise Extraction */
         .footer-noise-bg {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
-        /* Premium Links */
-        .clean-link { position: relative; text-decoration: none; display: inline-block; }
-        .clean-link::after {
-            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0;
-            background-color: currentColor; transform-origin: bottom right; transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        .ambient-orb {
+            position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: -1;
+            transition: opacity 1s ease, transform 1s ease; opacity: 0.15;
         }
-        .clean-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
+        .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
+        .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); }
+
+        @media (pointer: fine) { body, a, button, input, textarea { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+
+        .fade-up {
+            opacity: 0; transform: translateY(30px); filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.08); }
+        .btn-premium:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .dark .btn-premium:hover:not(:disabled) { box-shadow: 0 6px 20px rgba(255,255,255,0.12); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
 
         ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
-    <!-- Global Noise & Texture -->
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Global Noise & Ambient Light Engine -->
     <div class="elite-texture-base"></div>
     <div class="ambient-noise"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="ambient-orb orb-1 animate-float-slow"></div>
+        <div class="ambient-orb orb-2 animate-float-delayed"></div>
+    </div>
 
     <!-- NAVIGATION MENU -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
@@ -138,12 +190,12 @@
             
             <!-- Desktop Nav Links -->
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
-                <a href="/start-here" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
-                <a href="/identity" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
-                <a href="/focus" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
-                <a href="/action" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
-                <a href="/wow-mindset" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-center leading-[1.3]">WOW<br>MINDSET</a>
-                <a href="/library" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
+                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
@@ -153,7 +205,7 @@
             </div>
 
             <!-- CTA -->
-            <a href="/start-here" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_0_rgba(255,255,255,0.08)]">
+            <a href="/start-here.html" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
                 START<br>HERE
             </a>
 
@@ -171,40 +223,40 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40">
-        <a href="/start-here" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
-        <a href="/identity" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
-        <a href="/focus" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
-        <a href="/action" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
-        <a href="/wow-mindset" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">WOW Mindset</a>
-        <a href="/library" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
     </div>
 
     <main class="max-w-[760px] mx-auto pt-40 md:pt-48 pb-24 px-6 sm:px-8 z-10 relative min-h-screen">
         
-        <div class="mb-12">
+        <div class="mb-12 fade-up">
             <a href="/" class="text-brand-teal hover:text-brand-teal/80 transition-colors text-sm font-bold uppercase tracking-[0.15em] flex items-center">
                 <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Back to Home
             </a>
         </div>
 
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-6">
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-6 fade-up">
             Privacy Policy
         </h1>
-        <p class="text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 mb-12 pb-8 border-b border-neutral-200 dark:border-white/10">
+        <p class="text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 mb-12 pb-8 border-b border-neutral-200 dark:border-white/10 fade-up delay-1">
             Last updated: May 2026
         </p>
 
         <div class="text-lg text-neutral-700 dark:text-neutral-300 font-light space-y-16">
             
-            <div class="space-y-4">
+            <div class="space-y-4 reveal">
                 <p>This page explains how your information is handled here.</p>
                 <p>Simple, direct, and without unnecessary complexity.</p>
                 <p>If you use this site, subscribe, or contact us, some information may be collected.</p>
                 <p class="text-neutral-900 dark:text-white font-medium pt-2">This is how it is used.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Information We Collect</h2>
                 <p class="mb-4">We may collect:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
@@ -218,7 +270,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">How Your Information Is Used</h2>
                 <p class="mb-4">Your information is used to:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
@@ -232,7 +284,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Email Communication</h2>
                 <p>If you subscribe, you may receive emails.</p>
                 <p>You can unsubscribe at any time using the link provided.</p>
@@ -242,7 +294,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Third-Party Services</h2>
                 <p class="mb-4">We use trusted third-party services to operate this site. This may include:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
@@ -252,7 +304,7 @@
                 <p>These services may process limited data according to their own privacy policies.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Cookies</h2>
                 <p class="mb-4">This site may use basic cookies to:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
@@ -262,7 +314,7 @@
                 <p>You can disable cookies through your browser settings.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Legal Basis (GDPR)</h2>
                 <p class="mb-4">If you are in the European Economic Area (EEA), we process your data based on:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400">
@@ -271,7 +323,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Your Rights</h2>
                 <p class="mb-4">Depending on your location, you may have the right to:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
@@ -284,7 +336,7 @@
                 <p>To request any of these, you can contact us directly.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">California Privacy Rights (CCPA/CPRA)</h2>
                 <p class="mb-4">If you are a California resident, you have the right to:</p>
                 <ul class="space-y-2 pl-6 text-neutral-600 dark:text-neutral-400 mb-6">
@@ -295,36 +347,36 @@
                 <p class="text-neutral-900 dark:text-white font-medium">We do not sell personal data.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Data Retention</h2>
                 <p>Your data is kept only as long as necessary to provide the service or comply with legal obligations.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Data Security</h2>
                 <p>We take reasonable steps to protect your information.</p>
                 <p>However, no system can guarantee absolute security.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">International Use</h2>
                 <p>This site may be accessed globally.</p>
                 <p>By using it, you understand that your data may be processed in different regions.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Changes</h2>
                 <p>This policy may be updated when necessary.</p>
                 <p>Any updates will be reflected on this page.</p>
             </div>
 
-            <div>
+            <div class="reveal">
                 <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-6">Contact</h2>
                 <p class="mb-4">If you have questions about your data:</p>
                 <code class="font-mono text-sm md:text-base text-neutral-900 dark:text-white font-semibold">info {at} wordsofwisdom [dot] in</code>
             </div>
             
-            <div class="pt-16 border-t border-neutral-200/40 dark:border-white/10 text-sm text-neutral-500 font-light">
+            <div class="pt-16 border-t border-neutral-200/40 dark:border-white/10 text-sm text-neutral-500 font-light reveal">
                 <p>&copy; 2026 Words of Wisdom Media. All rights reserved.</p>
             </div>
 
@@ -332,78 +384,85 @@
 
     </main>
 
-    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
-    <footer class="bg-brand-light dark:bg-[#030305] pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK (Centered Profile Layout) -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
         <!-- Subtle noise over footer using the CSS class -->
         <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
 
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <!-- Centered Cursive Branding & Icon -->
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <!-- Borderless, transparent logo container -->
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <!-- Global Footer Links (Centered Layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
                 
-                <!-- Column 1 & Socials -->
-                <div class="md:col-span-2 space-y-6">
-                    <div class="flex justify-center md:justify-start">
-                        <a href="/" class="inline-flex flex-col items-center gap-5 hover:opacity-90 transition-opacity">
-                            <!-- Borderless, transparent logo container -->
-                            <div class="h-24 w-24 flex items-center justify-center overflow-visible">
-                                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
-                                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
-                            </div>
-                            <span class="font-logo text-3xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">Words of Wisdom</span>
-                        </a>
-                    </div>
-                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-base max-w-sm mx-auto md:mx-0 text-center md:text-left">Clear thinking. Steady action.</p>
-                    
-                    <!-- Social Icons -->
-                    <div class="flex items-center space-x-6 pt-2 justify-center md:justify-start">
-                        <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/#" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.facebook.com/wordsofwisdom.in/" target="_blank" rel="noopener" aria-label="Facebook" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
+                <!-- Column 1 -->
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
-                    <p class="text-neutral-900 dark:text-white">The Journey</p>
-                    <a href="/start-here" class="block hover:text-brand-teal transition-colors">Start</a>
-                    <a href="/identity" class="block hover:text-brand-teal transition-colors">Identity</a>
-                    <a href="/focus" class="block hover:text-brand-teal transition-colors">Focus</a>
-                    <a href="/action" class="block hover:text-brand-teal transition-colors">Action</a>
-                    <a href="/wow-mindset" class="block hover:text-brand-teal transition-colors">WOW Mindset</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/library/" class="block hover:text-brand-teal transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
+                    <a href="/books.html" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 text-center md:text-left">
-                    <p class="text-neutral-900 dark:text-white">Explore</p>
-                    <a href="/book" class="block hover:text-brand-teal transition-colors">Book</a>
-                    <a href="/tools" class="block hover:text-brand-teal transition-colors">Tools</a>
-                    <a href="/community" class="block hover:text-brand-teal transition-colors">Community</a>
-                    <a href="/about" class="block hover:text-brand-teal transition-colors">About</a>
-                    <a href="/author" class="block hover:text-brand-teal transition-colors">Author</a>
-                    <a href="/contact" class="block hover:text-brand-teal transition-colors">Contact</a>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Connect</p>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
+            
+            <!-- Social Icons Centered -->
+            <div class="flex items-center space-x-8 mb-16 justify-center">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+            </div>
 
-            <!-- Bottom Row: Legal + Author + Trust Line -->
-            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold">
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="/privacy" class="text-neutral-900 dark:text-white transition-colors">Privacy</a>
-                    <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
-                    <a href="/disclaimer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+            <!-- Bottom Row: Legal + Trust Line -->
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <div class="flex flex-wrap justify-center gap-6 mb-2">
+                    <a href="/privacy.html" class="text-neutral-900 dark:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
                 </div>
                 
-                <div class="text-center md:text-left text-neutral-500 dark:text-neutral-400">
-                    Built by <a href="/author" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a>
-                </div>
-
-                <p class="tracking-[0.1em] opacity-50 text-center md:text-left">No noise. No hype. Just clarity.</p>
+                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
             </div>
         </div>
     </footer>
 
-    <!-- INTERACTION LOGIC (Only Theme and Menu) -->
+    <!-- Elite Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
+        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- INTERACTION LOGIC -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
@@ -430,6 +489,84 @@
             if(btn && menu) {
                 btn.addEventListener('click', () => {
                     menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up, .reveal');
+            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        entry.target.classList.add('visible'); // For .reveal blocks
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Back to Top Logic
+            const bttBtn = document.getElementById('back-to-top');
+            if(bttBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        bttBtn.classList.add('translate-y-20', 'opacity-0');
+                    }
+                });
+
+                bttBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Magnetic Cursor Logic
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+                let cursorInitiated = false;
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) {
+                        dot.style.opacity = "1";
+                        ring.style.opacity = "1";
+                        cursorInitiated = true;
+                    }
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    dot.style.left = `${mouseX}px`;
+                    dot.style.top = `${mouseY}px`;
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, textarea');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
                 });
             }
         });
