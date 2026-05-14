@@ -17,14 +17,6 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wordsofwisdom.in/focus.html">
     <meta property="og:image" content="https://wordsofwisdom.in/assets/og/focus-cover.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Focus | Why Attention Keeps Drifting in a Distracted World">
-    <meta name="twitter:description" content="Understand why modern attention feels constantly interrupted and mentally scattered.">
-    <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/focus-cover.jpg">
 
     <!-- FINAL JSON-LD SCHEMA -->
     <script type="application/ld+json">
@@ -35,49 +27,23 @@
           "@type": "Organization",
           "name": "Words of Wisdom Media",
           "url": "https://wordsofwisdom.in",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://wordsofwisdom.in/assets/images/logo.png"
-          }
+          "logo": { "@type": "ImageObject", "url": "https://wordsofwisdom.in/assets/images/logo.png" }
         },
-        {
-          "@type": "WebSite",
-          "name": "Words of Wisdom Media",
-          "url": "https://wordsofwisdom.in"
-        },
+        { "@type": "WebSite", "name": "Words of Wisdom Media", "url": "https://wordsofwisdom.in" },
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://wordsofwisdom.in"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Focus",
-              "item": "https://wordsofwisdom.in/focus.html"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wordsofwisdom.in" },
+            { "@type": "ListItem", "position": 2, "name": "Focus", "item": "https://wordsofwisdom.in/focus.html" }
           ]
         },
         {
           "@type": "Article",
           "headline": "Focus | Why Attention Keeps Drifting in a Distracted World",
           "description": "Understand why attention keeps drifting, how modern distractions fragment focus, and why mental overload makes it difficult to stay present for long.",
-          "author": {
-            "@type": "Person",
-            "name": "Abdullah Khan"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Words of Wisdom Media"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://wordsofwisdom.in/focus.html"
-          },
+          "author": { "@type": "Person", "name": "Abdullah Khan" },
+          "publisher": { "@type": "Organization", "name": "Words of Wisdom Media" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wordsofwisdom.in/focus.html" },
           "inLanguage": "en"
         },
         {
@@ -86,26 +52,12 @@
             {
               "@type": "Question",
               "name": "Why is it difficult to stay focused today?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Modern environments continuously interrupt attention through notifications, stimulation, switching, and constant input."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "Modern environments continuously interrupt attention through notifications, stimulation, switching, and constant input." }
             },
             {
               "@type": "Question",
               "name": "Is lack of focus always a discipline problem?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not always. Environment, overload, distraction patterns, and repeated interruption shape attention more than most people realize."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can attention become steadier again?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Often through reducing mental overload, unnecessary stimulation, and competing attention demands."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "Not always. Environment, overload, distraction patterns, and repeated interruption shape attention more than most people realize." }
             }
           ]
         }
@@ -113,111 +65,53 @@
     }
     </script>
 
-    <!-- FAVICON -->
     <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
-
-    <!-- Premium Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
-    <!-- Theme Initialization Script -->
     <script>
-        if (localStorage.theme === 'light') {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
-        }
+        if (localStorage.theme === 'light') { document.documentElement.classList.remove('dark'); } 
+        else { document.documentElement.classList.add('dark'); localStorage.theme = 'dark'; }
     </script>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        display: ['"Cormorant Garamond"', 'serif'],
-                        logo: ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            light: '#fdfdfc',
-                            dark: '#030305',
-                            teal: '#2dd4bf',
-                        },
-                        neutral: {
-                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
-                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
-                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
-                        }
-                    },
-                    keyframes: {
-                        slideLeft: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        },
-                        slideRight: {
-                            '0%': { transform: 'translateX(-50%)' },
-                            '100%': { transform: 'translateX(0)' },
-                        }
-                    },
-                    animation: {
-                        'slide-left-slow': 'slideLeft 140s linear infinite',
-                        'slide-right-slow': 'slideRight 160s linear infinite',
-                    }
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['"Cormorant Garamond"', 'serif'], logo: ['"Playfair Display"', 'serif'] },
+                    colors: { brand: { light: '#fdfdfc', dark: '#030305', teal: '#2dd4bf' } }
                 }
             }
         }
     </script>
 
-    <!-- Advanced CSS: Editorial Fragmentation Layer -->
     <style type="text/tailwindcss">
         body { transition: background-color 0.8s ease, color 0.8s ease; }
-
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.2); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.4); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.15); border-radius: 10px; }
 
-        /* Smooth reveal system */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.3s; }
         .delay-2 { transition-delay: 0.6s; }
-        .delay-3 { transition-delay: 0.9s; }
 
-        /* Texture Layers */
         .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.02) 0%, transparent 60%); }
-        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(2, 2, 4, 1) 0%, transparent 100%); }
+        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.02) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(2, 2, 4, 1) 0%, transparent 100%); }
         .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.15; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
 
-        /* Glass Morphism Base Classes */
-        .glass-base {
-            @apply backdrop-blur-2xl border transition-all duration-500;
-            background: rgba(255, 255, 255, 0.8);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-        .dark .glass-base {
-            background: rgba(10, 10, 12, 0.8);
-            border-color: rgba(255, 255, 255, 0.06);
-        }
+        .glass-base { @apply backdrop-blur-2xl border transition-all duration-500; background: rgba(255, 255, 255, 0.8); border-color: rgba(255, 255, 255, 0.5); }
+        .dark .glass-base { background: rgba(10, 10, 12, 0.8); border-color: rgba(255, 255, 255, 0.06); }
 
-        /* Essential Buttons */
-        .button-press { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
-        .button-press:active { transform: scale(0.98); }
-        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.03); }
-        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.03); }
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        .cursor-dot { position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; opacity: 0; transition: opacity 0.3s ease; }
+        .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.5); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0; }
+        .cursor-ring.hover-active { width: 64px; height: 64px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
 
-        /* Museum Typography Rhythm */
         .article-body p { margin-bottom: 2.5rem; line-height: 1.8; }
         .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; margin-top: 7rem; margin-bottom: 3rem; color: #171717; font-weight: 400; line-height: 1.2; }
         .dark .article-body h2 { color: #ffffff; }
@@ -227,31 +121,19 @@
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
     <div class="elite-texture-base"></div>
     <div class="ambient-noise"></div>
-
-    <!-- ENVIRONMENTAL FRAGMENTATION LAYER (Subconscious drifting words) -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1] flex flex-col justify-between py-40">
-        <div class="flex whitespace-nowrap animate-slide-left-slow opacity-[0.02] dark:opacity-[0.03]">
-            <span class="font-display italic text-[10rem] md:text-[14rem] font-normal text-neutral-900 dark:text-white select-none whitespace-pre">
-                switch    check    open    return    scroll    switch    check    open    return    scroll    
-            </span>
-        </div>
-        <div class="flex whitespace-nowrap animate-slide-right-slow opacity-[0.02] dark:opacity-[0.03]">
-            <span class="font-display italic text-[10rem] md:text-[14rem] font-normal text-neutral-900 dark:text-white select-none whitespace-pre">
-                react    drift    fragment    interruption    react    drift    fragment    interruption    
-            </span>
-        </div>
-    </div>
 
     <!-- NAVIGATION MENU -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
         <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)]">
             <a href="/" class="flex-shrink-0 transform hover:opacity-70 transition-opacity duration-500 mr-4">
-                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom Media" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
-                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom Media" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
             </a>
-            
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
                 <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">START</a>
                 <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">IDENTITY</a>
@@ -259,26 +141,12 @@
                 <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">ACTION</a>
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">PROGRAMS</a>
                 <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">LIBRARY</a>
-                
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none ml-2" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white focus:outline-none ml-2" aria-label="Toggle Dark Mode">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
                 </button>
             </div>
-
-            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center whitespace-nowrap hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg btn-premium">
-                START HERE
-            </a>
-
-            <div class="flex lg:hidden items-center space-x-4">
-                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white p-1">
-                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
-                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
-                </button>
-                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                </button>
-            </div>
+            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center whitespace-nowrap hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">START HERE</a>
         </nav>
     </div>
 
@@ -286,18 +154,17 @@
     <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-500">
         <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
         <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Identity</a>
-        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white transition-colors">Focus</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">Focus</a>
         <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Action</a>
         <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Programs</a>
         <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
     </div>
 
-    <!-- MAIN ARTICLE CONTAINER -->
     <main class="max-w-[720px] mx-auto pt-40 pb-32 px-6 sm:px-0 relative z-10">
         
-        <!-- HERO SECTION (Recognition of Drift) -->
+        <!-- HERO SECTION -->
         <header class="mb-32 text-center md:text-left">
-            <span class="reveal block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-8">Phase 02</span>
+            <span class="reveal block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-8">PHASE 02</span>
             
             <h1 class="reveal delay-1 font-display text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-6">
                 Focus.
@@ -307,50 +174,41 @@
                 Why attention keeps drifting in a distracted world.
             </p>
 
-            <!-- Custom SVG Featured Image: Fragmentation & Environmental Pull -->
-            <div class="w-full h-[350px] md:h-[450px] rounded-[1rem] overflow-hidden reveal delay-3 relative mb-24 bg-neutral-50/30 dark:bg-[#050507]/30 flex items-center justify-center">
-                
-                <div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
-                    <svg viewBox="0 0 800 800" class="w-full h-full opacity-80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flawless SVG: Mental Switching Matrix -->
+            <div class="w-full h-[350px] md:h-[450px] rounded-[1rem] overflow-hidden reveal delay-3 relative mb-24 bg-neutral-50/30 dark:bg-[#050507]/30 flex items-center justify-center group">
+                <div class="relative w-full max-w-lg aspect-square flex items-center justify-center">
+                    <svg viewBox="0 0 800 800" class="w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-[3s] ease-out" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <filter id="focus-glow" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="10" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
+                            <filter id="focus-matrix-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="blur" /><feComposite in="SourceGraphic" in2="blur" operator="over" /></filter>
+                            <linearGradient id="matrix-path-grad" x1="0%" y1="50%" x2="100%" y2="50%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/><stop offset="50%" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                            </linearGradient>
                         </defs>
-                        
-                        <!-- Peripheral distractions pulling the core apart -->
-                        <g stroke="#ffffff" opacity="0.15" fill="none" stroke-width="1.5" stroke-dasharray="2 10">
-                            <path d="M 400 400 L 100 100" />
-                            <path d="M 400 400 L 700 100" />
-                            <path d="M 400 400 L 100 700" />
-                            <path d="M 400 400 L 700 700" />
+                        <g stroke="#ffffff" opacity="0.15" fill="none" stroke-width="1">
+                            <line x1="400" y1="0" x2="400" y2="800" stroke-dasharray="2 10" />
+                            <line x1="0" y1="400" x2="800" y2="400" stroke-dasharray="2 10" />
                         </g>
-
-                        <!-- Expanding, fragmented orbits -->
-                        <g class="origin-center animate-[spin_100s_linear_infinite]" stroke="#2DD4BF" opacity="0.2" fill="none">
-                            <circle cx="400" cy="400" r="150" stroke-width="1" stroke-dasharray="20 40" />
-                            <circle cx="400" cy="400" r="250" stroke-width="0.5" stroke-dasharray="5 15" />
+                        <g class="origin-center animate-[spin_120s_linear_infinite]" stroke="#2DD4BF" opacity="0.2" fill="none">
+                            <circle cx="400" cy="400" r="180" stroke-width="0.75" stroke-dasharray="2 20" />
+                            <circle cx="400" cy="400" r="260" stroke-width="0.5" stroke-dasharray="1 15" />
+                            <circle cx="400" cy="400" r="340" stroke-width="0.25" opacity="0.5" />
                         </g>
-
-                        <!-- The Fragmenting Core -->
-                        <circle cx="400" cy="400" r="30" fill="none" stroke="#2DD4BF" stroke-width="2" filter="url(#focus-glow)" opacity="0.5"/>
-                        <g class="animate-[pulse_10s_ease-in-out_infinite]">
-                             <circle cx="420" cy="380" r="5" fill="#ffffff" opacity="0.6" />
-                             <circle cx="380" cy="420" r="3" fill="#2DD4BF" opacity="0.4" />
-                        </g>
+                        <line x1="100" y1="100" x2="700" y2="700" stroke="url(#matrix-path-grad)" stroke-width="1.5" opacity="0.4" class="group-hover:translate-x-12 transition-transform duration-[4s]" />
+                        <line x1="700" y1="100" x2="100" y2="700" stroke="url(#matrix-path-grad)" stroke-width="1.5" opacity="0.4" class="group-hover:-translate-x-12 transition-transform duration-[4s]" />
+                        <circle cx="400" cy="400" r="30" fill="none" stroke="#2DD4BF" stroke-width="2" filter="url(#focus-matrix-glow)" opacity="0.4"/>
+                        <circle cx="400" cy="400" r="8" fill="#2DD4BF" opacity="0.9" filter="url(#focus-matrix-glow)" />
                     </svg>
                 </div>
             </div>
 
             <div class="article-body text-lg text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
                 <p class="reveal">Most people do not lose focus all at once. Attention moves gradually.</p>
-                <p class="reveal delay-1">
-                    One interruption.<br>
-                    One notification.<br>
-                    One thought.<br>
-                    One quick check.
-                </p>
+                <div class="reveal delay-1 pt-4 italic text-neutral-500 space-y-1">
+                    <p>One interruption.</p>
+                    <p>One notification.</p>
+                    <p>One thought.</p>
+                    <p>One quick check.</p>
+                </div>
                 <p class="reveal delay-2 pt-6">And before fully noticing it,</p>
                 <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium italic">the mind is already somewhere else.</p>
             </div>
@@ -359,15 +217,9 @@
         <!-- ARTICLE BODY -->
         <article class="article-body text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
             
-            <!-- SECTION 2: RECOGNITION -->
             <div class="reveal mt-32 mb-24">
                 <p>You sit down to do something important. For a moment, your attention is clear.</p>
-                
-                <p>Then something small interrupts. A message appears. A thought arrives. You check one thing quickly.</p>
-                
-                <p class="pt-8">A few minutes later, you are somewhere entirely different.</p>
-
-                <!-- Memorable Real-World Moment -->
+                <p>Then something small interrupts. A few minutes later, you are somewhere entirely different.</p>
                 <div class="pt-16 pb-8">
                     <p class="font-display text-2xl md:text-3xl text-neutral-900 dark:text-white leading-relaxed mb-0 pl-6 border-l border-brand-teal/50">
                         Sometimes, people open their phones for one reason, then forget why they picked them up at all.
@@ -375,83 +227,38 @@
                 </div>
             </div>
 
-            <!-- SECTION 3: THE ENVIRONMENTAL TRUTH -->
-            <div class="reveal space-y-8 my-24">
-                <p>Most attention problems do not begin internally. They begin environmentally.</p>
-                
-                <p>What is visible pulls attention. What is easy captures it. What is already open competes for it.</p>
-                
-                <p class="pt-10">Modern environments continuously ask the mind to react.</p>
-
-                <p class="italic text-neutral-500">
-                    Messages. Tabs. Notifications. Feeds. Updates. Suggestions. Entertainment. Noise.
-                </p>
-            </div>
-
-            <!-- SECTION 4: THE SIGNATURE MOMENT (Large Drifting Typography) -->
-            <section class="relative py-48 my-32 overflow-hidden reveal text-center">
-                <!-- Drifting Words Background -->
-                <div class="absolute inset-0 overflow-hidden pointer-events-none z-[-1] flex items-center justify-center opacity-[0.03] dark:opacity-[0.05]">
-                    <div class="flex whitespace-nowrap animate-slide-left-slow font-display italic text-[6rem] md:text-[10rem]">
-                        attention moves shifts reacts follows attention moves shifts reacts follows
-                    </div>
-                </div>
-
-                <div class="relative z-10 space-y-12">
-                    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-0 !border-none !p-0 !m-0 !mt-0">
+            <section class="relative py-48 my-32 overflow-hidden reveal text-center border-y border-neutral-200/30 dark:border-white/5">
+                <div class="relative z-10">
+                    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-0">
                         Attention follows<br>what interrupts it most.
                     </h2>
                 </div>
             </section>
 
-            <!-- SECTION 5: WHY FOCUS FEELS HARDER NOW -->
             <div class="reveal space-y-8 my-24">
-                <p>The brain adapts to repetition.</p>
-                
-                <p>When attention becomes used to constant switching, slower forms of focus begin feeling unusually difficult.</p>
-
-                <p class="pt-6">Reading deeply. Studying. Thinking carefully. Remaining with one thing for long enough to fully enter it.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-2xl italic font-display">The Environmental Truth</h2>
+                <p>Most attention problems do not begin internally. They begin environmentally. What is visible pulls attention. What is easy captures it. What is already open competes for it.</p>
+                <p>Modern environments continuously ask the mind to react: Messages. Tabs. Notifications. Feeds. Noise.</p>
             </div>
 
-            <!-- SECTION 6: MENTAL OVERLOAD -->
             <div class="reveal space-y-8 my-24">
-                <p>Many people are not incapable of focus. They are overloaded.</p>
-                
-                <p>Too much input. Too many open loops. Too many things competing quietly for attention at the same time.</p>
-
-                <div class="pt-10">
-                    <p class="text-neutral-900 dark:text-white font-medium italic text-2xl font-display">
-                        The mind rarely gets enough silence now to fully settle into one direction.
-                    </p>
-                </div>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-2xl italic font-display">Mental Overload</h2>
+                <p>Many people are not incapable of focus. They are overloaded. Too much input. Too many open loops. Too many things competing quietly for attention at the same time.</p>
+                <p class="pt-4 text-neutral-900 dark:text-white font-medium italic font-display text-2xl leading-relaxed">The mind rarely gets enough silence now to fully settle into one direction.</p>
             </div>
 
-            <!-- SECTION 7: THE SHIFT -->
             <div class="reveal space-y-8 my-24">
-                <p>This is why forcing concentration harder often fails. Attention does not become steadier through pressure alone.</p>
-                
-                <p>It usually becomes steadier through reduction.</p>
-
-                <div class="pt-8 space-y-2 text-neutral-500 italic">
-                    <p>Less interruption.</p>
-                    <p>Less switching.</p>
-                    <p>Less unnecessary stimulation.</p>
-                    <p>Fewer places for the mind to go.</p>
-                </div>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-2xl italic font-display">The Shift</h2>
+                <p>This is why forcing concentration harder often fails. Attention does not become steadier through pressure alone. It usually becomes steadier through reduction.</p>
+                <p>Less interruption. Less switching. Fewer places for the mind to go.</p>
             </div>
 
-            <!-- SECTION 8: QUIETER ATTENTION -->
             <div class="reveal space-y-8 mt-32 mb-24 pb-16 text-center border-b border-neutral-200/40 dark:border-white/5">
                 <p class="text-xl text-neutral-900 dark:text-white">When there is less pulling attention away, the mind settles more naturally.</p>
-                
-                <p class="text-neutral-600 dark:text-neutral-400 pt-6">Not perfectly. But more completely.</p>
-
-                <p class="pt-12 text-neutral-900 dark:text-white font-medium italic">
-                    But even clear attention does not automatically create action. Because starting is another struggle entirely.
-                </p>
-
+                <p class="pt-12 text-neutral-900 dark:text-white font-medium italic">But even clear attention does not automatically create action.</p>
+                <p class="text-neutral-500 italic">Because starting is another struggle entirely.</p>
                 <div class="pt-20 pb-8">
-                    <a href="/action.html" class="button-press inline-flex items-center justify-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-12 py-4 rounded-full uppercase tracking-[0.15em] font-bold text-xs transition-colors hover:bg-neutral-100 dark:hover:bg-white/5">
+                    <a href="/action.html" class="button-press inline-flex items-center justify-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-12 py-4 rounded-full uppercase tracking-[0.15em] font-bold text-xs hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors">
                         Continue to Action →
                     </a>
                 </div>
@@ -459,10 +266,9 @@
 
         </article>
 
-        <!-- FAQ SECTION (Questions people quietly ask themselves) -->
+        <!-- FAQ SECTION -->
         <section class="mb-32 pt-16 reveal">
-            <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-16 text-center md:text-left">Questions people quietly ask themselves</h3>
-            
+            <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-16">Questions people quietly ask themselves</h3>
             <div class="space-y-16 text-lg text-neutral-600 dark:text-neutral-400 font-light">
                 <div>
                     <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Why does my attention drift so quickly?</p>
@@ -479,63 +285,50 @@
             </div>
         </section>
 
-        <!-- NEWSLETTER CAPTURE (For people trying to think more clearly) -->
-        <section class="mb-32 reveal border-t border-neutral-200/40 dark:border-white/5 pt-32">
-            <div class="max-w-md mx-auto text-center relative">
+        <!-- NEWSLETTER -->
+        <section class="mb-32 reveal border-t border-neutral-200/40 dark:border-white/5 pt-32 text-center">
+            <div class="max-w-md mx-auto">
                 <p class="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-8 font-bold">For people trying to think more clearly.</p>
-                
-                <div class="mb-10 space-y-4">
-                    <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Clear thinking.<br>Shared from time to time.</h3>
-                    <p class="text-base font-light text-neutral-600 dark:text-neutral-400">Nothing frequent.</p>
-                    <p class="text-base font-light text-neutral-600 dark:text-neutral-400">Only when there is something worth noticing.</p>
-                </div>
-
+                <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Clear thinking. Shared from time to time.</h3>
                 <form id="email-form" action="https://wordsofwisdom.us16.list-manage.com/subscribe/post?u=f93e8d83bebb12d63d518821f&id=4f53207cea&f_id=00b5c2e1f0" method="post" novalidate class="w-full space-y-4 mt-12">
-                    <input type="email" name="EMAIL" required placeholder="Enter your email" autocomplete="email" inputmode="email" spellcheck="false" aria-label="Email address" class="w-full bg-white/40 dark:bg-black/20 border border-neutral-300 dark:border-white/10 text-neutral-900 dark:text-white px-6 py-4 rounded-xl focus:outline-none focus:border-brand-teal transition-all placeholder:text-neutral-400 text-center text-sm shadow-inner">
+                    <input type="email" name="EMAIL" required placeholder="Enter your email" autocomplete="email" class="w-full bg-white/40 dark:bg-black/20 border border-neutral-300 dark:border-white/10 text-neutral-900 dark:text-white px-6 py-4 rounded-xl focus:outline-none focus:border-brand-teal text-center text-sm shadow-inner">
                     <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_f93e8d83bebb12d63d518821f_4f53207cea" tabindex="-1" value=""></div>
-                    <button id="submit-btn" type="submit" class="button-press w-full btn-premium bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300">Continue</button>
-                    <div class="pt-4"><p class="text-[10px] uppercase tracking-wider text-neutral-500">No noise. Leave anytime.</p></div>
+                    <button id="submit-btn" type="submit" class="button-press w-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300 shadow-md">Continue</button>
                 </form>
             </div>
         </section>
 
         <!-- FINAL CLOSE -->
-        <section class="py-32 fade-up text-center border-t border-neutral-200/40 dark:border-white/5 relative z-10 mt-32">
+        <section class="py-32 fade-up text-center border-t border-neutral-200/40 dark:border-white/5 relative z-10">
             <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light space-y-8 max-w-xl mx-auto">
                 <p class="reveal">You do not need perfect concentration.</p>
                 <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">You need fewer things competing for your attention.</p>
-                
                 <p class="reveal delay-2 pt-16 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white">
-                    When the mind has fewer places to go, it becomes easier to stay where you already are.
+                    When the mind has fewer places to go,<br>it becomes easier to stay where you already are.
                 </p>
             </div>
         </section>
-
     </main>
 
-    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
-    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+    <!-- FOOTER -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
         <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
 
-        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+        <div class="max-w-5xl mx-auto flex flex-col items-center relative z-10">
+            <a href="/" class="flex flex-col items-center gap-5 mb-16 hover:opacity-90 transition-opacity">
+                <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                    <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain">
+                    <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain">
+                </div>
+                <span class="font-logo text-3xl md:text-4xl font-medium text-center tracking-wide">Words of Wisdom</span>
+            </a>
             
-            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-80 transition-opacity duration-500">
-                <a href="/" class="flex flex-col items-center gap-5">
-                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
-                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Media Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
-                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Media Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
-                    </div>
-                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom Media</span>
-                </a>
-                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">The Journey</p>
                     <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
                     <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
-                    <a href="/focus.html" class="block text-brand-teal dark:text-white transition-colors">Focus</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
                     <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
                 </div>
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
@@ -553,15 +346,15 @@
                     <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
-            
-            <div class="flex items-center space-x-8 mb-16 justify-center">
-                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+
+            <div class="flex items-center space-x-8 mb-16 justify-center text-xl text-neutral-500">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
                 <div class="flex flex-wrap justify-center gap-6 mb-2">
                     <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
                     <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
@@ -573,80 +366,63 @@
         </div>
     </footer>
 
-    <!-- BACK TO TOP BUTTON -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
-        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
-    <!-- INTERACTION LOGIC (Simplified & Restrained) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const toggleTheme = () => {
-                document.documentElement.classList.toggle('dark');
-                localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-            };
+            const toggleTheme = () => { document.documentElement.classList.toggle('dark'); localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'; };
             document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
             document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+            document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
 
-            document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.toggle('hidden');
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-            }, { threshold: 0.1 });
+            const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
             const backToTopBtn = document.getElementById('back-to-top');
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 600) {
-                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                } else {
-                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                    backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                }
+                if (window.scrollY > 600) backToTopBtn.classList.add('opacity-100'); 
+                else backToTopBtn.classList.remove('opacity-100');
             });
             backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-            // Mailchimp AJAX Submission
-            const emailForm = document.getElementById('email-form');
-            const submitBtn = document.getElementById('submit-btn');
+            // Magnetic Cursor
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const dot = document.getElementById('cursor-dot'), ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2, ringX = mouseX, ringY = mouseY, cursorInitiated = false;
+                window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) { dot.style.opacity = "1"; ring.style.opacity = "1"; cursorInitiated = true; }
+                    mouseX = e.clientX; mouseY = e.clientY;
+                    dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`;
+                });
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15; ringY += (mouseY - ringY) * 0.15;
+                    if(ring) { ring.style.left = `${ringX}px`; ring.style.top = `${ringY}px`; }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+                document.querySelectorAll('a, button, input, textarea').forEach(el => {
+                    el.addEventListener('mouseenter', () => ring.classList.add('hover-active'));
+                    el.addEventListener('mouseleave', () => ring.classList.remove('hover-active'));
+                });
+            }
 
+            const emailForm = document.getElementById('email-form'), submitBtn = document.getElementById('submit-btn');
             if (emailForm && submitBtn) {
                 emailForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const emailInput = emailForm.querySelector('input[name="EMAIL"]');
                     const email = emailInput ? emailInput.value.trim() : '';
                     if (!email || !email.includes('@')) return;
-
-                    const originalBtnText = submitBtn.innerHTML;
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<div class="w-4 h-4 border-2 border-white/30 border-t-white dark:border-neutral-900/30 dark:border-t-neutral-900 rounded-full animate-spin mx-auto"></div>';
-
-                    const url = emailForm.action.replace('/post?', '/post-json?');
-                    const callbackName = 'mailchimpCallback_' + Math.round(100000 * Math.random());
-                    
+                    submitBtn.disabled = true; submitBtn.innerHTML = '<div class="w-4 h-4 border-2 border-white/30 border-t-white dark:border-neutral-900/30 dark:border-t-neutral-900 rounded-full animate-spin mx-auto"></div>';
+                    const url = emailForm.action.replace('/post?', '/post-json?'), callbackName = 'mailchimpCallback_' + Math.round(100000 * Math.random());
                     window[callbackName] = function(data) {
                         delete window[callbackName];
-                        document.body.removeChild(script);
-                        if (data.result === 'success' || (data.result === 'error' && data.msg.toLowerCase().includes('already'))) {
-                            window.location.href = 'https://wordsofwisdom.in/thank-you.html';
-                        } else {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = originalBtnText;
-                            const tempDiv = document.createElement("div");
-                            tempDiv.innerHTML = data.msg;
-                            alert(tempDiv.textContent || tempDiv.innerText || "Please provide a valid email address.");
-                        }
+                        if (data.result === 'success' || (data.result === 'error' && data.msg.toLowerCase().includes('already'))) { window.location.href = 'https://wordsofwisdom.in/thank-you.html'; } 
+                        else { submitBtn.disabled = false; submitBtn.innerHTML = 'Continue'; alert(data.msg || "Error submitting email."); }
                     };
-
-                    const script = document.createElement('script');
-                    const encodedEmail = encodeURIComponent(email);
-                    const honeypotInput = emailForm.querySelector('input[name^="b_"]');
-                    const honeypotParam = honeypotInput ? `&${honeypotInput.name}=${encodeURIComponent(honeypotInput.value)}` : '';
-                    script.src = `${url}&EMAIL=${encodedEmail}${honeypotParam}&c=${callbackName}`;
-                    document.body.appendChild(script);
+                    const script = document.createElement('script'); script.src = `${url}&EMAIL=${encodeURIComponent(email)}&c=${callbackName}`; document.body.appendChild(script);
                 });
             }
         });
