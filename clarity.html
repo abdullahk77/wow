@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Workspace | Words of Wisdom</title>
+    
+    <!-- Prevent Search Engine Indexing for Paid Exclusivity -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wordsofwisdom.in/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wordsofwisdom.in/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wordsofwisdom.in/assets/images/favicon-16x16.png">
+
+    <!-- Premium Fonts Aligned with Homepage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script (Forces Dark Mode by Default) -->
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark'; // Default to Dark Mode
+        }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+    <!-- Tailwind CSS (Instant Setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fdfdfc',
+                            dark: '#050505',
+                            teal: '#2dd4bf'
+                        },
+                        neutral: {
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-white antialiased selection:bg-brand-teal/30 transition-colors duration-700; 
+            }
+            
+            /* Elite User-Friendly Input Fields (Glassmorphism) */
+            .input-field {
+                @apply w-full bg-white/60 dark:bg-white/[0.03] border border-neutral-300/60 dark:border-white/10 rounded-2xl px-6 py-4 text-[1.1rem] text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-teal/20 dark:focus:ring-brand-teal/40 focus:border-brand-teal dark:focus:border-brand-teal/70 focus:bg-white dark:focus:bg-white/10 transition-all duration-300 placeholder:text-neutral-400 dark:placeholder:text-white/20 placeholder:font-light font-sans shadow-sm hover:bg-white/90 dark:hover:bg-white/5;
+            }
+
+            .section-subline {
+                @apply text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-400 dark:text-white/30;
+            }
+        }
+
+        /* Ambient Backgrounds to Match Homepage */
+        .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%); }
+        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.05) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(20, 20, 24, 1) 0%, transparent 100%); }
+        .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.12; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
+
+        /* Smooth Animations */
+        .fade-in {
+            animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-soft {
+            animation: pulseSoft 3s ease-in-out infinite;
+        }
+        @keyframes pulseSoft {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+
+        /* Error Shake Animation for Password */
+        .shake {
+            animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+
+        /* Hide elements cleanly */
+        .hidden-view { display: none !important; }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden flex flex-col">
+
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+
+    <!-- AUTHENTICATION GATEWAY -->
+    <div id="auth-view" class="fixed inset-0 z-[100] flex flex-col justify-center items-center px-6 bg-brand-light/95 dark:bg-brand-dark/95 backdrop-blur-md fade-in hidden-view">
+        <div class="max-w-md w-full text-center space-y-8 relative z-10">
+            <div class="space-y-2">
+                <span class="text-[10px] font-extrabold uppercase tracking-[0.3em] font-sans text-neutral-400 dark:text-white/30 drop-shadow-sm">Words of Wisdom</span>
+                <h2 class="font-display text-[2.5rem] text-neutral-900 dark:text-white/95 leading-[1.1] italic">Clarity Workspace</h2>
+            </div>
+            
+            <div class="space-y-4 pt-4">
+                <p class="section-subline">Enter Access Code</p>
+                <div class="relative max-wxs mx-auto">
+                    <input type="password" id="access-password" placeholder="••••••••" class="input-field text-center tracking-[0.5em] font-sans !py-5" autocomplete="off" />
+                    <p id="auth-error" class="absolute -bottom-6 left-0 right-0 text-[10px] font-bold uppercase font-sans text-red-500/80 tracking-widest opacity-0 transition-opacity">INCORRECT CODE</p>
+                </div>
+            </div>
+
+            <div class="pt-6">
+                <button onclick="unlockWorkspace()" class="bg-neutral-900 dark:bg-white text-white dark:text-brand-dark px-10 py-4 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:scale-105 hover:shadow-lg transition-all duration-300 shadow-md">
+                    Unlock Experience
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CLARITY WORKSPACE -->
+    <main id="clarity-view" class="max-w-[720px] w-full mx-auto px-6 pb-32 fade-in relative z-10 flex-grow hidden-view">
+        
+        <!-- Utility Header (Theme + Navigation) -->
+        <div class="flex justify-between items-center mt-8 mb-4 opacity-60 hover:opacity-100 transition-opacity duration-500 bg-white/40 dark:bg-[#0a0a0c]/60 backdrop-blur-xl border border-neutral-200/80 dark:border-white/10 shadow-sm sticky top-6 z-50 px-6 py-3 rounded-full">
+            
+            <!-- App Title (Left) -->
+            <div class="flex items-center">
+                <span class="text-[11px] font-extrabold uppercase tracking-[0.25em] font-sans text-neutral-900 dark:text-white drop-shadow-sm">Clarity Workspace</span>
+            </div>
+
+            <!-- Controls (Right) -->
+            <div class="flex items-center space-x-5 md:space-x-6">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="text-neutral-500 dark:text-white/70 hover:text-brand-teal dark:hover:text-brand-teal transition-all focus:outline-none transform hover:scale-110 duration-300" aria-label="Toggle Theme">
+                    <!-- Icon injected via JS -->
+                </button>
+
+                <!-- Day Navigation -->
+                <div class="flex items-center space-x-3 bg-white/60 dark:bg-white/5 px-2 py-1.5 rounded-full border border-neutral-200/60 dark:border-white/5 shadow-inner">
+                    <button id="prev-day" class="p-1.5 bg-white dark:bg-white/10 rounded-full text-neutral-600 dark:text-white hover:bg-brand-teal hover:text-white dark:hover:bg-brand-teal transition-colors shadow-sm focus:outline-none" aria-label="Previous Day">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <span id="day-display" class="text-[10px] font-bold uppercase tracking-[0.25em] font-sans text-neutral-800 dark:text-white/90 min-w-[55px] text-center">Day 1</span>
+                    <button id="next-day" class="p-1.5 bg-white dark:bg-white/10 rounded-full text-neutral-600 dark:text-white hover:bg-brand-teal hover:text-white dark:hover:bg-brand-teal transition-colors shadow-sm focus:outline-none" aria-label="Next Day">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 & 2: TODAY (INSIGHT LAYER) -->
+        <div class="pt-[60px] mb-[50px] relative px-2">
+            <h1 id="insight-text" class="font-display text-[2.2rem] md:text-[2.6rem] italic text-neutral-900 dark:text-white/95 leading-[1.25] tracking-tight">
+                It feels like a fresh start.<br>
+                But most of what happens today has already begun.
+            </h1>
+            
+            <p class="font-display italic text-neutral-500 dark:text-white/40 text-xl mt-6">Take a moment.</p>
+            
+            <p id="notice-text" class="font-sans text-brand-teal dark:text-brand-teal/90 text-[1.1rem] font-medium mt-4">
+                Notice one thing you do without deciding.
+            </p>
+        </div>
+
+        <!-- WORKSPACE INPUTS -->
+        <div class="mt-[40px] space-y-12">
+            
+            <!-- SECTION 3: ENTRY -->
+            <div class="space-y-3">
+                <label for="matters" class="section-subline pl-2">What is the priority?</label>
+                <input type="text" id="matters" placeholder="Name the single most important thing that truly matters today..." class="input-field" autocomplete="off" />
+            </div>
+
+            <!-- SECTION 4: FOCUS -->
+            <div class="pt-6">
+                <p class="section-subline mb-4 pl-2">Keep it simple.</p>
+                <div class="space-y-4">
+                    <input type="text" id="f1" placeholder="Your primary focus..." class="input-field" autocomplete="off" />
+                    <input type="text" id="f2" placeholder="Your secondary focus (optional)..." class="input-field" autocomplete="off" />
+                    <input type="text" id="f3" placeholder="Your final focus (optional)..." class="input-field" autocomplete="off" />
+                </div>
+                
+                <div class="mt-8 flex justify-end">
+                    <button onclick="openFocus()" class="bg-neutral-900 dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center group shadow-md border border-transparent dark:border-white/10">
+                        Enter Focus Mode <span class="ml-3 transition-transform group-hover:translate-x-1">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- SECTION 5, 6, 7: CONTINUE -->
+            <div class="pt-12 border-t border-neutral-200 dark:border-white/10">
+                <p class="section-subline mb-6 pl-2">Pick up where you left off.</p>
+                
+                <div class="space-y-8">
+                    <!-- Attention Log -->
+                    <div class="space-y-3">
+                        <label for="pulled" class="text-sm font-sans font-medium text-neutral-600 dark:text-white/60 pl-2">What pulled your attention today?</label>
+                        <input type="text" id="pulled" placeholder="E.g., Mindlessly scrolling, checking emails too often..." class="input-field" autocomplete="off" />
+                    </div>
+
+                    <!-- Keep Log -->
+                    <div class="space-y-3">
+                        <label for="repeat" class="text-sm font-sans font-medium text-neutral-600 dark:text-white/60 pl-2">One thing to repeat tomorrow.</label>
+                        <input type="text" id="repeat" placeholder="E.g., Pausing for a moment before reacting..." class="input-field" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Branding -->
+            <div class="pt-24 pb-8 text-center opacity-60 hover:opacity-100 transition-opacity duration-500">
+                <a href="https://www.wordsofwisdom.in" target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold uppercase tracking-[0.3em] font-sans text-neutral-400 dark:text-white/50 hover:text-brand-teal dark:hover:text-brand-teal transition-colors">
+                    www.wordsofwisdom.in
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOCUS MODE ENVIRONMENT -->
+    <div id="focus-view" class="hidden-view fixed inset-0 bg-brand-light dark:bg-brand-dark z-50 flex flex-col justify-center items-center px-6 fade-in overflow-hidden">
+        
+        <!-- Deep focus ambient glow -->
+        <div class="absolute inset-0 z-0 opacity-30 dark:opacity-20 pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-brand-teal/20 rounded-full blur-[100px] pulse-soft"></div>
+        </div>
+
+        <div class="max-w-[720px] w-full text-center space-y-16 relative z-10">
+            
+            <p class="section-subline opacity-80 dark:opacity-60 tracking-[0.4em]">Stay with this. Don't switch.</p>
+            
+            <h2 id="focus-active-text" class="font-display text-[3rem] md:text-[5rem] text-neutral-900 dark:text-white/95 leading-[1.1] italic px-4 drop-shadow-sm">
+                Active Focus Item
+            </h2>
+            
+            <div class="max-w-xl mx-auto w-full pt-16">
+                <div class="relative group">
+                    <input type="text" id="distraction-log" placeholder="Type any distracting thought here and press Enter to release it..." class="w-full bg-white/40 dark:bg-black/40 backdrop-blur-md border border-neutral-300 dark:border-white/10 rounded-2xl py-5 px-6 text-center text-neutral-700 dark:text-white/80 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 dark:focus:ring-brand-teal/40 focus:border-brand-teal transition-all font-light text-lg placeholder:text-neutral-400 dark:placeholder:text-white/30 shadow-lg" autocomplete="off" />
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-brand-teal/0 group-hover:ring-brand-teal/20 transition-all pointer-events-none"></div>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <button onclick="closeFocus()" class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-white/40 hover:text-neutral-900 dark:hover:text-white transition-colors bg-white/50 dark:bg-white/5 px-6 py-3 rounded-full hover:bg-white dark:hover:bg-white/10 shadow-sm backdrop-blur-sm">
+                    ← Return to Workspace
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- CORE LOGIC & PROGRESSION -->
+    <script>
+        // Theme Engine
+        const toggle = document.getElementById('theme-toggle');
+        const htmlTag = document.documentElement;
+
+        const updateToggleIcon = () => {
+            if(toggle) {
+                const isDark = htmlTag.classList.contains('dark');
+                toggle.innerHTML = isDark 
+                    ? '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>' 
+                    : '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
+            }
+        };
+
+        updateToggleIcon();
+
+        if(toggle) {
+            toggle.addEventListener('click', () => {
+                htmlTag.classList.toggle('dark');
+                localStorage.setItem('theme', htmlTag.classList.contains('dark') ? 'dark' : 'light');
+                updateToggleIcon();
+            });
+        }
+
+        // 30 Days of Integrated WOW Content
+        const contentMatrix = [
+            { i: "It feels like a fresh start.<br>But most of what happens today has already begun.", n: "Notice one thing you do without deciding." },
+            { i: "You don't avoid everything.<br>Only what feels unclear.", n: "Notice what you delay before starting." },
+            { i: "Starting is not the hardest part.<br>Staying is.", n: "Notice when you switch." },
+            { i: "You don't lose focus randomly.<br>Something pulls it.", n: "Notice what pulls you first." },
+            { i: "You think you need more time.<br>But you often need a clearer start.", n: "Start before adjusting." },
+            { i: "You return to what feels familiar.<br>Even when it's not useful.", n: "Notice what you return to." },
+            { i: "You don't need to do more.<br>You need to stay longer.", n: "Stay a little longer than usual." },
+            { i: "Your attention doesn't move randomly.<br>It follows what it has learned.", n: "Notice what pulls your attention most today." },
+            { i: "You move toward what feels easier.<br>Even when something else matters more.", n: "Notice one moment where you avoided something." },
+            { i: "You are not stuck.<br>You are repeating.", n: "Do one small thing differently today." },
+            
+            { i: "You wait to feel ready before starting.<br>But that feeling doesn't always come.", n: "Start something today immediately." },
+            { i: "Big tasks feel heavy.<br>That's why you avoid them.", n: "Take one task and make it smaller." },
+            { i: "Switching breaks focus.<br>Even if it feels harmless.", n: "Choose one task. Stay with it without switching." },
+            { i: "Distractions don't disappear.<br>They are reduced.", n: "Remove one distraction today." },
+            { i: "Focus is not fixed.<br>It improves with use.", n: "Stay with one task slightly longer than yesterday." },
+            { i: "Unstructured time leads to drifting.<br>Without direction, attention moves randomly.", n: "Plan one part of your day." },
+            { i: "Heavy actions create resistance.<br>If something feels demanding, you avoid it.", n: "Break something into smaller steps." },
+            { i: "You will lose focus.<br>That's normal.", n: "Returning is more important than staying perfect." },
+            { i: "Restarting feels clean.<br>But it resets progress.", n: "Pick something unfinished. Continue it." },
+            { i: "Small actions are adding up.<br>Even if it doesn't feel obvious.", n: "Repeat one helpful action today." },
+            
+            { i: "You don't become someone new by deciding.<br>You become someone new by repeating.", n: "Do one action today that reflects who you want to become." },
+            { i: "Not every impulse needs a response.<br>A small pause creates space.", n: "Pause once before acting today." },
+            { i: "Your attention improves when you stop moving it.<br>Constant switching prevents depth.", n: "Choose one task. Stay fully with it." },
+            { i: "Complexity creates resistance.<br>Simplicity supports consistency.", n: "Simplify one task today." },
+            { i: "Pressure breaks consistency.<br>When something feels forced, you avoid it.", n: "Do one task calmly today." },
+            { i: "You always have a moment to choose.<br>Even if it feels small.", n: "Make one conscious choice today." },
+            { i: "Too much input creates noise.<br>When everything competes for attention, nothing stays.", n: "Remove one unnecessary input today." },
+            { i: "Consistency is not intensity.<br>It is repetition.", n: "Repeat one helpful action again today." },
+            { i: "Routine doesn't have to be automatic.<br>Awareness changes routine.", n: "Do one routine consciously today." },
+            { i: "This is not the end.<br>It's a starting point.", n: "Choose one thing to keep doing." }
+        ];
+
+        const STORAGE_KEY = "wow_clarity_workspace_v1";
+        
+        // Initialize Data Structure
+        let workspaceData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+            currentDay: 1,
+            logs: {} // logs[dayNumber] = { matters: "", f1: "", f2: "", f3: "", pulled: "", repeat: "" }
+        };
+
+        // --- AUTHENTICATION LOGIC ---
+        const ACCESS_CODE = "CLARITY2027"; // <-- UPDATED PASSWORD
+        const AUTH_STORAGE_KEY = "wow_clarity_unlocked";
+        
+        function checkAuth() {
+            const isUnlocked = localStorage.getItem(AUTH_STORAGE_KEY) === "true";
+            if (isUnlocked) {
+                document.getElementById('auth-view').classList.add('hidden-view');
+                document.getElementById('clarity-view').classList.remove('hidden-view');
+                initApp();
+            } else {
+                document.getElementById('auth-view').classList.remove('hidden-view');
+                document.getElementById('clarity-view').classList.add('hidden-view');
+            }
+        }
+
+        function unlockWorkspace() {
+            const input = document.getElementById('access-password');
+            const errorMsg = document.getElementById('auth-error');
+            
+            if (input.value.trim().toUpperCase() === ACCESS_CODE.toUpperCase()) {
+                localStorage.setItem(AUTH_STORAGE_KEY, "true");
+                
+                // Smooth transition fade out
+                const authView = document.getElementById('auth-view');
+                authView.style.opacity = '0';
+                authView.style.transition = 'opacity 0.8s ease';
+                
+                setTimeout(() => {
+                    authView.classList.add('hidden-view');
+                    const clarityView = document.getElementById('clarity-view');
+                    clarityView.classList.remove('hidden-view');
+                    initApp();
+                }, 800);
+            } else {
+                // Trigger error animation
+                input.classList.add('shake', 'border-red-500/50', 'dark:border-red-500/50', 'focus:border-red-500');
+                errorMsg.style.opacity = '1';
+                
+                setTimeout(() => {
+                    input.classList.remove('shake');
+                }, 400);
+                
+                setTimeout(() => {
+                    input.classList.remove('border-red-500/50', 'dark:border-red-500/50', 'focus:border-red-500');
+                    errorMsg.style.opacity = '0';
+                    input.value = '';
+                }, 2000);
+            }
+        }
+
+        // Allow 'Enter' key to trigger unlock
+        document.getElementById('access-password')?.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') unlockWorkspace();
+        });
+        // -----------------------------
+
+        const els = {
+            insight: document.getElementById('insight-text'),
+            notice: document.getElementById('notice-text'),
+            dayDisplay: document.getElementById('day-display'),
+            prevBtn: document.getElementById('prev-day'),
+            nextBtn: document.getElementById('next-day'),
+            inputs: ['matters', 'f1', 'f2', 'f3', 'pulled', 'repeat']
+        };
+
+        function initDayData(day) {
+            if (!workspaceData.logs[day]) {
+                workspaceData.logs[day] = { matters: "", f1: "", f2: "", f3: "", pulled: "", repeat: "" };
+            }
+        }
+
+        function save() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(workspaceData));
+        }
+
+        function loadWorkspace(dayIndex) {
+            // Load text content
+            const content = contentMatrix[dayIndex - 1];
+            els.insight.innerHTML = content.i;
+            els.notice.innerHTML = content.n;
+            els.dayDisplay.innerText = `Day ${dayIndex}`;
+
+            // Load saved inputs for this day
+            initDayData(dayIndex);
+            const dayData = workspaceData.logs[dayIndex];
+            
+            els.inputs.forEach(id => {
+                document.getElementById(id).value = dayData[id] || "";
+            });
+
+            // Handle button states
+            els.prevBtn.style.visibility = dayIndex === 1 ? 'hidden' : 'visible';
+            els.nextBtn.style.visibility = dayIndex === 30 ? 'hidden' : 'visible';
+            
+            // Add a subtle transition effect on load
+            const container = document.getElementById('clarity-view');
+            container.classList.remove('fade-in');
+            void container.offsetWidth; // trigger reflow
+            container.classList.add('fade-in');
+        }
+
+        function bindInputs() {
+            els.inputs.forEach(id => {
+                const element = document.getElementById(id);
+                element.addEventListener('input', (e) => {
+                    workspaceData.logs[workspaceData.currentDay][id] = e.target.value;
+                    save();
+                });
+            });
+
+            // Distraction log is ephemeral to act as a mental release
+            const distractionLog = document.getElementById("distraction-log");
+            distractionLog.addEventListener('keydown', function(e) {
+                if(e.key === 'Enter' && this.value.trim() !== '') {
+                    // Visual feedback for "releasing" the thought
+                    this.style.transform = 'scale(0.98)';
+                    this.style.opacity = '0.5';
+                    
+                    setTimeout(() => {
+                        this.value = ''; 
+                        this.style.transform = 'scale(1)';
+                        this.style.opacity = '1';
+                        this.placeholder = 'Thought released. Return to focus...';
+                        setTimeout(() => {
+                            this.placeholder = 'Type any distracting thought here and press Enter to release it...';
+                        }, 3000);
+                    }, 200);
+                }
+            });
+        }
+
+        function changeDay(delta) {
+            let newDay = workspaceData.currentDay + delta;
+            if (newDay >= 1 && newDay <= 30) {
+                workspaceData.currentDay = newDay;
+                save();
+                loadWorkspace(newDay);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Focus Environment Toggle
+        function openFocus() {
+            // Find the first non-empty focus item
+            const f1 = document.getElementById('f1').value.trim();
+            const f2 = document.getElementById('f2').value.trim();
+            const f3 = document.getElementById('f3').value.trim();
+            const activeFocus = f1 || f2 || f3;
+
+            if (!activeFocus) {
+                // Gently prompt the user if they try to enter focus without setting a goal
+                const f1Input = document.getElementById('f1');
+                f1Input.focus();
+                f1Input.classList.add('ring-2', 'ring-brand-red/50');
+                setTimeout(() => f1Input.classList.remove('ring-2', 'ring-brand-red/50'), 1500);
+                return; 
+            }
+
+            document.getElementById("clarity-view").classList.add("hidden-view");
+            document.getElementById("focus-view").classList.remove("hidden-view");
+            document.getElementById("focus-active-text").innerText = activeFocus;
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+
+        function closeFocus() {
+            document.getElementById("focus-view").classList.add("hidden-view");
+            document.getElementById("clarity-view").classList.remove("hidden-view");
+            document.getElementById("distraction-log").value = ''; // Reset distraction log on return
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+
+        // Initialize App Function (Called after Auth)
+        function initApp() {
+            els.prevBtn.addEventListener('click', () => changeDay(-1));
+            els.nextBtn.addEventListener('click', () => changeDay(1));
+            
+            bindInputs();
+            loadWorkspace(workspaceData.currentDay);
+        }
+
+        // Run Auth Check on Load
+        checkAuth();
+
+    </script>
+</body>
+</html>
