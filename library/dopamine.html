@@ -17,16 +17,13 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wordsofwisdom.in/library/dopamine.html">
     <meta property="og:image" content="https://wordsofwisdom.in/og/dopamine-article.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dopamine, Stimulation, and Modern Distraction">
     <meta name="twitter:description" content="A thoughtful exploration of overstimulation, reward-seeking behavior, attention, and focus.">
-    <meta name="twitter:image" content="https://wordsofwisdom.in/og/dopamine-article.jpg">
 
-    <!-- ARTICLE SCHEMA (JSON-LD) -->
+    <!-- ARTICLE SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,17 +45,7 @@
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://wordsofwisdom.in/library/dopamine.html"
-      },
-      "image": "https://wordsofwisdom.in/og/dopamine-article.jpg",
-      "articleSection": "Dopamine",
-      "keywords": [
-        "dopamine",
-        "attention",
-        "focus",
-        "overstimulation",
-        "distraction",
-        "behavioral awareness"
-      ]
+      }
     }
     </script>
 
@@ -94,16 +81,8 @@
                         logo: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        brand: {
-                            light: '#fdfdfc',
-                            dark: '#050505',
-                            teal: '#2dd4bf',
-                        },
-                        neutral: {
-                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
-                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
-                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
-                        }
+                        brand: { light: '#fdfdfc', dark: '#050505', teal: '#2dd4bf' },
+                        neutral: { 50: '#fafafa', 400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040', 800: '#262626', 900: '#171717' }
                     }
                 }
             }
@@ -117,79 +96,35 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.3); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.6); }
 
-        /* Arrival Reveal System */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        .reveal.visible { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.15s; }
         .delay-2 { transition-delay: 0.3s; }
-        .delay-3 { transition-delay: 0.45s; }
 
-        /* Texture Layers */
         .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%); }
         .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.05) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(20, 20, 24, 1) 0%, transparent 100%); }
         .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.12; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
 
-        /* Glass Morphism Base Classes */
-        .glass-base {
-            @apply backdrop-blur-2xl border transition-all duration-500;
-            background: rgba(255, 255, 255, 0.6);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-        .dark .glass-base {
-            background: rgba(10, 10, 12, 0.6);
-            border-color: rgba(255, 255, 255, 0.06);
-        }
+        .glass-base { @apply backdrop-blur-2xl border transition-all duration-500; background: rgba(255, 255, 255, 0.6); border-color: rgba(255, 255, 255, 0.4); }
+        .dark .glass-base { background: rgba(10, 10, 12, 0.6); border-color: rgba(255, 255, 255, 0.06); }
 
-        /* Micro-Interactions */
         .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; }
         .button-press:active { transform: scale(0.95); }
-        .clean-link { opacity: 0.7; transition: opacity 0.3s ease; position: relative; display: inline-flex; align-items: center; }
-        .clean-link:hover { opacity: 1; }
-        
-        section { position: relative; z-index: 10; }
-        
-        /* Elevated Spotlight Cards */
-        .spotlight-card { 
-            position: relative; overflow: hidden; background: rgba(255,255,255,0.4); 
-            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
-        .dark .spotlight-card { 
-            background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); 
-        }
-        .spotlight-card:hover {
-            transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.2); 
-            background: rgba(255,255,255,0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-        .dark .spotlight-card:hover {
-            background: rgba(255,255,255,0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-        }
+        .spotlight-card { position: relative; overflow: hidden; background: rgba(255,255,255,0.4); border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .dark .spotlight-card { background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); }
+        .spotlight-card:hover { transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.2); background: rgba(255,255,255,0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .dark .spotlight-card:hover { background: rgba(255,255,255,0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
 
-        /* Precision Magnetic Cursor */
-        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
-        .cursor-dot { 
-            position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; 
-            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; 
-            z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; 
-            opacity: 0; transition: opacity 0.3s ease; 
-        }
-        .cursor-ring { 
-            position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.5); 
-            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); 
-            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0;
-        }
+        @media (pointer: fine) { body, a, button { cursor: none !important; } }
+        .cursor-dot { position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; opacity: 0; transition: opacity 0.3s ease; }
+        .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.5); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0; }
         .cursor-ring.hover-active { width: 64px; height: 64px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
 
-        /* Editorial Typography Enhancements */
         .article-body p { margin-bottom: 2rem; line-height: 1.8; }
         .article-body ul { margin-bottom: 2.5rem; list-style-type: none; padding-left: 1.5rem; }
         .article-body ul li { position: relative; margin-bottom: 1rem; line-height: 1.8; }
@@ -200,19 +135,18 @@
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
 
-    <!-- Magnetic Cursor -->
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="cursor-ring" id="cursor-ring"></div>
 
     <div class="elite-texture-base"></div>
     <div class="ambient-noise"></div>
 
-    <!-- NAVIGATION MENU (Standardized Template) -->
+    <!-- NAVIGATION -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
         <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
             <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
-                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
-                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block">
             </a>
             
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
@@ -223,23 +157,17 @@
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
                 <a href="/library/index.html" class="text-brand-teal dark:text-white transition-colors duration-300">LIBRARY</a>
                 
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white hover:scale-110 transform duration-300 ml-2">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
                 </button>
             </div>
 
-            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full items-center justify-center whitespace-nowrap hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">
-                START HERE
-            </a>
+            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full shadow-lg">START HERE</a>
 
             <div class="flex lg:hidden items-center space-x-4">
-                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white p-1">
-                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
-                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
-                </button>
                 <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </nav>
@@ -255,7 +183,7 @@
         <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white">Library</a>
     </div>
 
-    <!-- MAIN ARTICLE CONTAINER -->
+    <!-- MAIN CONTAINER -->
     <main class="max-w-[720px] mx-auto pt-40 pb-32 px-6 sm:px-0 relative z-10">
         
         <!-- ARTICLE HEADER -->
@@ -266,44 +194,31 @@
                     <span class="text-neutral-300 dark:text-neutral-700">/</span>
                     <span>Dopamine</span>
                 </div>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">
-                    15 Min Read
-                </div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">15 Min Read</div>
             </div>
 
             <h1 class="text-[3rem] md:text-5xl lg:text-[4rem] font-display text-neutral-900 dark:text-white leading-tight md:leading-[1.1] tracking-tight reveal visible mb-8">
                 Dopamine, Stimulation, and Modern Distraction
             </h1>
             
-            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-display italic reveal delay-1 mb-12">
-                We live in environments designed to keep us constantly engaged. Over time, this quiet stream of input changes how we focus, how we wait, and how it feels to simply sit in a quiet room.
-            </p>
+            <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-display italic reveal delay-1 mb-12 space-y-4">
+                <p>Many people feel mentally restless without fully understanding why.</p>
+                <p>The mind rarely gets a real pause anymore.</p>
+                <p>Phones, notifications, short videos, endless scrolling, and constant stimulation train attention to keep searching for something new.</p>
+                <p>Over time, this can make focus feel harder, silence feel uncomfortable, and everyday life feel mentally crowded.</p>
+            </div>
 
-            <!-- Custom Abstract Dopamine/Stimulation Representation Hero -->
+            <!-- Custom Abstract Dopamine Hero -->
             <div class="w-full h-[350px] md:h-[450px] rounded-[2rem] overflow-hidden reveal delay-2 relative mb-16 border border-neutral-200 dark:border-white/5 bg-neutral-50 dark:bg-[#050507] group flex items-center justify-center">
-                <!-- Ambient Base -->
                 <div class="absolute inset-0 bg-gradient-to-br from-transparent to-neutral-200/50 dark:to-brand-teal/5"></div>
-                
-                <!-- Abstract Texture -->
                 <div class="absolute inset-0 opacity-[0.15] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
-
-                <!-- Abstract Composition: Hyper-stimulation fading into calm awareness -->
                 <div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
-                    
-                    <!-- Rapid outer reward loops (Overstimulation) -->
-                    <div class="absolute inset-4 border border-brand-teal/10 rounded-full opacity-60 border-dashed group-hover:opacity-10 group-hover:scale-110 transition-all duration-[2s] ease-in-out"></div>
-                    <div class="absolute inset-10 border border-neutral-400 dark:border-neutral-600 rounded-full opacity-30 border-dotted group-hover:opacity-10 group-hover:scale-105 transition-all duration-[2.5s] ease-in-out"></div>
-                    <div class="absolute inset-16 border border-neutral-300 dark:border-neutral-700 rounded-full opacity-40 group-hover:opacity-20 group-hover:scale-105 transition-all duration-[3s] ease-in-out"></div>
-                    
-                    <!-- Erratic dopamine pulses (Scattered attention) -->
-                    <div class="absolute w-2 h-2 bg-brand-teal rounded-full shadow-[0_0_10px_rgba(45,212,191,0.8)] opacity-80 group-hover:opacity-0 transition-opacity duration-[1s] animate-[ping_1.5s_infinite]"></div>
+                    <div class="absolute inset-4 border border-brand-teal/10 rounded-full opacity-60 border-dashed group-hover:opacity-10 group-hover:scale-110 transition-all duration-[2s]"></div>
+                    <div class="absolute w-2 h-2 bg-brand-teal rounded-full shadow-[0_0_10px_rgba(45,212,191,0.8)] animate-[ping_1.5s_infinite] group-hover:opacity-0 transition-opacity duration-1000"></div>
+                    <div class="absolute w-16 h-16 bg-neutral-300/10 dark:bg-neutral-800/20 rounded-full blur-xl group-hover:bg-brand-teal/20 transition-all duration-[2.5s]"></div>
                     <div class="absolute w-1.5 h-1.5 bg-neutral-500 rounded-full opacity-70 top-1/4 left-1/3 group-hover:opacity-0 transition-opacity duration-[1.5s] animate-[ping_2s_infinite]"></div>
                     <div class="absolute w-2 h-2 bg-brand-teal/60 rounded-full opacity-70 bottom-1/4 right-1/4 group-hover:opacity-0 transition-opacity duration-[2s] animate-[ping_1.8s_infinite]"></div>
-                    
-                    <!-- The settling core (Restoring calm and reducing stimulation) -->
-                    <div class="absolute w-16 h-16 bg-neutral-300/10 dark:bg-neutral-800/20 rounded-full blur-xl group-hover:bg-brand-teal/20 transition-all duration-[2.5s] ease-out"></div>
-                    <div class="absolute w-6 h-6 border border-brand-teal/20 rounded-full opacity-0 group-hover:opacity-50 group-hover:scale-125 transition-all duration-[2s] ease-out"></div>
-                    <div class="absolute w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full group-hover:bg-brand-teal group-hover:shadow-[0_0_15px_rgba(45,212,191,0.6)] transition-all duration-[2s] z-10"></div>
+                    <div class="absolute w-3 h-3 bg-neutral-400 dark:bg-neutral-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_15px_rgba(45,212,191,0.5)] transition-all duration-1000 z-10"></div>
                 </div>
             </div>
         </header>
@@ -311,264 +226,286 @@
         <!-- ARTICLE BODY -->
         <article class="article-body text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
             
-            <!-- SECTION 1 -->
-            <h2 class="reveal">There is rarely a moment without input</h2>
+            <!-- Section 1 -->
+            <h2 class="reveal">Modern life keeps the mind constantly occupied</h2>
 
-            <p class="reveal">
-                There is rarely a moment in the modern day that isn't filled with something to look at, listen to, or process.
-            </p>
+            <p class="reveal">For many people, quiet moments barely exist anymore.</p>
 
-            <p class="reveal">
-                You might notice it when you are waiting in line and instantly reach for your phone. Or when a quiet evening suddenly feels too quiet, and you need a podcast or a show playing just to comfortably fold the laundry.
-            </p>
+            <p class="reveal">Waiting in line becomes scrolling.</p>
+            <p class="reveal">A few seconds of boredom becomes checking the phone.</p>
+            <p class="reveal">Meals become content consumption.</p>
+            <p class="reveal">Rest becomes stimulation.</p>
 
-            <p class="reveal font-medium text-neutral-900 dark:text-white">
-                It doesn’t always feel like stress. Most of the time, it just feels like normal life.
-            </p>
-
-            <p class="reveal">
-                But over time, the mind gets used to this rhythm. It begins to expect a constant stream of input.
-            </p>
+            <p class="reveal">The mind stays active almost all the time.</p>
+            <p class="reveal">Not because people are weak.</p>
+            <p class="reveal font-medium text-neutral-900 dark:text-white">Because modern environments make constant input feel normal.</p>
+            
+            <p class="reveal mt-8">Over time, many people begin noticing:</p>
+            <ul class="reveal delay-1">
+                <li>difficulty focusing deeply</li>
+                <li>restlessness during silence</li>
+                <li>compulsive checking habits</li>
+                <li>shorter attention spans</li>
+                <li>mental fatigue without understanding why</li>
+            </ul>
 
             <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 pl-6 border-l-[3px] border-brand-teal/50">
-                And when that input stops, even for a moment, an uncomfortable restlessness sets in.
+                The nervous system rarely gets enough space to settle fully.
             </p>
 
-            <!-- SECTION 2 -->
-            <h2 class="reveal">The chemical of seeking, not just pleasure</h2>
+            <!-- Section 2 -->
+            <h2 class="reveal">The brain naturally repeats what feels rewarding</h2>
 
-            <p class="reveal">
-                We often hear dopamine described as the chemical of pleasure. But that isn't quite right.
+            <p class="reveal">Human attention is strongly influenced by reward.</p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white">The brain remembers what feels stimulating, comforting, exciting, relieving, or emotionally satisfying.</p>
+            
+            <p class="reveal mt-8">This is part of why people repeatedly return to things like:</p>
+            <ul class="reveal delay-1">
+                <li>scrolling</li>
+                <li>notifications</li>
+                <li>short videos</li>
+                <li>constant updates</li>
+                <li>rapid entertainment</li>
+                <li>checking messages repeatedly</li>
+            </ul>
+
+            <p class="reveal mt-8">The brain begins expecting stimulation frequently.</p>
+            
+            <p class="reveal">Not because something is "wrong" with people.</p>
+            
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 text-center">
+                Because repeated reward patterns slowly train attention and behavior over time.
             </p>
 
-            <p class="reveal">
-                It is more accurately the chemical of <em>seeking</em>. It is the drive that makes you want to check your email one more time, or refresh a timeline just in case something new appeared in the last thirty seconds.
-            </p>
+            <!-- Section 3 -->
+            <h2 class="reveal">Modern apps are designed to keep attention moving</h2>
 
-            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">
-                Your mind is simply doing what it was designed to do: looking for a reward.
-            </p>
+            <p class="reveal">Most digital platforms benefit when people stay engaged longer.</p>
+            
+            <p class="reveal">This is why so many apps are built around:</p>
+            <ul class="reveal delay-1">
+                <li>endless scrolling</li>
+                <li>rapid novelty</li>
+                <li>notifications</li>
+                <li>instant feedback</li>
+                <li>unpredictable rewards</li>
+            </ul>
 
-            <p class="reveal">
-                The difficulty is that we now live in environments that offer endless, effortless rewards. There is no natural stopping point.
-            </p>
+            <p class="reveal mt-8 font-medium text-neutral-900 dark:text-white">Something new is always waiting.</p>
 
             <p class="reveal delay-1 italic text-neutral-500 my-8">
-                The seeking never really has to end.
+                Another video.<br>
+                Another update.<br>
+                Another message.<br>
+                Another reason to check again.
             </p>
 
-            <!-- SECTION 3 -->
-            <h2 class="reveal">The pull of the unpredictable</h2>
+            <p class="reveal">Over time, the brain adapts to constant stimulation.</p>
 
-            <p class="reveal">
-                Much of the digital world is built on a very simple premise: if you keep the reward unpredictable, people will keep pulling the lever.
+            <p class="reveal">Many people begin reaching for their phones automatically without consciously deciding to.</p>
+
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 pl-6 border-l-[3px] border-brand-teal/50">
+                Attention starts reacting before awareness fully catches up.
             </p>
 
-            <p class="reveal">
-                You don’t know what the next post will be. You don’t know who just messaged you. You don’t know what the notification says until you look.
-            </p>
+            <!-- Section 4 -->
+            <h2 class="reveal">Fast stimulation makes slower focus feel harder</h2>
 
-            <p class="reveal mt-8 font-medium text-neutral-900 dark:text-white">
-                That tiny gap of uncertainty is deeply compelling to the human brain.
-            </p>
+            <p class="reveal">The brain adapts to whatever it experiences repeatedly.</p>
+            
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">When attention becomes used to constant stimulation, slower activities can begin feeling unusually difficult.</p>
 
-            <p class="reveal">
-                It trains us to check. And then to check again.
-            </p>
+            <ul class="reveal delay-1">
+                <li>Reading a book.</li>
+                <li>Studying.</li>
+                <li>Writing.</li>
+                <li>Thinking deeply.</li>
+                <li>Even sitting quietly.</li>
+            </ul>
+
+            <p class="reveal">Many people assume they suddenly became lazy or incapable of focusing.</p>
+            <p class="reveal font-medium text-neutral-900 dark:text-white">But often the mind has simply become accustomed to faster reward cycles.</p>
+
+            <p class="reveal mt-8">The problem is not intelligence.</p>
 
             <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 text-center">
-                Before long, it’s no longer a conscious choice.<br>It’s an automatic reflex triggered by the slightest hint of boredom, difficulty, or fatigue.
+                The nervous system has been trained toward constant switching.
             </p>
 
-            <!-- SECTION 4 -->
-            <h2 class="reveal">Why slower things begin to feel difficult</h2>
+            <!-- Section 5 (Original #6) -->
+            <h2 class="reveal">Behavior often follows reward expectation</h2>
 
-            <p class="reveal">
-                The mind naturally flows toward the path of least resistance.
-            </p>
+            <p class="reveal">Human behavior is strongly influenced by anticipated reward.</p>
+            
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">The brain continuously asks:</p>
 
-            <p class="reveal">
-                If you have a choice between sitting with a difficult, complex problem, or tapping a screen for immediate novelty, the screen will almost always feel more appealing in the moment.
-            </p>
+            <ul class="reveal delay-1">
+                <li>What feels rewarding?</li>
+                <li>What reduces discomfort quickly?</li>
+                <li>What provides novelty?</li>
+                <li>What offers stimulation with minimal effort?</li>
+            </ul>
 
-            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">
-                But this shapes our attention over time.
-            </p>
+            <p class="reveal mt-8">This is why people frequently drift toward behaviors that provide rapid emotional payoff even when those behaviors reduce long-term clarity.</p>
 
-            <p class="reveal">
-                When we get used to things moving fast, slower things begin to feel agonizing. Reading a long article, having an uninterrupted conversation, or sitting with a blank page starts to feel physically uncomfortable.
-            </p>
-
-            <p class="reveal">
-                It isn't that you’ve lost the ability to focus. It’s that your mind has been conditioned to expect a reward much faster than those activities can provide.
-            </p>
-
-            <!-- SECTION 5 -->
-            <h2 class="reveal">Distraction is often an escape hatch</h2>
-
-            <p class="reveal">
-                We tend to think of distraction as something that happens <em>to</em> us. An interruption from the outside.
-            </p>
-
-            <p class="reveal font-medium text-neutral-900 dark:text-white">
-                But very often, distraction comes from within.
-            </p>
-
-            <p class="reveal">
-                When a task gets hard, or when we feel a spike of self-doubt, the mind immediately looks for an escape hatch. It wants to feel competent and stimulated again.
-            </p>
-
-            <p class="reveal mt-8">
-                So, without even realizing we felt frustrated, we open a new tab.
-            </p>
+            <p class="reveal">Over time, repeated stimulation patterns can weaken tolerance for slower, less immediately rewarding activities.</p>
 
             <p class="reveal delay-1 italic text-neutral-500 mt-8">
-                Over time, this erodes our tolerance for frustration. We become incredibly impatient with ourselves, and with life, because we have lost the muscle for sitting with discomfort.
+                Patience decreases.<br>
+                Impulsivity increases.<br>
+                Restlessness grows.<br>
+                Attention becomes more reactive.
             </p>
 
-            <!-- SECTION 6 -->
-            <h2 class="reveal">The feeling of mental restlessness</h2>
+            <!-- Section 6 (Overstimulation & Mental Restlessness) -->
+            <h2 class="reveal">Constant stimulation can create a restless mind</h2>
 
-            <p class="reveal">
-                One of the most common feelings today is a vague, persistent mental buzzing.
-            </p>
+            <p class="reveal">Many people now feel uncomfortable during stillness.</p>
+            <p class="reveal font-medium text-neutral-900 dark:text-white">Not because silence is bad.</p>
+            <p class="reveal">Because the brain has become used to constant input.</p>
 
-            <p class="reveal">
-                You might feel physically exhausted, yet mentally unable to shut down. You want to rest, but sitting on the couch doing "nothing" feels mildly agitating.
-            </p>
+            <p class="reveal mt-8">Without stimulation, attention immediately searches for something else:</p>
+            <ul class="reveal delay-1">
+                <li>checking the phone</li>
+                <li>opening another tab</li>
+                <li>switching apps</li>
+                <li>refreshing feeds</li>
+                <li>looking for entertainment</li>
+            </ul>
 
-            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">
-                So you rest while scrolling. You rest while watching a video and texting.
-            </p>
-
-            <p class="reveal">
-                The nervous system remains slightly elevated. It is waiting for the next piece of information.
-            </p>
+            <p class="reveal mt-8">The mind begins struggling to simply remain where it already is.</p>
 
             <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 pl-6 border-l-[3px] border-brand-teal/50">
-                This isn't necessarily anxiety. It is simply the momentum of a mind that has been moving at high speed all day and doesn't know how to hit the brakes.
+                Over time, this can create a constant feeling of internal restlessness.
             </p>
 
-            <!-- SECTION 7 -->
-            <h2 class="reveal">The friction of the "messy middle"</h2>
+            <!-- Section 7 (Slower Rewards) -->
+            <h2 class="reveal">Many meaningful things in life feel slower</h2>
 
-            <p class="reveal">
-                The things that usually bring the deepest satisfaction in life—building a relationship, mastering a skill, creating something meaningful, understanding yourself—do not offer instant gratification.
-            </p>
-
-            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">
-                They require a willingness to exist in the "messy middle."
-            </p>
-
-            <p class="reveal">
-                They require patience.
-            </p>
-
-            <p class="reveal mt-8">
-                When our environments train us to expect a payoff every three seconds, the messy middle feels unbearable.
-            </p>
+            <p class="reveal">Some of the most valuable experiences in life do not provide instant reward.</p>
 
             <p class="reveal delay-1 italic text-neutral-500 my-8">
-                We quit not because the work is too hard, but because the reward is too slow.
+                Learning deeply takes time.<br>
+                Building skill takes time.<br>
+                Meaningful relationships take time.<br>
+                Creative work takes time.<br>
+                Real clarity takes time.
             </p>
 
-            <!-- SECTION 8 -->
-            <h2 class="reveal">Observation works better than restriction</h2>
+            <p class="reveal font-medium text-neutral-900 dark:text-white">But overstimulated attention becomes impatient with slower progress.</p>
+            <p class="reveal">The brain starts expecting quick emotional payoff.</p>
 
-            <p class="reveal">
-                When people notice this happening, their first instinct is usually extreme restriction.
+            <p class="reveal mt-8">As a result, many people drift toward what feels immediately stimulating instead of what feels deeply meaningful over the long term.</p>
+
+            <!-- Section 8 (Original #9) -->
+            <h2 class="reveal">Awareness changes the relationship with stimulation</h2>
+
+            <p class="reveal">Many people respond to overstimulation with extreme restriction or self-judgment.</p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">But sustainable change usually begins with awareness rather than harsh control.</p>
+
+            <p class="reveal mt-8">People begin noticing:</p>
+
+            <ul class="reveal delay-1">
+                <li>what repeatedly captures attention</li>
+                <li>which behaviors feel compulsive</li>
+                <li>how overstimulation affects focus</li>
+                <li>when boredom triggers distraction</li>
+                <li>what environments increase impulsivity</li>
+                <li>which activities restore mental steadiness</li>
+            </ul>
+
+            <p class="reveal font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 pl-6 border-l-[3px] border-brand-teal/50">
+                Awareness creates the ability to respond more intentionally instead of reacting automatically.
             </p>
+
+            <!-- Section 9 (Original #10) -->
+            <h2 class="reveal">Attention often stabilizes when stimulation decreases</h2>
+
+            <p class="reveal">People frequently search for stronger concentration techniques while remaining continuously overstimulated.</p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">But many attention difficulties improve when unnecessary stimulation reduces.</p>
+
+            <p class="reveal mt-8">This may include:</p>
+
+            <ul class="reveal delay-1">
+                <li>fewer interruptions</li>
+                <li>less compulsive scrolling</li>
+                <li>more uninterrupted thought</li>
+                <li>calmer digital environments</li>
+                <li>slower information intake</li>
+                <li>periods without constant entertainment</li>
+                <li>deeper reading</li>
+                <li>intentional boredom</li>
+            </ul>
+
+            <p class="reveal mt-8 font-medium text-neutral-900 dark:text-white">The goal is not eliminating pleasure or technology.</p>
+
+            <p class="reveal">It is reducing unconscious overstimulation that continuously fragments attention.</p>
+
+            <!-- Section 10 (Original #11) -->
+            <h2 class="reveal">Mental steadiness often feels quieter than expected</h2>
+
+            <p class="reveal">Many people assume focus and clarity require more force.</p>
+
+            <p class="reveal font-medium text-neutral-900 dark:text-white mt-8">But sustainable attention often develops through reduction rather than intensity.</p>
 
             <p class="reveal delay-1 italic text-neutral-500 my-8">
-                Digital detoxes.<br>
-                Throwing the phone in another room.<br>
-                Beating themselves up for lacking discipline.
+                Less stimulation.<br>
+                Less impulsive switching.<br>
+                Less compulsive input.<br>
+                Less fragmentation.
             </p>
 
-            <p class="reveal font-medium text-neutral-900 dark:text-white">
-                But harsh restriction is just another form of tension.
-            </p>
+            <p class="reveal">As mental noise decreases, attention often becomes calmer naturally.</p>
 
-            <p class="reveal">
-                A more sustainable path begins with gentle observation. Notice what it feels like right before you reach for your phone. Is it boredom? Is it anxiety about an email? Is it a difficult sentence you are trying to write?
-            </p>
+            <p class="reveal mt-8">Not perfectly controlled.</p>
 
-            <p class="reveal mt-8">
-                Just seeing the reflex for what it is—an attempt to soothe a tiny discomfort—starts to loosen its grip.
-            </p>
-
-            <!-- SECTION 9 -->
-            <h2 class="reveal">Focus doesn't need to be forced</h2>
-
-            <p class="reveal">
-                We often think we need to build "stronger focus," as if focus is a muscle we haven't flexed hard enough.
-            </p>
-
-            <p class="reveal font-medium text-neutral-900 dark:text-white">
-                But often, focus doesn't need to be forced. It just needs less competition.
-            </p>
-
-            <p class="reveal">
-                When you gently turn down the volume of continuous input—leaving your phone in a bag while you walk, sitting with your coffee without a podcast, letting yourself be mildly bored for ten minutes—your attention naturally begins to stabilize.
-            </p>
-
-            <p class="reveal mt-8 font-display text-2xl md:text-3xl italic text-neutral-900 dark:text-white my-12 text-center">
-                It doesn't require superhuman willpower.<br>It just requires letting the mind remember what it feels like to not be entertained.
-            </p>
-
-            <!-- SECTION 10 -->
-            <h2 class="reveal">The relief of a quieted mind</h2>
-
-            <p class="reveal">
-                A clear mind is rarely an empty mind.
-            </p>
-
-            <p class="reveal font-medium text-neutral-900 dark:text-white">
-                It is just a mind that isn't desperately searching for the next thing.
-            </p>
-
-            <p class="reveal">
-                As the constant craving for input softens, something else takes its place.
-            </p>
-
-            <p class="reveal mt-8">
-                A sense of steadiness. The ability to listen to someone without an urge to check a screen. The capacity to do one thing at a time, without the background hum of missing out.
-            </p>
-
-            <p class="reveal delay-1 italic text-neutral-500 my-8">
-                It feels surprisingly quiet.<br>And deeply relieving.
-            </p>
+            <p class="reveal font-medium text-neutral-900 dark:text-white">But more intentional.</p>
 
         </article>
 
-        <!-- INTERNAL NAVIGATION / RELATED READING -->
+        <!-- RELATED READING -->
         <section class="mt-32 pt-16 border-t border-neutral-200 dark:border-white/10 reveal">
             <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-10 text-center">Continue Reading</h3>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Related Link 1 -->
-                <a href="/library/attention.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                <a href="/library/attention.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
                     <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
                     <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Attention</h4>
                     <p class="text-neutral-500 text-sm font-light">How modern environments quietly shape the way people think.</p>
                 </a>
-                
-                <!-- Related Link 2 -->
-                <a href="/library/focus.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                <a href="/library/focus.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
                     <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
                     <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Focus</h4>
                     <p class="text-neutral-500 text-sm font-light">Why sustained attention feels difficult and how fragmentation happens.</p>
                 </a>
-
-                <!-- Related Link 3 -->
-                <a href="/insights/attention-fragmentation.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                <a href="/library/clarity.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Clarity</h4>
+                    <p class="text-neutral-500 text-sm font-light">Reducing internal noise to observe and decide more consciously.</p>
+                </a>
+                <a href="/library/overthinking.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Overthinking</h4>
+                    <p class="text-neutral-500 text-sm font-light">The mental loops that disguise themselves as problem-solving.</p>
+                </a>
+                <a href="/library/habits.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Library</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Habits</h4>
+                    <p class="text-neutral-500 text-sm font-light">How repeated behavior quietly shapes your daily life.</p>
+                </a>
+                <a href="/insights/dopamine-distraction.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
+                    <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3">Insight</span>
+                    <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Dopamine & Distraction</h4>
+                    <p class="text-neutral-500 text-sm font-light">Why checking your phone feels automatic even when you try to stop.</p>
+                </a>
+                <a href="/insights/attention-fragmentation.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
                     <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 mb-3">Insight</span>
                     <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Attention Fragmentation</h4>
                     <p class="text-neutral-500 text-sm font-light">Why constant switching makes deep work increasingly difficult.</p>
                 </a>
-
-                <!-- Related Link 4 -->
-                <a href="/programs/attention-recovery.html" class="spotlight-card block p-8 rounded-[1.5rem] border border-neutral-200 dark:border-white/10 transition-colors group">
+                <a href="/programs/attention-recovery.html" class="spotlight-card block p-8 rounded-[1.5rem] transition-colors group">
                     <span class="block text-[9px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-3">Program</span>
                     <h4 class="text-xl font-display text-neutral-900 dark:text-white mb-2">Attention Recovery</h4>
                     <p class="text-neutral-500 text-sm font-light">A system to rebuild focus span and reduce digital distraction loops.</p>
@@ -588,7 +525,7 @@
                 <p class="text-neutral-600 dark:text-neutral-400 font-light mt-6">
                     Not by rejecting technology entirely, but by helping people notice which patterns quietly weaken attention, increase restlessness, and reduce the ability to remain fully present.
                 </p>
-                <p class="text-neutral-600 dark:text-neutral-400 font-light">
+                <p class="text-neutral-600 dark:text-neutral-400 font-light mt-4">
                     Over time, even small reductions in overstimulation can significantly change the quality of attention, thinking, and daily life.
                 </p>
             </div>
@@ -596,20 +533,13 @@
 
         <!-- SUBTLE CTA BLOCK -->
         <section class="mt-32 reveal">
-            <div class="spotlight-card rounded-[3rem] p-12 md:p-16 text-center border border-neutral-200 dark:border-white/10 overflow-hidden relative bg-gradient-to-br from-white/80 to-neutral-50/50 dark:from-white/[0.03] dark:to-transparent">
+            <div class="spotlight-card rounded-[3rem] p-12 md:p-16 text-center border border-neutral-200 dark:border-white/10 overflow-hidden relative">
                 <div class="relative z-10">
                     <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Protect Your Attention More Intentionally</h3>
-                    <p class="text-lg font-light text-neutral-600 dark:text-neutral-400 mb-10 max-w-md mx-auto">
-                        Thoughtful programs, tools, and reflections designed to reduce mental fragmentation and support clearer sustained attention.
-                    </p>
-
+                    <p class="text-lg font-light text-neutral-600 dark:text-neutral-400 mb-10 max-w-md mx-auto">Thoughtful programs, tools, and reflections designed to reduce mental fragmentation and support clearer sustained attention.</p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="/programs/index.html" class="button-press w-full sm:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] shadow-lg">
-                            Explore Programs
-                        </a>
-                        <a href="/library/index.html" class="button-press w-full sm:w-auto bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors">
-                            Browse Library
-                        </a>
+                        <a href="/programs/index.html" class="button-press w-full sm:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] shadow-lg">Explore Programs</a>
+                        <a href="/library/index.html" class="button-press w-full sm:w-auto bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white py-4 px-8 rounded-full font-bold uppercase tracking-[0.15em] text-[10px] hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors">Browse Library</a>
                     </div>
                 </div>
             </div>
@@ -617,179 +547,91 @@
 
     </main>
 
-    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
-    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
-        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
-
-        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
-            
-            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
-                <a href="/" class="flex flex-col items-center gap-5">
-                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
-                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
-                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
-                    </div>
-                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
-                </a>
-                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
+    <!-- FOOTER -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+            <a href="/" class="flex flex-col items-center gap-5 mb-16">
+                <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW" class="h-20 w-20 block dark:hidden">
+                <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW" class="h-20 w-20 hidden dark:block">
+                <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium text-center">Words of Wisdom</span>
+            </a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl">
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">The Journey</p>
-                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
-                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
-                    <a href="/focus.html" class="block hover:text-brand-teal transition-colors">Focus</a>
-                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
+                    <a href="/start-here.html" class="block hover:text-brand-teal">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal">Action</a>
                 </div>
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Explore</p>
-                    <a href="/library/index.html" class="block hover:text-brand-teal transition-colors">Library</a>
-                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
-                    <a href="/books.html" class="block hover:text-brand-teal transition-colors">Books</a>
-                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
+                    <a href="/library/index.html" class="block hover:text-brand-teal">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal">Programs</a>
+                    <a href="/books.html" class="block hover:text-brand-teal">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal">Tools</a>
                 </div>
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Connect</p>
-                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
-                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
-                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
-                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
+                    <a href="/about.html" class="block hover:text-brand-teal">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal">Contact</a>
                 </div>
             </div>
-            
-            <div class="flex items-center space-x-8 mb-16 justify-center">
-                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-
-            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
-                <div class="flex flex-wrap justify-center gap-6 mb-2">
-                    <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
-                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
-                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
-                </div>
-                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
-                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <p class="tracking-[0.1em] opacity-60">Built by <a href="/author.html" class="text-brand-teal">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40">Clear thinking in a distracted world.</p>
             </div>
         </div>
     </footer>
 
-    <!-- BACK TO TOP BUTTON -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
-        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal button-press">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
-    <!-- INTERACTION LOGIC -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
-            // Theme Toggle Logic
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
-
             const toggleTheme = () => {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.theme = 'light';
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.theme = 'dark';
-                }
+                document.documentElement.classList.toggle('dark');
+                localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
             };
+            document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
 
-            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
-            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-            // Mobile Menu Toggle
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-            if(btn && menu) {
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-            }
-
-            // Scroll Fade-Up Animation
-            const fadeElements = document.querySelectorAll('.reveal');
-            const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            fadeElements.forEach(el => observer.observe(el));
-
-            // Magnetic Cursor Logic
             if (window.matchMedia("(pointer: fine)").matches) {
-                const dot = document.getElementById('cursor-dot');
-                const ring = document.getElementById('cursor-ring');
-                let mouseX = window.innerWidth / 2;
-                let mouseY = window.innerHeight / 2;
-                let ringX = mouseX;
-                let ringY = mouseY;
-                let cursorInitiated = false;
-
+                const dot = document.getElementById('cursor-dot'), ring = document.getElementById('cursor-ring');
+                let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
                 window.addEventListener('mousemove', (e) => {
-                    if (!cursorInitiated) {
-                        dot.style.opacity = "1";
-                        ring.style.opacity = "1";
-                        cursorInitiated = true;
-                    }
-                    mouseX = e.clientX;
-                    mouseY = e.clientY;
-                    dot.style.left = `${mouseX}px`;
-                    dot.style.top = `${mouseY}px`;
+                    mouseX = e.clientX; mouseY = e.clientY;
+                    dot.style.opacity = "1"; ring.style.opacity = "1";
+                    dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`;
                 });
-
-                const animateRing = () => {
-                    ringX += (mouseX - ringX) * 0.15;
-                    ringY += (mouseY - ringY) * 0.15;
-                    if(ring) {
-                        ring.style.left = `${ringX}px`;
-                        ring.style.top = `${ringY}px`;
-                    }
-                    requestAnimationFrame(animateRing);
+                const animate = () => {
+                    ringX += (mouseX - ringX) * 0.15; ringY += (mouseY - ringY) * 0.15;
+                    ring.style.left = `${ringX}px`; ring.style.top = `${ringY}px`;
+                    requestAnimationFrame(animate);
                 };
-                animateRing();
-
-                const interactables = document.querySelectorAll('a, button, input, textarea, .spotlight-card');
-                interactables.forEach(el => {
-                    el.addEventListener('mouseenter', () => { 
-                        if(ring) ring.classList.add('hover-active');
-                        if(dot) dot.classList.add('hover-active');
-                    });
-                    el.addEventListener('mouseleave', () => { 
-                        if(ring) ring.classList.remove('hover-active');
-                        if(dot) dot.classList.remove('hover-active');
-                    });
+                animate();
+                document.querySelectorAll('a, button, .spotlight-card').forEach(el => {
+                    el.addEventListener('mouseenter', () => ring.classList.add('hover-active'));
+                    el.addEventListener('mouseleave', () => ring.classList.remove('hover-active'));
                 });
             }
 
-            // Back to Top Logic
             const backToTopBtn = document.getElementById('back-to-top');
-            if (backToTopBtn) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 600) {
-                        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                    } else {
-                        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                    }
-                });
-
-                backToTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         });
     </script>
 </body>
