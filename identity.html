@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- FINAL META DATA -->
+    <!-- FINAL META DATA (SEO + AEO + GEO) -->
     <title>Identity | Why You Keep Returning to the Same Patterns | Words of Wisdom</title>
     <meta name="description" content="Understand why you return to the same patterns, how repeated behavior shapes identity, and why lasting personal change feels difficult even when you genuinely want it.">
     <meta name="keywords" content="identity patterns, self identity, repeated behavior, why people repeat patterns, behavior change, identity and habits, self perception, personal change, identity psychology, subconscious patterns">
@@ -17,6 +17,8 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://wordsofwisdom.in/identity.html">
     <meta property="og:image" content="https://wordsofwisdom.in/assets/og/identity-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +26,7 @@
     <meta name="twitter:description" content="Repeated behavior quietly becomes identity. Understand why lasting change feels difficult and why familiar patterns keep returning.">
     <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/identity-cover.jpg">
 
-    <!-- FLAGSHIP SCHEMA -->
+    <!-- FINAL JSON-LD SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,7 +122,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
-    <!-- Theme Initialization Script (Dark Mode Default) -->
+    <!-- Theme Initialization Script -->
     <script>
         if (localStorage.theme === 'light') {
             document.documentElement.classList.remove('dark');
@@ -161,72 +163,61 @@
                         }
                     },
                     animation: {
-                        'slide-left': 'slideLeft 40s linear infinite',
+                        'slide-left-slow': 'slideLeft 120s linear infinite',
                     }
                 }
             }
         }
     </script>
 
-    <!-- Advanced CSS: Editorial Layer -->
+    <!-- Advanced CSS: Flagship Editorial Layer (Ultra Minimal) -->
     <style type="text/tailwindcss">
-        body { transition: background-color 0.6s ease, color 0.6s ease; }
+        body { transition: background-color 0.8s ease, color 0.8s ease; }
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.3); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.6); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.2); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.4); }
 
-        /* Smooth Reveal System */
+        /* Slow, Restrained Reveal System */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
-        .delay-1 { transition-delay: 0.2s; }
-        .delay-2 { transition-delay: 0.4s; }
+        .delay-1 { transition-delay: 0.3s; }
+        .delay-2 { transition-delay: 0.6s; }
+        .delay-3 { transition-delay: 0.9s; }
 
-        /* Texture Layers */
-        .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%); }
-        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.04) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(20, 20, 24, 1) 0%, transparent 100%); }
-        .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.12; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
+        /* Core Texture Layers */
+        .elite-texture-base { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.02) 0%, transparent 60%); }
+        .dark .elite-texture-base { background: radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.03) 0%, transparent 60%), radial-gradient(circle at 50% 110%, rgba(2, 2, 4, 1) 0%, transparent 100%); }
+        .ambient-noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.15; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"); }
 
         /* Glass Morphism Base Classes */
         .glass-base {
             @apply backdrop-blur-2xl border transition-all duration-500;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             border-color: rgba(255, 255, 255, 0.5);
         }
         .dark .glass-base {
-            background: rgba(10, 10, 12, 0.7);
+            background: rgba(10, 10, 12, 0.8);
             border-color: rgba(255, 255, 255, 0.06);
         }
 
-        /* Buttons & Links */
-        .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; }
-        .button-press:active { transform: scale(0.97); }
-        .clean-link { opacity: 0.7; transition: opacity 0.3s ease; position: relative; display: inline-flex; align-items: center; }
-        .clean-link:hover { opacity: 1; }
-        
-        /* Typography System */
-        .article-body p { margin-bottom: 2rem; line-height: 1.8; }
-        .article-body ul { margin-bottom: 2.5rem; list-style-type: none; padding-left: 1.5rem; }
-        .article-body ul li { position: relative; margin-bottom: 1rem; line-height: 1.8; }
-        .article-body ul li::before { content: "•"; position: absolute; left: -1.2rem; color: #2dd4bf; opacity: 0.8;}
-        .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-top: 6rem; margin-bottom: 2.5rem; color: #171717; font-weight: 400; line-height: 1.2; }
+        /* Restrained Button & Links */
+        .button-press { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
+        .button-press:active { transform: scale(0.98); }
+        .btn-premium { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.05); }
+        .dark .btn-premium { box-shadow: 0 4px 14px 0 rgba(255,255,255,0.05); }
+
+        /* Museum-like Typography Rhythm */
+        .article-body p { margin-bottom: 2.5rem; line-height: 1.8; }
+        .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; margin-top: 7rem; margin-bottom: 3rem; color: #171717; font-weight: 400; line-height: 1.2; }
         .dark .article-body h2 { color: #ffffff; }
 
-        /* Gentle Hover Cards */
-        .calm-card { 
-            background: rgba(255,255,255,0.4); border: 1px solid rgba(0,0,0,0.04); 
-            transition: all 0.5s ease; position: relative; overflow: hidden;
-        }
-        .dark .calm-card { 
-            background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); 
-        }
-        .calm-card:hover { border-color: rgba(45, 212, 191, 0.3); background: rgba(255,255,255,0.6); }
-        .dark .calm-card:hover { background: rgba(255,255,255,0.02); }
+        ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
@@ -236,27 +227,27 @@
 
     <!-- NAVIGATION MENU -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
-        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
-            <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
-                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
-                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
+        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)]">
+            <a href="/" class="flex-shrink-0 transform hover:opacity-70 transition-opacity duration-500 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom Media" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom Media" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
             </a>
             
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
-                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
-                <a href="/identity.html" class="text-brand-teal dark:text-white transition-colors duration-300">IDENTITY</a>
-                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
-                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
-                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
-                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">START</a>
+                <a href="/identity.html" class="text-brand-teal dark:text-white transition-colors duration-500">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">ACTION</a>
+                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">PROGRAMS</a>
+                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-500">LIBRARY</a>
                 
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none ml-2" aria-label="Toggle Dark Mode">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
                 </button>
             </div>
 
-            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">
+            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center whitespace-nowrap hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg btn-premium">
                 START HERE
             </a>
 
@@ -273,299 +264,272 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
-        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Start</a>
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-500">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
         <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-brand-teal dark:text-white transition-colors">Identity</a>
-        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Focus</a>
-        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Action</a>
-        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Programs</a>
-        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Library</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
     </div>
 
+    <!-- MAIN ARTICLE CONTAINER (Editorial Constraints) -->
     <main class="max-w-[720px] mx-auto pt-40 pb-32 px-6 sm:px-0 relative z-10">
         
-        <!-- HERO -->
+        <!-- HERO SECTION (Museum Quiet) -->
         <header class="mb-32 text-center md:text-left">
-            <span class="reveal block text-xs font-bold uppercase tracking-[0.2em] text-brand-teal mb-6">Phase 01</span>
+            <span class="reveal block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-8">Phase 01</span>
             
-            <h1 class="reveal delay-1 font-display text-[3.5rem] md:text-[4.5rem] lg:text-[5.25rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-4">
+            <h1 class="reveal delay-1 font-display text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-6">
                 Identity.
             </h1>
             
-            <p class="reveal delay-2 font-display text-2xl md:text-3xl text-neutral-500 opacity-80 italic mb-16">
+            <p class="reveal delay-2 font-display text-xl md:text-2xl text-neutral-500 opacity-60 italic mb-20 max-w-lg">
                 Why you keep returning to the same patterns.
             </p>
 
-            <div class="reveal delay-3 text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-6">
-                <p>Most people think change begins with motivation.</p>
-                <p>But long before motivation appears,<br>there is already something shaping what feels natural to you.</p>
-                <p class="pt-4">You do not begin from zero.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">You begin from what already feels familiar.</p>
-            </div>
-
-            <!-- Custom Abstract Identity Representation Hero - SVG -->
-            <div class="w-full h-[350px] md:h-[450px] mt-16 rounded-[2rem] overflow-hidden reveal delay-3 relative border border-neutral-200 dark:border-white/5 bg-neutral-50 dark:bg-[#050507] group flex items-center justify-center">
+            <!-- Superb SVG Featured Image: Convergence of Patterns into Identity -->
+            <div class="w-full h-[350px] md:h-[450px] rounded-[1rem] overflow-hidden reveal delay-3 relative mb-24 bg-neutral-50/50 dark:bg-[#050507]/50 flex items-center justify-center">
                 
-                <div class="absolute inset-0 bg-gradient-to-br from-transparent to-neutral-200/50 dark:to-brand-teal/5"></div>
-                <div class="absolute inset-0 opacity-[0.15] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E');"></div>
-
-                <!-- High-Fidelity SVG Composition: The Gravity of Identity -->
-                <div class="relative w-full max-w-lg aspect-square flex items-center justify-center">
-                    <svg viewBox="0 0 800 800" class="w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-[3s] ease-out" xmlns="http://www.w3.org/2000/svg">
+                <div class="absolute inset-0 opacity-[0.1] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+                
+                <div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
+                    <svg viewBox="0 0 800 800" class="w-full h-full opacity-80" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+                            <filter id="core-glow" x="-50%" y="-50%" width="200%" height="200%">
                                 <feGaussianBlur stdDeviation="15" result="blur" />
                                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
                             </filter>
-                            <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="4" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
-                            <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.8"/>
-                                <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
-                            </linearGradient>
-                            <linearGradient id="grad-path" x1="0%" y1="100%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                                <stop offset="50%" stop-color="#2DD4BF" stop-opacity="0.8"/>
-                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-                            </linearGradient>
                         </defs>
-
-                        <!-- Background grid/texture hint -->
-                        <g stroke="#ffffff" stroke-width="1" opacity="0.02">
-                            <line x1="400" y1="0" x2="400" y2="800" />
-                            <line x1="0" y1="400" x2="800" y2="400" />
-                            <circle cx="400" cy="400" r="350" fill="none" />
-                        </g>
-
-                        <!-- Outer Behavioral Loops (Unconscious Patterns) -->
-                        <g class="origin-center animate-[spin_60s_linear_infinite]">
-                            <circle cx="400" cy="400" r="280" fill="none" stroke="#525252" stroke-width="1" stroke-dasharray="2 12" />
-                            <circle cx="400" cy="400" r="320" fill="none" stroke="#404040" stroke-width="1" stroke-dasharray="10 30" opacity="0.5"/>
-                        </g>
-
-                        <g class="origin-center animate-[spin_40s_linear_infinite_reverse]">
-                            <circle cx="400" cy="400" r="220" fill="none" stroke="#2DD4BF" stroke-width="1" opacity="0.15" />
-                            <circle cx="400" cy="400" r="180" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="60 20 5 20" opacity="0.3" />
-                        </g>
-
-                        <!-- The Gravity of Identity (Paths pulling inward) -->
-                        <path d="M50,400 Q200,200 400,400 T750,400" fill="none" stroke="url(#grad-path)" stroke-width="2" filter="url(#glow-light)" opacity="0.5" class="group-hover:opacity-100 transition-opacity duration-[2s]"/>
-                        <path d="M400,50 Q600,200 400,400 T400,750" fill="none" stroke="url(#grad-path)" stroke-width="2" filter="url(#glow-light)" opacity="0.2" class="group-hover:opacity-80 transition-opacity duration-[2s]"/>
-
-                        <!-- The Core (Self-Perception Solidifying) -->
-                        <circle cx="400" cy="400" r="80" fill="#2DD4BF" filter="url(#glow-heavy)" opacity="0.1" class="group-hover:opacity-20 transition-opacity duration-[2s]"/>
-                        <circle cx="400" cy="400" r="40" fill="#2DD4BF" filter="url(#glow-light)" opacity="0.2" />
-                        <circle cx="400" cy="400" r="15" fill="#2DD4BF" filter="url(#glow-heavy)" opacity="0.8" />
-                        <circle cx="400" cy="400" r="4" fill="#ffffff" />
-
-                        <!-- Orbiting Fragments (Thoughts & Actions becoming Identity) -->
-                        <g class="origin-center animate-[spin_12s_linear_infinite]">
-                            <circle cx="400" cy="220" r="4" fill="#ffffff" filter="url(#glow-light)" />
-                            <path d="M400,220 A180,180 0 0,0 250,300" fill="none" stroke="url(#grad-teal)" stroke-width="2" opacity="0.4"/>
-                        </g>
                         
-                        <g class="origin-center animate-[spin_20s_linear_infinite_reverse]">
-                            <circle cx="580" cy="400" r="3" fill="#2DD4BF" filter="url(#glow-light)" />
-                            <circle cx="260" cy="260" r="2" fill="#ffffff" opacity="0.4" />
+                        <!-- Peripheral scattered behaviors (Chaotic, faint lines converging) -->
+                        <g class="origin-center animate-[spin_120s_linear_infinite]" stroke="#2DD4BF" opacity="0.15" fill="none">
+                            <ellipse cx="400" cy="400" rx="350" ry="80" stroke-width="0.5" transform="rotate(15 400 400)" />
+                            <ellipse cx="400" cy="400" rx="330" ry="60" stroke-width="0.5" transform="rotate(45 400 400)" />
+                            <ellipse cx="400" cy="400" rx="310" ry="100" stroke-width="0.5" transform="rotate(75 400 400)" />
+                            <ellipse cx="400" cy="400" rx="290" ry="50" stroke-width="0.5" transform="rotate(105 400 400)" />
+                            <ellipse cx="400" cy="400" rx="270" ry="120" stroke-width="0.5" transform="rotate(135 400 400)" />
+                            <ellipse cx="400" cy="400" rx="250" ry="90" stroke-width="0.5" transform="rotate(165 400 400)" />
                         </g>
 
-                        <!-- The "Spark" of Awareness (Breaking the loop on hover) -->
-                        <circle cx="200" cy="400" r="2" fill="#ffffff" filter="url(#glow-heavy)" class="group-hover:translate-x-[200px] transition-transform duration-[3s] ease-in-out opacity-0 group-hover:opacity-100"/>
+                        <!-- Becoming more unified and structured (Habit forming) -->
+                        <g class="origin-center animate-[spin_80s_linear_infinite_reverse]" stroke="#ffffff" opacity="0.1" fill="none">
+                            <circle cx="400" cy="400" r="180" stroke-width="1" stroke-dasharray="1 8" />
+                            <circle cx="400" cy="400" r="140" stroke-width="1.5" stroke-dasharray="4 12" />
+                            <circle cx="400" cy="400" r="100" stroke-width="2" stroke-dasharray="10 15" />
+                        </g>
+
+                        <!-- The Solid Core (Identity firmly established) -->
+                        <circle cx="400" cy="400" r="45" fill="none" stroke="#2DD4BF" stroke-width="3" filter="url(#core-glow)" opacity="0.4"/>
+                        <circle cx="400" cy="400" r="45" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" />
+                        <circle cx="400" cy="400" r="12" fill="#2DD4BF" filter="url(#core-glow)" opacity="0.8" />
                     </svg>
                 </div>
             </div>
+
+            <div class="article-body text-lg text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
+                <p class="reveal">Most people think change begins with motivation.</p>
+                <p class="reveal delay-1">But long before motivation appears, there is already something shaping what feels natural to you.</p>
+                <p class="reveal delay-2 pt-6">You do not begin from zero.</p>
+                <p class="reveal delay-2 text-neutral-900 dark:text-white font-medium italic">You begin from what already feels familiar.</p>
+            </div>
         </header>
 
-        <!-- SECTION 2: RECOGNITION -->
-        <article class="article-body font-light tracking-wide text-lg text-neutral-600 dark:text-neutral-400">
+        <!-- ARTICLE BODY -->
+        <article class="article-body text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
             
-            <div class="reveal space-y-6 my-24">
+            <!-- SECTION 2: RECOGNITION -->
+            <div class="reveal mt-32 mb-24">
                 <p>You have probably experienced this before.</p>
+                
                 <p>You decide to change something.</p>
                 
-                <p class="pt-4">
-                    You begin carefully.<br>
-                    You try harder.<br>
-                    You become more aware.
-                </p>
-                
-                <p class="pt-4">
-                    For a while,<br>
-                    it even feels possible.
-                </p>
-                
-                <p class="pt-4">
-                    Then slowly,<br>
-                    almost without noticing,<br>
-                    you return to what you were doing before.
-                </p>
-                
-                <p class="pt-10 text-neutral-900 dark:text-white font-medium">Not because you wanted to fail.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">Because the previous pattern<br>still felt more familiar than the new one.</p>
+                <p>You begin carefully.<br>You try harder.<br>You become more aware.</p>
+
+                <p>For a while, it even feels possible.</p>
+
+                <p>Then slowly, almost without noticing, you return to what you were doing before.</p>
+
+                <div class="pt-8">
+                    <p class="text-neutral-900 dark:text-white font-medium">Not because you wanted to fail.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium">Because the previous pattern still felt more familiar than the new one.</p>
+                </div>
             </div>
 
-            <!-- SECTION 3: THE CORE REALIZATION (Museum-like) -->
-            <section class="py-40 reveal text-center my-12">
-                <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-tight mb-12 !border-none !p-0 !m-0 !mt-0">
-                    What repeats quietly<br>eventually feels like you.
-                </h2>
-                
-                <p class="text-xl md:text-2xl text-neutral-500 font-light">
-                    And once something feels like you,<br>you stop questioning it.
-                </p>
-                
-                <p class="text-xl md:text-2xl text-neutral-900 dark:text-white font-medium mt-6">
-                    You continue it automatically.
-                </p>
+            <!-- SECTION 3: THE CORE REALIZATION (Museum Stillness) -->
+            <section class="relative py-48 my-32 overflow-hidden reveal text-center">
+                <div class="relative z-10 space-y-12">
+                    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-0 !border-none !p-0 !m-0 !mt-0 transition-opacity duration-1000">
+                        What repeats quietly<br>eventually feels like you.
+                    </h2>
+                    
+                    <div class="text-lg md:text-xl text-neutral-500 italic space-y-2 pt-8">
+                        <p>And once something feels like you,<br>you stop questioning it.</p>
+                        <p class="pt-4">You continue it automatically.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- SECTION 4: REAL WORLD RECOGNITION -->
-            <div class="reveal space-y-6 my-24">
+            <div class="reveal space-y-8 my-24">
                 <p>This happens in small ways.</p>
                 
                 <p>You stop expecting consistency from yourself.</p>
+                
                 <p>You stop trusting your own promises.</p>
-                
-                <p class="pt-6">
-                    You delay things often enough<br>
-                    that delay starts feeling normal.
-                </p>
-                
-                <p class="pt-6">
-                    You lose focus repeatedly<br>
-                    and eventually stop believing you can stay steady.
-                </p>
 
-                <p class="text-xl md:text-2xl font-display italic text-neutral-900 dark:text-white mt-16 pl-6 border-l-[3px] border-brand-teal/50 py-2">
-                    Sometimes, people stop starting things entirely, because they no longer trust themselves to continue.
-                </p>
+                <p>You delay things often enough that delay starts feeling normal.</p>
+                
+                <p>You lose focus repeatedly and eventually stop believing you can stay steady.</p>
+
+                <!-- Strong Human Moment -->
+                <div class="pt-16 pb-8">
+                    <p class="font-display text-2xl md:text-3xl text-neutral-900 dark:text-white leading-relaxed mb-0 pl-6 border-l border-brand-teal/50">
+                        Sometimes, people stop starting things entirely, because they no longer trust themselves to continue.
+                    </p>
+                </div>
             </div>
 
-            <!-- SECTION 5: THE INVISIBLE LOOP (With ambient scrolling text) -->
-            <section class="relative py-48 my-24 overflow-hidden reveal">
-                <div class="absolute inset-0 flex items-center justify-center whitespace-nowrap z-0 pointer-events-none opacity-[0.03] text-[8rem] md:text-[12rem] font-display font-bold text-neutral-900 dark:text-white tracking-widest uppercase select-none animate-slide-left">
-                    REPEAT FAMILIAR AUTOMATIC NORMAL REPEAT FAMILIAR AUTOMATIC NORMAL
+            <!-- SECTION 5: THE INVISIBLE LOOP (With Slow Faint Background) -->
+            <section class="relative py-40 my-32 reveal">
+                <!-- Faint Moving Background Text -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none z-[-1] flex items-center justify-center mix-blend-overlay">
+                    <div class="flex whitespace-nowrap animate-slide-left-slow opacity-[0.02] dark:opacity-[0.03]">
+                        <span class="font-display italic text-[8rem] md:text-[12rem] font-normal text-neutral-900 dark:text-white mx-8 select-none">
+                            repeat &nbsp; familiar &nbsp; automatic &nbsp; normal &nbsp;
+                            repeat &nbsp; familiar &nbsp; automatic &nbsp; normal &nbsp;
+                        </span>
+                    </div>
                 </div>
-                
-                <div class="relative z-10 space-y-6">
-                    <p>Over time,<br>repetition becomes expectation.</p>
-                    <p class="text-neutral-900 dark:text-white font-medium pt-4">And expectation quietly becomes identity.</p>
-                    <p class="pt-6">Not consciously.</p>
-                    <p>Gradually.</p>
+
+                <div class="relative z-10 space-y-6 text-center">
+                    <p class="text-xl md:text-2xl text-neutral-900 dark:text-white font-medium">Over time, repetition becomes expectation.</p>
+                    <p class="text-xl md:text-2xl text-neutral-900 dark:text-white font-medium">And expectation quietly becomes identity.</p>
+                    
+                    <div class="pt-12 space-y-2 text-neutral-500 italic">
+                        <p>Not consciously.</p>
+                        <p>Gradually.</p>
+                    </div>
                 </div>
             </section>
 
             <!-- SECTION 6: WHY WILLPOWER FAILS -->
-            <div class="reveal space-y-6 my-24">
+            <div class="reveal space-y-8 my-24">
                 <p>This is why effort alone often fades.</p>
                 
-                <p class="pt-4">
-                    For a while,<br>
-                    you can force yourself forward.
-                </p>
-                
-                <p class="pt-4">
-                    But eventually,<br>
-                    most people return to what feels psychologically familiar.
-                </p>
-                
-                <p class="text-neutral-900 dark:text-white font-medium pt-4">Even when they genuinely want something different.</p>
+                <p>For a while, you can force yourself forward.</p>
+
+                <p>But eventually, most people return to what feels psychologically familiar.</p>
+
+                <p class="text-neutral-900 dark:text-white font-medium">Even when they genuinely want something different.</p>
             </div>
 
             <!-- SECTION 7: REFRAME -->
-            <div class="reveal space-y-6 my-24">
-                <p class="text-2xl text-neutral-900 dark:text-white font-display italic">This does not mean you are broken.</p>
+            <div class="reveal space-y-8 my-24">
+                <p>This does not mean you are broken.</p>
+
                 <p>It means repetition has been shaping you quietly for longer than you realized.</p>
-                
-                <p class="text-neutral-900 dark:text-white font-medium pt-8">And what has been shaped gradually<br>can also be changed gradually.</p>
+
+                <p class="pt-8 text-neutral-900 dark:text-white font-medium italic">
+                    And what has been shaped gradually can also be changed gradually.
+                </p>
             </div>
 
-            <!-- SECTION 8: TRANSITION -->
-            <div class="reveal space-y-6 my-32 pb-16 text-center">
-                <p>But identity is not the only thing involved.</p>
-                <p>Attention matters too.</p>
+            <!-- SECTION 8: TRANSITION TO FOCUS -->
+            <div class="reveal space-y-8 mt-32 mb-24 pb-16 text-center border-b border-neutral-200/40 dark:border-white/5">
+                <p class="text-xl text-neutral-900 dark:text-white">But identity is not the only thing involved.</p>
                 
-                <p class="text-xl text-neutral-900 dark:text-white font-medium pt-6 pb-12">
-                    Because where your attention repeatedly goes<br>shapes what becomes reinforced next.
-                </p>
+                <p class="text-xl text-neutral-900 dark:text-white">Attention matters too.</p>
 
-                <a href="/focus.html" class="button-press inline-flex items-center justify-center bg-[#111] dark:bg-white text-white dark:text-[#111] px-10 py-4 rounded-full uppercase tracking-[0.1em] font-bold text-sm transition-all duration-300">
-                    Continue to Focus →
-                </a>
+                <p class="pt-6 text-neutral-600 dark:text-neutral-400">Because where your attention repeatedly goes shapes what becomes reinforced next.</p>
+
+                <div class="pt-20 pb-8">
+                    <a href="/focus.html" class="button-press inline-flex items-center justify-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-12 py-4 rounded-full uppercase tracking-[0.15em] font-bold text-xs transition-colors hover:bg-neutral-100 dark:hover:bg-white/5">
+                        Continue to Focus →
+                    </a>
+                </div>
             </div>
 
         </article>
 
-        <!-- FAQ SECTION -->
-        <section class="mb-32 pt-16 border-t border-neutral-200 dark:border-white/10 reveal">
-            <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-12">Questions people quietly ask themselves</h3>
+        <!-- FAQ SECTION (Questions people quietly ask themselves) -->
+        <section class="mb-32 pt-16 reveal">
+            <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-16 text-center md:text-left">Questions people quietly ask themselves</h3>
             
-            <div class="space-y-12 text-lg text-neutral-600 dark:text-neutral-400 font-light">
+            <div class="space-y-16 text-lg text-neutral-600 dark:text-neutral-400 font-light">
                 <div>
-                    <p class="text-neutral-900 dark:text-white font-medium mb-3">Why do I keep repeating the same habits?</p>
-                    <p>Because repeated behavior slowly becomes psychologically familiar, even when it creates frustration.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Why do I keep repeating the same habits?</p>
+                    <p>Because repeated behavior slowly becomes psychologically familiar, even when it creates frustration. The mind naturally gravitates back toward what it knows best, rather than expending the energy required to sustain something new.</p>
                 </div>
                 <div>
-                    <p class="text-neutral-900 dark:text-white font-medium mb-3">Why does change feel temporary?</p>
-                    <p>Many people try to change behavior without understanding the deeper patterns that already feel normal internally.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Why does change feel temporary?</p>
+                    <p>Many people try to change behavior without understanding the deeper patterns that already feel normal internally. You are not only changing an action; you are moving away from what has psychologically started to feel like "you."</p>
                 </div>
                 <div>
-                    <p class="text-neutral-900 dark:text-white font-medium mb-3">Is identity fixed?</p>
-                    <p>No. Identity shifts gradually through repetition, environment, attention, and reinforcement.</p>
+                    <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Is identity fixed?</p>
+                    <p>No. Identity shifts gradually through repetition, environment, attention, and reinforcement. It is a slow accumulation of what you continuously participate in.</p>
                 </div>
             </div>
         </section>
 
-        <!-- NEWSLETTER CAPTURE -->
-        <section class="mb-32 reveal">
-            <div class="calm-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-                <p class="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-8 font-bold">For people trying to understand themselves more clearly.</p>
+        <!-- NEWSLETTER CAPTURE (Minimalist Restraint) -->
+        <section class="mb-32 reveal border-t border-neutral-200/40 dark:border-white/5 pt-32">
+            <div class="max-w-md mx-auto text-center relative">
+                <p class="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-8 font-bold">For people trying to understand themselves more clearly.</p>
                 
-                <div class="mb-12 space-y-4">
-                    <h3 class="font-display text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Clear thinking.<br>Shared from time to time.</h3>
-                    <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">Nothing frequent.</p>
-                    <p class="text-lg font-light text-neutral-600 dark:text-neutral-400">Only when there is something worth noticing.</p>
+                <div class="mb-10 space-y-4">
+                    <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white leading-tight mb-6">Clear thinking.<br>Shared from time to time.</h3>
+                    <p class="text-base font-light text-neutral-600 dark:text-neutral-400">Nothing frequent.</p>
+                    <p class="text-base font-light text-neutral-600 dark:text-neutral-400">Only when there is something worth noticing.</p>
                 </div>
 
-                <form id="email-form" action="https://wordsofwisdom.us16.list-manage.com/subscribe/post?u=f93e8d83bebb12d63d518821f&id=4f53207cea&f_id=00b5c2e1f0" method="post" novalidate class="max-w-sm mx-auto space-y-4">
-                    <input type="email" name="EMAIL" required placeholder="Enter your email" autocomplete="email" inputmode="email" spellcheck="false" aria-label="Email address" class="w-full bg-white/50 dark:bg-black/40 border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-6 py-5 rounded-2xl focus:outline-none focus:border-brand-teal transition-all placeholder:text-neutral-400 text-center shadow-inner">
+                <form id="email-form" action="https://wordsofwisdom.us16.list-manage.com/subscribe/post?u=f93e8d83bebb12d63d518821f&id=4f53207cea&f_id=00b5c2e1f0" method="post" novalidate class="w-full space-y-4 mt-12">
+                    <input type="email" name="EMAIL" required placeholder="Enter your email" autocomplete="email" inputmode="email" spellcheck="false" aria-label="Email address" class="w-full bg-white/40 dark:bg-black/20 border border-neutral-300 dark:border-white/10 text-neutral-900 dark:text-white px-6 py-4 rounded-xl focus:outline-none focus:border-brand-teal transition-all placeholder:text-neutral-400 text-center text-sm shadow-inner">
                     <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_f93e8d83bebb12d63d518821f_4f53207cea" tabindex="-1" value=""></div>
-                    <button id="submit-btn" type="submit" class="button-press w-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300 shadow-md">Continue</button>
-                    <div class="pt-6 space-y-2"><p class="text-[10px] uppercase tracking-wider text-neutral-500">No noise. Leave anytime.</p></div>
+                    <button id="submit-btn" type="submit" class="button-press w-full btn-premium bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300">Continue</button>
+                    <div class="pt-4"><p class="text-[10px] uppercase tracking-wider text-neutral-500">No noise. Leave anytime.</p></div>
                 </form>
             </div>
         </section>
 
         <!-- FINAL CLOSE -->
-        <section class="py-24 fade-up text-center border-t border-neutral-200 dark:border-white/10 relative z-10">
-            <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light space-y-6">
+        <section class="py-32 fade-up text-center border-t border-neutral-200/40 dark:border-white/5 relative z-10 mt-32">
+            <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light space-y-8 max-w-xl mx-auto">
                 <p class="reveal">You do not become yourself suddenly.</p>
                 <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">You become yourself through repetition.</p>
                 
-                <p class="reveal delay-2 pt-8">Quietly.<br>Gradually.<br>Over time.</p>
-
-                <p class="reveal delay-3 pt-12 font-display text-3xl italic text-neutral-900 dark:text-white">And most of it happens before you fully notice it.</p>
+                <div class="reveal delay-2 pt-12 pb-12 italic text-neutral-500 space-y-4 font-display text-2xl md:text-3xl">
+                    <p>Quietly.</p>
+                    <p>Gradually.</p>
+                    <p>Over time.</p>
+                </div>
+                
+                <p class="reveal delay-3 pt-8 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white">
+                    And most of it happens before you fully notice it.
+                </p>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- HIGH-END FOOTER WITH AUTHOR LINK -->
     <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
         <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
 
-        <div class="max-w-5xl mx-auto flex flex-col items-center relative z-10">
-            <a href="/" class="flex flex-col items-center gap-5 mb-16 hover:opacity-90 transition-opacity">
-                <div class="h-24 w-24 flex items-center justify-center overflow-visible">
-                    <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
-                    <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
-                </div>
-                <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
-            </a>
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl">
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-80 transition-opacity duration-500">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="Words of Wisdom Media Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="Words of Wisdom Media Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom Media</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">The Journey</p>
                     <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
@@ -590,10 +554,10 @@
             </div>
             
             <div class="flex items-center space-x-8 mb-16 justify-center">
-                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
             <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
@@ -608,10 +572,12 @@
         </div>
     </footer>
 
-    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full glass-base shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal button-press group focus:outline-none">
-        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
+        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
+    <!-- INTERACTION LOGIC (Simplified & Restrained) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toggleTheme = () => {
@@ -631,16 +597,16 @@
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
             const backToTopBtn = document.getElementById('back-to-top');
-            if(backToTopBtn) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 500) {
-                        backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
-                    } else {
-                        backToTopBtn.classList.add('translate-y-20', 'opacity-0');
-                    }
-                });
-                backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-            }
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
             // Mailchimp AJAX Submission
             const emailForm = document.getElementById('email-form');
@@ -649,6 +615,7 @@
             if (emailForm && submitBtn) {
                 emailForm.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    
                     const emailInput = emailForm.querySelector('input[name="EMAIL"]');
                     const email = emailInput ? emailInput.value.trim() : '';
                     if (!email || !email.includes('@')) return;
@@ -663,6 +630,7 @@
                     window[callbackName] = function(data) {
                         delete window[callbackName];
                         document.body.removeChild(script);
+                        
                         if (data.result === 'success' || (data.result === 'error' && data.msg.toLowerCase().includes('already'))) {
                             window.location.href = 'https://wordsofwisdom.in/thank-you.html';
                         } else {
@@ -675,9 +643,11 @@
                     };
 
                     const script = document.createElement('script');
+                    const encodedEmail = encodeURIComponent(email);
                     const honeypotInput = emailForm.querySelector('input[name^="b_"]');
                     const honeypotParam = honeypotInput ? `&${honeypotInput.name}=${encodeURIComponent(honeypotInput.value)}` : '';
-                    script.src = `${url}&EMAIL=${encodeURIComponent(email)}${honeypotParam}&c=${callbackName}`;
+                    
+                    script.src = `${url}&EMAIL=${encodedEmail}${honeypotParam}&c=${callbackName}`;
                     document.body.appendChild(script);
                 });
             }
