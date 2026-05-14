@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL SEO & AEO METADATA -->
+    <title>Daily Check | A Quiet Reset for Attention and Clarity | Words of Wisdom</title>
+    <meta name="description" content="A calm daily reflection tool designed to reduce mental noise, support attention, and help you reconnect with one meaningful direction.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/tools/daily-check.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Daily Check | A Quiet Reset for Attention and Clarity">
+    <meta property="og:description" content="A calm daily reflection tool designed to reduce mental noise and reconnect attention with what matters most.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordsofwisdom.in/tools/daily-check.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/assets/og/daily-check.jpg">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily Check | A Quiet Reset for Attention and Clarity">
+    <meta name="twitter:description" content="A quiet daily reset for attention, clarity, and intentional action.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/daily-check.jpg">
+
+    <!-- SCHEMA (AEO Optimized) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Words of Wisdom",
+          "url": "https://wordsofwisdom.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wordsofwisdom.in/assets/images/logo.png"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Daily Check",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Web",
+          "url": "https://wordsofwisdom.in/tools/daily-check.html",
+          "description": "A calm daily reflection tool designed to support attention, clarity, and intentional daily awareness."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Daily Check tool for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Daily Check is a quiet reflection tool designed to reduce mental clutter and help people reconnect with one meaningful direction each day."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this a productivity tracker?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The tool is designed for awareness and clarity, not performance tracking or optimization."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should I use it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many people use it once daily as a calm mental reset before work, study, or reflection."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#070707',
+                            teal: '#2DD4BF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-brand-dark text-[#F5F5F4] antialiased selection:bg-brand-teal/20 overflow-x-hidden; 
+            }
+            
+            .input-underlined {
+                @apply w-full bg-transparent border-b border-white/10 py-4 text-xl md:text-2xl font-display italic focus:outline-none focus:border-brand-teal/50 transition-colors placeholder:text-white/10;
+            }
+
+            .matte-card {
+                @apply bg-white/[0.03] border border-white/[0.05] rounded-[2rem] p-8 md:p-12 transition-all duration-700;
+            }
+
+            .pill-choice {
+                @apply px-6 py-3 rounded-full border border-white/5 bg-white/[0.02] text-sm text-white/60 hover:text-white hover:bg-white/5 hover:border-white/10 transition-all cursor-pointer whitespace-nowrap;
+            }
+
+            .pill-choice.active {
+                @apply bg-brand-teal/[0.08] border-brand-teal/30 text-brand-teal shadow-[0_0_20px_rgba(45,212,191,0.05)];
+            }
+        }
+
+        /* Ambient Drift Words */
+        .ambient-word {
+            position: fixed;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: white;
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 0;
+            animation: drift 60s linear infinite;
+        }
+
+        @keyframes drift {
+            from { transform: translate(0, 0) rotate(0deg); }
+            to { transform: translate(100px, -100px) rotate(5deg); }
+        }
+
+        /* Cinematic Transitions */
+        .fade-up {
+            animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .view-transition {
+            transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+        }
+
+        .hidden-view {
+            opacity: 0;
+            filter: blur(20px);
+            transform: translateY(-20px);
+            pointer-events: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center">
+
+    <!-- Ambient Drift Layer -->
+    <div class="ambient-word text-4xl top-[10%] left-[5%]" style="animation-delay: 0s;">pause</div>
+    <div class="ambient-word text-6xl top-[40%] right-[10%]" style="animation-delay: -15s;">notice</div>
+    <div class="ambient-word text-3xl bottom-[20%] left-[15%]" style="animation-delay: -30s;">return</div>
+    <div class="ambient-word text-5xl top-[70%] right-[20%]" style="animation-delay: -45s;">breathe</div>
+    <div class="ambient-word text-2xl top-[5%] right-[30%]" style="animation-delay: -10s;">clarity</div>
+
+    <!-- MAIN INTERFACE -->
+    <main id="main-interface" class="max-w-[640px] w-full px-6 pt-32 pb-48 relative z-10 fade-up view-transition">
+        
+        <!-- HERO -->
+        <header class="mb-24 text-center">
+            <span class="text-[10px] font-bold tracking-[0.4em] text-brand-teal uppercase mb-4 block">Daily Check</span>
+            <h1 class="font-display text-4xl md:text-5xl text-white mb-6">A quieter way to begin the day</h1>
+            <p class="text-white/50 font-light leading-relaxed max-w-md mx-auto">
+                A short daily reflection designed to reduce mental noise, reconnect attention, and help you move through the day more intentionally.
+            </p>
+            <p class="text-[10px] font-bold tracking-widest text-white/20 mt-8 uppercase">No tracking. No pressure. No perfect streaks.</p>
+        </header>
+
+        <!-- TOOL SECTIONS -->
+        <div class="space-y-24">
+            
+            <!-- 1. MIND STATE -->
+            <section class="space-y-8">
+                <h2 class="font-display text-2xl italic text-white/90 text-center">How does your mind feel right now?</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Clear</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Scattered</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Overloaded</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Restless</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Avoiding</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Tired</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Focused</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'mindState')">Uncertain</div>
+                </div>
+            </section>
+
+            <!-- 2. ONE DIRECTION -->
+            <section class="space-y-8">
+                <h2 class="font-display text-2xl italic text-white/90 text-center">What matters most today?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="one-direction" placeholder="One meaningful direction..." class="input-underlined text-center">
+                </div>
+            </section>
+
+            <!-- 3. ATTENTION AWARENESS -->
+            <section class="space-y-8">
+                <h2 class="font-display text-2xl italic text-white/90 text-center">What will most likely pull your attention away?</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Phone checking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Overthinking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Notifications</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Switching tasks</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Avoidance</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Mental fatigue</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Scrolling</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'distractions', true)">Too many open tabs</div>
+                </div>
+                <p class="text-center text-[10px] uppercase tracking-widest text-white/30 pt-4">Noticing patterns matters more than judging them.</p>
+            </section>
+
+            <!-- 4. SMALL ACTION -->
+            <section class="space-y-8">
+                <h2 class="font-display text-2xl italic text-white/90 text-center">What feels possible right now?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="small-action" placeholder="A small beginning..." class="input-underlined text-center">
+                </div>
+            </section>
+
+            <!-- 5. END REFLECTION -->
+            <section class="py-12 text-center space-y-8">
+                <div class="space-y-4">
+                    <p class="font-display text-3xl md:text-4xl text-white/90 leading-tight">
+                        You do not need to solve everything today.
+                    </p>
+                    <p class="font-display text-2xl italic text-white/40">
+                        You only need a clearer next direction.
+                    </p>
+                </div>
+                <p class="text-xs uppercase tracking-[0.2em] text-white/20">Small intentional movement matters more than most people realize.</p>
+            </section>
+
+            <!-- SAVE BUTTON -->
+            <div class="flex justify-center pt-12">
+                <button onclick="saveQuietly()" class="group flex items-center space-x-4 bg-transparent border border-white/10 hover:border-brand-teal/40 px-12 py-5 rounded-full transition-all duration-500">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 group-hover:text-brand-teal">Save quietly</span>
+                    <span class="text-white/30 group-hover:text-brand-teal transition-transform group-hover:translate-x-1">→</span>
+                </button>
+            </div>
+            
+            <p class="text-center text-[10px] uppercase tracking-widest text-white/10 mt-6">Your reflections stay on your device.</p>
+
+        </div>
+
+        <!-- Branding Footer -->
+        <footer class="mt-48 text-center opacity-20 hover:opacity-100 transition-opacity duration-700">
+            <a href="https://wordsofwisdom.in" class="text-[10px] font-bold uppercase tracking-[0.4em] font-sans hover:text-brand-teal transition-colors">www.wordsofwisdom.in</a>
+        </footer>
+    </main>
+
+    <!-- SUCCESS VIEW -->
+    <div id="success-view" class="fixed inset-0 flex flex-col justify-center items-center px-6 text-center view-transition hidden-view">
+        <div class="space-y-12">
+            <h2 class="font-display text-4xl md:text-6xl text-white italic">Return tomorrow when the mind feels crowded again.</h2>
+            <div class="pt-8">
+                <button onclick="resetView()" class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 hover:text-white transition-colors">← Review Reflection</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE LOGIC -->
+    <script>
+        const STORAGE_KEY = 'wow_daily_check_v1';
+        let currentData = {
+            mindState: '',
+            priority: '',
+            distractions: [],
+            smallAction: '',
+            timestamp: null
+        };
+
+        // Load data if available
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                // Only load if it's from today
+                const savedDate = new Date(parsed.timestamp).toDateString();
+                const today = new Date().toDateString();
+                
+                if (savedDate === today) {
+                    currentData = parsed;
+                    populateInterface();
+                }
+            }
+        });
+
+        function togglePill(el, category, multi = false) {
+            const value = el.innerText;
+            
+            if (!multi) {
+                // Clear others in same category
+                const parent = el.parentElement;
+                parent.querySelectorAll('.pill-choice').forEach(p => p.classList.remove('active'));
+                el.classList.add('active');
+                currentData[category] = value;
+            } else {
+                // Toggle multi-select
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active');
+                    currentData[category] = currentData[category].filter(v => v !== value);
+                } else {
+                    el.classList.add('active');
+                    currentData[category].push(value);
+                }
+            }
+        }
+
+        function populateInterface() {
+            // Restore pills
+            document.querySelectorAll('.pill-choice').forEach(pill => {
+                const val = pill.innerText;
+                if (currentData.mindState === val || currentData.distractions.includes(val)) {
+                    pill.classList.add('active');
+                }
+            });
+            // Restore inputs
+            document.getElementById('one-direction').value = currentData.priority || '';
+            document.getElementById('small-action').value = currentData.smallAction || '';
+        }
+
+        function saveQuietly() {
+            currentData.priority = document.getElementById('one-direction').value;
+            currentData.smallAction = document.getElementById('small-action').value;
+            currentData.timestamp = new Date().getTime();
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+
+            // View Transition
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            main.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                success.classList.remove('hidden-view');
+            }, 500);
+        }
+
+        function resetView() {
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            success.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                main.classList.remove('hidden-view');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
