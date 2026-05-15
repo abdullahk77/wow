@@ -218,18 +218,18 @@
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
                 <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none ml-2" aria-label="Toggle Dark Mode">
-                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
                 </button>
             </div>
 
             <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center whitespace-nowrap hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">START HERE</a>
 
             <div class="flex lg:hidden items-center space-x-4">
-                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white p-1 focus:outline-none">
-                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-width="2"/></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-width="2"/></svg>
                 </button>
                 <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -239,7 +239,7 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-500">
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
         <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
         <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Identity</a>
         <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Focus</a>
@@ -255,78 +255,62 @@
         <header class="mb-32 text-center md:text-left">
             <span class="reveal block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-8">PHASE 03</span>
             
-            <h1 class="reveal delay-1 font-display text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-6">
+            <h1 class="reveal delay-1 font-display text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-8 text-center md:text-left">
                 Action.
             </h1>
             
-            <p class="reveal delay-2 font-display text-[1.8rem] md:text-4xl lg:text-[2.5rem] text-neutral-500 dark:text-neutral-400 opacity-90 mb-16 max-w-3xl leading-tight">
+            <p class="reveal delay-2 font-display text-3xl md:text-4xl lg:text-5xl text-neutral-500 dark:text-neutral-400 opacity-90 mb-16 max-w-2xl leading-tight text-center md:text-left mx-auto md:mx-0">
                 Why starting feels difficult even when you want change.
             </p>
 
-            <!-- FEATURED SUPERB SVG IMAGE (Interactive Path Emergence - THE RETHINK) -->
+            <!-- FEATURED TARGET VISUAL (Interactive Focus & Precision - Locked to screenshot aesthetic) -->
             <div id="action-hero-visual" class="w-full h-[350px] md:h-[450px] rounded-[1rem] overflow-hidden reveal delay-3 relative mb-24 bg-neutral-50/50 dark:bg-[#050507]/50 flex items-center justify-center border border-neutral-200/50 dark:border-white/5 cursor-crosshair group" style="perspective: 1000px;">
                 <div class="relative w-full max-w-sm aspect-square flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-[1.02]">
                     
-                    <!-- Concept: Movement despite Inertia / Breach of Resistance -->
+                    <!-- Concept: The Precision Target (Locked-In Decisive Action) -->
                     <svg viewBox="0 0 800 800" class="w-full h-full opacity-90" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <filter id="glow-action" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="14" result="blur" />
+                            <filter id="glow-target" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="12" result="blur" />
                                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
                             </filter>
-                            <filter id="fog-resistance" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="12" />
-                            </filter>
-                            <linearGradient id="path-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                                <stop offset="0%" stop-color="#525252" stop-opacity="0" />
-                                <stop offset="45%" stop-color="#525252" stop-opacity="0.6" />
-                                <stop offset="50%" stop-color="#2dd4bf" stop-opacity="1" />
-                                <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0" />
-                            </linearGradient>
                         </defs>
 
                         <!-- Ambient Base Light -->
-                        <circle cx="400" cy="400" r="280" class="fill-neutral-300 dark:fill-white opacity-[0.015] dark:opacity-[0.03]" />
+                        <circle cx="400" cy="400" r="220" class="fill-neutral-300 dark:fill-white opacity-[0.015] dark:opacity-[0.03]" />
 
-                        <!-- Layer 1: The Resistance Zone / Fog of Hesitation (Moves opposite to mouse) -->
-                        <g id="action-layer-1" class="transition-transform duration-[1.2s] ease-out" style="transform-origin: 400px 400px;">
-                            <!-- Top Left Minimal Context Node -->
-                            <circle cx="100" cy="100" r="18" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1.5" fill="none" opacity="0.4" />
+                        <!-- Layer 1: Background Reticle & Static Nodes (Moves opposite to mouse) -->
+                        <g id="target-layer-1" class="transition-transform duration-[1.2s] ease-out" style="transform-origin: 400px 400px;">
+                            <!-- Large Outer Dashed Orbit -->
+                            <circle cx="400" cy="400" r="280" class="stroke-neutral-300 dark:stroke-neutral-700" stroke-width="0.75" fill="none" stroke-dasharray="2 16" opacity="0.4" />
                             
-                            <!-- Blurred horizontal field representing psychological inertia -->
-                            <ellipse cx="400" cy="450" rx="350" ry="120" class="fill-neutral-300 dark:fill-neutral-800" filter="url(#fog-resistance)" opacity="0.4" />
-                            
-                            <!-- Static 'Grid of Preparation' (The avoidance loop) -->
-                            <g class="stroke-neutral-400 dark:stroke-neutral-700" stroke-width="0.5" fill="none" opacity="0.3">
-                                <line x1="100" y1="500" x2="700" y2="500" />
-                                <line x1="100" y1="540" x2="700" y2="540" />
-                                <line x1="100" y1="580" x2="700" y2="580" />
+                            <!-- Main Crosshair Axis -->
+                            <g class="stroke-neutral-300 dark:stroke-neutral-800" stroke-width="0.75" fill="none" opacity="0.3">
+                                <line x1="120" y1="400" x2="680" y2="400" />
+                                <line x1="400" y1="120" x2="400" y2="680" />
                             </g>
                         </g>
 
-                        <!-- Layer 2: The Action trajectory / The Breach (Moves with mouse) -->
-                        <g id="action-layer-2" class="transition-transform duration-[0.8s] ease-out">
-                            <!-- Diagonal Axis Line representing the 'intended' direction -->
-                            <line x1="200" y1="650" x2="600" y2="150" class="stroke-neutral-400 dark:stroke-neutral-700" stroke-width="1.5" stroke-dasharray="4 12" opacity="0.4" />
+                        <!-- Layer 2: Intermediate Cardinal Nodes (Moves slightly with mouse) -->
+                        <g id="target-layer-2" class="transition-transform duration-[0.8s] ease-out" style="transform-origin: 400px 400px;">
+                            <!-- The Inner Ring of Intention -->
+                            <circle cx="400" cy="400" r="140" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" stroke-dasharray="4 8" opacity="0.5" />
                             
-                            <!-- The Curved Emergence Line -->
-                            <path d="M 250 700 Q 400 450 600 150" stroke="url(#path-gradient)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.95" />
-                            
-                            <!-- Detached particles stuck below the threshold -->
-                            <circle cx="340" cy="580" r="3" class="fill-neutral-400 dark:fill-neutral-600" opacity="0.5" />
-                            <circle cx="380" cy="620" r="2" class="fill-neutral-400 dark:fill-neutral-600" opacity="0.3" />
+                            <!-- Static Precision Dots at cardinal points -->
+                            <circle cx="400" cy="260" r="2.5" class="fill-neutral-400 dark:fill-neutral-500" opacity="0.6" />
+                            <circle cx="400" cy="540" r="2.5" class="fill-neutral-400 dark:fill-neutral-500" opacity="0.6" />
+                            <circle cx="260" cy="400" r="2.5" class="fill-neutral-400 dark:fill-neutral-500" opacity="0.6" />
+                            <circle cx="540" cy="400" r="2.5" class="fill-neutral-400 dark:fill-neutral-500" opacity="0.6" />
                         </g>
 
-                        <!-- Layer 3: The Active Decision Node (Most active movement) -->
-                        <g id="action-layer-3" class="transition-transform duration-[0.4s] ease-out">
-                            <!-- The glowing Breach Node (The moment action thins the fog) -->
-                            <circle cx="400" cy="450" r="14" class="fill-brand-teal" filter="url(#glow-action)" opacity="0.9" />
-                            <circle cx="400" cy="450" r="5" fill="#ffffff" opacity="1" />
+                        <!-- Layer 3: The Target Node / Action Point (Most active movement) -->
+                        <g id="target-layer-3" class="transition-transform duration-[0.4s] ease-out">
+                            <!-- Reticle Ring -->
+                            <circle cx="400" cy="400" r="55" class="stroke-brand-teal" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glow-target)" />
                             
-                            <!-- Forward momentum trails -->
-                            <g class="animate-[pulse_5s_ease-in-out_infinite]">
-                                <path d="M 430 400 L 460 350" class="stroke-brand-teal" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.7" filter="url(#glow-action)" />
-                            </g>
+                            <!-- The Glowing Action Node (from reference screenshot) -->
+                            <circle cx="400" cy="400" r="16" class="fill-brand-teal" filter="url(#glow-target)" opacity="0.9" />
+                            <circle cx="400" cy="400" r="5" fill="#ffffff" />
                         </g>
                     </svg>
 
@@ -334,10 +318,10 @@
             </div>
 
             <div class="article-body text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide space-y-8 text-left">
-                <p class="reveal delay-3">Most people think action begins when motivation appears.</p>
-                <p class="reveal delay-3">But many important actions begin long before you feel fully ready.</p>
+                <p class="reveal delay-3">Many people wait to feel motivated before they begin.</p>
+                <p class="reveal delay-3">But most important decisions in life happen before you feel completely ready.</p>
                 
-                <p class="reveal delay-3 pt-6 text-neutral-900 dark:text-white font-medium">The difficulty is not always knowing what to do.<br>Often, the difficulty is beginning while uncertainty still exists.</p>
+                <p class="reveal delay-3 pt-6 text-neutral-900 dark:text-white font-medium">Most people already know what they need to do.<br>The difficult part is beginning while uncertainty still exists.</p>
             </div>
         </header>
 
@@ -367,14 +351,14 @@
                     <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white leading-[1.1] mb-8 !mt-0">
                         Action usually feels heavier<br>before it begins.
                     </h2>
-                    <p class="text-xl md:text-2xl text-neutral-500 italic max-w-2xl mx-auto">
+                    <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                         Because uncertainty feels uncomfortable. And the mind naturally tries to avoid discomfort whenever possible.
                     </p>
                 </div>
             </section>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">The hesitation before action</h2>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Why people keep waiting</h2>
                 <p>Many people are not incapable of action. They are stuck in hesitation.</p>
                 
                 <div class="pt-4 pb-4 italic text-neutral-500 space-y-2">
@@ -383,12 +367,13 @@
                     <p>They wait to feel ready.</p>
                 </div>
                 
-                <p>But readiness rarely arrives completely on its own.</p>
+                <p>But most people never suddenly feel fully ready.</p>
             </div>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">The invisible resistance</h2>
-                <p>Sometimes resistance appears as overthinking. Sometimes it appears as distraction. Sometimes it appears as endlessly searching for better systems, better timing, or better clarity.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">What resistance actually looks like</h2>
+                <p>Sometimes it looks like overthinking.</p>
+                <p>Sometimes it looks like endlessly researching, reorganizing, or waiting for a better moment.</p>
                 <p>But underneath all of it, there is often a quiet reluctance to step into uncertainty.</p>
                 
                 <div class="pt-16 pb-8">
@@ -409,12 +394,13 @@
                     <p>One repeated effort.</p>
                 </div>
                 
-                <p class="pt-8">This is why consistency matters more than intensity. Intensity appears briefly. Repeated action changes direction over time.</p>
+                <p class="pt-8">Big bursts of motivation rarely last.</p>
+                <p class="font-medium text-neutral-900 dark:text-white pt-2">But small actions repeated over time quietly change direction.</p>
             </div>
 
             <div class="reveal my-24">
                 <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">The shift</h2>
-                <p>Action becomes easier when the mind stops demanding complete certainty first.</p>
+                <p>Action becomes easier once you stop waiting to feel completely certain.</p>
                 <p class="pt-4 text-neutral-900 dark:text-white font-medium italic font-display text-2xl md:text-3xl leading-relaxed">
                     Not because fear disappears. But because movement begins anyway.
                 </p>
@@ -423,7 +409,7 @@
             <!-- TRANSITION -->
             <div class="reveal mt-32 mb-24 pb-16 text-center border-b border-neutral-200/40 dark:border-white/5">
                 <p class="text-xl text-neutral-900 dark:text-white mb-6">Most people are waiting to feel completely ready.</p>
-                <p class="text-xl text-neutral-900 dark:text-white font-medium mb-16">Many meaningful lives begin before that feeling arrives.</p>
+                <p class="text-xl text-neutral-900 dark:text-white font-medium mb-16">At some point, you realize waiting is also a decision.</p>
                 
                 <div class="pt-8 pb-8">
                     <a href="/start-here.html" class="editorial-cta font-display text-2xl text-neutral-900 dark:text-white group">
@@ -471,9 +457,9 @@
         <section class="py-32 fade-up text-center border-t border-neutral-200/40 dark:border-white/5 relative z-10">
             <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light space-y-8 max-w-xl mx-auto">
                 <p class="reveal">You do not need perfect certainty to begin.</p>
-                <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">You only need enough honesty to stop waiting forever.</p>
+                <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">At some point, you realize waiting is also a decision.</p>
                 <p class="reveal delay-2 pt-16 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white">
-                    Some of the most important changes in life<br>begin before you feel fully ready.
+                    Clear thinking matters.<br>But it is action that completes the thought.
                 </p>
             </div>
         </section>
@@ -526,7 +512,6 @@
                 </div>
             </div>
             
-            <!-- Social Icons Centered -->
             <div class="flex items-center space-x-8 mb-16 justify-center">
                 <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
@@ -534,14 +519,13 @@
                 <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <!-- Bottom Row: Legal + Trust Line -->
+            <!-- Bottom Row -->
             <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
                 <div class="flex flex-wrap justify-center gap-6 mb-2">
                     <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
                     <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
                     <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
                 </div>
-                
                 <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
                 <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
             </div>
@@ -550,7 +534,7 @@
 
     <!-- BACK TO TOP BUTTON -->
     <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
-        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </button>
 
     <!-- INTERACTION LOGIC -->
@@ -583,7 +567,7 @@
                 });
             }
 
-            // Scroll Fade-Up Animation (Editorial Soft Reveal)
+            // Scroll Fade-Up Animation
             const fadeElements = document.querySelectorAll('.reveal, .fade-up');
             const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
 
@@ -647,11 +631,11 @@
                 });
             }
 
-            // Interactive Parallax Visual Logic for Action Image (Rethink Version)
+            // Interactive Parallax Visual Logic (Reduced Intensity for Groundedness)
             const visualContainer = document.getElementById('action-hero-visual');
-            const layer1 = document.getElementById('action-layer-1');
-            const layer2 = document.getElementById('action-layer-2');
-            const layer3 = document.getElementById('action-layer-3');
+            const layer1 = document.getElementById('target-layer-1');
+            const layer2 = document.getElementById('target-layer-2');
+            const layer3 = document.getElementById('target-layer-3');
 
             if (visualContainer && layer1 && layer2 && layer3) {
                 visualContainer.addEventListener('mousemove', (e) => {
@@ -659,12 +643,10 @@
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
                     
-                    // Layer 1: The Resistance / Inertia Zone (Moves opposite for weight)
-                    layer1.style.transform = `translate(${x * -0.02}px, ${y * -0.02}px)`; 
-                    // Layer 2: The Emerge Path (Subtle alignment)
-                    layer2.style.transform = `translate(${x * 0.015}px, ${y * 0.015}px)`;   
-                    // Layer 3: The Breach Point (Most active forward movement)
-                    layer3.style.transform = `translate(${x * 0.04}px, ${y * 0.04}px)`;   
+                    // Creates grounded, directional depth levels (Reduced by 40%)
+                    layer1.style.transform = `translate(${x * -0.009}px, ${y * -0.009}px)`; 
+                    layer2.style.transform = `translate(${x * 0.009}px, ${y * 0.009}px)`;   
+                    layer3.style.transform = `translate(${x * 0.024}px, ${y * 0.024}px)`;   
                 });
 
                 visualContainer.addEventListener('mouseleave', () => {
