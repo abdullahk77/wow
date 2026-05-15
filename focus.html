@@ -174,7 +174,7 @@
         .glass-base { @apply backdrop-blur-2xl border transition-all duration-500; background: rgba(255, 255, 255, 0.8); border-color: rgba(255, 255, 255, 0.5); }
         .dark .glass-base { background: rgba(10, 10, 12, 0.8); border-color: rgba(255, 255, 255, 0.06); }
 
-        /* Precision Magnetic Cursor - Refined and Subdued */
+        /* Precision Magnetic Cursor */
         @media (pointer: fine) { body, a, button { cursor: none !important; } input, textarea, select { cursor: auto !important; } }
         .cursor-dot { position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; box-shadow: 0 0 4px rgba(255,255,255,0.35); border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; }
         .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.22); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, opacity 0.3s ease; opacity: 0; }
@@ -192,7 +192,6 @@
         .editorial-cta:hover { opacity: 1; }
 
         ::selection { background-color: #2dd4bf; color: #171717; }
-        .dark ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
@@ -219,7 +218,7 @@
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
                 <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none ml-2" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors ml-2" aria-label="Toggle Dark Mode">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
                 </button>
@@ -256,7 +255,7 @@
         <header class="mb-32 text-center md:text-left">
             <span class="reveal block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal mb-8">PHASE 02</span>
             
-            <h1 class="reveal delay-1 font-display text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] text-neutral-900 dark:text-white leading-[0.96] font-normal mb-6">
+            <h1 class="reveal delay-1 font-display text-[3.5rem] md:text-6xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-6">
                 Focus.
             </h1>
             
@@ -268,7 +267,6 @@
             <div id="focus-hero-visual" class="w-full h-[350px] md:h-[450px] rounded-[1rem] overflow-hidden reveal delay-3 relative mb-24 bg-neutral-50/50 dark:bg-[#050507]/50 flex items-center justify-center border border-neutral-200/50 dark:border-white/5 cursor-crosshair group" style="perspective: 1000px;">
                 <div class="relative w-full max-w-sm aspect-square flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-[1.02]">
                     
-                    <!-- Concept: Environmental Fragmentation & Scattered Attention -->
                     <svg viewBox="0 0 800 800" class="w-full h-full opacity-90" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="glow-focus" x="-50%" y="-50%" width="200%" height="200%">
@@ -282,44 +280,38 @@
                             </linearGradient>
                         </defs>
 
-                        <!-- Ambient Center Glow (Light & Dark compatible) -->
+                        <!-- Ambient Center Glow -->
                         <circle cx="400" cy="400" r="220" class="fill-brand-teal opacity-[0.08] dark:opacity-[0.05]" filter="url(#glow-focus)" />
 
-                        <!-- Layer 1: Environmental Noise / The Chaos (Moves quickly opposite to mouse) -->
+                        <!-- Layer 1: Environmental Noise -->
                         <g id="focus-layer-1" class="transition-transform duration-[1.2s] ease-out" style="transform-origin: 400px 400px;">
-                            <!-- Fragmented intersecting environment lines -->
                             <g class="stroke-neutral-400 dark:stroke-neutral-700" stroke-width="0.75" fill="none" opacity="0.6">
                                 <line x1="100" y1="200" x2="700" y2="600" stroke-dasharray="2 12" />
                                 <line x1="150" y1="700" x2="650" y2="100" stroke-dasharray="4 8" />
                                 <line x1="50" y1="450" x2="750" y2="350" stroke-dasharray="1 6" />
                             </g>
                             
-                            <!-- Unstable, misaligned outer tracking arcs -->
-                            <g class="origin-center animate-[spin_40s_linear_infinite]" style="transform-origin: 400px 400px;">
+                            <g class="origin-center animate-[spin_60s_linear_infinite]" style="transform-origin: 400px 400px;">
                                 <path d="M 200 400 A 200 200 0 0 1 400 200" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" stroke-dasharray="12 12" opacity="0.5" />
                                 <path d="M 600 400 A 200 200 0 0 1 400 600" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" stroke-dasharray="4 16" opacity="0.5" />
                             </g>
                         </g>
 
-                        <!-- Layer 2: Mental Switching / Drifting Paths (Moves slightly with mouse) -->
+                        <!-- Layer 2: Mental Switching Paths -->
                         <g id="focus-layer-2" class="transition-transform duration-[0.8s] ease-out" style="transform-origin: 400px 400px;">
-                            <!-- Erratic, glowing distraction streaks cutting through -->
                             <line x1="250" y1="150" x2="550" y2="650" stroke="url(#distraction-fade)" stroke-width="2" opacity="0.8" />
                             
-                            <!-- Rapidly spinning fragmented ring (Information overload) -->
-                            <g class="origin-center animate-[spin_15s_linear_infinite_reverse]" style="transform-origin: 400px 400px;">
+                            <!-- Information Overload Ring (Slower 30s Loop) -->
+                            <g class="origin-center animate-[spin_30s_linear_infinite_reverse]" style="transform-origin: 400px 400px;">
                                 <circle cx="400" cy="400" r="140" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1.5" fill="none" stroke-dasharray="40 120" opacity="0.6" />
                                 <circle cx="540" cy="400" r="3" class="fill-brand-teal" filter="url(#glow-focus)" opacity="0.9" />
                                 <circle cx="260" cy="400" r="3" class="fill-brand-teal" filter="url(#glow-focus)" opacity="0.6" />
                             </g>
                         </g>
 
-                        <!-- Layer 3: The Core Attention (Moves most actively with mouse, trying to stabilize) -->
+                        <!-- Layer 3: The Core Attention -->
                         <g id="focus-layer-3" class="transition-transform duration-[0.4s] ease-out">
-                            <!-- Inner reticle trying to lock on -->
                             <circle cx="400" cy="400" r="45" class="stroke-neutral-600 dark:stroke-neutral-400" stroke-width="0.5" fill="none" stroke-dasharray="4 4" opacity="0.7" />
-                            
-                            <!-- The glowing point of Focus -->
                             <circle cx="400" cy="400" r="8" class="fill-brand-teal" filter="url(#glow-focus)" opacity="0.95" />
                             <circle cx="400" cy="400" r="3" fill="#ffffff" opacity="1" />
                         </g>
@@ -329,8 +321,7 @@
             </div>
 
             <div class="article-body text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide space-y-8 text-left">
-                <p class="reveal delay-3">Most people do not lose focus all at once.</p>
-                <p class="reveal delay-3">Attention moves gradually.</p>
+                <p class="reveal delay-3">The mind rarely drifts all at once.</p>
                 
                 <div class="reveal delay-3 pt-4 pb-2 italic text-neutral-500 space-y-2">
                     <p>One interruption.</p>
@@ -339,7 +330,7 @@
                     <p>One quick check.</p>
                 </div>
                 
-                <p class="reveal delay-3 pt-6 text-neutral-900 dark:text-white font-medium">And before fully noticing it,<br>the mind is already somewhere else.</p>
+                <p class="reveal delay-3 pt-6 text-neutral-900 dark:text-white font-medium">And a few moments later,<br>your attention is somewhere else entirely.</p>
             </div>
         </header>
 
@@ -347,8 +338,7 @@
         <article class="article-body text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide">
             
             <div class="reveal mt-32 mb-24">
-                <p>You sit down to do something important.</p>
-                <p>For a moment, your attention is clear.</p>
+                <p>You sit down to do something important. For a moment, your attention is clear.</p>
                 <p>Then something small interrupts.</p>
                 
                 <div class="pt-4 pb-4 italic text-neutral-500 space-y-2">
@@ -376,24 +366,15 @@
             </section>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">The environmental reality</h2>
-                <p>Most attention problems do not begin internally.</p>
-                <p>They begin environmentally.</p>
-                
-                <div class="pt-4 pb-4 italic text-neutral-500 space-y-2">
-                    <p>What is visible pulls attention.</p>
-                    <p>What is easy captures it.</p>
-                    <p>What is already open competes for it.</p>
-                </div>
-                
-                <p>Modern environments continuously ask the mind to react.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Most attention problems begin around you</h2>
+                <p>Most attention problems do not begin internally. They begin environmentally. What is visible pulls attention. What is easy captures it. What is already open competes for it.</p>
+                <p>Modern environments constantly pull at attention.</p>
                 <p class="font-medium text-neutral-900 dark:text-white pt-4">Messages. Tabs. Notifications. Feeds. Noise.</p>
             </div>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Mental overload</h2>
-                <p>Many people are not incapable of focus.</p>
-                <p>They are overloaded.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">When the mind never fully settles</h2>
+                <p>Many people are not incapable of focus. They are overloaded.</p>
                 
                 <div class="pt-4 pb-4 italic text-neutral-500 space-y-2">
                     <p>Too much input.</p>
@@ -408,8 +389,8 @@
 
             <div class="reveal my-24">
                 <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Why forcing focus harder usually fails</h2>
-                <p>Attention does not become steadier through pressure alone.</p>
-                <p>It usually becomes steadier through reduction.</p>
+                <p>Most people try to force focus harder.</p>
+                <p>But attention usually becomes clearer when there is less pulling it away.</p>
                 
                 <div class="pt-4 pb-4 text-neutral-900 dark:text-white font-medium space-y-2">
                     <p>Less interruption.</p>
@@ -420,8 +401,8 @@
 
             <!-- TRANSITION -->
             <div class="reveal mt-32 mb-24 pb-16 text-center border-b border-neutral-200/40 dark:border-white/5">
-                <p class="text-xl text-neutral-900 dark:text-white mb-6">When there is less pulling attention away, the mind settles more naturally.</p>
-                <p class="text-xl text-neutral-900 dark:text-white mb-6">But even clear attention does not automatically create action.</p>
+                <p class="text-xl text-neutral-900 dark:text-white mb-6">When there is less competing for attention, it becomes easier to stay with one thing.</p>
+                <p class="text-xl text-neutral-900 dark:text-white font-medium mb-6">But even clear attention does not automatically create action.</p>
                 <p class="text-neutral-500 italic mb-16">Because starting is another struggle entirely.</p>
                 
                 <div class="pt-8 pb-8">
@@ -469,14 +450,11 @@
         <!-- FINAL CLOSE -->
         <section class="py-32 fade-up text-center border-t border-neutral-200/40 dark:border-white/5 relative z-10">
             <div class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light space-y-8 max-w-xl mx-auto">
-                <p class="reveal">You do not need perfect concentration.</p>
-                <p class="reveal delay-1 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white pt-8">
-                    You need fewer things competing for your attention.
+                <p class="reveal">Most people are not failing because they cannot focus.</p>
+                <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">They are trying to think clearly inside environments designed to interrupt them.</p>
+                <p class="reveal delay-2 pt-16 font-display text-3xl md:text-4xl italic text-neutral-900 dark:text-white">
+                    When the mind has fewer places to go,<br>it becomes easier to stay where you already are.
                 </p>
-                <div class="space-y-2 pt-8">
-                    <p class="reveal delay-2 text-neutral-500">When the mind has fewer places to go,</p>
-                    <p class="reveal delay-2 text-neutral-500">it becomes easier to stay where you already are.</p>
-                </div>
             </div>
         </section>
 
@@ -488,7 +466,6 @@
 
         <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
             
-            <!-- Centered Cursive Branding & Icon -->
             <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
                 <a href="/" class="flex flex-col items-center gap-5">
                     <div class="h-24 w-24 flex items-center justify-center overflow-visible">
@@ -500,35 +477,30 @@
                 <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking in a distracted world.</p>
             </div>
 
-            <!-- Global Footer Links (Centered Layout) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
-                
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">The Journey</p>
-                    <a href="/start-here.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
-                    <a href="/identity.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Identity</a>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
                     <a href="/focus.html" class="block text-brand-teal dark:text-white transition-colors">Focus</a>
-                    <a href="/action.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Action</a>
+                    <a href="/action.html" class="block hover:text-brand-teal transition-colors">Action</a>
                 </div>
-
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Explore</p>
-                    <a href="/library/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
-                    <a href="/programs/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Programs</a>
-                    <a href="/books/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Books</a>
-                    <a href="/tools/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Tools</a>
+                    <a href="/library/index.html" class="block hover:text-brand-teal transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
+                    <a href="/books/index.html" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
                 </div>
-
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Connect</p>
-                    <a href="/about.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">About</a>
-                    <a href="/author.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Author</a>
-                    <a href="/community.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Community</a>
-                    <a href="/contact.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Contact</a>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
             
-            <!-- Social Icons Centered -->
             <div class="flex items-center space-x-8 mb-16 justify-center">
                 <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
@@ -536,14 +508,12 @@
                 <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <!-- Bottom Row: Legal + Trust Line -->
             <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
                 <div class="flex flex-wrap justify-center gap-6 mb-2">
                     <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
                     <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
                     <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
                 </div>
-                
                 <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-brand-teal hover:text-neutral-900 dark:hover:text-white transition-colors">Abdullah Khan</a></p>
                 <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
             </div>
@@ -585,7 +555,7 @@
                 });
             }
 
-            // Scroll Fade-Up Animation (Editorial Soft Reveal)
+            // Scroll Fade-Up Animation
             const fadeElements = document.querySelectorAll('.reveal, .fade-up');
             const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
 
@@ -649,7 +619,7 @@
                 });
             }
 
-            // Interactive Parallax Visual Logic for Focus Image
+            // Interactive Parallax Visual Logic
             const visualContainer = document.getElementById('focus-hero-visual');
             const layer1 = document.getElementById('focus-layer-1');
             const layer2 = document.getElementById('focus-layer-2');
@@ -661,7 +631,6 @@
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
                     
-                    // Creates tense, distinct depth levels representing fragmentation
                     layer1.style.transform = `translate(${x * -0.04}px, ${y * -0.04}px)`; 
                     layer2.style.transform = `translate(${x * 0.03}px, ${y * 0.03}px)`;   
                     layer3.style.transform = `translate(${x * 0.01}px, ${y * 0.01}px)`;   
