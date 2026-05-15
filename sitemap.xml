@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Core Pages -->
+  <!-- CORE -->
 
   <url>
     <loc>https://wordsofwisdom.in/</loc>
@@ -16,7 +16,7 @@
   <url>
     <loc>https://wordsofwisdom.in/start-here.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
@@ -32,12 +32,6 @@
   </url>
 
   <url>
-    <loc>https://wordsofwisdom.in/books.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://wordsofwisdom.in/community.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -50,24 +44,70 @@
   </url>
 
   <url>
+    <loc>https://wordsofwisdom.in/newsletter.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/resources.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/recommendations.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- BRAND PHILOSOPHY -->
+
+  <url>
+    <loc>https://wordsofwisdom.in/manifesto.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/philosophy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/mission.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- FLAGSHIP -->
+
+  <url>
+    <loc>https://wordsofwisdom.in/identity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
     <loc>https://wordsofwisdom.in/focus.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/action.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
 
-  <url>
-    <loc>https://wordsofwisdom.in/identity.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Programs -->
+  <!-- PROGRAMS -->
 
   <url>
     <loc>https://wordsofwisdom.in/programs/index.html</loc>
@@ -84,16 +124,42 @@
   <url>
     <loc>https://wordsofwisdom.in/programs/attention-recovery.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/programs/consistency-framework.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- MINDSET -->
+
+  <url>
+    <loc>https://wordsofwisdom.in/mindset/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/mindset/action-approach.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Library -->
+  <url>
+    <loc>https://wordsofwisdom.in/mindset/deep-work-skill.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/mindset/mental-pattern.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LIBRARY -->
 
   <url>
     <loc>https://wordsofwisdom.in/library/index.html</loc>
@@ -104,47 +170,41 @@
   <url>
     <loc>https://wordsofwisdom.in/library/attention.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/overthinking.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/procrastination.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/consistency.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/library/focus.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/clarity.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/identity.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/library/discipline.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/library/focus.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -152,16 +212,22 @@
   <url>
     <loc>https://wordsofwisdom.in/library/dopamine.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://wordsofwisdom.in/library/discipline.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/library/habits.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
 
-  <!-- Insights -->
+  <!-- INSIGHTS -->
 
   <url>
     <loc>https://wordsofwisdom.in/insights/index.html</loc>
@@ -211,101 +277,71 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Tools -->
+  <!-- TOOLS -->
 
   <url>
     <loc>https://wordsofwisdom.in/tools/index.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/tools/pattern-journal.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/tools/focus-recovery.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/tools/daily-check.html</loc>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/tools/attention-audit.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/tools/clarity-check.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://wordsofwisdom.in/tools/overthinking-interruption.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://wordsofwisdom.in/tools/consistency-tracker.html</loc>
+    <loc>https://wordsofwisdom.in/tools/attention-audit.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Additional Pages -->
-
   <url>
-    <loc>https://wordsofwisdom.in/newsletter.html</loc>
+    <loc>https://wordsofwisdom.in/tools/focus-recovery.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://wordsofwisdom.in/resources.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/faq.html</loc>
+    <loc>https://wordsofwisdom.in/tools/pattern-journal.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://wordsofwisdom.in/recommendations.html</loc>
+    <loc>https://wordsofwisdom.in/tools/daily-return.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- BOOKS -->
+
+  <url>
+    <loc>https://wordsofwisdom.in/books/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://wordsofwisdom.in/manifesto.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://wordsofwisdom.in/books/the-right-question.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://wordsofwisdom.in/philosophy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wordsofwisdom.in/mission.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Legal -->
+  <!-- LEGAL -->
 
   <url>
     <loc>https://wordsofwisdom.in/privacy.html</loc>
@@ -325,7 +361,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Utility -->
+  <!-- UTILITY -->
 
   <url>
     <loc>https://wordsofwisdom.in/thank-you.html</loc>
