@@ -86,7 +86,7 @@
               "name": "Why do people keep returning to the same patterns?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "People usually return to what already feels familiar, even when they genuinely want something different."
+                "text": "People usually return to what already feels familiar, even when part of them wants something different."
               }
             },
             {
@@ -174,10 +174,10 @@
         .glass-base { @apply backdrop-blur-2xl border transition-all duration-500; background: rgba(255, 255, 255, 0.8); border-color: rgba(255, 255, 255, 0.5); }
         .dark .glass-base { background: rgba(10, 10, 12, 0.8); border-color: rgba(255, 255, 255, 0.06); }
 
-        /* Precision Magnetic Cursor - Refined and Subdued */
+        /* Precision Magnetic Cursor */
         @media (pointer: fine) { body, a, button { cursor: none !important; } input, textarea, select { cursor: auto !important; } }
-        .cursor-dot { position: fixed; top: 0; left: 0; width: 5px; height: 5px; background: #ffffff; box-shadow: 0 0 4px rgba(255,255,255,0.35); border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; }
-        .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.22); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, opacity 0.3s ease; opacity: 0; }
+        .cursor-dot { position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; box-shadow: 0 0 8px rgba(255,255,255,0.4); border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.3s ease; }
+        .cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1px solid rgba(45, 212, 191, 0.6); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, opacity 0.3s ease; }
         .cursor-ring.hover-active { width: 42px; height: 42px; border-color: rgba(45, 212, 191, 0.35); background: rgba(45, 212, 191, 0.03); }
 
         .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
@@ -192,7 +192,6 @@
         .editorial-cta:hover { opacity: 1; }
 
         ::selection { background-color: #2dd4bf; color: #171717; }
-        .dark ::selection { background-color: #2dd4bf; color: #171717; }
     </style>
 </head>
 <body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.1rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
@@ -219,7 +218,7 @@
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
                 <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
-                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors ml-2" aria-label="Toggle Dark Mode">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
                 </button>
@@ -284,35 +283,35 @@
                         </defs>
 
                         <!-- Ambient Center Glow (Light & Dark compatible) -->
-                        <circle cx="400" cy="400" r="220" class="fill-brand-teal opacity-[0.03] dark:opacity-[0.05]" filter="url(#glow-identity)" />
+                        <circle cx="400" cy="400" r="220" class="fill-brand-teal opacity-[0.06] dark:opacity-[0.05]" filter="url(#glow-identity)" />
 
-                        <!-- Layer 1: Background Noise / Faded Past Patterns (Moves away on hover) -->
+                        <!-- Layer 1: Background Noise / Faded Past Patterns -->
                         <g id="svg-layer-1" class="transition-transform duration-[1.2s] ease-out" style="transform-origin: 400px 400px;">
-                            <circle cx="400" cy="400" r="300" class="stroke-neutral-300 dark:stroke-neutral-700" stroke-width="1" fill="none" stroke-dasharray="2 12" opacity="0.5"/>
-                            <circle cx="400" cy="400" r="240" class="stroke-neutral-300 dark:stroke-neutral-700" stroke-width="0.5" fill="none" opacity="0.4"/>
+                            <circle cx="400" cy="400" r="300" class="stroke-neutral-400 dark:stroke-neutral-700" stroke-width="1" fill="none" stroke-dasharray="2 12" opacity="0.6"/>
+                            <circle cx="400" cy="400" r="240" class="stroke-neutral-400 dark:stroke-neutral-700" stroke-width="0.5" fill="none" opacity="0.5"/>
                         </g>
 
-                        <!-- Layer 2: The Forming Patterns / Repeated Behaviors (Moves slightly with mouse) -->
+                        <!-- Layer 2: The Forming Patterns / Repeated Behaviors -->
                         <g id="svg-layer-2" class="transition-transform duration-[0.8s] ease-out" style="transform-origin: 400px 400px;">
                             <g class="origin-center animate-[spin_120s_linear_infinite]" style="transform-origin: 400px 400px;">
                                 <!-- Overlapping ellipses creating a dense center -->
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(0 400 400)" />
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(30 400 400)" />
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(60 400 400)" />
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(90 400 400)" />
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(120 400 400)" />
-                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-400 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.3" transform="rotate(150 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(0 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(30 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(60 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(90 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(120 400 400)" />
+                                <ellipse cx="400" cy="400" rx="220" ry="40" class="stroke-neutral-500 dark:stroke-neutral-600" stroke-width="1" fill="none" opacity="0.4" transform="rotate(150 400 400)" />
                                 
-                                <!-- One highlighted, recurring active pattern bridging outside to inside -->
+                                <!-- Recurring pattern bridging outside to inside -->
                                 <ellipse cx="400" cy="400" rx="220" ry="40" stroke="url(#teal-fade)" stroke-width="1.5" fill="none" opacity="0.8" transform="rotate(75 400 400)" />
                             </g>
                         </g>
 
-                        <!-- Layer 3: The Core Identity (Moves most actively with mouse) -->
+                        <!-- Layer 3: The Core Identity -->
                         <g id="svg-layer-3" class="transition-transform duration-[0.4s] ease-out">
                             <!-- Inner density rings establishing the anchor -->
-                            <circle cx="400" cy="400" r="40" class="stroke-neutral-400 dark:stroke-neutral-500" stroke-width="1" fill="none" opacity="0.4" />
-                            <circle cx="400" cy="400" r="20" class="stroke-brand-teal" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="6 6" />
+                            <circle cx="400" cy="400" r="40" class="stroke-neutral-500 dark:stroke-neutral-500" stroke-width="1" fill="none" opacity="0.5" />
+                            <circle cx="400" cy="400" r="20" class="stroke-brand-teal" stroke-width="1.5" fill="none" opacity="0.6" stroke-dasharray="6 6" />
                             
                             <!-- The glowing, solid self -->
                             <circle cx="400" cy="400" r="10" class="fill-brand-teal" filter="url(#glow-identity)" opacity="0.9" />
@@ -325,7 +324,7 @@
 
             <div class="article-body text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide space-y-8 text-left">
                 <p class="reveal delay-3">Most people think change begins when they decide to become different.</p>
-                <p class="reveal delay-3">But long before that decision appears, there is already something shaping what feels normal to them.</p>
+                <p class="reveal delay-3">But long before that decision appears, something has already been shaping what feels normal to you.</p>
                 <p class="reveal delay-3 pt-6 text-neutral-900 dark:text-white font-medium">You do not begin from zero.<br>You begin from what already feels familiar.</p>
             </div>
         </header>
@@ -363,14 +362,14 @@
             </section>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">It appears in ordinary moments</h2>
-                <p>Sometimes identity appears in very small decisions.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Most of this happens in very ordinary moments</h2>
+                <p>Sometimes identity reveals itself in very small decisions.</p>
                 <p>You tell yourself you will start tomorrow.</p>
                 <p>You open your phone without thinking.</p>
                 <p>You avoid something important for a few minutes, then a few hours.</p>
                 <p>You promise yourself things privately and slowly stop believing your own promises.</p>
                 <p>None of these moments feel important individually.</p>
-                <p class="pt-4 text-neutral-900 dark:text-white font-medium">But repeated often enough, they quietly shape how you begin seeing yourself.</p>
+                <p class="pt-4 text-neutral-900 dark:text-white font-medium">But repeated often enough, they slowly change what starts feeling normal to you.</p>
             </div>
 
             <div class="reveal my-24">
@@ -391,20 +390,19 @@
                 <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">How repetition becomes familiar</h2>
                 <p>Over time, repetition becomes expectation.</p>
                 <p>And expectation slowly becomes identity.</p>
-                <p class="pt-4 text-neutral-900 dark:text-white font-medium italic font-display text-2xl md:text-3xl leading-relaxed">Usually so gradually that you barely notice it happening.</p>
+                <p class="pt-4 text-neutral-900 dark:text-white font-medium italic font-display text-2xl md:text-3xl leading-relaxed">Usually slowly enough that it feels invisible while it is happening.</p>
             </div>
 
             <div class="reveal my-24">
-                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Why trying harder usually does not last</h2>
-                <p>For a while, people can force themselves forward.</p>
+                <h2 class="text-neutral-900 dark:text-white font-medium text-3xl font-display">Why pushing harder usually does not last</h2>
+                <p>For a while, people can push themselves forward.</p>
                 <p>But eventually, most people return to what already feels normal to them.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">Even when they genuinely want something different.</p>
+                <p class="text-neutral-900 dark:text-white font-medium">Even when part of them wants something different.</p>
             </div>
 
             <div class="reveal my-24">
-                <p>This does not mean you are broken.</p>
-                <p>It means repetition has been shaping you quietly for longer than you realized.</p>
-                <p class="text-neutral-900 dark:text-white font-medium">And what has been shaped gradually can also be changed gradually.</p>
+                <p>It simply means repetition has been shaping you quietly for longer than you realized.</p>
+                <p class="text-neutral-900 dark:text-white font-medium">And anything repeated long enough can slowly begin changing too.</p>
             </div>
 
             <!-- TRANSITION -->
@@ -427,7 +425,7 @@
             <div class="space-y-16 text-lg text-neutral-600 dark:text-neutral-400 font-light">
                 <div>
                     <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Why do I keep repeating the same habits?</p>
-                    <p>People usually return to what already feels familiar, even when they genuinely want something different.</p>
+                    <p>People usually return to what already feels familiar, even when part of them wants something different.</p>
                 </div>
                 <div>
                     <p class="text-neutral-900 dark:text-white font-medium text-xl mb-4">Why does change feel temporary?</p>
@@ -488,7 +486,7 @@
                     </div>
                     <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
                 </a>
-                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking in a distracted world.</p>
             </div>
 
             <!-- Global Footer Links (Centered Layout) -->
@@ -496,26 +494,26 @@
                 
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">The Journey</p>
-                    <a href="/start-here.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
-                    <a href="/identity.html" class="block text-brand-teal dark:text-white transition-colors">Identity</a>
+                    <a href="/start-here.html" class="block hover:text-brand-teal transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal transition-colors">Identity</a>
                     <a href="/focus.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Focus</a>
                     <a href="/action.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Action</a>
                 </div>
 
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Explore</p>
-                    <a href="/library/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
-                    <a href="/programs/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Programs</a>
-                    <a href="/books/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Books</a>
-                    <a href="/tools/index.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Tools</a>
+                    <a href="/library/index.html" class="block hover:text-brand-teal transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal transition-colors">Programs</a>
+                    <a href="/books/index.html" class="block hover:text-brand-teal transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal transition-colors">Tools</a>
                 </div>
 
                 <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                     <p class="text-neutral-900 dark:text-white">Connect</p>
-                    <a href="/about.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">About</a>
-                    <a href="/author.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Author</a>
-                    <a href="/community.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Community</a>
-                    <a href="/contact.html" class="block hover:text-neutral-900 dark:hover:text-white transition-colors">Contact</a>
+                    <a href="/about.html" class="block hover:text-brand-teal transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal transition-colors">Contact</a>
                 </div>
             </div>
             
@@ -604,8 +602,8 @@
 
                 window.addEventListener('mousemove', (e) => {
                     if (!cursorInitiated) {
-                        if(dot) dot.style.opacity = "1";
-                        if(ring) ring.style.opacity = "1";
+                        dot.style.opacity = "1";
+                        ring.style.opacity = "1";
                         cursorInitiated = true;
                     }
                     mouseX = e.clientX;
@@ -640,7 +638,7 @@
                 });
             }
 
-            // Interactive Parallax Visual Logic for Identity Image
+            // Interactive Parallax Visual Logic for Identity Image (Reduced Intensity)
             const visualContainer = document.getElementById('identity-hero-visual');
             const layer1 = document.getElementById('svg-layer-1');
             const layer2 = document.getElementById('svg-layer-2');
@@ -652,10 +650,10 @@
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
                     
-                    // Creates distinct depth levels
-                    layer1.style.transform = `translate(${x * -0.02}px, ${y * -0.02}px)`; 
-                    layer2.style.transform = `translate(${x * 0.02}px, ${y * 0.02}px)`;   
-                    layer3.style.transform = `translate(${x * 0.05}px, ${y * 0.05}px)`;   
+                    // Creates distinct depth levels (Reduced by 40% for quiet immersion)
+                    layer1.style.transform = `translate(${x * -0.012}px, ${y * -0.012}px)`; 
+                    layer2.style.transform = `translate(${x * 0.012}px, ${y * 0.012}px)`;   
+                    layer3.style.transform = `translate(${x * 0.03}px, ${y * 0.03}px)`;   
                 });
 
                 visualContainer.addEventListener('mouseleave', () => {
