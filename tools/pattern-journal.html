@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL SEO & AEO METADATA -->
+    <title>Pattern Journal | Notice What Keeps Repeating</title>
+    <meta name="description" content="A quiet reflection tool designed to help you notice recurring mental, emotional, and behavioral patterns with greater awareness and clarity.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/tools/pattern-journal.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Pattern Journal | Quiet Self-Observation">
+    <meta property="og:description" content="A calmer way to notice recurring thoughts, reactions, distractions, and behavioral patterns without judgment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordsofwisdom.in/tools/pattern-journal.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/assets/og/pattern-journal.jpg">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pattern Journal | Quiet Self-Observation">
+    <meta name="twitter:description" content="A calmer way to notice recurring thoughts, reactions, distractions, and behavioral patterns without judgment.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/pattern-journal.jpg">
+
+    <!-- SCHEMA (AEO Optimized) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Words of Wisdom Media",
+          "url": "https://wordsofwisdom.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wordsofwisdom.in/assets/images/logo.png"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Pattern Journal",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Web",
+          "url": "https://wordsofwisdom.in/tools/pattern-journal.html",
+          "description": "A quiet reflection tool designed to help people notice recurring mental, emotional, and behavioral patterns with greater awareness."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Pattern Journal tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A quiet reflection tool designed to help people notice recurring mental, emotional, and behavioral patterns with greater awareness."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this a therapy or mental health tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The tool is designed for reflection and awareness, not diagnosis, therapy, or medical treatment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does my information get stored online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Reflections remain locally on your device and are not uploaded or tracked."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#040405', /* A soft, deep matte charcoal for late-night reflection */
+                            teal: '#2DD4BF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-brand-dark text-[#EDEDED] antialiased selection:bg-brand-teal/10 overflow-x-hidden; 
+            }
+            
+            /* Extremely subtle grain overlay for a quiet physical texture */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+                opacity: 0.025;
+                pointer-events: none;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            }
+            
+            .input-underlined {
+                @apply w-full bg-transparent border-b border-white/10 py-5 text-xl md:text-2xl font-display italic text-white/80 focus:outline-none focus:border-white/25 transition-all duration-1000 placeholder:text-white/20 text-center;
+            }
+
+            .textarea-quiet {
+                @apply w-full bg-white/[0.015] border border-white/5 rounded-2xl p-8 text-[16px] md:text-[18px] font-display italic leading-relaxed text-white/80 placeholder:text-white/20 focus:outline-none focus:border-white/15 focus:bg-white/[0.025] transition-all duration-1000 min-h-[220px] resize-none text-center;
+            }
+
+            .pill-choice {
+                @apply px-7 py-3.5 rounded-full border border-white/5 bg-transparent text-[14px] md:text-[15px] text-white/40 hover:text-white/80 hover:bg-white/[0.02] hover:border-white/15 transition-all duration-1000 cursor-pointer whitespace-nowrap font-sans tracking-wide;
+            }
+
+            /* Highly muted active state, emotionally soft */
+            .pill-choice.active {
+                @apply bg-white/[0.035] border-white/20 text-white/90 shadow-[0_0_40px_rgba(255,255,255,0.015)];
+            }
+            
+            /* Focus Zone Dimming: Introspective and deeply calm */
+            .focus-zone {
+                @apply transition-all duration-[1500ms];
+            }
+            .focus-zone.dimmed {
+                @apply opacity-[0.15] blur-[3px] scale-[0.985] pointer-events-none;
+            }
+        }
+
+        /* Ambient Subconscious Drift Words (Very slow, 0.8% opacity) */
+        .ambient-word {
+            position: fixed;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: white;
+            opacity: 0.008; 
+            pointer-events: none;
+            z-index: -2;
+            animation: drift 180s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -20px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Cinematic Soft Transitions */
+        .fade-up {
+            animation: fadeUp 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); filter: blur(25px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .view-transition {
+            transition: opacity 3s cubic-bezier(0.16, 1, 0.3, 1), filter 3s ease, transform 3s ease;
+        }
+
+        /* Safely Hide View */
+        .hidden-view {
+            opacity: 0 !important;
+            filter: blur(40px) !important;
+            pointer-events: none !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center">
+
+    <!-- Subconscious Floating Words representing pattern recognition -->
+    <div class="ambient-word text-3xl top-[15%] left-[8%]" style="animation-delay: 0s;">notice</div>
+    <div class="ambient-word text-5xl top-[40%] right-[12%]" style="animation-delay: -25s;">repeat</div>
+    <div class="ambient-word text-xl bottom-[20%] left-[15%]" style="animation-delay: -50s;">awareness</div>
+    <div class="ambient-word text-4xl top-[80%] right-[18%]" style="animation-delay: -75s;">quieter</div>
+    <div class="ambient-word text-2xl top-[10%] right-[25%]" style="animation-delay: -100s;">return</div>
+    <div class="ambient-word text-3xl bottom-[15%] left-[35%]" style="animation-delay: -125s;">enough</div>
+    <div class="ambient-word text-4xl top-[30%] left-[12%]" style="animation-delay: -150s;">slowly</div>
+    <div class="ambient-word text-5xl top-[85%] left-[20%]" style="animation-delay: -40s;">pattern</div>
+    <div class="ambient-word text-3xl top-[25%] right-[8%]" style="animation-delay: -90s;">direction</div>
+
+    <!-- MAIN INTERFACE -->
+    <main id="main-interface" class="max-w-[640px] w-full px-6 pt-40 pb-56 relative z-10 fade-up view-transition">
+        
+        <!-- SECTION 1: ARRIVAL -->
+        <header class="mb-56 text-center focus-zone" id="zone-header">
+            <span class="text-[11px] font-bold tracking-[0.4em] text-white/30 uppercase mb-10 block">Pattern Journal</span>
+            <h1 class="font-display text-4xl md:text-[3.25rem] text-white mb-8 leading-tight">Some patterns repeat quietly<br>until they begin shaping your life.</h1>
+            <p class="text-white/50 font-light leading-relaxed max-w-md mx-auto text-[15px] md:text-[16px]">
+                A calmer space to notice recurring thoughts, behaviors, reactions, and attention patterns without judgment.
+            </p>
+            <p class="text-[15px] md:text-[16px] font-display italic tracking-widest text-white/30 mt-16">Awareness often begins with noticing what keeps returning.</p>
+        </header>
+
+        <!-- RECOGNITION SECTIONS (Enormous breathing gaps to force slowing down) -->
+        <div class="space-y-48 md:space-y-64">
+            
+            <!-- SECTION 2: PATTERN RECOGNITION -->
+            <section class="space-y-12 focus-zone text-center" id="zone-1">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What have you been noticing repeatedly lately?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Avoidance</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Mental fatigue</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Overthinking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Distraction</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Procrastination</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Restlessness</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Emotional reactivity</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Comparison</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Self-doubt</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Scattered attention</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Escaping into scrolling</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Starting without continuing</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Thinking without action</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Constant urgency</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'recognizedPatterns')">Losing focus quickly</div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: QUIET OBSERVATION -->
+            <section class="space-y-12 focus-zone" id="zone-2">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80 text-center">What pattern keeps returning?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="quiet-observation" placeholder="Notice it honestly. No need to explain it perfectly..." class="textarea-quiet" onfocus="focusZone('zone-2')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 4: SITUATIONAL AWARENESS -->
+            <section class="space-y-12 focus-zone text-center" id="zone-3">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">When does this pattern appear most strongly?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When overwhelmed</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When uncertain</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When tired</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">During stress</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">Late at night</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">Around distractions</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When emotionally drained</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When avoiding something important</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">Around certain people</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'situationalAwareness')">When trying to do too much</div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: EMOTIONAL EFFECT -->
+            <section class="space-y-12 focus-zone text-center" id="zone-4">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What does this usually leave you feeling?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Drained</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Scattered</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Stuck</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Restless</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Guilty</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Mentally noisy</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Frustrated</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Disconnected</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Anxious</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Numb</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'emotionalEffects')">Uncertain</div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: INTERRUPTION AWARENESS -->
+            <section class="space-y-12 focus-zone" id="zone-5">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80 text-center">What helps interrupt this pattern, even slightly?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="interruption-reflection" placeholder="Even small moments of awareness matter..." class="textarea-quiet min-h-[160px]" onfocus="focusZone('zone-5')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 7: GENTLE REDIRECTION -->
+            <section class="space-y-12 focus-zone text-center" id="zone-6">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What would you like to experience more consistently instead?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="intentional-direction" placeholder="Calm, consistency, clarity, presence..." class="input-underlined" onfocus="focusZone('zone-6')" onblur="blurZone()">
+                </div>
+            </section>
+
+            <!-- SECTION 8: CLOSING REFLECTION -->
+            <section class="py-32 text-center space-y-12 focus-zone" id="zone-reflection">
+                <div class="space-y-10">
+                    <p class="font-display text-4xl md:text-5xl text-white/90 leading-tight">
+                        Patterns rarely disappear through force.
+                    </p>
+                    <div class="font-display text-2xl md:text-3xl italic text-white/40 leading-relaxed max-w-md mx-auto space-y-2">
+                        <p>They begin changing</p>
+                        <p>when they are finally noticed clearly.</p>
+                        
+                        <p class="pt-16 text-white/60">Awareness is often the beginning</p>
+                        <p class="text-white/60">of a different direction.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: SAVE QUIETLY -->
+            <div class="flex flex-col items-center justify-center pt-10 space-y-8 focus-zone" id="zone-save">
+                <button onclick="saveQuietly()" class="group flex items-center space-x-6 bg-transparent border border-white/10 hover:border-white/20 hover:bg-white/[0.015] px-14 py-6 rounded-full transition-all duration-[1200ms]">
+                    <span class="text-[11px] font-bold uppercase tracking-[0.4em] text-white/40 group-hover:text-white/80 transition-colors duration-1000">Leave this here quietly</span>
+                </button>
+                <button onclick="clearReflection()" class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/15 hover:text-white/40 transition-colors duration-1000 mt-2">
+                    Erase reflection
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Footnote Branding -->
+        <footer class="mt-64 text-center opacity-10 hover:opacity-100 transition-opacity duration-1000">
+            <a href="https://wordsofwisdom.in" class="text-[11px] font-bold uppercase tracking-[0.4em] font-sans hover:text-white transition-colors">WORDSOFWISDOM.IN</a>
+        </footer>
+    </main>
+
+    <!-- SUCCESS VIEW (The Quiet Recognition Closing) -->
+    <!-- Cinematic curtain over the entire interface -->
+    <div id="success-view" class="fixed inset-0 z-50 flex flex-col justify-center items-center px-6 text-center view-transition hidden-view bg-brand-dark/95 backdrop-blur-xl">
+        <div class="space-y-20 max-w-2xl">
+            <h2 class="font-display text-4xl md:text-6xl text-white/90 leading-tight">What repeats quietly<br>eventually shapes direction.</h2>
+            <p class="font-display italic text-2xl md:text-3xl text-white/50 leading-relaxed">
+                Sometimes change begins<br>with simply noticing the pattern honestly.
+            </p>
+            <div class="pt-20 opacity-0 fade-up" style="animation-delay: 2.5s;">
+                <button onclick="resetView()" class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/20 hover:text-white transition-colors duration-1000">← Return to view</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE SYSTEM LOGIC -->
+    <script>
+        const STORAGE_KEY = 'wow_pattern_journal_v1';
+        
+        let currentData = {
+            recognizedPatterns: [],
+            quietObservation: '',
+            situationalAwareness: [],
+            emotionalEffects: [],
+            interruptionReflections: '',
+            intentionalDirection: '',
+            timestamp: null
+        };
+
+        // Focus Zone Helpers (extremely soft dimming to reduce cognitive weight)
+        function focusZone(zoneId) {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                if (zone.id !== zoneId) {
+                    zone.classList.add('dimmed');
+                }
+            });
+        }
+
+        function blurZone() {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                zone.classList.remove('dimmed');
+            });
+        }
+
+        // Initialize state restoration from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                currentData = parsed;
+                restoreInterfaceState();
+            }
+        });
+
+        // Pill Toggling System (Multi-selection for Awareness Arrays)
+        function togglePill(el, category) {
+            const value = el.innerText;
+            if (el.classList.contains('active')) {
+                el.classList.remove('active');
+                currentData[category] = currentData[category].filter(v => v !== value);
+            } else {
+                el.classList.add('active');
+                currentData[category].push(value);
+            }
+        }
+
+        // Hydrate GUI elements from existing object
+        function restoreInterfaceState() {
+            document.querySelectorAll('.pill-choice').forEach(pill => {
+                const val = pill.innerText;
+                if (currentData.recognizedPatterns.includes(val) || 
+                    currentData.situationalAwareness.includes(val) ||
+                    currentData.emotionalEffects.includes(val)) {
+                    pill.classList.add('active');
+                }
+            });
+
+            document.getElementById('quiet-observation').value = currentData.quietObservation || '';
+            document.getElementById('interruption-reflection').value = currentData.interruptionReflections || '';
+            document.getElementById('intentional-direction').value = currentData.intentionalDirection || '';
+        }
+
+        // Quietly Commit to Storage with Ultra-Slow Cinematic Transitions
+        function saveQuietly() {
+            currentData.quietObservation = document.getElementById('quiet-observation').value;
+            currentData.interruptionReflections = document.getElementById('interruption-reflection').value;
+            currentData.intentionalDirection = document.getElementById('intentional-direction').value;
+            currentData.timestamp = new Date().getTime();
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            // Hide the main interface slowly
+            main.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                // Remove main from flow so it doesn't affect scrolling behind the curtain
+                main.style.display = 'none';
+                
+                // Unveil the success curtain
+                success.classList.remove('hidden-view');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 2500); // 2.5 seconds to fade out main view for absolute calmness
+        }
+
+        // Return gracefully to overview to adjust entries
+        function resetView() {
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            success.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                main.style.display = 'block';
+                // Micro-delay to ensure display:block is painted before removing opacity
+                setTimeout(() => {
+                    main.classList.remove('hidden-view');
+                }, 100);
+            }, 2000); // Very slow curtain dissolve
+        }
+
+        // Erase Reflection to Clear Local Data Safely
+        function clearReflection() {
+            currentData = {
+                recognizedPatterns: [],
+                quietObservation: '',
+                situationalAwareness: [],
+                emotionalEffects: [],
+                interruptionReflections: '',
+                intentionalDirection: '',
+                timestamp: null
+            };
+
+            localStorage.removeItem(STORAGE_KEY);
+
+            document.querySelectorAll('.pill-choice').forEach(pill => pill.classList.remove('active'));
+            document.getElementById('quiet-observation').value = '';
+            document.getElementById('interruption-reflection').value = '';
+            document.getElementById('intentional-direction').value = '';
+
+            // Soft visual pulse confirmation of clearing
+            const main = document.getElementById('main-interface');
+            main.style.opacity = '0.2';
+            setTimeout(() => {
+                main.style.opacity = '1';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
