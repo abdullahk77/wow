@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL SEO & AEO METADATA -->
+    <title>Focus Recovery | Reconnect With Sustained Attention</title>
+    <meta name="description" content="A quiet reflection tool designed to reduce cognitive fragmentation and help you reconnect with deeper, more sustained attention.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/tools/focus-recovery.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Focus Recovery | A Quieter Return to Attention">
+    <meta property="og:description" content="A calm space to recover mental presence, reduce fragmentation, and reconnect with deeper focus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordsofwisdom.in/tools/focus-recovery.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/assets/og/focus-recovery.jpg">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Focus Recovery | A Quieter Return to Attention">
+    <meta name="twitter:description" content="A calm space to recover mental presence, reduce fragmentation, and reconnect with deeper focus.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/focus-recovery.jpg">
+
+    <!-- SCHEMA (AEO Optimized) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Words of Wisdom Media",
+          "url": "https://wordsofwisdom.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wordsofwisdom.in/assets/images/logo.png"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Focus Recovery",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Web",
+          "url": "https://wordsofwisdom.in/tools/focus-recovery.html",
+          "description": "A quiet reflection tool designed to reduce cognitive fragmentation and help you reconnect with deeper, more sustained attention."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Focus Recovery tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A quiet reflection tool designed to help people reconnect with sustained attention, mental presence, and deeper focus."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this a productivity tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The tool is designed for awareness and recovery, not productivity tracking or performance optimization."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this tool store my information online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Reflections remain locally on your device and are not uploaded or tracked."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#020202', /* Deepest matte black for maximum quietness */
+                            teal: '#2DD4BF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-brand-dark text-[#EDEDED] antialiased selection:bg-brand-teal/10 overflow-x-hidden; 
+            }
+            
+            /* Extremely subtle grain overlay for cinematic texture */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+                opacity: 0.025;
+                pointer-events: none;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            }
+            
+            .input-underlined {
+                @apply w-full bg-transparent border-b border-white/10 py-5 text-xl md:text-2xl font-display italic text-white/80 focus:outline-none focus:border-white/30 transition-all duration-1000 placeholder:text-white/20 text-center;
+            }
+
+            .textarea-quiet {
+                @apply w-full bg-white/[0.01] border border-white/5 rounded-2xl p-8 text-[16px] md:text-[18px] font-sans font-light leading-relaxed text-white/80 placeholder:text-white/20 focus:outline-none focus:border-white/15 focus:bg-white/[0.02] transition-all duration-1000 min-h-[200px] resize-none text-center;
+            }
+
+            .pill-choice {
+                @apply px-7 py-3.5 rounded-full border border-white/5 bg-transparent text-[14px] md:text-[15px] text-white/40 hover:text-white/80 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-1000 cursor-pointer whitespace-nowrap font-sans tracking-wide;
+            }
+
+            /* Highly muted active state, avoiding strong colors to keep it calm */
+            .pill-choice.active {
+                @apply bg-white/[0.04] border-white/20 text-white/90 shadow-[0_0_40px_rgba(255,255,255,0.015)];
+            }
+            
+            /* Focus Zone Dimming: Soft, deep, and slow */
+            .focus-zone {
+                @apply transition-all duration-[1200ms];
+            }
+            .focus-zone.dimmed {
+                @apply opacity-15 blur-[3px] scale-[0.99] pointer-events-none;
+            }
+        }
+
+        /* Ambient Subconscious Drift Words (Slowest configuration yet) */
+        .ambient-word {
+            position: fixed;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: white;
+            opacity: 0.01; /* Barely perceptible */
+            pointer-events: none;
+            z-index: -2;
+            animation: drift 120s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(25px, -25px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Cinematic Soft Transitions */
+        .fade-up {
+            animation: fadeUp 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); filter: blur(15px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .view-transition {
+            transition: opacity 2.5s cubic-bezier(0.16, 1, 0.3, 1), filter 2.5s ease, transform 2.5s ease;
+        }
+
+        /* Safely Hide View with Important Flags */
+        .hidden-view {
+            opacity: 0 !important;
+            filter: blur(30px) !important;
+            pointer-events: none !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center">
+
+    <!-- Subconscious Floating Words representing depth and return -->
+    <div class="ambient-word text-3xl top-[10%] left-[8%]" style="animation-delay: 0s;">depth</div>
+    <div class="ambient-word text-5xl top-[50%] right-[10%]" style="animation-delay: -20s;">slower</div>
+    <div class="ambient-word text-xl bottom-[15%] left-[12%]" style="animation-delay: -40s;">presence</div>
+    <div class="ambient-word text-4xl top-[80%] right-[15%]" style="animation-delay: -60s;">return</div>
+    <div class="ambient-word text-2xl top-[12%] right-[25%]" style="animation-delay: -80s;">breathe</div>
+    <div class="ambient-word text-3xl bottom-[10%] left-[30%]" style="animation-delay: -100s;">quiet</div>
+    <div class="ambient-word text-4xl top-[30%] left-[10%]" style="animation-delay: -10s;">stillness</div>
+    <div class="ambient-word text-xl bottom-[40%] left-[5%]" style="animation-delay: -30s;">enough</div>
+    <div class="ambient-word text-2xl top-[85%] left-[20%]" style="animation-delay: -50s;">attention</div>
+    <div class="ambient-word text-3xl top-[20%] right-[5%]" style="animation-delay: -70s;">stay</div>
+
+    <!-- MAIN INTERFACE -->
+    <main id="main-interface" class="max-w-[640px] w-full px-6 pt-32 pb-48 relative z-10 fade-up view-transition">
+        
+        <!-- SECTION 1: ARRIVAL -->
+        <header class="mb-48 text-center focus-zone" id="zone-header">
+            <span class="text-[11px] font-bold tracking-[0.4em] text-white/40 uppercase mb-8 block">Focus Recovery</span>
+            <h1 class="font-display text-4xl md:text-[3rem] text-white mb-8 leading-tight">It becomes difficult to focus<br>when the mind rarely rests in one place.</h1>
+            <p class="text-white/50 font-light leading-relaxed max-w-sm mx-auto text-[15px] md:text-[16px]">
+                A quieter space to reconnect with sustained attention, depth, and mental presence.
+            </p>
+            <p class="text-[14px] md:text-[15px] font-display italic tracking-widest text-white/40 mt-16">Attention slowly changes according to what it repeatedly experiences.</p>
+        </header>
+
+        <!-- RECOVERY SECTIONS (Using enormous breathing gaps) -->
+        <div class="space-y-40 md:space-y-56">
+            
+            <!-- SECTION 2: RECOGNITION LAYER -->
+            <section class="space-y-12 focus-zone text-center" id="zone-1">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What makes sustained focus feel difficult lately?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Constant interruptions</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Mental fatigue</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Too much stimulation</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Switching tasks</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Endless scrolling</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Restlessness</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Anxiety</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Open tabs</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Pressure</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Noise</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Information overload</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'focusDifficulties')">Urgency</div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: ATTENTION RECOVERY AWARENESS -->
+            <section class="space-y-12 focus-zone" id="zone-2">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80 text-center">When do you feel most mentally present?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="presence-moments" placeholder="Notice the moments when your mind feels quieter..." class="textarea-quiet" onfocus="focusZone('zone-2')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 4: FRAGMENTATION AWARENESS -->
+            <section class="space-y-12 focus-zone text-center" id="zone-3">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What most often breaks your attention during the day?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Phone checking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Notifications</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Mental replaying</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Multitasking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Constant switching</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Background media</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Pressure to respond</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Boredom</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Avoidance</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'fragmentationSources')">Overthinking</div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: DEPTH RECOGNITION -->
+            <section class="space-y-12 focus-zone text-center" id="zone-4">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What do you miss being able to fully focus on?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="depth-longing" placeholder="Reading, conversations, quiet work..." class="input-underlined" onfocus="focusZone('zone-4')" onblur="blurZone()">
+                </div>
+            </section>
+
+            <!-- SECTION 6: RECOVERY LAYER -->
+            <section class="space-y-12 focus-zone" id="zone-5">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80 text-center">What helps your attention slow down?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="recovery-reflection" placeholder="Even small moments of quiet matter..." class="textarea-quiet" onfocus="focusZone('zone-5')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 7: GENTLE RETURN -->
+            <section class="space-y-12 focus-zone text-center" id="zone-6">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/80">What deserves more of your uninterrupted attention?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="intentional-direction" placeholder="One clear focus..." class="input-underlined" onfocus="focusZone('zone-6')" onblur="blurZone()">
+                </div>
+            </section>
+
+            <!-- SECTION 8: CLOSING REFLECTION -->
+            <section class="py-24 text-center space-y-12 focus-zone" id="zone-reflection">
+                <div class="space-y-8">
+                    <p class="font-display text-4xl md:text-5xl text-white/90 leading-tight">
+                        Focus rarely returns through force.
+                    </p>
+                    <div class="font-display text-2xl md:text-3xl italic text-white/40 leading-relaxed max-w-md mx-auto space-y-2">
+                        <p>It returns slowly</p>
+                        <p>when the mind experiences</p>
+                        <p>less fragmentation,</p>
+                        <p>less urgency,</p>
+                        <p>and more presence.</p>
+                        
+                        <p class="pt-12 text-white/60">Depth begins to return</p>
+                        <p class="text-white/60">when attention finally has room to stay.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: SAVE QUIETLY -->
+            <div class="flex flex-col items-center justify-center pt-20 space-y-8 focus-zone" id="zone-save">
+                <button onclick="saveQuietly()" class="group flex items-center space-x-6 bg-transparent border border-white/10 hover:border-white/20 hover:bg-white/[0.01] px-14 py-6 rounded-full transition-all duration-1000">
+                    <span class="text-[11px] font-bold uppercase tracking-[0.4em] text-white/50 group-hover:text-white/90 transition-colors duration-1000">Return to this slowly</span>
+                </button>
+                <button onclick="clearReflection()" class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20 hover:text-white/50 transition-colors duration-1000 mt-2">
+                    Erase reflection
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Footnote Branding -->
+        <footer class="mt-56 text-center opacity-20 hover:opacity-100 transition-opacity duration-1000">
+            <a href="https://wordsofwisdom.in" class="text-[11px] font-bold uppercase tracking-[0.4em] font-sans hover:text-white transition-colors">WORDSOFWISDOM.IN</a>
+        </footer>
+    </main>
+
+    <!-- SUCCESS VIEW (The Deep Return) -->
+    <!-- Cinematic curtain over the entire interface -->
+    <div id="success-view" class="fixed inset-0 z-50 flex flex-col justify-center items-center px-6 text-center view-transition hidden-view bg-brand-dark/95 backdrop-blur-md">
+        <div class="space-y-20 max-w-2xl">
+            <h2 class="font-display text-4xl md:text-6xl text-white/90 leading-tight">Attention changes according to<br>what it repeatedly practices.</h2>
+            <p class="font-display italic text-2xl md:text-3xl text-white/50 leading-relaxed">
+                Recovery begins<br>when the mind no longer lives in constant interruption.
+            </p>
+            <div class="pt-16 opacity-0 fade-up" style="animation-delay: 2s;">
+                <button onclick="resetView()" class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 hover:text-white transition-colors duration-700">← Return to view</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE SYSTEM LOGIC -->
+    <script>
+        const STORAGE_KEY = 'wow_focus_recovery_v1';
+        
+        let currentData = {
+            focusDifficulties: [],
+            presenceMoments: '',
+            fragmentationSources: [],
+            depthLonging: '',
+            recoveryReflections: '',
+            intentionalDirection: '',
+            timestamp: null
+        };
+
+        // Focus Zone Helpers (reduces cognitive load by gently fading surroundings)
+        function focusZone(zoneId) {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                if (zone.id !== zoneId) {
+                    zone.classList.add('dimmed');
+                }
+            });
+        }
+
+        function blurZone() {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                zone.classList.remove('dimmed');
+            });
+        }
+
+        // Initialize state restoration from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                currentData = parsed;
+                restoreInterfaceState();
+            }
+        });
+
+        // Pill Toggling System (Multi-selection for Awareness Arrays)
+        function togglePill(el, category) {
+            const value = el.innerText;
+            if (el.classList.contains('active')) {
+                el.classList.remove('active');
+                currentData[category] = currentData[category].filter(v => v !== value);
+            } else {
+                el.classList.add('active');
+                currentData[category].push(value);
+            }
+        }
+
+        // Hydrate GUI elements from existing object
+        function restoreInterfaceState() {
+            document.querySelectorAll('.pill-choice').forEach(pill => {
+                const val = pill.innerText;
+                if (currentData.focusDifficulties.includes(val) || 
+                    currentData.fragmentationSources.includes(val)) {
+                    pill.classList.add('active');
+                }
+            });
+
+            document.getElementById('presence-moments').value = currentData.presenceMoments || '';
+            document.getElementById('depth-longing').value = currentData.depthLonging || '';
+            document.getElementById('recovery-reflection').value = currentData.recoveryReflections || '';
+            document.getElementById('intentional-direction').value = currentData.intentionalDirection || '';
+        }
+
+        // Quietly Commit to Storage with Ultra-Slow Cinematic Transitions
+        function saveQuietly() {
+            currentData.presenceMoments = document.getElementById('presence-moments').value;
+            currentData.depthLonging = document.getElementById('depth-longing').value;
+            currentData.recoveryReflections = document.getElementById('recovery-reflection').value;
+            currentData.intentionalDirection = document.getElementById('intentional-direction').value;
+            currentData.timestamp = new Date().getTime();
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            // Hide the main interface
+            main.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                // Ensure main interface doesn't cause scroll/layout issues while hidden
+                main.style.display = 'none';
+                
+                // Show the success curtain
+                success.classList.remove('hidden-view');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1800); // Allow extended time for the deep blur/fade transition
+        }
+
+        // Return gracefully to overview to adjust entries
+        function resetView() {
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            success.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                main.style.display = 'block';
+                // Slight delay to ensure display:block applies before removing hidden-view opacity/blur
+                setTimeout(() => {
+                    main.classList.remove('hidden-view');
+                }, 100);
+            }, 1500); // Very slow dissolve
+        }
+
+        // Erase Reflection to Clear Local Data Safely
+        function clearReflection() {
+            currentData = {
+                focusDifficulties: [],
+                presenceMoments: '',
+                fragmentationSources: [],
+                depthLonging: '',
+                recoveryReflections: '',
+                intentionalDirection: '',
+                timestamp: null
+            };
+
+            localStorage.removeItem(STORAGE_KEY);
+
+            document.querySelectorAll('.pill-choice').forEach(pill => pill.classList.remove('active'));
+            document.getElementById('presence-moments').value = '';
+            document.getElementById('depth-longing').value = '';
+            document.getElementById('recovery-reflection').value = '';
+            document.getElementById('intentional-direction').value = '';
+
+            // Gentle visual confirmation of clearing
+            const main = document.getElementById('main-interface');
+            main.style.opacity = '0.3';
+            setTimeout(() => {
+                main.style.opacity = '1';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 800);
+        }
+    </script>
+</body>
+</html>
