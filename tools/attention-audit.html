@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL SEO & AEO METADATA -->
+    <title>Attention Audit | A Quieter Look at Where Your Attention Goes</title>
+    <meta name="description" content="A calm reflection tool designed to help you notice distraction patterns, reduce cognitive overload, and reconnect attention with what matters.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/tools/attention-audit.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Attention Audit | Reduce Mental Noise">
+    <meta property="og:description" content="A quieter way to understand distraction, fragmented attention, and modern mental overload.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordsofwisdom.in/tools/attention-audit.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/assets/og/attention-audit.jpg">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attention Audit | Reduce Mental Noise">
+    <meta name="twitter:description" content="A quieter way to understand distraction, fragmented attention, and modern mental overload.">
+    <meta name="twitter:image" content="https://wordsofwisdom.in/assets/og/attention-audit.jpg">
+
+    <!-- SCHEMA (AEO Optimized) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Words of Wisdom Media",
+          "url": "https://wordsofwisdom.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wordsofwisdom.in/assets/images/logo.png"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Attention Audit",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Web",
+          "url": "https://wordsofwisdom.in/tools/attention-audit.html",
+          "description": "A quiet reflection tool designed to help people notice distraction patterns, fragmented attention, and sources of mental overload."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Attention Audit tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A quiet reflection tool designed to help people notice distraction patterns, fragmented attention, and sources of mental overload."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this a productivity tracker?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The tool is designed for awareness and reflection, not productivity scoring or performance optimization."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the tool store personal information online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Reflections remain locally on your device and are not uploaded or tracked."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#040405', /* Extremely deep matte tone, slightly cool for digital awareness */
+                            teal: '#2DD4BF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-brand-dark text-[#EDEDED] antialiased selection:bg-brand-teal/15 overflow-x-hidden; 
+            }
+            
+            /* Ambient noise for modern cognitive feel */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+                opacity: 0.04;
+                pointer-events: none;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            }
+            
+            .input-underlined {
+                @apply w-full bg-transparent border-b border-white/20 py-5 text-xl md:text-2xl font-display italic text-white/90 focus:outline-none focus:border-white/50 transition-all duration-1000 placeholder:text-white/20 text-center;
+            }
+
+            .textarea-quiet {
+                @apply w-full bg-white/[0.02] border border-white/10 rounded-2xl p-8 text-[16px] md:text-[18px] font-sans font-light leading-relaxed text-white/90 placeholder:text-white/20 focus:outline-none focus:border-white/40 focus:bg-white/[0.04] transition-all duration-1000 min-h-[200px] resize-none text-center;
+            }
+
+            .pill-choice {
+                @apply px-7 py-3.5 rounded-full border border-white/10 bg-transparent text-[14px] md:text-[15px] text-white/50 hover:text-white/95 hover:bg-white/[0.03] hover:border-white/30 transition-all duration-700 cursor-pointer whitespace-nowrap font-sans tracking-wide;
+            }
+
+            .pill-choice.active {
+                @apply bg-white/[0.07] border-white/30 text-white/95 shadow-[0_0_30px_rgba(255,255,255,0.03)];
+            }
+            
+            /* Focus Zone Dimming: Soft, calm suppression of peripheral noise */
+            .focus-zone {
+                @apply transition-all duration-1000;
+            }
+            .focus-zone.dimmed {
+                @apply opacity-20 blur-[1px] scale-[0.98] pointer-events-none;
+            }
+        }
+
+        /* Ambient Subconscious Drift Words */
+        .ambient-word {
+            position: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: white;
+            opacity: 0.015;
+            pointer-events: none;
+            z-index: -2;
+            animation: drift 100s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Cinematic Soft Transitions */
+        .fade-up {
+            animation: fadeUp 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); filter: blur(15px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .view-transition {
+            transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1), filter 2s ease, transform 2s ease;
+        }
+
+        /* Safely Hide View */
+        .hidden-view {
+            opacity: 0 !important;
+            filter: blur(25px) !important;
+            pointer-events: none !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center">
+
+    <!-- Subconscious Floating Words representing modern noise -->
+    <div class="ambient-word text-2xl top-[12%] left-[8%]" style="animation-delay: 0s;">noise</div>
+    <div class="ambient-word text-4xl top-[55%] right-[10%]" style="animation-delay: -15s;">scroll</div>
+    <div class="ambient-word text-xl bottom-[18%] left-[12%]" style="animation-delay: -30s;">switch</div>
+    <div class="ambient-word text-3xl top-[75%] right-[15%]" style="animation-delay: -45s;">pause</div>
+    <div class="ambient-word text-lg top-[8%] right-[22%]" style="animation-delay: -60s;">notice</div>
+    <div class="ambient-word text-2xl bottom-[12%] left-[32%]" style="animation-delay: -75s;">enough</div>
+    <div class="ambient-word text-3xl top-[28%] left-[12%]" style="animation-delay: -90s;">drift</div>
+    <div class="ambient-word text-xl bottom-[35%] left-[8%]" style="animation-delay: -25s;">return</div>
+    <div class="ambient-word text-2xl top-[88%] left-[22%]" style="animation-delay: -40s;">quieter</div>
+    <div class="ambient-word text-3xl top-[18%] right-[8%]" style="animation-delay: -55s;">attention</div>
+
+    <!-- MAIN INTERFACE -->
+    <main id="main-interface" class="max-w-[680px] w-full px-6 pt-32 pb-48 relative z-10 fade-up view-transition">
+        
+        <!-- SECTION 1: ARRIVAL -->
+        <header class="mb-40 text-center focus-zone" id="zone-header">
+            <span class="text-[12px] font-bold tracking-[0.4em] text-white/50 uppercase mb-8 block">Attention Audit</span>
+            <h1 class="font-display text-4xl md:text-[3rem] text-white mb-8 leading-tight">Your attention is being<br>shaped every day.</h1>
+            <p class="text-white/60 font-light leading-relaxed max-w-md mx-auto text-[15px] md:text-base">
+                A quieter way to notice what keeps pulling your mind away from what matters.
+            </p>
+            <p class="text-[16px] md:text-[18px] font-display italic tracking-widest text-white/50 mt-12">What repeatedly receives your attention<br>eventually shapes your inner world.</p>
+        </header>
+
+        <!-- AWARENESS SECTIONS -->
+        <div class="space-y-32 md:space-y-40">
+            
+            <!-- SECTION 2: RECOGNITION LAYER -->
+            <section class="space-y-10 focus-zone text-center" id="zone-1">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90">What most often interrupts your attention?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Phone checking</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Notifications</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Endless scrolling</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Switching tasks</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Background noise</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Open tabs</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Social media</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Mental replaying</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Constant urgency</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Fear of missing something</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Information overload</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'interruptions')">Comparison</div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: ATTENTION DRIFT AWARENESS -->
+            <section class="space-y-10 focus-zone" id="zone-2">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90 text-center">Where does your attention usually go<br>when you avoid something important?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="drift-reflection" placeholder="Notice the pattern without judging it..." class="textarea-quiet" onfocus="focusZone('zone-2')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 4: COGNITIVE ENVIRONMENT -->
+            <section class="space-y-10 focus-zone text-center" id="zone-3">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90">What environment surrounds most of your day?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Constant input</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Fast switching</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Noise</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Urgency</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Pressure</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Silence</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Depth</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Calm moments</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Distraction</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'environments')">Overstimulation</div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: ATTENTION COST -->
+            <section class="space-y-10 focus-zone text-center" id="zone-4">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90">What feels harder now than it used to?</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Staying present</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Reading deeply</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Thinking clearly</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Finishing things</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Sitting quietly</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Concentrating</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Being patient</div>
+                    <div class="pill-choice" onclick="togglePill(this, 'attentionCost')">Resting mentally</div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: RECOVERY LAYER -->
+            <section class="space-y-10 focus-zone" id="zone-5">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90 text-center">What helps your attention feel calmer?</h2>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="recovery-reflection" placeholder="Even small moments count..." class="textarea-quiet" onfocus="focusZone('zone-5')" onblur="blurZone()"></textarea>
+                </div>
+            </section>
+
+            <!-- SECTION 7: DIRECTION LAYER -->
+            <section class="space-y-10 focus-zone text-center" id="zone-6">
+                <h2 class="font-display text-2xl md:text-3xl italic text-white/90">What deserves more of your attention right now?</h2>
+                <div class="max-w-md mx-auto">
+                    <input type="text" id="intentional-direction" placeholder="One clear focus..." class="input-underlined" onfocus="focusZone('zone-6')" onblur="blurZone()">
+                </div>
+            </section>
+
+            <!-- SECTION 8: CLOSING REFLECTION -->
+            <section class="py-20 text-center space-y-10 focus-zone" id="zone-reflection">
+                <div class="space-y-6">
+                    <p class="font-display text-3xl md:text-5xl text-white/95 leading-tight">
+                        Attention rarely disappears all at once.
+                    </p>
+                    <div class="font-display text-2xl md:text-3xl italic text-white/50 leading-relaxed max-w-lg mx-auto space-y-2">
+                        <p>It slowly fragments</p>
+                        <p>through repetition,</p>
+                        <p>noise,</p>
+                        <p>and constant interruption.</p>
+                        
+                        <p class="pt-8 text-white/70">And it slowly returns</p>
+                        <p class="text-white/70">through awareness.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: SAVE QUIETLY -->
+            <div class="flex flex-col items-center justify-center pt-16 space-y-8 focus-zone" id="zone-save">
+                <button onclick="saveQuietly()" class="group flex items-center space-x-6 bg-transparent border border-white/10 hover:border-white/30 hover:bg-white/[0.02] px-14 py-6 rounded-full transition-all duration-1000">
+                    <span class="text-[12px] md:text-[13px] font-bold uppercase tracking-[0.4em] text-white/70 group-hover:text-white transition-colors duration-1000">Return to this quietly</span>
+                </button>
+                <button onclick="clearReflection()" class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20 hover:text-white/60 transition-colors duration-700 mt-2">
+                    Erase reflection
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Footnote Branding -->
+        <footer class="mt-48 text-center opacity-30 hover:opacity-100 transition-opacity duration-1000">
+            <a href="https://wordsofwisdom.in" class="text-[11px] font-bold uppercase tracking-[0.4em] font-sans hover:text-white transition-colors">WORDSOFWISDOM.IN</a>
+        </footer>
+    </main>
+
+    <!-- SUCCESS VIEW (The Emotional Awareness Shift) -->
+    <!-- Cinematic curtain over the entire interface -->
+    <div id="success-view" class="fixed inset-0 z-50 flex flex-col justify-center items-center px-6 text-center view-transition hidden-view bg-brand-dark/95 backdrop-blur-md">
+        <div class="space-y-16 max-w-2xl">
+            <h2 class="font-display text-4xl md:text-6xl text-white/95 leading-tight">The mind notices<br>what it repeatedly consumes.</h2>
+            <p class="font-display italic text-2xl md:text-3xl text-white/60 leading-relaxed">
+                Awareness is where attention<br>begins to return.
+            </p>
+            <div class="pt-12 opacity-0 fade-up" style="animation-delay: 1.5s;">
+                <button onclick="resetView()" class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 hover:text-white transition-colors">← Return to view</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE SYSTEM LOGIC -->
+    <script>
+        const STORAGE_KEY = 'wow_attention_audit_v1';
+        
+        let currentData = {
+            interruptions: [],
+            driftReflection: '',
+            environments: [],
+            attentionCost: [],
+            recoveryReflection: '',
+            intentionalDirection: '',
+            timestamp: null
+        };
+
+        // Focus Zone Helpers (reduces cognitive load by dimming surroundings)
+        function focusZone(zoneId) {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                if (zone.id !== zoneId) {
+                    zone.classList.add('dimmed');
+                }
+            });
+        }
+
+        function blurZone() {
+            document.querySelectorAll('.focus-zone').forEach(zone => {
+                zone.classList.remove('dimmed');
+            });
+        }
+
+        // Initialize state restoration from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                currentData = parsed;
+                restoreInterfaceState();
+            }
+        });
+
+        // Pill Toggling System (Multi-selection for Awareness Arrays)
+        function togglePill(el, category) {
+            const value = el.innerText;
+            if (el.classList.contains('active')) {
+                el.classList.remove('active');
+                currentData[category] = currentData[category].filter(v => v !== value);
+            } else {
+                el.classList.add('active');
+                currentData[category].push(value);
+            }
+        }
+
+        // Hydrate GUI elements from existing object
+        function restoreInterfaceState() {
+            document.querySelectorAll('.pill-choice').forEach(pill => {
+                const val = pill.innerText;
+                if (currentData.interruptions.includes(val) || 
+                    currentData.environments.includes(val) || 
+                    currentData.attentionCost.includes(val)) {
+                    pill.classList.add('active');
+                }
+            });
+
+            document.getElementById('drift-reflection').value = currentData.driftReflection || '';
+            document.getElementById('recovery-reflection').value = currentData.recoveryReflection || '';
+            document.getElementById('intentional-direction').value = currentData.intentionalDirection || '';
+        }
+
+        // Quietly Commit to Storage with Ultra-Slow Cinematic Transitions
+        function saveQuietly() {
+            currentData.driftReflection = document.getElementById('drift-reflection').value;
+            currentData.recoveryReflection = document.getElementById('recovery-reflection').value;
+            currentData.intentionalDirection = document.getElementById('intentional-direction').value;
+            currentData.timestamp = new Date().getTime();
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            // Hide the main interface
+            main.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                // Ensure main interface doesn't cause scroll/layout issues while hidden
+                main.style.display = 'none';
+                
+                // Show the success curtain
+                success.classList.remove('hidden-view');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1200); // Allow time for the blur/fade transition
+        }
+
+        // Return gracefully to overview to adjust entries
+        function resetView() {
+            const main = document.getElementById('main-interface');
+            const success = document.getElementById('success-view');
+
+            success.classList.add('hidden-view');
+            
+            setTimeout(() => {
+                main.style.display = 'block';
+                // Slight delay to ensure display:block applies before removing hidden-view opacity/blur
+                setTimeout(() => {
+                    main.classList.remove('hidden-view');
+                }, 50);
+            }, 1000);
+        }
+
+        // Erase Reflection to Clear Local Data Safely
+        function clearReflection() {
+            currentData = {
+                interruptions: [],
+                driftReflection: '',
+                environments: [],
+                attentionCost: [],
+                recoveryReflection: '',
+                intentionalDirection: '',
+                timestamp: null
+            };
+
+            localStorage.removeItem(STORAGE_KEY);
+
+            document.querySelectorAll('.pill-choice').forEach(pill => pill.classList.remove('active'));
+            document.getElementById('drift-reflection').value = '';
+            document.getElementById('recovery-reflection').value = '';
+            document.getElementById('intentional-direction').value = '';
+
+            // Gentle visual confirmation of clearing
+            const main = document.getElementById('main-interface');
+            main.style.opacity = '0.5';
+            setTimeout(() => {
+                main.style.opacity = '1';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 400);
+        }
+    </script>
+</body>
+</html>
