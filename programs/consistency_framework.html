@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FINAL META DATA (SEO + AEO) -->
+    <title>Consistency Framework | Sustainable Action Without Hustle Culture</title>
+    <meta name="description" content="A free program designed to help people understand inconsistency, mental overload, distraction, and sustainable follow-through without productivity pressure.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordsofwisdom.in/programs/consistency-framework.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Consistency Framework | A Calmer Approach to Follow-Through">
+    <meta property="og:description" content="A quieter program about sustainable action, attention, mental clarity, and consistency without hustle culture.">
+    <meta property="og:url" content="https://wordsofwisdom.in/programs/consistency-framework.html">
+    <meta property="og:image" content="https://wordsofwisdom.in/assets/og/consistency-framework.jpg">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consistency Framework | A Calmer Approach to Follow-Through">
+    <meta name="twitter:description" content="A quieter program about sustainable action, attention, mental clarity, and consistency without hustle culture.">
+
+    <!-- SCHEMA (JSON-LD) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Consistency Framework",
+        "description": "A free program exploring inconsistency, distraction, cognitive overload, attention fragmentation, and sustainable intentional action.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Words of Wisdom Media",
+          "url": "https://wordsofwisdom.in/"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Consistency Framework program?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A free program designed to help people understand inconsistency, distraction, mental overload, and sustainable follow-through with greater awareness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a productivity or discipline course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The program focuses on sustainable action, awareness, and intentional consistency rather than productivity optimization or hustle culture."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to complete the program quickly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The program is intentionally designed to be explored slowly and revisited whenever it feels useful."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://wordsofwisdom.in/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+    <!-- Theme Initialization Script (Safe for Iframes) -->
+    <script>
+        try {
+            const savedTheme = window.localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+                window.localStorage.setItem('theme', 'dark');
+            }
+        } catch (e) {
+            // Failsafe for sandboxed iframes (Canvas preview mode) where localStorage throws SecurityError
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        logo: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafafa',
+                            dark: '#030305',
+                            teal: '#2dd4bf',
+                        },
+                        neutral: {
+                            50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+                            400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+                            800: '#262626', 900: '#171717', 950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Advanced CSS for Restrained Premium UI/UX -->
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
+        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.3); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.2); border: 2px solid #030305; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+
+        .elite-texture-base {
+            position: fixed; inset: 0; z-index: -2; pointer-events: none;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.03) 0%, transparent 60%);
+        }
+        .dark .elite-texture-base {
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.03) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 100%, rgba(2, 2, 4, 0.98) 0%, transparent 100%);
+        }
+
+        .ambient-noise {
+            position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.15;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .dark .ambient-noise { opacity: 0.3; }
+
+        .footer-noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .fade-up {
+            opacity: 0; transform: translateY(20px); filter: blur(2px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
+        }
+        .fade-up.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+        .btn-premium { transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .btn-premium:hover { opacity: 0.9; transform: scale(0.98); }
+
+        .btn-secondary { transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+        .btn-secondary:hover { background: rgba(0,0,0,0.03); }
+        .dark .btn-secondary:hover { background: rgba(255,255,255,0.05); }
+
+        /* Unified Nav Base */
+        .glass-base {
+            @apply backdrop-blur-2xl border transition-all duration-500;
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .dark .glass-base {
+            background: rgba(10, 10, 12, 0.7);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Spotlight Cards */
+        .spotlight-card { 
+            position: relative; overflow: hidden; background: rgba(255,255,255,0.6); 
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .dark .spotlight-card { 
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); 
+        }
+        .spotlight-card:hover { 
+            transform: translateY(-4px); border-color: rgba(45, 212, 191, 0.3); 
+            background: rgba(255,255,255,0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+        .dark .spotlight-card:hover {
+            background: rgba(255,255,255,0.04); border-color: rgba(45, 212, 191, 0.2); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        ::selection { background-color: #e5e5e5; color: #171717; }
+        .dark ::selection { background-color: #262626; color: #fafafa; }
+
+        @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
+        
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: #ffffff; 
+            box-shadow: 0 0 10px rgba(255,255,255,0.8); border-radius: 50%; pointer-events: none; z-index: 10000; 
+            transform: translate(-50%, -50%); mix-blend-mode: difference; transition: opacity 0.2s ease, transform 0.2s ease; display: none;
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px; border: 1px solid rgba(45, 212, 191, 0.6); 
+            border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background 0.3s ease, border-color 0.3s ease; display: none;
+        }
+        .cursor-dot.hover-active { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        .cursor-ring.hover-active { width: 70px; height: 70px; background: #ffffff; border-color: transparent; mix-blend-mode: difference; }
+        @media (pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-brand-dark text-neutral-900 dark:text-neutral-100 antialiased font-sans text-[1.05rem] leading-relaxed overflow-x-hidden relative transition-colors duration-700">
+
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Global Noise & Ambient Restrained Texture -->
+    <div class="elite-texture-base"></div>
+    <div class="ambient-noise"></div>
+
+    <!-- NAVIGATION MENU -->
+    <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
+        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.2)] transition-all duration-500">
+            
+            <a href="/" class="flex-shrink-0 transition-opacity duration-300 hover:opacity-80 mr-4">
+                <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain" onerror="this.src='https://placehold.co/150x40/fdfdfc/a3a3a3?text=Logo'">
+                <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain" onerror="this.src='https://placehold.co/150x40/050505/a3a3a3?text=Logo'">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+                <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
+                <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
+                <a href="/focus.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">FOCUS</a>
+                <a href="/action.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">ACTION</a>
+                <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
+                <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
+                
+                <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none ml-2" aria-label="Toggle Dark Mode">
+                    <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+            </div>
+
+            <a href="/start-here.html" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full items-center justify-center whitespace-nowrap hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
+                START HERE
+            </a>
+
+            <div class="flex lg:hidden items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors p-1 focus:outline-none">
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <button id="mobile-menu-btn" class="text-neutral-900 dark:text-white p-1 pr-3 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-xl z-40 transform transition-all duration-300">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">Library</a>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
+        
+        <!-- 1. HERO SECTION -->
+        <section class="max-w-4xl mx-auto pt-16 pb-32 fade-up text-center">
+            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal block mb-8 reveal">Free Program</span>
+            
+            <h1 class="font-display text-[3.5rem] md:text-7xl text-neutral-900 dark:text-white leading-[1.05] tracking-tight mb-8 reveal delay-1">
+                Consistency Framework
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 font-display italic max-w-2xl mx-auto mb-16 reveal delay-2">
+                A calmer approach to understanding why consistent action becomes difficult — and how sustainable follow-through slowly returns.
+            </p>
+            
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light max-w-3xl mx-auto space-y-8 mb-16 text-left reveal delay-3 border-l border-brand-teal/30 dark:border-brand-teal/50 pl-8 md:pl-10">
+                <p>Many people blame themselves for inconsistency.</p>
+                <p>But sustainable action is rarely driven by motivation alone.</p>
+                <p class="leading-relaxed">
+                    Attention fragmentation,<br>
+                    mental overload,<br>
+                    emotional exhaustion,<br>
+                    unclear direction,<br>
+                    overstimulation,<br>
+                    perfectionism,<br>
+                    and unrealistic expectations<br>
+                    <span class="block mt-2 font-medium text-neutral-900 dark:text-white">all quietly affect consistency.</span>
+                </p>
+                <p>This program is designed to help people understand those patterns more clearly — without shame, hustle culture, or productivity pressure.</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center space-y-6 reveal delay-3 pt-8">
+                <a href="#program-start" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-5 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px] inline-flex items-center">
+                    Begin the Program
+                </a>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 block">Move Through It Slowly</span>
+            </div>
+        </section>
+
+        <!-- 2. WHY CONSISTENCY FEELS DIFFICULT -->
+        <section class="max-w-4xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400 dark:text-neutral-500 block mb-6 reveal">Why This Exists</span>
+            <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white mb-12 leading-tight reveal delay-1">Most people are trying to force consistency from an exhausted mind.</h2>
+            
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-8">
+                <p class="reveal delay-2">Modern life often fragments attention, overwhelms mental energy, and rewards constant stimulation.</p>
+                
+                <div class="reveal delay-3 pt-4 pb-4">
+                    <p class="mb-6 font-medium text-neutral-900 dark:text-white">Over time, people begin:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-base">
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> starting without continuing</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> relying on temporary motivation</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> abandoning routines quickly</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> feeling mentally scattered</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> avoiding difficult work</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> restarting repeatedly</div>
+                        <div class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-teal rounded-full mr-4 opacity-60"></span> feeling guilty for inconsistency</div>
+                    </div>
+                </div>
+
+                <p class="reveal">Many people interpret this as personal failure.</p>
+                <p class="reveal delay-1 font-medium text-neutral-900 dark:text-white">But sustainable consistency depends on much more than discipline.</p>
+                <p class="reveal delay-2">This program exists to help people understand the deeper layers beneath inconsistent action — and how calmer, more intentional consistency slowly becomes possible again.</p>
+            </div>
+        </section>
+
+        <!-- 3. WHAT YOU WILL EXPLORE (MODULE GRID) -->
+        <section id="program-start" class="max-w-6xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white mb-16 text-center reveal">Inside the program</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                
+                <!-- Module 1 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 01</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">The Myth of Motivation</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">Why relying on motivation creates unstable cycles of action and collapse.</p>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal delay-1 group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 02</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">Attention Fragmentation & Inconsistency</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">How distraction, overstimulation, and constant switching weaken sustained follow-through.</p>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 03</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">Mental Overload and Avoidance</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">Understanding how overwhelm quietly reduces cognitive energy for meaningful action.</p>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal delay-1 group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 04</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">Perfectionism and Restart Cycles</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">Why unrealistic expectations often create inconsistency instead of progress.</p>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 05</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">Sustainable Action & Cognitive Recovery</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">How consistency becomes more possible when attention, energy, and mental clarity begin stabilizing.</p>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="spotlight-card rounded-[2.5rem] p-10 md:p-14 flex flex-col h-full reveal delay-1 group">
+                    <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-teal mb-6 opacity-80">Module 06</span>
+                    <h3 class="font-display text-3xl text-neutral-900 dark:text-white mb-4">Building a Healthier Rhythm</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light flex-grow text-lg">Creating calmer environments and realistic systems that support intentional follow-through.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 4. IMPORTANT DIFFERENTIATOR SECTION -->
+        <section class="max-w-4xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up text-center">
+            <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white mb-10 reveal">This is not a hustle culture program.</h2>
+            
+            <div class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-light space-y-8">
+                <p class="reveal delay-1">This program is not designed to turn people into productivity machines.</p>
+                
+                <div class="reveal delay-2 pt-6 pb-6 flex flex-col items-center">
+                    <p class="mb-6 font-medium text-neutral-900 dark:text-white">There are no:</p>
+                    <div class="space-y-3 text-base md:text-lg text-neutral-500 dark:text-neutral-400 inline-block text-left">
+                        <div class="flex items-center"><span class="w-1 h-1 bg-neutral-400 rounded-full mr-4"></span> extreme routines</div>
+                        <div class="flex items-center"><span class="w-1 h-1 bg-neutral-400 rounded-full mr-4"></span> motivational pressure systems</div>
+                        <div class="flex items-center"><span class="w-1 h-1 bg-neutral-400 rounded-full mr-4"></span> performance obsession</div>
+                        <div class="flex items-center"><span class="w-1 h-1 bg-neutral-400 rounded-full mr-4"></span> discipline worship</div>
+                        <div class="flex items-center"><span class="w-1 h-1 bg-neutral-400 rounded-full mr-4"></span> unrealistic optimization frameworks</div>
+                    </div>
+                </div>
+
+                <p class="reveal">The goal is not constant output.</p>
+                <p class="reveal delay-1 font-display text-3xl italic text-neutral-900 dark:text-white pt-4 pb-4">The goal is sustainable, intentional direction.</p>
+                <p class="reveal delay-2">Consistency becomes healthier when the mind is less fragmented, less overloaded, and more aware of what actually matters.</p>
+            </div>
+        </section>
+
+        <!-- 5. PROGRAM EXPERIENCE SECTION -->
+        <section class="max-w-5xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="spotlight-card rounded-[3rem] p-12 md:p-20 text-center border border-neutral-200 dark:border-white/10 reveal">
+                <h2 class="font-display text-4xl md:text-5xl text-neutral-900 dark:text-white mb-10">Move through it slowly.</h2>
+                
+                <div class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 font-light space-y-6 max-w-2xl mx-auto">
+                    <p>This program is designed to be explored gradually.</p>
+                    <p>Some ideas may resonate immediately.<br>Others may take time to notice more honestly.</p>
+                    <p class="pt-6 font-medium text-neutral-900 dark:text-white">You do not need to rush through everything.</p>
+                    <p>Return to sections whenever they feel useful.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TOOL INTEGRATION SECTION -->
+        <section class="max-w-6xl mx-auto py-32 border-t border-neutral-200/60 dark:border-white/5 fade-up">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white">Use the tools alongside the program.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool 1 -->
+                <a href="/tools/daily-check.html" class="spotlight-card rounded-[2rem] p-8 flex flex-col h-full reveal group">
+                    <h3 class="font-display text-2xl text-neutral-900 dark:text-white mb-3">Daily Check</h3>
+                    <p class="text-neutral-500 font-light text-sm flex-grow">Reconnect with what deserves your attention each day.</p>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="/tools/clarity-check.html" class="spotlight-card rounded-[2rem] p-8 flex flex-col h-full reveal delay-1 group">
+                    <h3 class="font-display text-2xl text-neutral-900 dark:text-white mb-3">Clarity Check</h3>
+                    <p class="text-neutral-500 font-light text-sm flex-grow">Reduce mental noise and reconnect with clearer direction.</p>
+                </a>
+
+                <!-- Tool 3 -->
+                <a href="/tools/pattern-journal.html" class="spotlight-card rounded-[2rem] p-8 flex flex-col h-full reveal delay-2 group">
+                    <h3 class="font-display text-2xl text-neutral-900 dark:text-white mb-3">Pattern Journal</h3>
+                    <p class="text-neutral-500 font-light text-sm flex-grow">Notice recurring behaviors and emotional patterns more honestly.</p>
+                </a>
+
+                <!-- Tool 4 -->
+                <a href="/tools/daily-return.html" class="spotlight-card rounded-[2rem] p-8 flex flex-col h-full reveal delay-3 group">
+                    <h3 class="font-display text-2xl text-neutral-900 dark:text-white mb-3">Daily Return</h3>
+                    <p class="text-neutral-500 font-light text-sm flex-grow">A quieter space for reflection, awareness, and intentional presence.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 7. FINAL REFLECTION SECTION -->
+        <section class="max-w-4xl mx-auto py-40 border-t border-neutral-200/60 dark:border-white/5 fade-up text-center">
+            <div class="font-display text-4xl md:text-6xl lg:text-7xl text-neutral-900 dark:text-white leading-[1.1] tracking-tight space-y-12">
+                <p class="reveal">Consistency rarely disappears all at once.</p>
+                
+                <p class="reveal delay-1 text-[0.8em] text-neutral-500 italic">
+                    It slowly weakens<br>
+                    through fragmentation,<br>
+                    overload,<br>
+                    pressure,<br>
+                    distraction,<br>
+                    and unrealistic expectations.
+                </p>
+                
+                <p class="reveal delay-2 text-[0.9em]">
+                    And it slowly returns<br>
+                    through clarity,<br>
+                    awareness,<br>
+                    healthier rhythms,<br>
+                    and calmer attention.
+                </p>
+            </div>
+        </section>
+
+        <!-- 8. FINAL CTA -->
+        <section class="max-w-3xl mx-auto pb-40 fade-up text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-10 reveal">You can begin more gently.</h2>
+            <div class="reveal delay-1">
+                <a href="#" class="bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-5 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px] inline-flex items-center shadow-lg hover:shadow-xl transition-all">
+                    Begin Consistency Framework
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CALM, HUMAN FOOTER -->
+    <footer class="bg-brand-light dark:bg-[#030305] text-neutral-900 dark:text-white pt-24 pb-12 px-6 text-sm relative z-10 overflow-hidden border-t border-neutral-200 dark:border-white/5 transition-colors duration-700">
+        <div class="absolute inset-0 footer-noise-bg mix-blend-overlay pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-700"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <div class="flex flex-col items-center gap-6 mb-16 hover:opacity-90 transition-opacity">
+                <a href="/" class="flex flex-col items-center gap-5">
+                    <div class="h-24 w-24 flex items-center justify-center overflow-visible">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon.png" alt="WOW Icon" class="h-full w-full block dark:hidden object-contain drop-shadow-sm" onerror="this.src='https://placehold.co/100x100/fdfdfc/a3a3a3?text=W'">
+                        <img src="https://wordsofwisdom.in/assets/images/Icon-dark.png" alt="WOW Icon" class="h-full w-full hidden dark:block object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,0.08)]" onerror="this.src='https://placehold.co/100x100/050505/a3a3a3?text=W'">
+                    </div>
+                    <span class="font-logo text-3xl md:text-4xl tracking-wide font-medium bg-clip-text text-transparent bg-gradient-to-t from-stone-500 via-stone-700 to-stone-800 dark:from-stone-300 dark:via-stone-100 dark:to-white drop-shadow-sm dark:drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] text-center">Words of Wisdom</span>
+                </a>
+                <p class="text-neutral-600 dark:text-neutral-400 font-light text-base text-center max-w-sm">Clear thinking. Steady action.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center mb-20 w-full max-w-3xl mx-auto">
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">The Journey</p>
+                    <a href="/start-here.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Start</a>
+                    <a href="/identity.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Identity</a>
+                    <a href="/focus.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Focus</a>
+                    <a href="/action.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Action</a>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Explore</p>
+                    <a href="/library/index.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Library</a>
+                    <a href="/programs/index.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Programs</a>
+                    <a href="/books/index.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Books</a>
+                    <a href="/tools/index.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Tools</a>
+                </div>
+                <div class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
+                    <p class="text-neutral-900 dark:text-white">Connect</p>
+                    <a href="/about.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">About</a>
+                    <a href="/author.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Author</a>
+                    <a href="/community.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Community</a>
+                    <a href="/contact.html" class="block hover:text-brand-teal dark:hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-8 mb-16 justify-center">
+                <a href="https://www.linkedin.com/company/wordsofwisdom-in" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wordsofwisdom_in/" target="_blank" rel="noopener" aria-label="Instagram" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://in.pinterest.com/wordsofwisdom_in" target="_blank" rel="noopener" aria-label="Pinterest" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/channel/UC4StrCVczKkKwmhCuUX-Fyw" target="_blank" rel="noopener" aria-label="YouTube" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="border-t border-neutral-200 dark:border-white/10 pt-8 flex flex-col justify-center items-center gap-6 text-neutral-500 text-xs tracking-wider uppercase font-bold w-full">
+                <div class="flex flex-wrap justify-center gap-6 mb-2">
+                    <a href="/privacy.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms</a>
+                    <a href="/disclaimer.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Disclaimer</a>
+                </div>
+                
+                <p class="tracking-[0.1em] opacity-60 text-center">Built by <a href="/author.html" class="text-neutral-900 dark:text-white transition-colors">Abdullah Khan</a></p>
+                <p class="tracking-[0.1em] opacity-40 text-center mt-2">Clear thinking in a distracted world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            const toggleTheme = () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    try { window.localStorage.setItem('theme', 'light'); } catch(e) {}
+                } else {
+                    document.documentElement.classList.add('dark');
+                    try { window.localStorage.setItem('theme', 'dark'); } catch(e) {}
+                }
+            };
+
+            if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+            if(themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll Fade-Up Animation
+            const fadeElements = document.querySelectorAll('.fade-up, .reveal');
+            const observerOptions = { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.1 };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible', 'visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Magnetic Cursor Logic
+            if (window.matchMedia("(pointer: fine)").matches) {
+                const dot = document.getElementById('cursor-dot');
+                const ring = document.getElementById('cursor-ring');
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                let ringX = mouseX;
+                let ringY = mouseY;
+                let cursorInitiated = false;
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) {
+                        if(dot) dot.style.display = "block";
+                        if(ring) ring.style.display = "block";
+                        cursorInitiated = true;
+                    }
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    if(dot) {
+                        dot.style.left = `${mouseX}px`;
+                        dot.style.top = `${mouseY}px`;
+                    }
+                });
+
+                const animateRing = () => {
+                    ringX += (mouseX - ringX) * 0.15;
+                    ringY += (mouseY - ringY) * 0.15;
+                    if(ring) {
+                        ring.style.left = `${ringX}px`;
+                        ring.style.top = `${ringY}px`;
+                    }
+                    requestAnimationFrame(animateRing);
+                };
+                animateRing();
+
+                const interactables = document.querySelectorAll('a, button, input, .spotlight-card');
+                interactables.forEach(el => {
+                    el.addEventListener('mouseenter', () => { 
+                        if(ring) ring.classList.add('hover-active');
+                        if(dot) dot.classList.add('hover-active');
+                    });
+                    el.addEventListener('mouseleave', () => { 
+                        if(ring) ring.classList.remove('hover-active');
+                        if(dot) dot.classList.remove('hover-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
