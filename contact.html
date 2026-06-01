@@ -248,13 +248,25 @@
             <p class="text-neutral-600 dark:text-neutral-400 font-light">Or send a message here.</p>
         </section>
 
-        <!-- STANDARD FORMSPREE CONTACT FORM (Non-AJAX to avoid reCAPTCHA issues) -->
+        <!-- FUNCTIONAL AJAX CONTACT FORM -->
         <section class="mb-24 reveal">
-            <div class="spotlight-card rounded-[3rem] p-8 md:p-14 relative overflow-hidden flex flex-col justify-center">
+            <div class="spotlight-card rounded-[3rem] p-8 md:p-14 relative overflow-hidden flex flex-col justify-center min-h-[400px]">
                 
+                <!-- Green Success State Overlay (Hidden by default, animates smoothly) -->
+                <div id="form-success-message" class="hidden absolute inset-0 z-20 bg-white/95 dark:bg-[#0a0a0c]/95 flex flex-col items-center justify-center p-8 text-center transition-all duration-500 opacity-0">
+                    <div class="w-20 h-20 bg-green-50 dark:bg-green-900/20 text-green-500 rounded-full flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(34,197,94,0.2)]">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="font-display text-3xl md:text-4xl text-neutral-900 dark:text-white mb-4">Message Sent</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 font-light text-lg">Thank you for reaching out.<br>If it needs a response, you will hear back soon.</p>
+                </div>
+
                 <div class="text-center mb-10 reveal">
                     <p class="font-display italic text-2xl text-neutral-500 dark:text-neutral-400">Take a moment before writing.</p>
                 </div>
+
+                <!-- On-page Inline Error Message (Replaces native browser alerts) -->
+                <div id="form-error-message" class="hidden mb-6 bg-red-500/10 border border-red-500/20 text-red-500 text-sm py-3 px-4 rounded-xl text-center transition-all"></div>
 
                 <form id="contact-form" action="https://formspree.io/f/xwvyyjkw" method="POST" class="space-y-6 relative z-10 w-full reveal delay-1">
                     
@@ -276,14 +288,11 @@
                                   class="w-full bg-white/50 dark:bg-black/40 border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white px-6 py-5 rounded-2xl focus:outline-none focus:border-brand-teal transition-all placeholder:text-neutral-400 shadow-inner min-h-[160px] resize-y"></textarea>
                     </div>
 
-                    <!-- Hidden field to define the subject line in Formspree -->
                     <input type="hidden" name="_subject" value="New message from Words of Wisdom Website">
-                    <!-- Optional: Redirect back to home or a custom thank you page after submission -->
-                    <input type="hidden" name="_next" value="https://wordsofwisdom.in/">
 
                     <div class="pt-4 relative flex justify-center">
-                        <button type="submit" class="button-press w-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300 shadow-md">
-                            Send Message
+                        <button id="contact-submit-btn" type="submit" class="button-press w-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center transition-all duration-300 shadow-md min-h-[56px]">
+                            <span>Send Message</span>
                         </button>
                     </div>
                     
@@ -487,6 +496,65 @@
 
                 backToTopBtn.addEventListener('click', () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Vanilla JS AJAX Form Submission (No redirect, premium overlay feedback)
+            const contactForm = document.getElementById('contact-form');
+            const successOverlay = document.getElementById('form-success-message');
+            const errorBox = document.getElementById('form-error-message');
+            const submitBtn = document.getElementById('contact-submit-btn');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Hide any active previous error states
+                    errorBox.classList.add('hidden');
+                    
+                    // Show Loading Spinner inside premium submit button
+                    const originalContent = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<div class="w-5 h-5 border-2 border-white/30 border-t-white dark:border-neutral-900/30 dark:border-t-neutral-900 rounded-full animate-spin"></div>';
+
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: contactForm.method,
+                            body: new FormData(contactForm),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Show Green Success Screen
+                            contactForm.reset();
+                            successOverlay.classList.remove('hidden');
+                            successOverlay.classList.add('flex');
+                            // Small delay for CSS transition animation trigger
+                            setTimeout(() => successOverlay.classList.remove('opacity-0'), 50);
+                        } else {
+                            const data = await response.json();
+                            let errorMsg = "Oops! There was a problem submitting your form.";
+                            if (Object.hasOwn(data, 'errors')) {
+                                errorMsg = data.errors.map(err => err.message).join(", ");
+                            }
+                            
+                            // Render premium custom inline box instead of alert() window
+                            errorBox.textContent = errorMsg;
+                            errorBox.classList.remove('hidden');
+                            
+                            // Re-enable button state
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalContent;
+                        }
+                    } catch (error) {
+                        errorBox.textContent = "Oops! There was a network error. Please try again.";
+                        errorBox.classList.remove('hidden');
+                        
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalContent;
+                    }
                 });
             }
         });
