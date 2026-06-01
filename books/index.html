@@ -120,12 +120,12 @@
     <!-- Advanced CSS for Elite Premium UI/UX -->
     <style type="text/tailwindcss">
         ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #fafafa; border-left: 1px solid rgba(0,0,0,0.03); }
-        .dark ::-webkit-scrollbar-track { background: #030305; border-left: 1px solid rgba(255,255,255,0.02); }
-        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid #fafafa; transition: background 0.3s ease; }
-        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid #030305; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); }
-        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); }
+        ::-webkit-scrollbar-track { background: transparent; }
+        .dark ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.4); border-radius: 10px; border: 2px solid transparent; background-clip: padding-box; transition: background 0.3s ease; }
+        .dark ::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.25); border: 2px solid transparent; background-clip: padding-box; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.7); border: 2px solid transparent; background-clip: padding-box; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: rgba(45, 212, 191, 0.5); border: 2px solid transparent; background-clip: padding-box; }
 
         .elite-texture-base {
             position: fixed; inset: 0; z-index: -2; pointer-events: none;
@@ -155,6 +155,23 @@
         .dark .ambient-orb { opacity: 0.2; filter: blur(140px); }
         .orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%); }
         .orb-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); }
+
+        /* Glass Morphism Base Classes */
+        .glass-base {
+            @apply backdrop-blur-2xl border transition-all duration-500;
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .dark .glass-base {
+            background: rgba(10, 10, 12, 0.6);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Micro-Interactions */
+        .button-press { transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; }
+        .button-press:active { transform: scale(0.95); }
+        .clean-link { opacity: 0.7; transition: opacity 0.3s ease; position: relative; display: inline-flex; align-items: center; }
+        .clean-link:hover { opacity: 1; }
 
         @media (pointer: fine) { body, a, button, input { cursor: none !important; } }
         
@@ -229,17 +246,14 @@
         <div class="ambient-orb orb-2 animate-float-delayed"></div>
     </div>
 
-    <!-- NAVIGATION MENU -->
+    <!-- NAVIGATION MENU (Standardized Template) -->
     <div class="fixed top-6 left-0 right-0 w-full flex justify-center z-50 pointer-events-none px-4 md:px-6">
-        <nav class="pointer-events-auto bg-white/95 dark:bg-[#0a0a0c]/95 backdrop-blur-2xl border border-neutral-200/60 dark:border-white/5 rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.4)] transition-all duration-500">
-            
-            <!-- Logo Integration -->
+        <nav class="pointer-events-auto glass-base rounded-full pl-6 pr-2 py-2 flex items-center justify-between w-full max-w-[1040px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
             <a href="/" class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mr-4">
                 <img src="https://wordsofwisdom.in/assets/images/logo-light.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto block dark:hidden object-contain">
                 <img src="https://wordsofwisdom.in/assets/images/logo.png" alt="Words of Wisdom" class="h-8 md:h-10 w-auto hidden dark:block object-contain">
             </a>
             
-            <!-- Desktop Nav Links -->
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-extrabold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
                 <a href="/start-here.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">START</a>
                 <a href="/identity.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">IDENTITY</a>
@@ -248,16 +262,15 @@
                 <a href="/programs/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">PROGRAMS</a>
                 <a href="/library/index.html" class="hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">LIBRARY</a>
                 
-                <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="hover:text-neutral-900 dark:hover:text-white transition-colors focus:outline-none hover:scale-110 transform duration-300 ml-2" aria-label="Toggle Dark Mode">
                     <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                     <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
                 </button>
             </div>
 
-            <!-- CTA -->
-            <a href="/start-here.html" class="hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-3.5 rounded-full items-center justify-center leading-[1.2] text-center hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 btn-premium">
-                START<br>HERE
+            <!-- CTA: Fixed Single Line Start Here -->
+            <a href="/start-here.html" class="button-press hidden lg:flex bg-[#111] dark:bg-white text-white dark:text-[#111] text-[11px] uppercase tracking-[0.1em] font-bold px-8 py-4 rounded-full items-center justify-center whitespace-nowrap hover:bg-black dark:hover:bg-neutral-200 transition-colors ml-4 shadow-lg">
+                START HERE
             </a>
 
             <!-- Mobile Utilities -->
@@ -274,13 +287,13 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 bg-white/95 dark:bg-[#0d0d11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/5 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
-        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Start</a>
-        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Identity</a>
-        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Focus</a>
-        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Action</a>
-        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Programs</a>
-        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Library</a>
+    <div id="mobile-menu" class="hidden fixed top-24 left-6 right-6 glass-base !bg-white/95 dark:!bg-[#0d0d11]/95 rounded-3xl p-6 space-y-4 shadow-2xl z-40 transform transition-all duration-300">
+        <a href="/start-here.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Start</a>
+        <a href="/identity.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Identity</a>
+        <a href="/focus.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Focus</a>
+        <a href="/action.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Action</a>
+        <a href="/programs/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Programs</a>
+        <a href="/library/index.html" class="block text-sm font-bold uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 hover:text-brand-teal dark:hover:text-white transition-colors">Library</a>
     </div>
 
     <main class="pt-32 md:pt-40 pb-16 px-6 sm:px-8 z-10 relative min-h-screen">
@@ -382,7 +395,7 @@
                             <p>The goal is learning to think more clearly and respond more intentionally.</p>
                         </div>
                         
-                        <a href="/books/the-right-question.html" class="w-full text-center bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-4 px-8 rounded-full uppercase tracking-[0.15em] font-bold text-[11px] mt-auto">
+                        <a href="/books/the-right-question.html" class="w-full text-center bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium button-press py-4 px-8 rounded-full uppercase tracking-[0.15em] font-bold text-[11px] mt-auto">
                             Explore The Right Question
                         </a>
                     </div>
@@ -484,10 +497,10 @@
             <p class="text-neutral-600 dark:text-neutral-400 font-light mb-12 max-w-2xl mx-auto">The Programs and Tools sections are designed to help apply many of these ideas more consistently during daily life.</p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal delay-1">
-                <a href="/programs/" class="w-full sm:w-auto text-center bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium py-4 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px]">
+                <a href="/programs/" class="w-full sm:w-auto text-center bg-[#111] dark:bg-white text-white dark:text-[#111] btn-premium button-press py-4 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px]">
                     Explore Programs
                 </a>
-                <a href="/tools/" class="w-full sm:w-auto text-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white btn-secondary py-4 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px]">
+                <a href="/tools/" class="w-full sm:w-auto text-center bg-transparent border border-neutral-300 dark:border-white/20 text-neutral-900 dark:text-white btn-secondary button-press py-4 px-10 rounded-full uppercase tracking-[0.15em] font-bold text-[11px]">
                     Explore Tools
                 </a>
             </div>
@@ -577,9 +590,9 @@
         </div>
     </footer>
 
-    <!-- Elite Back To Top Button -->
-    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-white/80 dark:bg-[#0d0d11]/80 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] transform translate-y-20 opacity-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-teal dark:hover:border-brand-teal focus:outline-none">
-        <svg class="w-5 h-5 text-neutral-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 rounded-full glass-base shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-500 z-50 text-neutral-600 dark:text-neutral-400 hover:text-brand-teal dark:hover:text-brand-teal button-press group" aria-label="Back to top">
+        <svg class="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
     <!-- INTERACTION LOGIC -->
@@ -612,64 +625,41 @@
                 });
             }
 
-            // Scroll Fade-Up Animation
-            const fadeElements = document.querySelectorAll('.fade-up');
+            // Scroll Reveal Animation (.reveal to .visible)
+            const revealElements = document.querySelectorAll('.reveal, .fade-up');
             const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
+                        entry.target.classList.add('visible', 'is-visible');
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            fadeElements.forEach(el => observer.observe(el));
+            revealElements.forEach(el => observer.observe(el));
 
-            // Back to Top Logic
-            const bttBtn = document.getElementById('back-to-top');
-            if(bttBtn) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 500) {
-                        bttBtn.classList.remove('translate-y-20', 'opacity-0');
-                    } else {
-                        bttBtn.classList.add('translate-y-20', 'opacity-0');
-                    }
-                });
-
-                bttBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Spotlight Cards Tracking & Cursor
+            // Magnetic Cursor Logic
             if (window.matchMedia("(pointer: fine)").matches) {
-                const cards = document.querySelectorAll('.spotlight-card');
-                cards.forEach(card => {
-                    card.addEventListener('mousemove', (e) => {
-                        const rect = card.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-                        card.style.setProperty('--mouse-x', `${x}px`);
-                        card.style.setProperty('--mouse-y', `${y}px`);
-                    });
-                });
-                
                 const dot = document.getElementById('cursor-dot');
                 const ring = document.getElementById('cursor-ring');
                 let mouseX = window.innerWidth / 2;
                 let mouseY = window.innerHeight / 2;
                 let ringX = mouseX;
                 let ringY = mouseY;
+                let cursorInitiated = false;
 
                 window.addEventListener('mousemove', (e) => {
+                    if (!cursorInitiated) {
+                        dot.style.opacity = "1";
+                        ring.style.opacity = "1";
+                        cursorInitiated = true;
+                    }
                     mouseX = e.clientX;
                     mouseY = e.clientY;
-                    if(dot) {
-                        dot.style.left = `${mouseX}px`;
-                        dot.style.top = `${mouseY}px`;
-                    }
+                    dot.style.left = `${mouseX}px`;
+                    dot.style.top = `${mouseY}px`;
                 });
 
                 const animateRing = () => {
@@ -683,7 +673,7 @@
                 };
                 animateRing();
 
-                const interactables = document.querySelectorAll('a, button, input, .spotlight-card');
+                const interactables = document.querySelectorAll('a, button, input, textarea, .spotlight-card');
                 interactables.forEach(el => {
                     el.addEventListener('mouseenter', () => { 
                         if(ring) ring.classList.add('hover-active');
@@ -695,16 +685,24 @@
                     });
                 });
             }
-            
-            // Soft Presence Observer (for generic reveal text)
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+
+            // Back to Top Logic
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 600) {
+                        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
                     }
                 });
-            }, { threshold: 0.12 });
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
         });
     </script>
 </body>
